@@ -7,9 +7,8 @@
 //
 
 #import "NSString+Additions.h"
-#import "RegexKitLite.h"
 
-@implementation NSString (Pluto)
+@implementation NSString (HF)
 
 /*---------------------------------------------------------------------------
  * 根据format来格式化形式为"20121010"的字符串

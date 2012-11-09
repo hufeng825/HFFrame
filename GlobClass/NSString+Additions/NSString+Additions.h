@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface NSString (Pluto)
+#import "RegexKitLite.h"
+@interface NSString (HF)
 
 - (NSString*)dateStringWithFormat:(NSString*)format;
 - (NSString*)ymdString;

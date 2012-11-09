@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "UIImageView+WebCache.h"
 @interface HomeViewController ()
 
 @end
@@ -26,10 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString * tmp = @" 交易成功 ";
-    BOOL a = [tmp isContain:@"结婚"];
-    NSLog(@"%d",a);
-    // Do any additional setup after loading the view from its nib.
+       // Do any additional setup after loading the view from its nib.
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:imageView];
+    [imageView setImageWithURL:[NSURL URLWithString:@"http://img.my.csdn.net/uploads/201101/25/3619941_1295933551y8U4.jpg"]
+                   placeholderImage:[UIImage imageNamed:@"default.png"]];
+
 }
 
 - (void)didReceiveMemoryWarning
