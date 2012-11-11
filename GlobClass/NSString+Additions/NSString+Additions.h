@@ -22,7 +22,7 @@
 + (NSString*)fenStringWithDecimalNumber:(NSDecimalNumber*)number;
 
 
--(BOOL)isContain :(NSString *)findStr;
+-(BOOL)isContainsString:(NSString *)findStr;
 -(int)lengthToInt;//得到字符串长度 中英文混合情况下
 -(BOOL)isPersonCard;
 -(BOOL)isNumberStr;

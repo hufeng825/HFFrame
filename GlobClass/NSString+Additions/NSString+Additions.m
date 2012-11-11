@@ -143,11 +143,15 @@
     return [fen stringValue];
 }
 
--(BOOL)isContain :(NSString *)findStr
+-(BOOL)isContainsString:(NSString *)findStr
 {
     NSRange textRange;
     textRange =[self rangeOfString:findStr];
     return (textRange.location != NSNotFound);
+}
+
+- (BOOL)isContainsString:(NSString*)string options:(NSStringCompareOptions)options {
+	return [self rangeOfString:string options:options].location == NSNotFound ? NO : YES;
 }
 
 
