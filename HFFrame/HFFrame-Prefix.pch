@@ -11,6 +11,5 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
-    #import "NSString+Additions.h"
-    #import "UIViewAdditions.h"
+    #import"Global_macro.h"
 #endif

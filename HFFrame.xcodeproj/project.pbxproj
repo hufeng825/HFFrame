@@ -24,6 +24,12 @@
 		96876D84164BCAD000406C92 /* Global_macro.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D83164BCAD000406C92 /* Global_macro.m */; };
 		96876D93164C048600406C92 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D91164C048500406C92 /* HomeViewController.m */; };
 		96876D94164C048600406C92 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96876D92164C048500406C92 /* HomeViewController.xib */; };
+		969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969340231656110B00F1BDC1 /* iflyMSC.framework */; };
+		9693402A165613DC00F1BDC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96934029165613DC00F1BDC1 /* SystemConfiguration.framework */; };
+		9693402C1656141600F1BDC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402B1656141600F1BDC1 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402D1656144D00F1BDC1 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402F165615AD00F1BDC1 /* AudioToolbox.framework */; };
+		9693403A16561F8D00F1BDC1 /* NSDictionary_HFDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9693403916561F8D00F1BDC1 /* NSDictionary_HFDictionary.m */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
@@ -76,6 +82,13 @@
 		96876D90164C048400406C92 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		96876D91164C048500406C92 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		96876D92164C048500406C92 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
+		969340231656110B00F1BDC1 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "GlobClass/voice/armv6-armv7/iflyMSC.framework"; sourceTree = "<group>"; };
+		96934029165613DC00F1BDC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9693402B1656141600F1BDC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9693402D1656144D00F1BDC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9693402F165615AD00F1BDC1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9693403716561F3A00F1BDC1 /* NSDictionary_HFDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDictionary_HFDictionary.h; path = GlobClass/HFDictionary/NSDictionary_HFDictionary.h; sourceTree = SOURCE_ROOT; };
+		9693403916561F8D00F1BDC1 /* NSDictionary_HFDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDictionary_HFDictionary.m; path = GlobClass/HFDictionary/NSDictionary_HFDictionary.m; sourceTree = SOURCE_ROOT; };
 		96E517071632AFB300E7D20C /* HFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFHttpRequest.h; path = HFHttpRequest/HFHttpRequest.h; sourceTree = "<group>"; };
 		96E517081632AFB300E7D20C /* HFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFHttpRequest.m; path = HFHttpRequest/HFHttpRequest.m; sourceTree = "<group>"; };
 		96E5174D1632B88400E7D20C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = GlobClass/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
@@ -129,12 +142,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
+				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
+				1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */,
+				9693402C1656141600F1BDC1 /* CFNetwork.framework in Frameworks */,
+				9693402A165613DC00F1BDC1 /* SystemConfiguration.framework in Frameworks */,
 				96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */,
 				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */,
 				1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */,
 				1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */,
-				1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */,
+				969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +179,12 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
+				9693402D1656144D00F1BDC1 /* QuartzCore.framework */,
+				9693402B1656141600F1BDC1 /* CFNetwork.framework */,
+				96934029165613DC00F1BDC1 /* SystemConfiguration.framework */,
 				96EAC5EC1641105C003D9281 /* libicucore.dylib */,
+				969340231656110B00F1BDC1 /* iflyMSC.framework */,
 				96FC742F164CFB0E005ACABC /* MapKit.framework */,
 				96FC742D164CFA6F005ACABC /* ImageIO.framework */,
 				1848AF1516328FD800AD42B6 /* UIKit.framework */,
@@ -254,6 +277,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9693403816561F5200F1BDC1 /* NSDictionary+Additons */,
 				96FC7410164CF8CE005ACABC /* SDWebImage */,
 				96E517301632B82500E7D20C /* AFNetwprking */,
 				96EAC5EF16411081003D9281 /* RegexKitLite正则表达式 */,
@@ -262,6 +286,15 @@
 				96876D7D164BBBB800406C92 /* UIViewAddition长高宽 */,
 			);
 			name = Class;
+			sourceTree = "<group>";
+		};
+		9693403816561F5200F1BDC1 /* NSDictionary+Additons */ = {
+			isa = PBXGroup;
+			children = (
+				9693403716561F3A00F1BDC1 /* NSDictionary_HFDictionary.h */,
+				9693403916561F8D00F1BDC1 /* NSDictionary_HFDictionary.m */,
+			);
+			name = "NSDictionary+Additons";
 			sourceTree = "<group>";
 		};
 		96E517021632AF3200E7D20C /* HFHTTP */ = {
@@ -431,6 +464,7 @@
 				96FC742A164CF8CE005ACABC /* SDWebImagePrefetcher.m in Sources */,
 				96FC742B164CF8CE005ACABC /* UIButton+WebCache.m in Sources */,
 				96FC742C164CF8CE005ACABC /* UIImageView+WebCache.m in Sources */,
+				9693403A16561F8D00F1BDC1 /* NSDictionary_HFDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +540,10 @@
 		1848AF3616328FD800AD42B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
@@ -517,6 +555,10 @@
 		1848AF3716328FD800AD42B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";

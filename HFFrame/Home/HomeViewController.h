@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
+#import "iFlyMSC/IFlyRecognizeControl.h"
+#import "iFlyMSC/IFlySynthesizerControl.h"
 @interface HomeViewController : HFBaseViewController
 
 @end

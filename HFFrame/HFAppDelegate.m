@@ -8,6 +8,7 @@
 
 #import "HFAppDelegate.h"
 #import "HomeViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation HFAppDelegate
 
@@ -27,6 +28,19 @@
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:self.viewController];
 	self.window.rootViewController = nv ;
     [self.window makeKeyAndVisible];
+    
+    UIImageView *splashScreen = [[[UIImageView alloc] initWithFrame:self.window.bounds] autorelease];
+    splashScreen.image = [UIImage imageNamed:@"Default"];
+    [self.window addSubview:splashScreen];
+    [NSThread sleepForTimeInterval:1.0];
+    [UIView animateWithDuration:1.0 animations:^{
+        CATransform3D transform = CATransform3DMakeScale(1.5, 1.5, 1.0);
+    splashScreen.layer.transform = transform;
+    splashScreen.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [splashScreen removeFromSuperview];
+    }];
+    
     return YES;
 }
 
