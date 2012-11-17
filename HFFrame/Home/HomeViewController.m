@@ -72,6 +72,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 //    [_iflySynizeControl setSpeed:];
     [initParam release];
     [_iflySynizeControl setShowUI:NO];
+	[_iflySynizeControl setSpeed:100];
 	[_iflySynizeControl start];
     
 }
