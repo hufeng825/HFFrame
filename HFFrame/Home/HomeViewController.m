@@ -31,7 +31,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     [super viewDidLoad];
     self.title = @"首页";
     
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.view.width, 100)];
+    UILabel *label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.view.width, 100)]autorelease];
     [label setText:warningStr];
     [label setNumberOfLines:0];
     [self.view addSubview:label];
@@ -73,7 +73,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     [initParam release];
     [_iflySynizeControl setShowUI:NO];
 	[_iflySynizeControl start];
-
+    
 }
 
 #pragma 识别接口实现
