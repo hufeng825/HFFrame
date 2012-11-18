@@ -78,7 +78,12 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
      ***********************************************/
 
     bt.userInfo = @"d";
-//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
+    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
+
+
+    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
+    NSLog(@"%@",array);
+    NSLog(@"%@", [array uniqueMembers]);
 }
 -(void)btClick:(id)sender
 {

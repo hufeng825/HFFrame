@@ -13,6 +13,7 @@
 #import "NSString+Additions.h"
 #import "UIViewAdditions.h"
 #import "UIImage+Extensions.h"
+#import "Array.h"
 
 //判断系统是否大于等于v
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
