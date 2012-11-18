@@ -23,7 +23,23 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        
+        if ([self backgroundImageForState:UIControlStateNormal])
+        {
+            NSLog(@"%@",[self backgroundImageForState:UIControlStateNormal]);
+            UIImage *img = [self backgroundImageForState:UIControlStateNormal];
+            if ( [img respondsToSelector:@selector(resizableImageWithCapInsets:resizingMode:)])
+            {
+                [self setBackgroundImage:
+                 [img resizableImageWithCapInsets:UIEdgeInsetsMake(4,2,4,2) resizingMode:UIImageResizingModeStretch]
+                                forState:UIControlStateNormal];
+            }
+            else
+            {
+                [self setBackgroundImage:
+                 [img stretchableImageWithLeftCapWidth:4 topCapHeight:4]
+                                forState:UIControlStateNormal];
+            }
+        }
     }
     return self;
 }

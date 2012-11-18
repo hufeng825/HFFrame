@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "UIImageView+WebCache.h"
 
-NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
+static NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
 
 @interface HomeViewController ()
 
@@ -50,7 +50,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     NSString *initParam = [[NSString alloc] initWithFormat:@"appid=%@",APPID];
     
     
-    /*************************************************
+    /********************----识别---******************
     IFlyRecognizeControl *_iflyRecognizeControl = [[IFlyRecognizeControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
     [self.view addSubview:_iflyRecognizeControl];
     // Configure the RecognizeControl
@@ -62,6 +62,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 	[_iflyRecognizeControl start];
     *************************************************/
     
+    /********************----播报---******************
     IFlySynthesizerControl *_iflySynizeControl = [[IFlySynthesizerControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
     [self.view addSubview:_iflySynizeControl];
     // Configure the RecognizeControl
@@ -74,7 +75,8 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     [_iflySynizeControl setShowUI:NO];
 	[_iflySynizeControl setSpeed:100];
 	[_iflySynizeControl start];
-    
+     ***********************************************/
+
     bt.userInfo = @"d";
 //    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -88,8 +90,8 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     }
 }
 
-#pragma 识别接口实现
-
+#pragma -  语音接口实现
+#pragma    识别接口实现
 - (void) onGrammer:(NSString *)grammer error:(int)err
 {
     NSLog(@"the error is:%d",err);
@@ -99,7 +101,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 - (void) onRecognizeEnd:(IFlyRecognizeControl *)iFlyRecognizeControl theError:(int)error
 {
     NSLog(@"识别结束回调finish.....");
-	NSLog(@"getUpflow:%d,getDownflow:%d",[iFlyRecognizeControl getUpflow],[iFlyRecognizeControl getDownflow]);
+//	NSLog(@"getUpflow:%d,getDownflow:%d",[iFlyRecognizeControl getUpflow],[iFlyRecognizeControl getDownflow]);
     
 }
 
@@ -148,6 +150,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 {
     NSLog(@"the playing progress :%f",playProgress);
 }
+#pragma -
 
 
 - (void)didReceiveMemoryWarning

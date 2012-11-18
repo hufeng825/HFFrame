@@ -35,10 +35,10 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIButton" id="842774647">
+					<object class="IBUIButton" id="146828104">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{88, 326}, {73, 44}}</string>
+						<string key="NSFrame">{{20, 326}, {254, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -60,9 +60,9 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUINormalImage">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btm_nav@2x.png</string>
+							<string key="NSResourceName">btm_nav.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
@@ -78,6 +78,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="146828104"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -120,7 +121,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">bt</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="842774647"/>
+						<reference key="destination" ref="146828104"/>
 					</object>
 					<int key="connectionID">7</int>
 				</object>
@@ -137,7 +138,7 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="842774647"/>
+							<reference ref="146828104"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -154,7 +155,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="842774647"/>
+						<reference key="object" ref="146828104"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -218,8 +219,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">btm_nav@2x.png</string>
-			<string key="NS.object.0">{94, 64}</string>
+			<string key="NS.key.0">btm_nav.png</string>
+			<string key="NS.object.0">{47, 32}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>
