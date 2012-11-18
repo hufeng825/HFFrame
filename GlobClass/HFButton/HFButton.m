@@ -23,26 +23,42 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        if ([self backgroundImageForState:UIControlStateNormal])
-        {
-            NSLog(@"%@",[self backgroundImageForState:UIControlStateNormal]);
-            UIImage *img = [self backgroundImageForState:UIControlStateNormal];
-            if ( [img respondsToSelector:@selector(resizableImageWithCapInsets:resizingMode:)])
-            {
-                [self setBackgroundImage:
-                 [img resizableImageWithCapInsets:UIEdgeInsetsMake(4,2,4,2) resizingMode:UIImageResizingModeStretch]
-                                forState:UIControlStateNormal];
-            }
-            else
-            {
-                [self setBackgroundImage:
-                 [img stretchableImageWithLeftCapWidth:4 topCapHeight:4]
-                                forState:UIControlStateNormal];
-            }
-        }
+        [self initStyle];
     }
     return self;
 }
+///!!! 设置button 外观
+-(void)initStyle
+{
+    [self initStyle: UIControlStateNormal];
+    [self initStyle: UIControlStateHighlighted ];                  // used when UIControl isHighlighted is set
+    [self initStyle: UIControlStateDisabled];
+    [self initStyle: UIControlStateSelected];                   // flag usable by app (see below)
+    [self initStyle: UIControlStateApplication];              // additional flags available for application use
+    [self initStyle:UIControlStateReserved];
+}
+
+-(void)initStyle :(UIControlState)state
+{
+    if ([self backgroundImageForState:state])
+    {
+        UIImage *img = [self backgroundImageForState:state];
+        if ( [img respondsToSelector:@selector(resizableImageWithCapInsets:resizingMode:)])
+        {
+            [self setBackgroundImage:
+             [img resizableImageWithCapInsets:UIEdgeInsetsMake(4,2,4,2) resizingMode:UIImageResizingModeStretch]
+                            forState:state];
+        }
+        else
+        {
+            [self setBackgroundImage:
+             [img stretchableImageWithLeftCapWidth:4 topCapHeight:4]
+                            forState:state];
+        }
+    }
+}
+
+
 
 -(void)setUserInfo:(id)_userInfo
 {
