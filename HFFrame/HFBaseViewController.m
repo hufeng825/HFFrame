@@ -24,7 +24,7 @@ bool ye =[email isMatchedByRegex:@""];
 @end
 
 @implementation HFBaseViewController
-
+@synthesize titleLabel;
 
 - (id)init
 {
@@ -52,10 +52,13 @@ bool ye =[email isMatchedByRegex:@""];
 }
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self toSetTitleLable];
     
     HFHttpRequest *client = [HFHttpRequest sharedClient];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
@@ -75,9 +78,32 @@ bool ye =[email isMatchedByRegex:@""];
     }];
     [operation start];
     [[client operationQueue]cancelAllOperations];
-
-    
 }
+#pragma mark  - 设置title
+-(void) toSetTitleLable
+{
+    self.titleLabel = [[[UILabel alloc] initWithFrame:self.navigationController.navigationBar.frame] autorelease];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:22.0];
+    titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    titleLabel.textAlignment = UITextAlignmentCenter;
+    titleLabel.textColor = [UIColor whiteColor]; // change this color
+    [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
+    self.navigationItem.titleView = titleLabel;
+}
+-(void)setTitle:(NSString *)title
+{
+    if (title)
+    {
+        self.titleLabel.text = title;
+    }
+}
+
+-(NSString*)title
+{
+    return self.titleLabel.text;
+}
+
 
 -(void)buttonIndexClick
 {
@@ -94,6 +120,11 @@ bool ye =[email isMatchedByRegex:@""];
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)dealloc
+{
+    RELEASE_SAFELY(titleLabel);
+    [super dealloc];
 }
 
 @end
