@@ -29,7 +29,7 @@
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:self.viewController];
 	self.window.rootViewController = nv ;
     [self.window makeKeyAndVisible];
-    
+    [nv release];
     UIImageView *splashScreen = [[[UIImageView alloc] initWithFrame:self.window.bounds] autorelease];
     splashScreen.image = [UIImage imageNamed:@"Default"];
     [self.window addSubview:splashScreen];
