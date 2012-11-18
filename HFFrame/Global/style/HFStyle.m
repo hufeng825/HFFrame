@@ -10,6 +10,12 @@
 @implementation HFStyle
 
 @end
+/*
+ 设置uitabr 样式
+ 此方法需要设置了viewControllers 后设置了后调用
+ tabBar.viewControllers = [NSArray arrayWithObjects:nav1,nav2,nav3,nil];
+ */
+
 
 //-------------------------------------------------------
 // 因为iOS 5以后，UINavigationBar的drawRect方法不再被调用，

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HFFrame/HFBaseViewController.m"
-         timestampString = "374065996.696428"
+         timestampString = "374924967.366981"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "56"
+         endingLineNumber = "56"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HFFrame/Global/style/HFStyle.m"
-         timestampString = "374915517.880859"
+         timestampString = "374924967.366981"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "-drawRect:"
          landmarkType = "5">
       </FileBreakpoint>
