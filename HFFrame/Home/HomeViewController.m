@@ -16,7 +16,7 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 @end
 
 @implementation HomeViewController
-
+@synthesize bt;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -75,6 +75,17 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
 	[_iflySynizeControl setSpeed:100];
 	[_iflySynizeControl start];
     
+    bt.userInfo = @"d";
+//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+-(void)btClick:(id)sender
+{
+    HFButton *bt;
+    if([sender isKindOfClass:[HFButton class]])
+    {
+        bt= sender;
+        NSLog(@"%@",bt.userInfo);
+    }
 }
 
 #pragma 识别接口实现
@@ -145,4 +156,12 @@ NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开�
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [bt release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [self setBt:nil];
+    [super viewDidUnload];
+}
 @end
