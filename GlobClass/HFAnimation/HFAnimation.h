@@ -17,5 +17,9 @@
 +(void) animationCurViewUp:(id)sender;
 +(void) animationExplosion:(id)sender;
 + (void)animationShake:(id)sender;
++(void)animationShow:(id)sender;
++(void)animationHidden:(id)sender;
++(void )animationMovepoint:(id)sender point:(CGPoint )point; //点移动
++(void)animationHeartbeat:(id)sender;
 +(void)palySound:(NSString*)soundAct;
 @end

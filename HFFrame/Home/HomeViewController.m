@@ -98,7 +98,8 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
         [(HFButton*)sender stopWarningAnimation];
         NSLog(@"%@",bt.userInfo);
     }
-    [HFAnimation animationCurViewDown:sender];
+//    [HFAnimation animationHeartbeat:sender];
+    [HFAnimation animationMovepoint:sender  point:CGPointMake(100, -10)];
 }
 
 #pragma -  语音接口实现

@@ -6,7 +6,7 @@
 
 
 #import "HFAnimation.h"
-
+#import "QuartzCore/QuartzCore.h"
 
 @implementation HFAnimation
 //!!!翻转 从左往右
@@ -90,6 +90,59 @@
         }
     }];
 }
+
++(void )animationMovepoint:(id)sender point:(CGPoint )point //点移动
+{
+    UIView *view = (UIView*)sender;
+    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"transform.translation"];
+    animation.duration = .5;
+    animation.toValue=[NSValue valueWithCGPoint:point];
+    animation.removedOnCompletion=NO;
+    animation.fillMode=kCAFillModeForwards;
+    [view.layer addAnimation:animation forKey:@"transform.scale"];
+}
+
+
+
+//!!! 隐藏动画
++(void)animationHidden:(id)sender
+{
+    UIView *view = (UIView*)sender;
+    [UIView animateWithDuration:1 animations:^{
+        [view setAlpha:0.0f];
+    } completion:^(BOOL finished){
+        [view setHidden:YES];
+        [view setAlpha:1];
+    }];
+}
+
+//!!! 隐藏动画
++(void)animationShow:(id)sender
+{
+    UIView *view = (UIView*)sender;
+    [view setAlpha:0];
+    [view setHidden:NO];
+    [UIView animateWithDuration:1 animations:^{
+        [view setAlpha:1.0f];
+    } completion:^(BOOL finished){
+        [view setAlpha:1];
+    }];
+}
+
+
++(void)animationHeartbeat:(id)sender
+{
+    float bigSize = 1.1;
+    UIView *view = (UIView*)sender;
+
+    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    pulseAnimation.duration = .5;
+    pulseAnimation.toValue = [NSNumber numberWithFloat:bigSize];
+    pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    pulseAnimation.autoreverses = YES;
+    pulseAnimation.repeatCount = FLT_MAX;
+    [view.layer addAnimation:pulseAnimation forKey:@"transform.scale"];
+};
 
 
 
