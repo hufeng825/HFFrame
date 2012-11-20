@@ -21,7 +21,6 @@
 +(void)animationHidden:(id)sender;
 +(void )animationMovepoint:(id)sender point:(CGPoint )point; //点移动
 +(void)animationHeartbeat:(id)sender;
-
 +(void)removeAllAnimation:(id)sender;
 
 +(void)palySound:(NSString*)soundAct;
