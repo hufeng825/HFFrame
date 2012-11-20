@@ -19,6 +19,7 @@
 		1848AF2F16328FD800AD42B6 /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */; };
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
+		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -81,6 +82,8 @@
 		1848AF3116328FD800AD42B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFBaseViewController.xib; sourceTree = "<group>"; };
 		60390693556A2D35E43E2729 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = "GlobClass/Array+Extensions/Array.m"; sourceTree = SOURCE_ROOT; };
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
+		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
+		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 				96876D90164C048400406C92 /* HomeViewController.h */,
 				96876D91164C048500406C92 /* HomeViewController.m */,
 				96876D92164C048500406C92 /* HomeViewController.xib */,
+				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 			);
 			path = HFFrame;
 			sourceTree = "<group>";
@@ -253,6 +257,15 @@
 				6039094F212CB306D7DE551E /* Array.h */,
 			);
 			name = "Array+Additons";
+			sourceTree = "<group>";
+		};
+		603909DF0C4A042C9DAE96F0 /* HFAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				60390C31B0D47E2AE9AF071F /* HFAnimation.m */,
+				60390F639EF55A8FFAE7BF29 /* HFAnimation.h */,
+			);
+			path = HFAnimation;
 			sourceTree = "<group>";
 		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
@@ -546,6 +559,7 @@
 				969D90AE1658C57000A382B2 /* UIColor+Hex.m in Sources */,
 				969D90C01658FB6200A382B2 /* HFButton.m in Sources */,
 				60390DEF8443AB722552E435 /* Array.m in Sources */,
+				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
