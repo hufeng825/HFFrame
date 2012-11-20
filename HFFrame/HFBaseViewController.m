@@ -15,10 +15,9 @@ bool ye =[email isMatchedByRegex:@""];
 
 
 #import "HFBaseViewController.h"
-#import "HFHttpRequest.h"
-#import "AFNetworkActivityIndicatorManager.h"
 #import "RegexKitLite.h"
 
+//!!! 设置tab 样式
 static inline void setUITabBarStyle (UITabBarController *tabBar)
 {
     for(UIView *view in tabBar.tabBar.subviews)
@@ -41,6 +40,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     }
 }
 
+
 @interface HFBaseViewController ()
 
 @end
@@ -49,7 +49,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 
 
 @implementation HFBaseViewController
-@synthesize titleLabel;
+@synthesize titleLabel,hfClient;
 
 - (id)init
 {
@@ -90,7 +90,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     HFHttpRequest *client = [HFHttpRequest sharedClient];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
 //    NSString *path = [NSString stringWithFormat:@"myapipath/?value=%@", value];
-    NSURLRequest *request = [client requestWithMethod:@"POST" path:
+    NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:
                              @"http://qa.fun-guide.mobi:7002/users/login.json?mobile=15810329037&password=96E79218965EB72C92A549DD5A330112"
                                            parameters:nil];
     [request setTimeoutInterval:30];
@@ -104,19 +104,31 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
      
     }];
     [operation start];
-    [[client operationQueue]cancelAllOperations];
+//    [[client operationQueue]cancelAllOperations];
 }
 #pragma mark  - 设置title
+
+-(HFHttpRequest *)hfClient
+{
+    if (!hfClient) {
+        self.hfClient = [HFHttpRequest client];
+    }
+    return hfClient;
+}
+
 -(void) toSetTitleLable
 {
-    self.titleLabel = [[[UILabel alloc] initWithFrame:self.navigationController.navigationBar.frame] autorelease];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.font = [UIFont boldSystemFontOfSize:22.0];
-    titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    titleLabel.textAlignment = UITextAlignmentCenter;
-    titleLabel.textColor = [UIColor whiteColor]; // change this color
-    [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
-    self.navigationItem.titleView = titleLabel;
+    if (!titleLabel) {
+        self.titleLabel = [[[UILabel alloc] initWithFrame:self.navigationController.navigationBar.frame] autorelease];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.font = [UIFont boldSystemFontOfSize:22.0];
+        titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        titleLabel.textAlignment = UITextAlignmentCenter;
+        titleLabel.textColor = [UIColor whiteColor]; // change this color
+        [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
+        self.navigationItem.titleView = titleLabel;
+
+    }
 }
 -(void)setTitle:(NSString *)title
 {
@@ -143,14 +155,19 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     NSLog(@"su button %d",buttonIndex);
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 - (void)dealloc
 {
+    [[hfClient operationQueue]cancelAllOperations];
     RELEASE_SAFELY(titleLabel);
+    RELEASE_CF_SAFELY(hfClient);
     [super dealloc];
 }
 
