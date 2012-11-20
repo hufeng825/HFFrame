@@ -79,8 +79,8 @@
     CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
     CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
     view.transform = translateLeft;
-    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        [UIView setAnimationRepeatCount:2.0];
+    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:FLT_MAX];
         view.transform = translateRight;
     } completion:^(BOOL finished) {
         if (finished) {
@@ -102,6 +102,13 @@
     [view.layer addAnimation:animation forKey:@"transform.scale"];
 }
 
+
++(void)removeAllAnimation:(id)sender;
+{
+    UIView *view = (UIView*)sender;
+    [UIView setAnimationsEnabled:YES];
+    [view.layer removeAllAnimations];
+}
 
 
 //!!! 隐藏动画

@@ -83,23 +83,25 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     //HFbutton类使用
     bt.userInfo = @"d";
     [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
-    [bt beginWarningAnimation];
+//    [bt beginWarningAnimation];
     
     //arrary 数组去重复
     NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
     NSLog(@"%@",array);
     NSLog(@"%@", [array uniqueMembers]);
+//     [HFAnimation animationHeartbeat:bt];
+    [HFAnimation animationShake:bt];
+
 }
 -(void)btClick:(id)sender
 {
     if([sender isKindOfClass:[HFButton class]])
     {
         //停止醒目提示
-        [(HFButton*)sender stopWarningAnimation];
+//        [(HFButton*)sender stopWarningAnimation];
         NSLog(@"%@",bt.userInfo);
+        [HFAnimation removeAllAnimation:sender];
     }
-//    [HFAnimation animationHeartbeat:sender];
-    [HFAnimation animationMovepoint:sender  point:CGPointMake(100, -10)];
 }
 
 #pragma -  语音接口实现
