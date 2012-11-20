@@ -11,4 +11,6 @@
 @interface HFButton : UIButton
 @property(nonatomic,copy)id userInfo;
 @property(nonatomic,assign) int index;
+-(void)beginWarningAnimation;
+-(void)stopWarningAnimation;
 @end

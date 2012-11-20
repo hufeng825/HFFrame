@@ -7,6 +7,7 @@
 //
 
 #import "HFStyle.h"
+#import "UIColor+Hex.h"
 @implementation HFStyle
 
 @end

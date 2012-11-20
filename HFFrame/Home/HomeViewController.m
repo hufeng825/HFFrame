@@ -80,7 +80,7 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     bt.userInfo = @"d";
     [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
 
-
+    [bt beginWarningAnimation];
     NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
     NSLog(@"%@",array);
     NSLog(@"%@", [array uniqueMembers]);
@@ -91,6 +91,7 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     if([sender isKindOfClass:[HFButton class]])
     {
         bt= sender;
+        [bt stopWarningAnimation];
         NSLog(@"%@",bt.userInfo);
     }
 }

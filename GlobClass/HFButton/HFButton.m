@@ -31,10 +31,10 @@
 -(void)initStyle
 {
     [self initStyle: UIControlStateNormal];
-    [self initStyle: UIControlStateHighlighted ];                  // used when UIControl isHighlighted is set
+    [self initStyle: UIControlStateHighlighted ]; // used when UIControl isHighlighted is set
     [self initStyle: UIControlStateDisabled];
-    [self initStyle: UIControlStateSelected];                   // flag usable by app (see below)
-    [self initStyle: UIControlStateApplication];              // additional flags available for application use
+    [self initStyle: UIControlStateSelected];     // flag usable by app (see below)
+    [self initStyle: UIControlStateApplication];  // additional flags available for application use
     [self initStyle:UIControlStateReserved];
 }
 
@@ -58,7 +58,29 @@
     }
 }
 
+-(void)beginWarningAnimation
+{
+    UIViewAnimationOptions options = UIViewAnimationCurveLinear | UIViewAnimationOptionAllowUserInteraction|
+        UIViewAnimationOptionRepeat|
+        UIViewAnimationOptionAutoreverse
+    ;
+    
+    [UIView animateWithDuration:1 delay:0.0 options:options animations:^
+     {
+         self.alpha = .6;
+         
+     } completion:nil];
 
+}
+-(void)stopWarningAnimation
+{
+    [UIView animateWithDuration:1 delay:0.0 options:nil animations:^
+     {
+         self.alpha = 1;
+         
+     } completion:nil];
+
+}
 
 -(void)setUserInfo:(id)_userInfo
 {
