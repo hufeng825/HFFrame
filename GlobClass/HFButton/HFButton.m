@@ -74,7 +74,7 @@
 }
 -(void)stopWarningAnimation
 {
-    [UIView animateWithDuration:1 delay:0.0 options:nil animations:^
+    [UIView animateWithDuration:1 animations:^
      {
          self.alpha = 1;
          
