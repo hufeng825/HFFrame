@@ -35,6 +35,9 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     [label setText:warningStr];
     [label setNumberOfLines:0];
     [self.view addSubview:label];
+    
+    
+    
        // Do any additional setup after loading the view from its nib.
     /**************************************************************
      ************************下载图片代码段****************************
@@ -47,9 +50,7 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     *********************************************************************/
      
      
-    NSString *initParam = [[NSString alloc] initWithFormat:@"appid=%@",APPID];
-    
-    
+//    NSString *initParam = [[NSString alloc] initWithFormat:@"appid=%@",APPID];
     /********************----识别---******************
     IFlyRecognizeControl *_iflyRecognizeControl = [[IFlyRecognizeControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
     [self.view addSubview:_iflyRecognizeControl];
@@ -77,21 +78,23 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 	[_iflySynizeControl start];
      ***********************************************/
 
+    
+    //HFbutton类使用
     bt.userInfo = @"d";
     [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
-
     [bt beginWarningAnimation];
+    
+    //arrary 数组去重复
     NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
     NSLog(@"%@",array);
     NSLog(@"%@", [array uniqueMembers]);
 }
 -(void)btClick:(id)sender
 {
-    HFButton *bt;
     if([sender isKindOfClass:[HFButton class]])
     {
-        bt= sender;
-        [bt stopWarningAnimation];
+        //停止醒目提示
+        [(HFButton*)sender stopWarningAnimation];
         NSLog(@"%@",bt.userInfo);
     }
 }
@@ -131,7 +134,6 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 
 
 #pragma 合成接口实现
-
 - (void)onSynthesizerEnd:(IFlySynthesizerControl *)iFlySynthesizerControl theError:(SpeechError) error
 {
     
@@ -142,14 +144,12 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     // 获取上传流量和下载流量
 	NSLog(@"upFlow:%d,downFlow:%d",[iFlySynthesizerControl getUpflow],[iFlySynthesizerControl getDownflow]);
 }
-
 // get the player buffer progress
 // 获取播放器缓冲进度
 - (void)onSynthesizerBufferProgress:(float)bufferProgress
 {
     NSLog(@"the playing buffer :%f",bufferProgress);
 }
-
 // get the player progress
 // 获取播放器的播放进度
 - (void)onSynthesizerPlayProgress:(float)playProgress
