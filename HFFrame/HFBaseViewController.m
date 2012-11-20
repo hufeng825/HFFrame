@@ -87,23 +87,9 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     
     [self toSetTitleLable];
     
-    HFHttpRequest *client = [HFHttpRequest sharedClient];
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
+//    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
 //    NSString *path = [NSString stringWithFormat:@"myapipath/?value=%@", value];
-    NSMutableURLRequest *request = [client requestWithMethod:@"POST" path:
-                             @"http://qa.fun-guide.mobi:7002/users/login.json?mobile=15810329037&password=96E79218965EB72C92A549DD5A330112"
-                                           parameters:nil];
-    [request setTimeoutInterval:30];
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-    {
-        NSLog(@"json %@",JSON);
-        // do something with return data
-    }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
-    {
-        // code for failed request goes here        
-     
-    }];
-    [operation start];
+   
 //    [[client operationQueue]cancelAllOperations];
 }
 #pragma mark  - 设置title
