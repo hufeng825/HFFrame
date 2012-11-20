@@ -14,4 +14,5 @@
     
 }
 +(HFHttpRequest *)sharedClient;
++(HFHttpRequest *)client;
 @end

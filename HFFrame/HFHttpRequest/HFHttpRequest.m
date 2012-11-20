@@ -17,10 +17,25 @@
     
     return self;
 }
-+(HFHttpRequest *)sharedClient
+
+//非单例模式
++(HFHttpRequest *)client
 {
     return [[[self alloc]init]autorelease];
 }
+
+//单例模式
++(HFHttpRequest *)sharedClient
+{
+    static HFHttpRequest *sharedHttpRequest = nil;
+    @synchronized([HFHttpRequest class])
+    {
+        if(!sharedHttpRequest)
+            sharedHttpRequest = [[HFHttpRequest alloc] init];
+    }
+    return sharedHttpRequest;
+}
+
 
 
 -(id)initWithBaseURL:(NSURL *)url {
@@ -31,9 +46,7 @@
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self setDefaultHeader:@"Accept" value:@"application/json"];
     self.parameterEncoding = AFJSONParameterEncoding;
-    
     return self;
-    
 }
 
 - (void)dealloc {
