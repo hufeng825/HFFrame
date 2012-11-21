@@ -13,6 +13,8 @@
 #import "HttpExampleViewController.h"
 #import "WebPictureViewController.h"
 #import "HFButtonExampleViewController.h"
+#import "AnimationExampleViewController.h"
+
 
 const NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
 
@@ -85,7 +87,7 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
     
 
 }
@@ -162,6 +164,18 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
             
+        }
+            break;
+        case 3:
+        {
+            HFAlert(@"详情请参阅头文件 对原有数据格式添加了很多方法 例如 数组去重复  string 判断 等等");
+        }
+            
+        case 4:
+        {
+            AnimationExampleViewController *vc = [[AnimationExampleViewController alloc]initWithNibName:@"AnimationExampleViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         default:

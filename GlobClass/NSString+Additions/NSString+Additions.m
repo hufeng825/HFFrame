@@ -181,7 +181,7 @@
     NSString * comparStr = [[self componentsSeparatedByCharactersInSet:cs]componentsJoinedByString:@""];
     return [self isEqualToString:comparStr];
 }
-
+//验证是否是字母
 -(BOOL)isLetterStr
 {
     return [self isMatchedByRegex:@"^([A-Za-z]+$"];
