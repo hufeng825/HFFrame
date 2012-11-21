@@ -231,7 +231,6 @@
 				96876D90164C048400406C92 /* HomeViewController.h */,
 				96876D91164C048500406C92 /* HomeViewController.m */,
 				96876D92164C048500406C92 /* HomeViewController.xib */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 			);
 			path = HFFrame;
 			sourceTree = "<group>";
@@ -320,6 +319,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				969D90BD1658FAD000A382B2 /* HFButton */,
 				969D90AF1658C88100A382B2 /* UIColor+Additons */,
 				9693403816561F5200F1BDC1 /* NSDictionary+Additons */,
