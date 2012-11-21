@@ -11,7 +11,7 @@
 #import "UIImageView+WebCache.h"
 
 #import "HttpExampleViewController.h"
-
+#import "WebPictureViewController.h"
 
 
 const NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
@@ -43,16 +43,7 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     
     self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
-    /**************************************************************
-     ************************下载图片代码段****************************
-    
-     UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:imageView];
-    [imageView setImageWithURL:[NSURL URLWithString:@"http://img.my.csdn.net/uploads/201101/25/3619941_1295933551y8U4.jpg"]
-                   placeholderImage:[UIImage imageNamed:@"default.png"]];
-    
-    *********************************************************************/
-     
+        
      
 //    NSString *initParam = [[NSString alloc] initWithFormat:@"appid=%@",APPID];
     /********************----识别---******************
@@ -141,23 +132,30 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self pushController:[context_array objectAtIndex:indexPath.row]];
+    [self pushController:indexPath.row];
 }
 
 #pragma -
 
--(void)pushController:(NSString*)title
+-(void)pushController:(NSInteger)row
 {
-    switch ([title intValue])
+    switch (row)
     {
         case 0:
         {
             HttpExampleViewController *vc = [[HttpExampleViewController alloc]initWithNibName:@"HttpExampleViewController" bundle:nil];
-            vc.title = title;
+            vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
-            
+        case 1:
+        {
+            WebPictureViewController *vc = [[WebPictureViewController alloc]initWithNibName:@"WebPictureViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }
+            break;
         default:
             break;
     }
