@@ -29,6 +29,10 @@
 		962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */; };
 		962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F702C165CB5800032A849 /* AnimationExampleViewController.m */; };
 		962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F702D165CB5810032A849 /* AnimationExampleViewController.xib */; };
+		96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96791686165CBFE2006F52B9 /* VoiceReadViewController.m */; };
+		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
+		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
+		9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -107,6 +111,12 @@
 		962F702B165CB5800032A849 /* AnimationExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationExampleViewController.h; path = HFFrame/Example/AnimationExampleViewController.h; sourceTree = "<group>"; };
 		962F702C165CB5800032A849 /* AnimationExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationExampleViewController.m; path = HFFrame/Example/AnimationExampleViewController.m; sourceTree = "<group>"; };
 		962F702D165CB5810032A849 /* AnimationExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimationExampleViewController.xib; path = HFFrame/Example/AnimationExampleViewController.xib; sourceTree = "<group>"; };
+		96791685165CBFE2006F52B9 /* VoiceReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceReadViewController.h; path = HFFrame/Example/VoiceReadViewController.h; sourceTree = "<group>"; };
+		96791686165CBFE2006F52B9 /* VoiceReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceReadViewController.m; path = HFFrame/Example/VoiceReadViewController.m; sourceTree = "<group>"; };
+		96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceReadViewController.xib; path = HFFrame/Example/VoiceReadViewController.xib; sourceTree = "<group>"; };
+		9679168B165CD819006F52B9 /* VoiceExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceExampleViewController.h; path = HFFrame/Example/VoiceExampleViewController.h; sourceTree = "<group>"; };
+		9679168C165CD819006F52B9 /* VoiceExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceExampleViewController.m; path = HFFrame/Example/VoiceExampleViewController.m; sourceTree = "<group>"; };
+		9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceExampleViewController.xib; path = HFFrame/Example/VoiceExampleViewController.xib; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -304,6 +314,8 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				9679168A165CD7F5006F52B9 /* 语音识别 */,
+				96791683165CBF97006F52B9 /* 语音播报 */,
 				962F7030165CB5870032A849 /* 动画 */,
 				962F7006165C9D2B0032A849 /* 网络请求 */,
 				962F701A165CAC720032A849 /* 网络图片 */,
@@ -350,6 +362,26 @@
 				962F702D165CB5810032A849 /* AnimationExampleViewController.xib */,
 			);
 			name = "动画";
+			sourceTree = "<group>";
+		};
+		96791683165CBF97006F52B9 /* 语音播报 */ = {
+			isa = PBXGroup;
+			children = (
+				96791685165CBFE2006F52B9 /* VoiceReadViewController.h */,
+				96791686165CBFE2006F52B9 /* VoiceReadViewController.m */,
+				96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */,
+			);
+			name = "语音播报";
+			sourceTree = "<group>";
+		};
+		9679168A165CD7F5006F52B9 /* 语音识别 */ = {
+			isa = PBXGroup;
+			children = (
+				9679168B165CD819006F52B9 /* VoiceExampleViewController.h */,
+				9679168C165CD819006F52B9 /* VoiceExampleViewController.m */,
+				9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */,
+			);
+			name = "语音识别";
 			sourceTree = "<group>";
 		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
@@ -607,6 +639,8 @@
 				962F701F165CACAB0032A849 /* WebPictureViewController.xib in Resources */,
 				962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */,
 				962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */,
+				96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */,
+				9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +689,8 @@
 				962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */,
 				962F7028165CAFD30032A849 /* HFButtonExampleViewController.m in Sources */,
 				962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */,
+				96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */,
+				9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
