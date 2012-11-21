@@ -14,9 +14,9 @@
 #import "WebPictureViewController.h"
 #import "HFButtonExampleViewController.h"
 #import "AnimationExampleViewController.h"
+#import "VoiceReadViewController.h"
+#import "VoiceExampleViewController.h"
 
-
-const NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
 
 @interface HomeViewController ()
 
@@ -46,47 +46,6 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
         
-     
-//    NSString *initParam = [[NSString alloc] initWithFormat:@"appid=%@",APPID];
-    /********************----识别---******************
-    IFlyRecognizeControl *_iflyRecognizeControl = [[IFlyRecognizeControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
-    [self.view addSubview:_iflyRecognizeControl];
-    // Configure the RecognizeControl
-    // 设置语音识别控件的参数,具体参数可参看开发文档
-	[_iflyRecognizeControl setEngine:@"sms" engineParam:nil grammarID:nil];
-    [_iflyRecognizeControl setSampleRate:16000];
-	_iflyRecognizeControl.delegate = self;
-    [initParam release];
-	[_iflyRecognizeControl start];
-    *************************************************/
-    
-    /********************----播报---******************
-    IFlySynthesizerControl *_iflySynizeControl = [[IFlySynthesizerControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
-    [self.view addSubview:_iflySynizeControl];
-    // Configure the RecognizeControl
-    // 设置语音识别控件的参数,具体参数可参看开发文档
-	[_iflySynizeControl setText:warningStr params:nil ];
-	_iflySynizeControl.delegate = self;
-    [_iflySynizeControl setVoiceName:@"xiaoyu"];
-//    [_iflySynizeControl setSpeed:];
-    [initParam release];
-    [_iflySynizeControl setShowUI:NO];
-	[_iflySynizeControl setSpeed:100];
-	[_iflySynizeControl start];
-     ***********************************************/
-//    //HFbutton类使用
-//    bt.userInfo = @"d";
-//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
-////    [bt beginWarningAnimation];
-//    
-//    //arrary 数组去重复
-//    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
-//    NSLog(@"%@",array);
-//    NSLog(@"%@", [array uniqueMembers]);
-////     [HFAnimation animationHeartbeat:bt];
-//    [HFAnimation animationShake:bt];
-    
-    
     self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
     
 
@@ -170,7 +129,7 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
         {
             HFAlert(@"详情请参阅头文件 对原有数据格式添加了很多方法 例如 数组去重复  string 判断 等等");
         }
-            
+            break;
         case 4:
         {
             AnimationExampleViewController *vc = [[AnimationExampleViewController alloc]initWithNibName:@"AnimationExampleViewController" bundle:nil];
@@ -178,6 +137,20 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 5:
+        {
+            VoiceReadViewController *vc = [[VoiceReadViewController alloc]initWithNibName:@"VoiceReadViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 6:
+        {
+            VoiceExampleViewController *vc = [[VoiceExampleViewController alloc]initWithNibName:@"VoiceExampleViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+
+        }
         default:
             break;
     }
