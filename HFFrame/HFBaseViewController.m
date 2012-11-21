@@ -118,6 +118,10 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 }
 -(void)setTitle:(NSString *)title
 {
+    if (!titleLabel)
+    {
+        [self toSetTitleLable];
+    }
     if (title)
     {
         self.titleLabel.text = title;
