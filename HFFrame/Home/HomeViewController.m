@@ -12,7 +12,7 @@
 
 #import "HttpExampleViewController.h"
 #import "WebPictureViewController.h"
-
+#import "HFButtonExampleViewController.h"
 
 const NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
 
@@ -154,6 +154,14 @@ const NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
 
+        }
+            break;
+        case 2:
+        {
+            HFButtonExampleViewController *vc = [[HFButtonExampleViewController alloc]initWithNibName:@"HFButtonExampleViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+            
         }
             break;
         default:

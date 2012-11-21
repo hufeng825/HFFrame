@@ -24,6 +24,8 @@
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
 		962F701F165CACAB0032A849 /* WebPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F701D165CACAB0032A849 /* WebPictureViewController.xib */; };
+		962F7028165CAFD30032A849 /* HFButtonExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */; };
+		962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -94,6 +96,9 @@
 		962F701B165CACAB0032A849 /* WebPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebPictureViewController.h; path = HFFrame/Example/WebPictureViewController.h; sourceTree = "<group>"; };
 		962F701C165CACAB0032A849 /* WebPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebPictureViewController.m; path = HFFrame/Example/WebPictureViewController.m; sourceTree = "<group>"; };
 		962F701D165CACAB0032A849 /* WebPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebPictureViewController.xib; path = HFFrame/Example/WebPictureViewController.xib; sourceTree = "<group>"; };
+		962F7025165CAFD20032A849 /* HFButtonExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButtonExampleViewController.h; path = HFFrame/Example/HFButtonExampleViewController.h; sourceTree = "<group>"; };
+		962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFButtonExampleViewController.m; path = HFFrame/Example/HFButtonExampleViewController.m; sourceTree = "<group>"; };
+		962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFButtonExampleViewController.xib; path = HFFrame/Example/HFButtonExampleViewController.xib; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -281,8 +286,9 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
-				962F701A165CAC720032A849 /* 网络图片 */,
 				962F7006165C9D2B0032A849 /* 网络请求 */,
+				962F701A165CAC720032A849 /* 网络图片 */,
+				962F702A165CB0930032A849 /* HFButton */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -305,6 +311,16 @@
 				962F701D165CACAB0032A849 /* WebPictureViewController.xib */,
 			);
 			name = "网络图片";
+			sourceTree = "<group>";
+		};
+		962F702A165CB0930032A849 /* HFButton */ = {
+			isa = PBXGroup;
+			children = (
+				962F7025165CAFD20032A849 /* HFButtonExampleViewController.h */,
+				962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */,
+				962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */,
+			);
+			name = HFButton;
 			sourceTree = "<group>";
 		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
@@ -559,6 +575,7 @@
 				969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */,
 				962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */,
 				962F701F165CACAB0032A849 /* WebPictureViewController.xib in Resources */,
+				962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +621,7 @@
 				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
 				962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */,
 				962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */,
+				962F7028165CAFD30032A849 /* HFButtonExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
