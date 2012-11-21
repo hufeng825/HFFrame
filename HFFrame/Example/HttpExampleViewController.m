@@ -34,7 +34,7 @@
     [request setTimeoutInterval:30];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
                                          {
-//                                             NSLog(@"json %@",JSON);
+                                             NSLog(@"json %@",[JSON class]);
                                              _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
                                              // do something with return data
                                          }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
