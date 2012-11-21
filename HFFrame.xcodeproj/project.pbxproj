@@ -20,6 +20,8 @@
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
+		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
+		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -84,6 +86,9 @@
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
 		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
 		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
+		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
+		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
+		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 		1848AF0616328FD800AD42B6 = {
 			isa = PBXGroup;
 			children = (
+				962F7004165C9D170032A849 /* example */,
 				1848AF1B16328FD800AD42B6 /* HFFrame */,
 				1848AF1416328FD800AD42B6 /* Frameworks */,
 				1848AF1216328FD800AD42B6 /* Products */,
@@ -265,6 +271,24 @@
 				60390F639EF55A8FFAE7BF29 /* HFAnimation.h */,
 			);
 			path = HFAnimation;
+			sourceTree = "<group>";
+		};
+		962F7004165C9D170032A849 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				962F7006165C9D2B0032A849 /* 网络请求 */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
+		962F7006165C9D2B0032A849 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				962F7007165C9D760032A849 /* HttpExampleViewController.h */,
+				962F7008165C9D760032A849 /* HttpExampleViewController.m */,
+				962F7009165C9D760032A849 /* HttpExampleViewController.xib */,
+			);
+			name = "网络请求";
 			sourceTree = "<group>";
 		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
@@ -517,6 +541,7 @@
 				969D90A51658AC4C00A382B2 /* btm_nav@2x.png in Resources */,
 				969D90AA1658B2DD00A382B2 /* navigation.jpg in Resources */,
 				969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */,
+				962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +585,7 @@
 				969D90C01658FB6200A382B2 /* HFButton.m in Sources */,
 				60390DEF8443AB722552E435 /* Array.m in Sources */,
 				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
+				962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
