@@ -64,6 +64,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     self = [super initWithCoder:aDecoder];
     if (self)
     {
+
     }
     return self;
 }
@@ -72,6 +73,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+
     }
     return self;
 }

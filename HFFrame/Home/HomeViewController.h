@@ -12,6 +12,6 @@
 #import "iFlyMSC/IFlySynthesizerControl.h"
 #import "HFButton.h"
 @interface HomeViewController : HFBaseViewController
-@property (retain, nonatomic) IBOutlet HFButton *bt;
-
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) NSArray *context_array;
 @end

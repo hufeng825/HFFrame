@@ -10,14 +10,19 @@
 #import "HFAnimation.h"
 #import "UIImageView+WebCache.h"
 
-static NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
+#import "HttpExampleViewController.h"
+
+
+
+const NSString *warningStr = @"这是一个开源的工程 目前集成了 一些开发常用的开源库，纯属个人爱好 方便大家能快速迭代开发，如果侵犯到您的版权信息 请联系 550230997@qq.com";
 
 @interface HomeViewController ()
 
 @end
 
 @implementation HomeViewController
-@synthesize bt;
+@synthesize context_array;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,16 +34,14 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.title = @"首页";
-    
-    UILabel *label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.view.width, 100)]autorelease];
-    [label setText:warningStr];
-    [label setNumberOfLines:0];
-    [self.view addSubview:label];
+    [super viewDidLoad];    
+//    UILabel *label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.view.width, 100)]autorelease];
+//    [label setText:warningStr];
+//    [label setNumberOfLines:0];
+//    [self.view addSubview:label];
     
     
-    
+    self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
     /**************************************************************
      ************************下载图片代码段****************************
@@ -78,55 +81,91 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 	[_iflySynizeControl setSpeed:100];
 	[_iflySynizeControl start];
      ***********************************************/
+//    //HFbutton类使用
+//    bt.userInfo = @"d";
+//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
+////    [bt beginWarningAnimation];
+//    
+//    //arrary 数组去重复
+//    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
+//    NSLog(@"%@",array);
+//    NSLog(@"%@", [array uniqueMembers]);
+////     [HFAnimation animationHeartbeat:bt];
+//    [HFAnimation animationShake:bt];
+    
+    
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
+    
 
-    
-    //HFbutton类使用
-    bt.userInfo = @"d";
-    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
-//    [bt beginWarningAnimation];
-    [bt beginActivity:@"胡峰" postion:ActiveLeftOnBt];
-//    [activeView startAnimating];
-    //arrary 数组去重复
-    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
-    NSLog(@"%@",array);
-    NSLog(@"%@", [array uniqueMembers]);
-//    [HFAnimation animationHeartbeat:bt];
-    
-    /***********************网络请求例子*****************************/
-    NSMutableURLRequest *request = [self.hfClient requestWithMethod:@"POST" path:
-                                    @"http://qa.fun-guide.mobi:7002/users/login.json?mobile=15810329037&password=96E79218965EB72C92A549DD5A330112"
-                                                  parameters:nil];
-    [request setTimeoutInterval:30];
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-                                         {
-                                             NSLog(@"json %@",JSON);
-                                             // do something with return data
-                                         }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
-                                         {
-                                             // code for failed request goes here        
-                                             
-                                         }];
-    [operation start];
-
-    int64_t delayInSeconds = 5.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [bt stopActivity];
-    });
-    
 }
--(void)btClick:(id)sender
+//-(void)btClick:(id)sender
+//{
+//    if([sender isKindOfClass:[HFButton class]])
+//    {
+//        //停止醒目提示
+////        [(HFButton*)sender stopWarningAnimation];
+//        NSLog(@"%@",bt.userInfo);
+//        [HFAnimation removeAllAnimation:sender];
+//    }
+//}
+
+#pragma -
+#pragma - UItableView delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if([sender isKindOfClass:[HFButton class]])
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
+{
+    return [context_array count];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    return 60;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
+{
+    static NSString * showUserInfoCellIdentifier = @"ShowUserInfoCell";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:showUserInfoCellIdentifier];
+    if (cell == nil)
     {
-        //停止醒目提示
-//        [(HFButton*)sender stopWarningAnimation];
-        NSLog(@"%@",bt.userInfo);
-        [HFAnimation removeAllAnimation:sender];
-        [bt setEnabled:NO];
+        // Create a cell to display an ingredient.
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                       reuseIdentifier:showUserInfoCellIdentifier]
+                autorelease];
+    }
+    
+    // Configure the cell.
+    cell.textLabel.text= [context_array objectAtIndex:indexPath.row];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self pushController:[context_array objectAtIndex:indexPath.row]];
+}
+
+#pragma -
+
+-(void)pushController:(NSString*)title
+{
+    switch ([title intValue])
+    {
+        case 0:
+        {
+            HttpExampleViewController *vc = [[HttpExampleViewController alloc]initWithNibName:@"HttpExampleViewController" bundle:nil];
+            vc.title = title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
     }
     NSLog(@"%d",ISJailBreak);
 }
+
+
+
 
 #pragma -  语音接口实现
 #pragma    识别接口实现
@@ -195,11 +234,12 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 }
 
 - (void)dealloc {
-    [bt release];
+    [_tableView release];
     [super dealloc];
 }
 - (void)viewDidUnload {
-    [self setBt:nil];
+    RELEASE_CF_SAFELY(context_array);
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 @end
