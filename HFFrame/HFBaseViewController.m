@@ -15,16 +15,41 @@ bool ye =[email isMatchedByRegex:@""];
 
 
 #import "HFBaseViewController.h"
-#import "HFHttpRequest.h"
-#import "AFNetworkActivityIndicatorManager.h"
 #import "RegexKitLite.h"
+
+//!!! 设置tab 样式
+static inline void setUITabBarStyle (UITabBarController *tabBar)
+{
+    for(UIView *view in tabBar.tabBar.subviews)
+    {
+        if([view isKindOfClass:[UIImageView class]])
+        {
+            [view removeFromSuperview];
+        }
+    }
+    UIImageView *imageView = [[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"teb.png"]]autorelease];
+    imageView.width = tabBar.tabBar.width;
+    imageView.height = tabBar.tabBar.height;
+    [tabBar.tabBar insertSubview:imageView  atIndex:0];
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5"))
+    {
+        [tabBar.tabBar setSelectedImageTintColor:[UIColor whiteColor]];
+        UIImage *img = [UIImage imageNamed:@"tab_bg.png"];
+        UIImage *img1 = [img imageByScalingToSize:CGSizeMake(imageView.width/[[tabBar viewControllers]count],imageView.height)];
+        [tabBar.tabBar setSelectionIndicatorImage:img1];
+    }
+}
+
 
 @interface HFBaseViewController ()
 
 @end
 
-@implementation HFBaseViewController
 
+
+
+@implementation HFBaseViewController
+@synthesize titleLabel,hfClient;
 
 - (id)init
 {
@@ -52,32 +77,62 @@ bool ye =[email isMatchedByRegex:@""];
 }
 
 
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    HFHttpRequest *client = [HFHttpRequest sharedClient];
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
-//    NSString *path = [NSString stringWithFormat:@"myapipath/?value=%@", value];
-    NSURLRequest *request = [client requestWithMethod:@"POST" path:
-                             @"http://qa.fun-guide.mobi:7002/users/login.json?mobile=15810329037&password=96E79218965EB72C92A549DD5A330112"
-                                           parameters:nil];
-    [request setTimeoutInterval:3];
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-    {
-        NSLog(@"json %@",JSON);
-        // do something with return data
-    }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
-                                         {
-        // code for failed request goes here        
-     
-    }];
-    [operation start];
-    [[client operationQueue]cancelAllOperations];
-
+    [self toSetTitleLable];
     
+//    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];    
+//    NSString *path = [NSString stringWithFormat:@"myapipath/?value=%@", value];
+   
+//    [[client operationQueue]cancelAllOperations];
 }
+#pragma mark  - 设置title
+
+-(HFHttpRequest *)hfClient
+{
+    if (!hfClient) {
+        self.hfClient = [HFHttpRequest client];
+    }
+    return hfClient;
+}
+
+-(void) toSetTitleLable
+{
+    if (!titleLabel) {
+        self.titleLabel = [[[UILabel alloc] initWithFrame:self.navigationController.navigationBar.frame] autorelease];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.font = [UIFont boldSystemFontOfSize:22.0];
+        titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        titleLabel.textAlignment = UITextAlignmentCenter;
+        titleLabel.textColor = [UIColor whiteColor]; // change this color
+        [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
+        self.navigationItem.titleView = titleLabel;
+
+    }
+}
+-(void)setTitle:(NSString *)title
+{
+    if (!titleLabel)
+    {
+        [self toSetTitleLable];
+    }
+    if (title)
+    {
+        self.titleLabel.text = title;
+    }
+}
+
+-(NSString*)title
+{
+    return self.titleLabel.text;
+}
+
 
 -(void)buttonIndexClick
 {
@@ -90,10 +145,20 @@ bool ye =[email isMatchedByRegex:@""];
     NSLog(@"su button %d",buttonIndex);
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)dealloc
+{
+    [[hfClient operationQueue]cancelAllOperations];
+    RELEASE_SAFELY(titleLabel);
+    RELEASE_CF_SAFELY(hfClient);
+    [super dealloc];
 }
 
 @end

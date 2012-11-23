@@ -23,12 +23,13 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-  
-	self.viewController = [[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] autorelease];
+
+
+    self.viewController = [[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil] autorelease];
     UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:self.viewController];
 	self.window.rootViewController = nv ;
     [self.window makeKeyAndVisible];
-    
+    [nv release];
     UIImageView *splashScreen = [[[UIImageView alloc] initWithFrame:self.window.bounds] autorelease];
     splashScreen.image = [UIImage imageNamed:@"Default"];
     [self.window addSubview:splashScreen];
