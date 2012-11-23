@@ -13,6 +13,7 @@
 @interface HFButtonExampleViewController : HFBaseViewController
 @property (retain, nonatomic) IBOutlet HFButton *warningBt;
 @property (retain, nonatomic) IBOutlet HFButton *passValueBt;
+@property (retain, nonatomic) IBOutlet HFButton *loadingBt;
 
 - (IBAction)Btclicked:(id)sender;
 @end
