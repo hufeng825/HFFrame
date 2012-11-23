@@ -27,4 +27,5 @@
 -(BOOL)isPersonCard;
 -(BOOL)isNumberStr;
 -(BOOL)isNameStr;//只准有字母和英文
+-(BOOL)isEmailAddress;
 @end
