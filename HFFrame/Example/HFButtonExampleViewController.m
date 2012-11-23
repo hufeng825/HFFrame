@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view from its nib.
     [_warningBt beginWarningAnimation];
     _passValueBt.userInfo =@"你好胡峰";
+    [_loadingBt beginActivity:@"仿QQ登录Bt" postion:ActiveRightOnBt];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,11 +41,13 @@
 - (void)dealloc {
     [_warningBt release];
     [_passValueBt release];
+    [_loadingBt release];
     [super dealloc];
 }
 - (void)viewDidUnload {
     [self setWarningBt:nil];
     [self setPassValueBt:nil];
+    [self setLoadingBt:nil];
     [super viewDidUnload];
 }
 - (IBAction)Btclicked:(id)sender

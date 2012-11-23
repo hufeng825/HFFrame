@@ -45,10 +45,24 @@
     
     self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
-        
     self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
     
-
+   
+    
+//    //HFbutton类使用
+//    bt.userInfo = @"d";
+//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
+////    [bt beginWarningAnimation];
+//    
+//    //arrary 数组去重复
+//    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
+//    NSLog(@"%@",array);
+//    NSLog(@"%@", [array uniqueMembers]);
+////     [HFAnimation animationHeartbeat:bt];
+//    [HFAnimation animationShake:bt];
+    
+    
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
