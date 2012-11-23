@@ -118,6 +118,7 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
         NSLog(@"%@",bt.userInfo);
         [HFAnimation removeAllAnimation:sender];
     }
+    NSLog(@"%d",ISJailBreak);
 }
 
 #pragma -  语音接口实现

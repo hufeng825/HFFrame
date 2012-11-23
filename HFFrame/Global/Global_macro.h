@@ -24,6 +24,15 @@
 // Release a CoreFoundation object safely.检测对象是否为nil，如果不为nil释放对象，最后赋值为nil。
 #define RELEASE_CF_SAFELY(__REF) { if (nil != (__REF)) { CFRelease(__REF); __REF = nil; } }
 
+#define HFAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+//判断是否越狱
+#define ISJailBreak system("ls") == 0 ? YES:NO
+//机器语言
+#define HFApplicationLanguage [[NSUserDefaults standardUserDefaults]\
+       objectForKey:@"AppleLanguages"]\
+	   objectAtIndex:0];
+//ios版本
+#define IOSVersion [[[UIDevice currentDevice] systemVersion] floatValue];
 
 #define HFAlert(m) \
     {\
