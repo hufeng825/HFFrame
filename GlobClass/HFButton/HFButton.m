@@ -7,14 +7,14 @@
 //
 
 #import "HFButton.h"
-
 @implementation HFButton
-@synthesize userInfo,index;
+@synthesize userInfo,index,activeView,tmpTitle;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self initStyle];
     }
     return self;
 }
@@ -37,7 +37,10 @@
     [self initStyle: UIControlStateApplication];  // additional flags available for application use
     [self initStyle:UIControlStateReserved];
 }
-
+-(void)initUIActivityView
+{
+    
+}
 -(void)initStyle :(UIControlState)state
 {
     if ([self backgroundImageForState:state])
@@ -89,12 +92,47 @@
         userInfo = [_userInfo copy];
     }
 }
+
+-(void)beginActivity:(NSString*)title postion:(ActionPostionOnBt)postion
+{
+    if (!activeView)
+    {
+        activeView  = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhite];
+        activeView.center= CGPointMake(10, self.height/2);
+        [self addSubview:activeView];
+    }
+    tmpTitle = self.titleLabel.text;
+    [self setTitle:title forState:UIControlStateDisabled];
+    switch (postion) {
+        case ActiveLeftOnBt:
+            activeView.left = 10;
+            break;
+        case ActiveRightOnBt: activeView.right = self.width-10;
+            break;
+        case ActiveCenterOnBt: activeView.left = self.width/2-activeView.width/2;
+        default:
+            break;
+    }
+    [self setAlpha:.8];
+    [self setEnabled:NO];
+    [activeView startAnimating];
+}
+-(void)stopActivity
+{
+    [activeView stopAnimating];
+    [self setTitle:tmpTitle forState:UIControlStateDisabled];
+    [self setAlpha:1];
+}
+
+
 -(id)userInfo
 {
     return userInfo ;
 }
 - (void)dealloc
 {
+    RELEASE_SAFELY(activeView);
+    RELEASE_CF_SAFELY(tmpTitle);
     [userInfo release];
     [super dealloc];
 }
