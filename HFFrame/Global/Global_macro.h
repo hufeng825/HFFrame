@@ -15,6 +15,14 @@
 #import "UIImage+Extensions.h"
 #import "Array.h"
 
+
+//#ifdef QA
+# define NSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#else
+//# define NSLog(...){};
+//#endif
+
+
 //判断系统是否大于等于v
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -25,12 +33,15 @@
 #define RELEASE_CF_SAFELY(__REF) { if (nil != (__REF)) { CFRelease(__REF); __REF = nil; } }
 
 #define HFAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
+
 //判断是否越狱
 #define ISJailBreak system("ls") == 0 ? YES:NO
+
 //机器语言
 #define HFApplicationLanguage [[NSUserDefaults standardUserDefaults]\
        objectForKey:@"AppleLanguages"]\
 	   objectAtIndex:0];
+
 //ios版本
 #define IOSVersion [[[UIDevice currentDevice] systemVersion] floatValue];
 
