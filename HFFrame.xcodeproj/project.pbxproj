@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183206751660BB5500EA3FD1 /* CycleScrollView.m */; };
-		183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */; };
-		183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */; };
 		1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1516328FD800AD42B6 /* UIKit.framework */; };
 		1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1716328FD800AD42B6 /* Foundation.framework */; };
 		1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1916328FD800AD42B6 /* CoreGraphics.framework */; };
@@ -23,18 +21,6 @@
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
-		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
-		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
-		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
-		962F701F165CACAB0032A849 /* WebPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F701D165CACAB0032A849 /* WebPictureViewController.xib */; };
-		962F7028165CAFD30032A849 /* HFButtonExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */; };
-		962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */; };
-		962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F702C165CB5800032A849 /* AnimationExampleViewController.m */; };
-		962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F702D165CB5810032A849 /* AnimationExampleViewController.xib */; };
-		96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96791686165CBFE2006F52B9 /* VoiceReadViewController.m */; };
-		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
-		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
-		9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -81,9 +67,6 @@
 /* Begin PBXFileReference section */
 		183206741660BB5500EA3FD1 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollView.h; path = GlobClass/CircleScroll/CycleScrollView.h; sourceTree = SOURCE_ROOT; };
 		183206751660BB5500EA3FD1 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollView.m; path = GlobClass/CircleScroll/CycleScrollView.m; sourceTree = SOURCE_ROOT; };
-		1832067D1660C13600EA3FD1 /* HFScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFScrollViewViewController.h; path = HFFrame/Example/HFScrollViewViewController.h; sourceTree = "<group>"; };
-		1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFScrollViewViewController.m; path = HFFrame/Example/HFScrollViewViewController.m; sourceTree = "<group>"; };
-		1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFScrollViewViewController.xib; path = HFFrame/Example/HFScrollViewViewController.xib; sourceTree = "<group>"; };
 		1848AF1116328FD800AD42B6 /* HFFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1848AF1516328FD800AD42B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1848AF1716328FD800AD42B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,24 +87,6 @@
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
 		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
 		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
-		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
-		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
-		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
-		962F701B165CACAB0032A849 /* WebPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebPictureViewController.h; path = HFFrame/Example/WebPictureViewController.h; sourceTree = "<group>"; };
-		962F701C165CACAB0032A849 /* WebPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebPictureViewController.m; path = HFFrame/Example/WebPictureViewController.m; sourceTree = "<group>"; };
-		962F701D165CACAB0032A849 /* WebPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebPictureViewController.xib; path = HFFrame/Example/WebPictureViewController.xib; sourceTree = "<group>"; };
-		962F7025165CAFD20032A849 /* HFButtonExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButtonExampleViewController.h; path = HFFrame/Example/HFButtonExampleViewController.h; sourceTree = "<group>"; };
-		962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFButtonExampleViewController.m; path = HFFrame/Example/HFButtonExampleViewController.m; sourceTree = "<group>"; };
-		962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFButtonExampleViewController.xib; path = HFFrame/Example/HFButtonExampleViewController.xib; sourceTree = "<group>"; };
-		962F702B165CB5800032A849 /* AnimationExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationExampleViewController.h; path = HFFrame/Example/AnimationExampleViewController.h; sourceTree = "<group>"; };
-		962F702C165CB5800032A849 /* AnimationExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationExampleViewController.m; path = HFFrame/Example/AnimationExampleViewController.m; sourceTree = "<group>"; };
-		962F702D165CB5810032A849 /* AnimationExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimationExampleViewController.xib; path = HFFrame/Example/AnimationExampleViewController.xib; sourceTree = "<group>"; };
-		96791685165CBFE2006F52B9 /* VoiceReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceReadViewController.h; path = HFFrame/Example/VoiceReadViewController.h; sourceTree = "<group>"; };
-		96791686165CBFE2006F52B9 /* VoiceReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceReadViewController.m; path = HFFrame/Example/VoiceReadViewController.m; sourceTree = "<group>"; };
-		96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceReadViewController.xib; path = HFFrame/Example/VoiceReadViewController.xib; sourceTree = "<group>"; };
-		9679168B165CD819006F52B9 /* VoiceExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceExampleViewController.h; path = HFFrame/Example/VoiceExampleViewController.h; sourceTree = "<group>"; };
-		9679168C165CD819006F52B9 /* VoiceExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceExampleViewController.m; path = HFFrame/Example/VoiceExampleViewController.m; sourceTree = "<group>"; };
-		9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceExampleViewController.xib; path = HFFrame/Example/VoiceExampleViewController.xib; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -220,20 +185,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1832067B1660C0DB00EA3FD1 /* 循环circleview */ = {
-			isa = PBXGroup;
-			children = (
-				1832067D1660C13600EA3FD1 /* HFScrollViewViewController.h */,
-				1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */,
-				1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */,
-			);
-			name = "循环circleview";
-			sourceTree = "<group>";
-		};
 		1848AF0616328FD800AD42B6 = {
 			isa = PBXGroup;
 			children = (
-				962F7004165C9D170032A849 /* example */,
 				1848AF1B16328FD800AD42B6 /* HFFrame */,
 				1848AF1416328FD800AD42B6 /* Frameworks */,
 				1848AF1216328FD800AD42B6 /* Products */,
@@ -324,80 +278,6 @@
 				60390C31B0D47E2AE9AF071F /* HFAnimation.m */,
 			);
 			path = HFAnimation;
-			sourceTree = "<group>";
-		};
-		962F7004165C9D170032A849 /* example */ = {
-			isa = PBXGroup;
-			children = (
-				1832067B1660C0DB00EA3FD1 /* 循环circleview */,
-				9679168A165CD7F5006F52B9 /* 语音识别 */,
-				96791683165CBF97006F52B9 /* 语音播报 */,
-				962F7030165CB5870032A849 /* 动画 */,
-				962F7006165C9D2B0032A849 /* 网络请求 */,
-				962F701A165CAC720032A849 /* 网络图片 */,
-				962F702A165CB0930032A849 /* HFButton */,
-			);
-			name = example;
-			sourceTree = "<group>";
-		};
-		962F7006165C9D2B0032A849 /* 网络请求 */ = {
-			isa = PBXGroup;
-			children = (
-				962F7007165C9D760032A849 /* HttpExampleViewController.h */,
-				962F7008165C9D760032A849 /* HttpExampleViewController.m */,
-				962F7009165C9D760032A849 /* HttpExampleViewController.xib */,
-			);
-			name = "网络请求";
-			sourceTree = "<group>";
-		};
-		962F701A165CAC720032A849 /* 网络图片 */ = {
-			isa = PBXGroup;
-			children = (
-				962F701B165CACAB0032A849 /* WebPictureViewController.h */,
-				962F701C165CACAB0032A849 /* WebPictureViewController.m */,
-				962F701D165CACAB0032A849 /* WebPictureViewController.xib */,
-			);
-			name = "网络图片";
-			sourceTree = "<group>";
-		};
-		962F702A165CB0930032A849 /* HFButton */ = {
-			isa = PBXGroup;
-			children = (
-				962F7025165CAFD20032A849 /* HFButtonExampleViewController.h */,
-				962F7026165CAFD20032A849 /* HFButtonExampleViewController.m */,
-				962F7027165CAFD20032A849 /* HFButtonExampleViewController.xib */,
-			);
-			name = HFButton;
-			sourceTree = "<group>";
-		};
-		962F7030165CB5870032A849 /* 动画 */ = {
-			isa = PBXGroup;
-			children = (
-				962F702B165CB5800032A849 /* AnimationExampleViewController.h */,
-				962F702C165CB5800032A849 /* AnimationExampleViewController.m */,
-				962F702D165CB5810032A849 /* AnimationExampleViewController.xib */,
-			);
-			name = "动画";
-			sourceTree = "<group>";
-		};
-		96791683165CBF97006F52B9 /* 语音播报 */ = {
-			isa = PBXGroup;
-			children = (
-				96791685165CBFE2006F52B9 /* VoiceReadViewController.h */,
-				96791686165CBFE2006F52B9 /* VoiceReadViewController.m */,
-				96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */,
-			);
-			name = "语音播报";
-			sourceTree = "<group>";
-		};
-		9679168A165CD7F5006F52B9 /* 语音识别 */ = {
-			isa = PBXGroup;
-			children = (
-				9679168B165CD819006F52B9 /* VoiceExampleViewController.h */,
-				9679168C165CD819006F52B9 /* VoiceExampleViewController.m */,
-				9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */,
-			);
-			name = "语音识别";
 			sourceTree = "<group>";
 		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
@@ -652,13 +532,6 @@
 				969D90A51658AC4C00A382B2 /* btm_nav@2x.png in Resources */,
 				969D90AA1658B2DD00A382B2 /* navigation.jpg in Resources */,
 				969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */,
-				962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */,
-				962F701F165CACAB0032A849 /* WebPictureViewController.xib in Resources */,
-				962F7029165CAFD30032A849 /* HFButtonExampleViewController.xib in Resources */,
-				962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */,
-				96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */,
-				9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */,
-				183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,13 +576,6 @@
 				60390DEF8443AB722552E435 /* Array.m in Sources */,
 				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
 				183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */,
-				962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */,
-				962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */,
-				962F7028165CAFD30032A849 /* HFButtonExampleViewController.m in Sources */,
-				962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */,
-				96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */,
-				9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */,
-				183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

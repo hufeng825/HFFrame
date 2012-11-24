@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
-#import "iFlyMSC/IFlyRecognizeControl.h"
-#import "iFlyMSC/IFlySynthesizerControl.h"
+
 @interface HomeViewController : HFBaseViewController
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
-@property (retain, nonatomic) NSArray *context_array;
+
 @end
