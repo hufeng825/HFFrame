@@ -84,13 +84,13 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
     bt.userInfo = @"d";
     [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
 //    [bt beginWarningAnimation];
-    
+    [bt beginActivity:@"胡峰" postion:ActiveLeftOnBt];
+//    [activeView startAnimating];
     //arrary 数组去重复
     NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
     NSLog(@"%@",array);
     NSLog(@"%@", [array uniqueMembers]);
-//     [HFAnimation animationHeartbeat:bt];
-    [HFAnimation animationShake:bt];
+//    [HFAnimation animationHeartbeat:bt];
     
     /***********************网络请求例子*****************************/
     NSMutableURLRequest *request = [self.hfClient requestWithMethod:@"POST" path:
@@ -108,6 +108,12 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
                                          }];
     [operation start];
 
+    int64_t delayInSeconds = 5.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [bt stopActivity];
+    });
+    
 }
 -(void)btClick:(id)sender
 {
@@ -117,6 +123,7 @@ static NSString *warningStr = @"这是一个开源的工程 目前集成了 一�
 //        [(HFButton*)sender stopWarningAnimation];
         NSLog(@"%@",bt.userInfo);
         [HFAnimation removeAllAnimation:sender];
+        [bt setEnabled:NO];
     }
     NSLog(@"%d",ISJailBreak);
 }
