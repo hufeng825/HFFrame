@@ -16,10 +16,6 @@ typedef enum {
 @protocol CycleScrollViewDelegate;
 
 @interface CycleScrollView : UIView <UIScrollViewDelegate> {
-    
-    UIScrollView *scrollView;
-    UIImageView *curImageView;
-    
     int totalPage;  
     int curPage;
     CGRect scrollFrame;
@@ -32,6 +28,11 @@ typedef enum {
 }
 
 @property (nonatomic, assign) id delegate;
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) NSArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
+@property (nonatomic, retain)  NSMutableArray *curImages;
+@property (nonatomic, retain)  UIImageView *curImageView;
+
 
 - (int)validPageValue:(NSInteger)value;
 - (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSArray *)pictureArray;

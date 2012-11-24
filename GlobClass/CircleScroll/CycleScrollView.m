@@ -10,6 +10,10 @@
 
 @implementation CycleScrollView
 @synthesize delegate;
+@synthesize scrollView;
+@synthesize imagesArray;               // 存放所有需要滚动的图片 UIImage
+@synthesize curImages;
+@synthesize curImageView;
 
 - (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSArray *)pictureArray
 {
@@ -174,7 +178,8 @@
 {
     [imagesArray release];
     [curImages release];
-    
+    [scrollView release];
+	[curImageView release];
     [super dealloc];
 }
 
