@@ -324,7 +324,11 @@ static inline NSAttributedString * NSAttributedStringByScalingFontSize(NSAttribu
     if (!CGRectContainsPoint(textRect, p)) {
         return NSNotFound;
     }
-    
+
+    if(!TTIsStringWithAnyText(_attributedText))
+    {
+        return NSNotFound;
+    }
     // Convert tap coordinates (start at top left) to CT coordinates (start at bottom left)
     p = CGPointMake(p.x, textRect.size.height - p.y);
 
