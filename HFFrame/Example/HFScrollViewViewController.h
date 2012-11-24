@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SDWebImageManager.h"
 #import "CycleScrollView.h"
-
-@interface HFScrollViewViewController : UIViewController<CycleScrollViewDelegate>
+#import "HFBaseViewController.h"
+@interface HFScrollViewViewController : HFBaseViewController<CycleScrollViewDelegate>
 {
   CycleScrollView * cycleScrollView;
 	NSMutableArray *picArray;
