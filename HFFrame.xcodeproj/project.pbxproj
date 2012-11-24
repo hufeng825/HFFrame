@@ -76,6 +76,7 @@
 		96FC742C164CF8CE005ACABC /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7424164CF8CE005ACABC /* UIImageView+WebCache.m */; };
 		96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742D164CFA6F005ACABC /* ImageIO.framework */; };
 		96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742F164CFB0E005ACABC /* MapKit.framework */; };
+		96FC8B0B16614A2D00FEB66E /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC8B0A16614A2D00FEB66E /* TTTAttributedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +197,8 @@
 		96FC7424164CF8CE005ACABC /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		96FC742D164CFA6F005ACABC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		96FC742F164CFB0E005ACABC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		96FC8B0916614A2D00FEB66E /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = SOURCE_ROOT; };
+		96FC8B0A16614A2D00FEB66E /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +455,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96FC8B0716614A0D00FEB66E /* TTTAttributedLabel */,
 				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				1887E62D1660B2470069EDC6 /* 循环ScrollView */,
 				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
@@ -590,6 +594,15 @@
 			path = GlobClass/SDWebImage;
 			sourceTree = SOURCE_ROOT;
 		};
+		96FC8B0716614A0D00FEB66E /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				96FC8B0916614A2D00FEB66E /* TTTAttributedLabel.h */,
+				96FC8B0A16614A2D00FEB66E /* TTTAttributedLabel.m */,
+			);
+			name = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -710,6 +723,7 @@
 				96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */,
 				9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */,
 				183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */,
+				96FC8B0B16614A2D00FEB66E /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
