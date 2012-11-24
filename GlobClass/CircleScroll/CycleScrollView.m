@@ -15,7 +15,7 @@
 @synthesize curImages;
 @synthesize curImageView;
 
-- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSArray *)pictureArray
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray
 {
     self = [super initWithFrame:frame];
     if(self)
@@ -25,7 +25,7 @@
         totalPage = pictureArray.count;
         curPage = 1;                                    // 显示的是图片数组里的第一张图片
         curImages = [[NSMutableArray alloc] init];
-        imagesArray = [[NSArray alloc] initWithArray:pictureArray];
+        imagesArray = [[NSMutableArray alloc] initWithArray:pictureArray];
         
         scrollView = [[UIScrollView alloc] initWithFrame:frame];
         scrollView.backgroundColor = [UIColor blackColor];
@@ -92,7 +92,7 @@
     }
 }
 
-- (NSArray *)getDisplayImagesWithCurpage:(int)page {
+- (NSMutableArray *)getDisplayImagesWithCurpage:(int)page {
     
     int pre = [self validPageValue:curPage-1];
     int last = [self validPageValue:curPage+1];

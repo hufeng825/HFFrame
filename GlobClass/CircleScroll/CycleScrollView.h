@@ -21,7 +21,7 @@ typedef enum {
     CGRect scrollFrame;
     
     CycleDirection scrollDirection;     // scrollView滚动的方向
-    NSArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
+    NSMutableArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
     NSMutableArray *curImages;          // 存放当前滚动的三张图片
     
     id delegate;
@@ -29,14 +29,14 @@ typedef enum {
 
 @property (nonatomic, assign) id delegate;
 @property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) NSArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
+@property (nonatomic, retain) NSMutableArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
 @property (nonatomic, retain)  NSMutableArray *curImages;
 @property (nonatomic, retain)  UIImageView *curImageView;
 
 
 - (int)validPageValue:(NSInteger)value;
-- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSArray *)pictureArray;
-- (NSArray *)getDisplayImagesWithCurpage:(int)page;
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray;
+- (NSMutableArray *)getDisplayImagesWithCurpage:(int)page;
 - (void)refreshScrollView;
 
 @end
