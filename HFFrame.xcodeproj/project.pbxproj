@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183206751660BB5500EA3FD1 /* CycleScrollView.m */; };
 		1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1516328FD800AD42B6 /* UIKit.framework */; };
 		1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1716328FD800AD42B6 /* Foundation.framework */; };
 		1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1916328FD800AD42B6 /* CoreGraphics.framework */; };
@@ -18,7 +19,6 @@
 		1848AF2C16328FD800AD42B6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF2B16328FD800AD42B6 /* Default-568h@2x.png */; };
 		1848AF2F16328FD800AD42B6 /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */; };
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
-		1887E6301660B2FA0069EDC6 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887E62F1660B2FA0069EDC6 /* CycleScrollView.m */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
@@ -65,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183206741660BB5500EA3FD1 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollView.h; path = GlobClass/CircleScroll/CycleScrollView.h; sourceTree = SOURCE_ROOT; };
+		183206751660BB5500EA3FD1 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollView.m; path = GlobClass/CircleScroll/CycleScrollView.m; sourceTree = SOURCE_ROOT; };
 		1848AF1116328FD800AD42B6 /* HFFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1848AF1516328FD800AD42B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1848AF1716328FD800AD42B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,8 +83,6 @@
 		1848AF2D16328FD800AD42B6 /* HFBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFBaseViewController.h; sourceTree = "<group>"; };
 		1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFBaseViewController.m; sourceTree = "<group>"; };
 		1848AF3116328FD800AD42B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFBaseViewController.xib; sourceTree = "<group>"; };
-		1887E62E1660B2FA0069EDC6 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollView.h; path = GlobClass/CircleScrollview/CycleScrollView.h; sourceTree = SOURCE_ROOT; };
-		1887E62F1660B2FA0069EDC6 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollView.m; path = GlobClass/CircleScrollview/CycleScrollView.m; sourceTree = SOURCE_ROOT; };
 		60390693556A2D35E43E2729 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = "GlobClass/Array+Extensions/Array.m"; sourceTree = SOURCE_ROOT; };
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
 		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
@@ -255,8 +255,8 @@
 		1887E62D1660B2470069EDC6 /* 循环ScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				1887E62E1660B2FA0069EDC6 /* CycleScrollView.h */,
-				1887E62F1660B2FA0069EDC6 /* CycleScrollView.m */,
+				183206741660BB5500EA3FD1 /* CycleScrollView.h */,
+				183206751660BB5500EA3FD1 /* CycleScrollView.m */,
 			);
 			name = "循环ScrollView";
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 				969D90C01658FB6200A382B2 /* HFButton.m in Sources */,
 				60390DEF8443AB722552E435 /* Array.m in Sources */,
 				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
-				1887E6301660B2FA0069EDC6 /* CycleScrollView.m in Sources */,
+				183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
