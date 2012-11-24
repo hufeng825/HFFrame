@@ -77,6 +77,9 @@
 		96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742D164CFA6F005ACABC /* ImageIO.framework */; };
 		96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742F164CFB0E005ACABC /* MapKit.framework */; };
 		96FC8B0B16614A2D00FEB66E /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC8B0A16614A2D00FEB66E /* TTTAttributedLabel.m */; };
+		96FC8B1016614B8200FEB66E /* AttributedLabelControllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC8B0E16614B8200FEB66E /* AttributedLabelControllViewController.m */; };
+		96FC8B1116614B8200FEB66E /* AttributedLabelControllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FC8B0F16614B8200FEB66E /* AttributedLabelControllViewController.xib */; };
+		96FC8B1316614D1200FEB66E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC8B1216614D1200FEB66E /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -199,6 +202,10 @@
 		96FC742F164CFB0E005ACABC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		96FC8B0916614A2D00FEB66E /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = SOURCE_ROOT; };
 		96FC8B0A16614A2D00FEB66E /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = SOURCE_ROOT; };
+		96FC8B0D16614B8200FEB66E /* AttributedLabelControllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttributedLabelControllViewController.h; path = HFFrame/Example/AttributedLabelControllViewController.h; sourceTree = "<group>"; };
+		96FC8B0E16614B8200FEB66E /* AttributedLabelControllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttributedLabelControllViewController.m; path = HFFrame/Example/AttributedLabelControllViewController.m; sourceTree = "<group>"; };
+		96FC8B0F16614B8200FEB66E /* AttributedLabelControllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AttributedLabelControllViewController.xib; path = HFFrame/Example/AttributedLabelControllViewController.xib; sourceTree = "<group>"; };
+		96FC8B1216614D1200FEB66E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FC8B1316614D1200FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
 				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
 				1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */,
@@ -254,6 +262,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96FC8B1216614D1200FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
 				9693402D1656144D00F1BDC1 /* QuartzCore.framework */,
 				9693402B1656141600F1BDC1 /* CFNetwork.framework */,
@@ -332,6 +341,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				96FC8B0C16614B2000FEB66E /* TTTAttributedLabel */,
 				1832067B1660C0DB00EA3FD1 /* 循环circleview */,
 				9679168A165CD7F5006F52B9 /* 语音识别 */,
 				96791683165CBF97006F52B9 /* 语音播报 */,
@@ -603,6 +613,16 @@
 			name = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
+		96FC8B0C16614B2000FEB66E /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				96FC8B0D16614B8200FEB66E /* AttributedLabelControllViewController.h */,
+				96FC8B0E16614B8200FEB66E /* AttributedLabelControllViewController.m */,
+				96FC8B0F16614B8200FEB66E /* AttributedLabelControllViewController.xib */,
+			);
+			name = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -672,6 +692,7 @@
 				96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */,
 				9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */,
 				183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */,
+				96FC8B1116614B8200FEB66E /* AttributedLabelControllViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +745,7 @@
 				9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */,
 				183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */,
 				96FC8B0B16614A2D00FEB66E /* TTTAttributedLabel.m in Sources */,
+				96FC8B1016614B8200FEB66E /* AttributedLabelControllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

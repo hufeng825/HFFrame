@@ -17,6 +17,7 @@
 #import "VoiceReadViewController.h"
 #import "VoiceExampleViewController.h"
 #import "HFScrollViewViewController.h"
+#import "AttributedLabelControllViewController.h"
 
 @interface HomeViewController ()
 
@@ -62,7 +63,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview", nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -173,6 +174,13 @@
             [self.navigationController pushViewController:vc animated:YES];
 		}
 			break;
+        case 8:
+        {
+            AttributedLabelControllViewController *vc = [[AttributedLabelControllViewController alloc]initWithNibName:@"AttributedLabelControllViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
