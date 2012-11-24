@@ -10,5 +10,6 @@
 #import "HFBaseViewController.h"
 #import "TTTAttributedLabel.h"
 @interface AttributedLabelControllViewController : HFBaseViewController
+@property (retain, nonatomic) IBOutlet TTTAttributedLabel *label;
 
 @end
