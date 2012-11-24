@@ -16,7 +16,7 @@
 #import "AnimationExampleViewController.h"
 #import "VoiceReadViewController.h"
 #import "VoiceExampleViewController.h"
-
+#import "HFScrollViewViewController.h"
 
 @interface HomeViewController ()
 
@@ -62,7 +62,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview", nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -165,6 +165,14 @@
             [self.navigationController pushViewController:vc animated:YES];
 
         }
+			break;
+		case 7:
+		{
+			HFScrollViewViewController *vc = [[HFScrollViewViewController alloc]initWithNibName:@"HFScrollViewViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+		}
+			break;
         default:
             break;
     }

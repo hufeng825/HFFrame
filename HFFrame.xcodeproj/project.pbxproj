@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183206751660BB5500EA3FD1 /* CycleScrollView.m */; };
+		183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */; };
+		183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */; };
 		1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1516328FD800AD42B6 /* UIKit.framework */; };
 		1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1716328FD800AD42B6 /* Foundation.framework */; };
 		1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1916328FD800AD42B6 /* CoreGraphics.framework */; };
@@ -79,6 +81,9 @@
 /* Begin PBXFileReference section */
 		183206741660BB5500EA3FD1 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CycleScrollView.h; path = GlobClass/CircleScroll/CycleScrollView.h; sourceTree = SOURCE_ROOT; };
 		183206751660BB5500EA3FD1 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CycleScrollView.m; path = GlobClass/CircleScroll/CycleScrollView.m; sourceTree = SOURCE_ROOT; };
+		1832067D1660C13600EA3FD1 /* HFScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFScrollViewViewController.h; path = HFFrame/Example/HFScrollViewViewController.h; sourceTree = "<group>"; };
+		1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFScrollViewViewController.m; path = HFFrame/Example/HFScrollViewViewController.m; sourceTree = "<group>"; };
+		1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFScrollViewViewController.xib; path = HFFrame/Example/HFScrollViewViewController.xib; sourceTree = "<group>"; };
 		1848AF1116328FD800AD42B6 /* HFFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1848AF1516328FD800AD42B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1848AF1716328FD800AD42B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -215,6 +220,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1832067B1660C0DB00EA3FD1 /* 循环circleview */ = {
+			isa = PBXGroup;
+			children = (
+				1832067D1660C13600EA3FD1 /* HFScrollViewViewController.h */,
+				1832067E1660C13600EA3FD1 /* HFScrollViewViewController.m */,
+				1832067F1660C13600EA3FD1 /* HFScrollViewViewController.xib */,
+			);
+			name = "循环circleview";
+			sourceTree = "<group>";
+		};
 		1848AF0616328FD800AD42B6 = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +271,6 @@
 			children = (
 				969D909A1658A9A500A382B2 /* style */,
 				96876D8F164C041700406C92 /* Class */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				96876D81164BCA5100406C92 /* 全局参数 */,
 				96E517021632AF3200E7D20C /* HFHTTP */,
 				96876D78164BB66D00406C92 /* BaseViewController */,
@@ -314,6 +328,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				1832067B1660C0DB00EA3FD1 /* 循环circleview */,
 				9679168A165CD7F5006F52B9 /* 语音识别 */,
 				96791683165CBF97006F52B9 /* 语音播报 */,
 				962F7030165CB5870032A849 /* 动画 */,
@@ -436,6 +451,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				1887E62D1660B2470069EDC6 /* 循环ScrollView */,
 				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				969D90BD1658FAD000A382B2 /* HFButton */,
@@ -641,6 +657,7 @@
 				962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */,
 				96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */,
 				9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */,
+				183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +708,7 @@
 				962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */,
 				96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */,
 				9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */,
+				183206801660C13600EA3FD1 /* HFScrollViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
