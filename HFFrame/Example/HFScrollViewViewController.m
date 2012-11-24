@@ -82,7 +82,6 @@
 	}
 }
 
-
 #pragma mark - CycleScrollViewDelegate
 - (void)cycleScrollViewDelegate:(CycleScrollView *)cycleScrollView didSelectImageView:(int)index {
     

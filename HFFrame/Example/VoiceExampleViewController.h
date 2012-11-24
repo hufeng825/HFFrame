@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "iFlyMSC/IFlyRecognizeControl.h"
 #import "HFBaseViewController.h"
+
 @interface VoiceExampleViewController : HFBaseViewController
 
 @end

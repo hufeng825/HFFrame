@@ -10,6 +10,7 @@
 #import "SDWebImageManager.h"
 #import "CycleScrollView.h"
 #import "HFBaseViewController.h"
+
 @interface HFScrollViewViewController : HFBaseViewController<CycleScrollViewDelegate>
 {
   CycleScrollView * cycleScrollView;
