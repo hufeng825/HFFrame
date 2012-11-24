@@ -63,6 +63,7 @@
 		96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742D164CFA6F005ACABC /* ImageIO.framework */; };
 		96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC742F164CFB0E005ACABC /* MapKit.framework */; };
 		96FC8B021661497300FEB66E /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC8B011661497300FEB66E /* TTTAttributedLabel.m */; };
+		96FC8B211661541500FEB66E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FC8B201661541500FEB66E /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +165,7 @@
 		96FC742F164CFB0E005ACABC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		96FC8B001661497300FEB66E /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = SOURCE_ROOT; };
 		96FC8B011661497300FEB66E /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = GlobClass/TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = SOURCE_ROOT; };
+		96FC8B201661541500FEB66E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FC8B211661541500FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
 				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
 				1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */,
@@ -208,6 +211,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96FC8B201661541500FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
 				9693402D1656144D00F1BDC1 /* QuartzCore.framework */,
 				9693402B1656141600F1BDC1 /* CFNetwork.framework */,
