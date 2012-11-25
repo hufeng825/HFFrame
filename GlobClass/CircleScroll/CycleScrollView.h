@@ -32,10 +32,10 @@ typedef enum {
 @property (nonatomic, retain) NSMutableArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
 @property (nonatomic, retain)  NSMutableArray *curImages;
 @property (nonatomic, retain)  UIImageView *curImageView;
-
+@property (nonatomic, retain)  NSTimer *timer;
 
 - (int)validPageValue:(NSInteger)value;
-- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray;
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray TimeInterval:(NSTimeInterval)timeInterval;
 - (NSMutableArray *)getDisplayImagesWithCurpage:(int)page;
 - (void)refreshScrollView;
 

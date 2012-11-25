@@ -39,7 +39,7 @@
 //		[manager downloadWithURL: delegate:self];
 	
 
-	cycleScrollView =[ [CycleScrollView alloc ]initWithFrame:self.view.frame cycleDirection:CycleDirectionLandscape pictures:picArray];
+	cycleScrollView =[ [CycleScrollView alloc ]initWithFrame:self.view.frame cycleDirection:CycleDirectionLandscape pictures:picArray TimeInterval:3];
 	cycleScrollView.delegate = self;
 	[self.view addSubview:cycleScrollView];
 	[self initPictureFunc];

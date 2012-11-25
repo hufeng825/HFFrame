@@ -14,8 +14,8 @@
 @synthesize imagesArray;               // 存放所有需要滚动的图片 UIImage
 @synthesize curImages;
 @synthesize curImageView;
-
-- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray
+@synthesize timer;
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray TimeInterval:(NSTimeInterval)timeInterval
 {
     self = [super initWithFrame:frame];
     if(self)
@@ -45,12 +45,28 @@
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width,
                                                 scrollView.frame.size.height * 3);
         }
-        
+        if (timeInterval>0 && !timer)
+		{
+			timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
+			NSRunLoop *main=[NSRunLoop currentRunLoop];
+			[main addTimer:timer forMode:NSRunLoopCommonModes];
+		}
         [self addSubview:scrollView];
         [self refreshScrollView];
     }
     
     return self;
+}
+-(void)updateScrollWithTimer:(id)sender
+{
+	 if(scrollDirection == CycleDirectionLandscape)
+	 { 
+		 [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x+scrollView.width,self.scrollView.contentOffset.y) animated:YES];
+	}
+	else
+	{
+		[self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x,self.scrollView.contentOffset.y+scrollView.height)  animated:YES];
+	}
 }
 
 - (void)refreshScrollView {
@@ -176,6 +192,7 @@
 
 - (void)dealloc
 {
+	[timer release];
     [imagesArray release];
     [curImages release];
     [scrollView release];
