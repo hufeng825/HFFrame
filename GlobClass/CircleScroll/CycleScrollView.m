@@ -47,7 +47,7 @@
         }
         if (timeInterval>0 && !timer)
 		{
-			timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
+			self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
 			NSRunLoop *main=[NSRunLoop currentRunLoop];
 			[main addTimer:timer forMode:NSRunLoopCommonModes];
 		}
@@ -192,7 +192,10 @@
 
 - (void)dealloc
 {
-	[timer release];
+	if (timer)
+	{
+		RELEASE_SAFELY(timer);
+	}
     [imagesArray release];
     [curImages release];
     [scrollView release];
