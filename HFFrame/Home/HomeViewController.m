@@ -18,6 +18,7 @@
 #import "VoiceExampleViewController.h"
 #import "HFScrollViewViewController.h"
 #import "AttributedLabelControllViewController.h"
+#import "ScreenshotExampleViewController.h"
 
 @interface HomeViewController ()
 
@@ -46,9 +47,6 @@
     
     self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别", nil]autorelease];
-    
-   
     
 //    //HFbutton类使用
 //    bt.userInfo = @"d";
@@ -63,7 +61,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -177,6 +175,13 @@
         case 8:
         {
             AttributedLabelControllViewController *vc = [[AttributedLabelControllViewController alloc]initWithNibName:@"AttributedLabelControllViewController" bundle:nil];
+            vc.title =  [context_array objectAtIndex:row];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 9:
+        {
+            ScreenshotExampleViewController *vc = [[ScreenshotExampleViewController alloc]initWithNibName:@"ScreenshotExampleViewController" bundle:nil];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }

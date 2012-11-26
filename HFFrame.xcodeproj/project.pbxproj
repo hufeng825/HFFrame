@@ -32,6 +32,8 @@
 		962F702E165CB5810032A849 /* AnimationExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F702C165CB5800032A849 /* AnimationExampleViewController.m */; };
 		962F702F165CB5810032A849 /* AnimationExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F702D165CB5810032A849 /* AnimationExampleViewController.xib */; };
 		96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B6916631B53001926B9 /* UIView+Screenshot.m */; };
+		96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */; };
+		96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */; };
 		96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96791686165CBFE2006F52B9 /* VoiceReadViewController.m */; };
 		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
 		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
@@ -123,6 +125,9 @@
 		962F702D165CB5810032A849 /* AnimationExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnimationExampleViewController.xib; path = HFFrame/Example/AnimationExampleViewController.xib; sourceTree = "<group>"; };
 		96352B6816631B53001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
 		96352B6916631B53001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
+		96352B78166323A1001926B9 /* ScreenshotExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotExampleViewController.h; path = HFFrame/Example/ScreenshotExampleViewController.h; sourceTree = "<group>"; };
+		96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenshotExampleViewController.m; path = HFFrame/Example/ScreenshotExampleViewController.m; sourceTree = "<group>"; };
+		96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScreenshotExampleViewController.xib; path = HFFrame/Example/ScreenshotExampleViewController.xib; sourceTree = "<group>"; };
 		96791685165CBFE2006F52B9 /* VoiceReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceReadViewController.h; path = HFFrame/Example/VoiceReadViewController.h; sourceTree = "<group>"; };
 		96791686165CBFE2006F52B9 /* VoiceReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceReadViewController.m; path = HFFrame/Example/VoiceReadViewController.m; sourceTree = "<group>"; };
 		96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceReadViewController.xib; path = HFFrame/Example/VoiceReadViewController.xib; sourceTree = "<group>"; };
@@ -344,6 +349,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				96352B7E166323B7001926B9 /* 截屏动画 */,
 				96FC8B0C16614B2000FEB66E /* TTTAttributedLabel */,
 				1832067B1660C0DB00EA3FD1 /* 循环circleview */,
 				9679168A165CD7F5006F52B9 /* 语音识别 */,
@@ -403,6 +409,16 @@
 				96352B6916631B53001926B9 /* UIView+Screenshot.m */,
 			);
 			name = "UIView+ScreenShot";
+			sourceTree = "<group>";
+		};
+		96352B7E166323B7001926B9 /* 截屏动画 */ = {
+			isa = PBXGroup;
+			children = (
+				96352B78166323A1001926B9 /* ScreenshotExampleViewController.h */,
+				96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */,
+				96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */,
+			);
+			name = "截屏动画";
 			sourceTree = "<group>";
 		};
 		96791683165CBF97006F52B9 /* 语音播报 */ = {
@@ -706,6 +722,7 @@
 				9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */,
 				183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */,
 				96FC8B1116614B8200FEB66E /* AttributedLabelControllViewController.xib in Resources */,
+				96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +777,7 @@
 				96FC8B0B16614A2D00FEB66E /* TTTAttributedLabel.m in Sources */,
 				96FC8B1016614B8200FEB66E /* AttributedLabelControllViewController.m in Sources */,
 				96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */,
+				96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
