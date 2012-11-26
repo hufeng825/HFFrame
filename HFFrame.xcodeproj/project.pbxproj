@@ -57,6 +57,8 @@
 		969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 969D90A91658B2DD00A382B2 /* navigation@2x.jpg */; };
 		969D90AE1658C57000A382B2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90AD1658C57000A382B2 /* UIColor+Hex.m */; };
 		969D90C01658FB6200A382B2 /* HFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90BF1658FB6200A382B2 /* HFButton.m */; };
+		96A2F81D1663443B00E61D4F /* FlodExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F81B1663443B00E61D4F /* FlodExampleViewController.m */; };
+		96A2F81E1663443B00E61D4F /* FlodExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
@@ -162,6 +164,9 @@
 		969D90AD1658C57000A382B2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "GlobClass/UIColor+Hex/UIColor+Hex.m"; sourceTree = SOURCE_ROOT; };
 		969D90BE1658FB6200A382B2 /* HFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButton.h; path = GlobClass/HFButton/HFButton.h; sourceTree = SOURCE_ROOT; };
 		969D90BF1658FB6200A382B2 /* HFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFButton.m; path = GlobClass/HFButton/HFButton.m; sourceTree = SOURCE_ROOT; };
+		96A2F81A1663443B00E61D4F /* FlodExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlodExampleViewController.h; path = HFFrame/Example/FlodExampleViewController.h; sourceTree = "<group>"; };
+		96A2F81B1663443B00E61D4F /* FlodExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlodExampleViewController.m; path = HFFrame/Example/FlodExampleViewController.m; sourceTree = "<group>"; };
+		96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FlodExampleViewController.xib; path = HFFrame/Example/FlodExampleViewController.xib; sourceTree = "<group>"; };
 		96E517071632AFB300E7D20C /* HFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFHttpRequest.h; path = HFHttpRequest/HFHttpRequest.h; sourceTree = "<group>"; };
 		96E517081632AFB300E7D20C /* HFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFHttpRequest.m; path = HFHttpRequest/HFHttpRequest.m; sourceTree = "<group>"; };
 		96E5174D1632B88400E7D20C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = GlobClass/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
@@ -349,6 +354,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				96A2F8201663444000E61D4F /* 翻转动画 */,
 				96352B7E166323B7001926B9 /* 截屏动画 */,
 				96FC8B0C16614B2000FEB66E /* TTTAttributedLabel */,
 				1832067B1660C0DB00EA3FD1 /* 循环circleview */,
@@ -561,6 +567,16 @@
 			name = HFButton;
 			sourceTree = "<group>";
 		};
+		96A2F8201663444000E61D4F /* 翻转动画 */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F81A1663443B00E61D4F /* FlodExampleViewController.h */,
+				96A2F81B1663443B00E61D4F /* FlodExampleViewController.m */,
+				96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */,
+			);
+			name = "翻转动画";
+			sourceTree = "<group>";
+		};
 		96E517021632AF3200E7D20C /* HFHTTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +739,7 @@
 				183206811660C13600EA3FD1 /* HFScrollViewViewController.xib in Resources */,
 				96FC8B1116614B8200FEB66E /* AttributedLabelControllViewController.xib in Resources */,
 				96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */,
+				96A2F81E1663443B00E61D4F /* FlodExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,6 +795,7 @@
 				96FC8B1016614B8200FEB66E /* AttributedLabelControllViewController.m in Sources */,
 				96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */,
 				96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */,
+				96A2F81D1663443B00E61D4F /* FlodExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

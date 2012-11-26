@@ -19,6 +19,8 @@
 #import "HFScrollViewViewController.h"
 #import "AttributedLabelControllViewController.h"
 #import "ScreenshotExampleViewController.h"
+#import "FlodExampleViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -61,7 +63,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"翻转动画例程",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
