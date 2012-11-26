@@ -28,10 +28,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
         /***********************网络请求例子*****************************/
-    NSMutableURLRequest *request = [self.hfClient requestWithMethod:@"POST" path:
-                                    @"http://qa.fun-guide.mobi:7002/users/login.json?mobile=15810329037&password=96E79218965EB72C92A549DD5A330112"
+    NSMutableURLRequest *request = [self.hfClient requestWithMethod:@"GET" path:
+                                    @"http://9snow.org/weather/api?city=%E5%8C%97%E4%BA%AC"
                                                   parameters:nil];
     [request setTimeoutInterval:30];
+    //
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+    
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
                                          {
                                              NSLog(@"json %@",[JSON class]);
@@ -40,8 +43,11 @@
                                          }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
                                          {
                                              // code for failed request goes here
+                                             NSLog(@"%@",[error description]);
+                                             _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
 
                                          }];
+    operation.JSONReadingOptions = NSJSONReadingAllowFragments;//
     [operation start];
 
     
