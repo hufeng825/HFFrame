@@ -112,6 +112,12 @@
 }
 
 #pragma -
+//-(void)funcFromeString:(NSString*)str index:(NSInteger)index
+//{
+//    NSClassFromString(str) *vc = [[[NSClassFromString(str) alloc]initWithNibName:str bundle:nil]autorelease];
+//    
+//}
+
 
 -(void)pushController:(NSInteger)row
 {
@@ -119,14 +125,14 @@
     {
         case 0:
         {
-            HttpExampleViewController *vc = [[HttpExampleViewController alloc]initWithNibName:@"HttpExampleViewController" bundle:nil];
+            HttpExampleViewController *vc = [[[HttpExampleViewController alloc]initWithNibName:@"HttpExampleViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 1:
         {
-            WebPictureViewController *vc = [[WebPictureViewController alloc]initWithNibName:@"WebPictureViewController" bundle:nil];
+            WebPictureViewController *vc = [[[WebPictureViewController alloc]initWithNibName:@"WebPictureViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
 
@@ -134,7 +140,7 @@
             break;
         case 2:
         {
-            HFButtonExampleViewController *vc = [[HFButtonExampleViewController alloc]initWithNibName:@"HFButtonExampleViewController" bundle:nil];
+            HFButtonExampleViewController *vc = [[[HFButtonExampleViewController alloc]initWithNibName:@"HFButtonExampleViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
             
@@ -147,21 +153,21 @@
             break;
         case 4:
         {
-            AnimationExampleViewController *vc = [[AnimationExampleViewController alloc]initWithNibName:@"AnimationExampleViewController" bundle:nil];
+            AnimationExampleViewController *vc = [[[AnimationExampleViewController alloc]initWithNibName:@"AnimationExampleViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 5:
         {
-            VoiceReadViewController *vc = [[VoiceReadViewController alloc]initWithNibName:@"VoiceReadViewController" bundle:nil];
+            VoiceReadViewController *vc = [[[VoiceReadViewController alloc]initWithNibName:@"VoiceReadViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 6:
         {
-            VoiceExampleViewController *vc = [[VoiceExampleViewController alloc]initWithNibName:@"VoiceExampleViewController" bundle:nil];
+            VoiceExampleViewController *vc = [[[VoiceExampleViewController alloc]initWithNibName:@"VoiceExampleViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
 
@@ -169,21 +175,21 @@
 			break;
 		case 7:
 		{
-			HFScrollViewViewController *vc = [[HFScrollViewViewController alloc]initWithNibName:@"HFScrollViewViewController" bundle:nil];
+			HFScrollViewViewController *vc = [[[HFScrollViewViewController alloc]initWithNibName:@"HFScrollViewViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
 		}
 			break;
         case 8:
         {
-            AttributedLabelControllViewController *vc = [[AttributedLabelControllViewController alloc]initWithNibName:@"AttributedLabelControllViewController" bundle:nil];
+            AttributedLabelControllViewController *vc = [[[AttributedLabelControllViewController alloc]initWithNibName:@"AttributedLabelControllViewController" bundle:nil]autorelease];
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 9:
         {
-            ScreenshotExampleViewController *vc = [[ScreenshotExampleViewController alloc]initWithNibName:@"ScreenshotExampleViewController" bundle:nil];
+            ScreenshotExampleViewController *vc = [[[ScreenshotExampleViewController alloc]initWithNibName:@"ScreenshotExampleViewController" bundle:nil]autorelease];;
             vc.title =  [context_array objectAtIndex:row];
             [self.navigationController pushViewController:vc animated:YES];
         }
