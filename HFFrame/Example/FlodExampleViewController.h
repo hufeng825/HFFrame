@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FlodExampleViewController : UIViewController
+#import "FlipViewController.h"
+@interface FlodExampleViewController : FlipViewController
 
 @end

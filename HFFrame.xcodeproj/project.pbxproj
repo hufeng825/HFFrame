@@ -59,6 +59,9 @@
 		969D90C01658FB6200A382B2 /* HFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90BF1658FB6200A382B2 /* HFButton.m */; };
 		96A2F81D1663443B00E61D4F /* FlodExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F81B1663443B00E61D4F /* FlodExampleViewController.m */; };
 		96A2F81E1663443B00E61D4F /* FlodExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */; };
+		96A2F83A16636D5700E61D4F /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F83816636D5700E61D4F /* FlipViewController.m */; };
+		96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F83916636D5700E61D4F /* FlipViewController.xib */; };
+		96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F83D1663723500E61D4F /* FlipCAlayer.m */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
@@ -167,6 +170,11 @@
 		96A2F81A1663443B00E61D4F /* FlodExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlodExampleViewController.h; path = HFFrame/Example/FlodExampleViewController.h; sourceTree = "<group>"; };
 		96A2F81B1663443B00E61D4F /* FlodExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlodExampleViewController.m; path = HFFrame/Example/FlodExampleViewController.m; sourceTree = "<group>"; };
 		96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FlodExampleViewController.xib; path = HFFrame/Example/FlodExampleViewController.xib; sourceTree = "<group>"; };
+		96A2F83716636D5700E61D4F /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipViewController.h; path = GlobClass/FlipViewController/FlipViewController.h; sourceTree = SOURCE_ROOT; };
+		96A2F83816636D5700E61D4F /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipViewController.m; path = GlobClass/FlipViewController/FlipViewController.m; sourceTree = SOURCE_ROOT; };
+		96A2F83916636D5700E61D4F /* FlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FlipViewController.xib; path = GlobClass/FlipViewController/FlipViewController.xib; sourceTree = SOURCE_ROOT; };
+		96A2F83C1663723500E61D4F /* FlipCAlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipCAlayer.h; path = GlobClass/FlipViewController/FlipCAlayer.h; sourceTree = SOURCE_ROOT; };
+		96A2F83D1663723500E61D4F /* FlipCAlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipCAlayer.m; path = GlobClass/FlipViewController/FlipCAlayer.m; sourceTree = SOURCE_ROOT; };
 		96E517071632AFB300E7D20C /* HFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFHttpRequest.h; path = HFHttpRequest/HFHttpRequest.h; sourceTree = "<group>"; };
 		96E517081632AFB300E7D20C /* HFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFHttpRequest.m; path = HFHttpRequest/HFHttpRequest.m; sourceTree = "<group>"; };
 		96E5174D1632B88400E7D20C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = GlobClass/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
@@ -499,6 +507,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96A2F83516636D0900E61D4F /* FlipViewController */,
 				96352B6616631AE0001926B9 /* UIView+ScreenShot */,
 				96FC8B0716614A0D00FEB66E /* TTTAttributedLabel */,
 				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
@@ -575,6 +584,18 @@
 				96A2F81C1663443B00E61D4F /* FlodExampleViewController.xib */,
 			);
 			name = "翻转动画";
+			sourceTree = "<group>";
+		};
+		96A2F83516636D0900E61D4F /* FlipViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96A2F83716636D5700E61D4F /* FlipViewController.h */,
+				96A2F83816636D5700E61D4F /* FlipViewController.m */,
+				96A2F83916636D5700E61D4F /* FlipViewController.xib */,
+				96A2F83C1663723500E61D4F /* FlipCAlayer.h */,
+				96A2F83D1663723500E61D4F /* FlipCAlayer.m */,
+			);
+			name = FlipViewController;
 			sourceTree = "<group>";
 		};
 		96E517021632AF3200E7D20C /* HFHTTP */ = {
@@ -740,6 +761,7 @@
 				96FC8B1116614B8200FEB66E /* AttributedLabelControllViewController.xib in Resources */,
 				96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */,
 				96A2F81E1663443B00E61D4F /* FlodExampleViewController.xib in Resources */,
+				96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +818,8 @@
 				96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */,
 				96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */,
 				96A2F81D1663443B00E61D4F /* FlodExampleViewController.m in Sources */,
+				96A2F83A16636D5700E61D4F /* FlipViewController.m in Sources */,
+				96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

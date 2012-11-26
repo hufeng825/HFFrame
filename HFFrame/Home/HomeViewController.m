@@ -21,13 +21,16 @@
 #import "ScreenshotExampleViewController.h"
 #import "FlodExampleViewController.h"
 
-
 @interface HomeViewController ()
 
 @end
 
 @implementation HomeViewController
 @synthesize context_array;
+
+/******用于翻转动画 工程中没用到可注释******/
+@synthesize flipcalayer;
+/******        结束翻转动画       ******/
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,13 +43,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
-//    UILabel *label = [[[UILabel alloc]initWithFrame:CGRectMake(0, 10, self.view.width, 100)]autorelease];
-//    [label setText:warningStr];
-//    [label setNumberOfLines:0];
-//    [self.view addSubview:label];
-    
-    
+    [super viewDidLoad];
+
     self.title = @"例程说明";
        // Do any additional setup after loading the view from its nib.
     
@@ -63,7 +61,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"翻转动画例程",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",/*@"翻转动画例程",*/nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -76,8 +74,8 @@
 //    }
 //}
 
-#pragma -
-#pragma - UItableView delegate
+#pragma mark -
+#pragma mark - UItableView delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -111,7 +109,7 @@
     [self pushController:indexPath.row];
 }
 
-#pragma -
+#pragma mark -
 -(void)funcFromeString:(NSString*)str index:(NSInteger)index
 {
     id vc = [[[NSClassFromString(str) alloc]initWithNibName:str bundle:nil]autorelease];
@@ -176,6 +174,13 @@
             [self funcFromeString:@"ScreenshotExampleViewController" index:row];
         }
             break;
+        case 10:
+        {
+//            [self funcFromeString:@"FlipViewController" index:row];
+            FlipViewController *vc = [[[FlipViewController alloc]initWithNibName:@"FlipViewController" bundle:nil]autorelease];
+            vc.delegate = self;
+            [self.navigationController pushViewController:vc animated:NO];
+        }
         default:
             break;
     }
@@ -183,10 +188,60 @@
 }
 
 
+#pragma  mark
 
 
-#pragma -  语音接口实现
-#pragma    识别接口实现
+#pragma mark flip
+-(void)FlipViewControllerClose:(FlipViewController *)flipViewController
+{
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+    //由于在scrollview中添加layer的时候我先后顺序，所以需要把所选中的layer放到最上面，否则在动画的时候，其他的layer在选中layer之上
+    [self.navigationController.view.layer addSublayer:flipcalayer];
+    [CATransaction commit];
+    
+    //变化layer的大小，从小到大
+    CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
+    boundsAnimation.fromValue = [NSValue valueWithCGRect:self.flipcalayer.frame];
+    boundsAnimation.toValue = [NSValue valueWithCGRect:self.navigationController.view.bounds];
+    //变化layer的位置
+    CABasicAnimation *positonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    positonAnimation.fromValue = [NSValue valueWithCGPoint:self.flipcalayer.position];
+    positonAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.navigationController.view.bounds), CGRectGetMidY(self.navigationController.view.bounds))];
+    
+    //组合动画
+    CAAnimationGroup *group =[CAAnimationGroup animation];
+    group.duration = 0.5;
+    group.animations = [NSArray arrayWithObjects:boundsAnimation,positonAnimation, nil];
+    group.delegate = self;
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
+    
+    [self.flipcalayer addAnimation:group forKey:@"zoomIn"];
+    
+    //页面翻转
+    CATransition *transition = [CATransition animation];
+    transition.type =@"flip";// kCATransitionPush;
+    transition.subtype = kCATransitionFromRight;
+    transition.duration = 0.25;
+    self.flipcalayer.contents = (id)[self.navigationController.view screenshot].CGImage;
+    [self.flipcalayer addAnimation:transition forKey:@"push"];
+}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+	if (anim == [self.flipcalayer animationForKey:@"zoomIn"])
+    {
+        [self.navigationController popViewControllerAnimated:NO];
+		//self.transitionLayer.hidden = YES;
+//		[self.navigationController presentModalViewController:subNav animated:NO];
+	}
+}
+
+#pragma mark 
+
+
+#pragma mark -  语音接口实现
+#pragma  mark 识别接口实现
 - (void) onGrammer:(NSString *)grammer error:(int)err
 {
     NSLog(@"the error is:%d",err);
@@ -242,7 +297,7 @@
 {
     NSLog(@"the playing progress :%f",playProgress);
 }
-#pragma -
+#pragma mark -
 
 
 - (void)didReceiveMemoryWarning
@@ -256,7 +311,8 @@
     [super dealloc];
 }
 - (void)viewDidUnload {
-    RELEASE_CF_SAFELY(context_array);
+    RELEASE_SAFELY(context_array);
+    RELEASE_SAFELY (flipcalayer);
     [self setTableView:nil];
     [super viewDidUnload];
 }

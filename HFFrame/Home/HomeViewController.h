@@ -8,7 +8,30 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
+#import "FlipCAlayer.h"
+
+
+/******用于翻转动画 工程中没用到可注释******/
+#import "FlipViewController.h"
+#import "FlipCAlayer.h"
+#import "UIView+Screenshot.h"
+/******        结束翻转动画       ******/
+
+
 @interface HomeViewController : HFBaseViewController
+<
+/******用于翻转动画 工程中没用到可注释******/
+FlipViewControllerDelegate
+/******        结束翻转动画       ******/
+
+>
+
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 @property (retain, nonatomic) NSArray *context_array;
+
+/******用于翻转动画 工程中没用到可注释******/
+@property (nonatomic,retain) FlipCAlayer *flipcalayer;
+/******        结束翻转动画       ******/
+
+
 @end
