@@ -43,10 +43,11 @@
 }
 -(void)initStyle :(UIControlState)state
 {
+    self.tmpTitle=nil;
     if ([self backgroundImageForState:state])
     {
         UIImage *img = [self backgroundImageForState:state];
-        if ( [img respondsToSelector:@selector(resizableImageWithCapInsets:resizingMode:)])
+        if ( [img respondsToSelector:        NSSelectorFromString(@"resizableImageWithCapInsets:resizingMode:")])
         {
             [self setBackgroundImage:
              [img resizableImageWithCapInsets:UIEdgeInsetsMake(4,2,4,2) resizingMode:UIImageResizingModeStretch]
@@ -101,7 +102,7 @@
         activeView.center= CGPointMake(10, self.height/2);
         [self addSubview:activeView];
     }
-    tmpTitle = self.titleLabel.text;
+    self.tmpTitle = self.titleLabel.text;
     [self setTitle:title forState:UIControlStateDisabled];
     switch (postion) {
         case ActiveLeftOnBt:
@@ -132,7 +133,9 @@
 - (void)dealloc
 {
     RELEASE_SAFELY(activeView);
-    RELEASE_CF_SAFELY(tmpTitle);
+    if (tmpTitle) {
+        RELEASE_SAFELY(tmpTitle);
+    }
     [userInfo release];
     [super dealloc];
 }
