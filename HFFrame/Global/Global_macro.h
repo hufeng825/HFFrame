@@ -37,6 +37,10 @@
 //判断是否越狱
 #define ISJailBreak system("ls") == 0 ? YES:NO
 
+//判断是否是iphone5
+#define IsIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
 //机器语言
 #define HFApplicationLanguage [[NSUserDefaults standardUserDefaults]\
        objectForKey:@"AppleLanguages"]\
