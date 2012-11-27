@@ -28,13 +28,21 @@
 +(HFHttpRequest *)sharedClient
 {
     static HFHttpRequest *sharedHttpRequest = nil;
-    @synchronized([HFHttpRequest class])
-    {
+//    @synchronized([HFHttpRequest class])
+//    {
+//        if(!sharedHttpRequest)
+//            sharedHttpRequest = [[HFHttpRequest alloc] init];
+//    }
+    static dispatch_once_t onceToken =0;
+    dispatch_once(&onceToken, ^{
         if(!sharedHttpRequest)
             sharedHttpRequest = [[HFHttpRequest alloc] init];
-    }
+    });
     return sharedHttpRequest;
 }
+//因为是单例和非单例混合的初始化 暂时没有重写allocWithZone
+
+
 
 
 
