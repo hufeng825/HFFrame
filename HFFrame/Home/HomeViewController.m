@@ -61,7 +61,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",/*@"翻转动画例程",*/nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -178,6 +178,7 @@
         {
 //            [self funcFromeString:@"FlipViewController" index:row];
             FlipViewController *vc = [[[FlipViewController alloc]initWithNibName:@"FlipViewController" bundle:nil]autorelease];
+            [vc setTitle:[context_array objectAtIndex:row]];
             vc.delegate = self;
             [self.navigationController pushViewController:vc animated:NO];
         }
@@ -194,16 +195,21 @@
 #pragma mark flip
 -(void)FlipViewControllerClose:(FlipViewController *)flipViewController
 {
+    self.flipcalayer = [[FlipCAlayer alloc]init];
+    
+    
+    
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-    //由于在scrollview中添加layer的时候我先后顺序，所以需要把所选中的layer放到最上面，否则在动画的时候，其他的layer在选中layer之上
     [self.navigationController.view.layer addSublayer:flipcalayer];
     [CATransaction commit];
     
     //变化layer的大小，从小到大
     CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
-    boundsAnimation.fromValue = [NSValue valueWithCGRect:self.flipcalayer.frame];
+    boundsAnimation.fromValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)];
     boundsAnimation.toValue = [NSValue valueWithCGRect:self.navigationController.view.bounds];
+    
+    
     //变化layer的位置
     CABasicAnimation *positonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
     positonAnimation.fromValue = [NSValue valueWithCGPoint:self.flipcalayer.position];
@@ -224,7 +230,8 @@
     transition.type =@"flip";// kCATransitionPush;
     transition.subtype = kCATransitionFromRight;
     transition.duration = 0.25;
-    self.flipcalayer.contents = (id)[self.navigationController.view screenshot].CGImage;
+    
+    self.flipcalayer.contents = (id)[[UIApplication sharedApplication].keyWindow screenshot].CGImage;
     [self.flipcalayer addAnimation:transition forKey:@"push"];
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
@@ -232,8 +239,7 @@
 	if (anim == [self.flipcalayer animationForKey:@"zoomIn"])
     {
         [self.navigationController popViewControllerAnimated:NO];
-		//self.transitionLayer.hidden = YES;
-//		[self.navigationController presentModalViewController:subNav animated:NO];
+		self.flipcalayer.hidden = YES;
 	}
 }
 
