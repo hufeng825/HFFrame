@@ -34,8 +34,7 @@
 
 -(void)customInit
 {
-    self.backgroundColor = [UIColor blackColor];
-    [self setAlpha:0.7];
+//    self.backgroundColor = [UIColor blackColor];
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [self addSubview:customView];
 }
@@ -52,9 +51,14 @@
 
 #pragma mark -
 #pragma mark Class methods
-+ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view {
++ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view title:(NSString*)title {
 	HFLoadingView *loadingView = [[HFLoadingView alloc] initWithFrame:view.bounds];
 	[view addSubview:loadingView];
+    if (TTIsStringWithAnyText(title))
+    {
+        UILabel *label = (UILabel*)[loadingView.customView viewWithTag:12];
+        label.text = title;
+    }
     loadingView.customView.center = CGPointMake(
                                        (view.width)/2.0,
                                        (view.height)/2.0);

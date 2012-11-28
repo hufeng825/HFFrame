@@ -10,6 +10,7 @@
 
 @interface HFLoadingView : UIView
 @property (nonatomic,retain) UIView *customView;
-+ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view;
+//传入nil 或空字符串 title 用默认字符串
++ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view title:(NSString*)title;
 + (void)hideLoadingViewForView:(UIView *)view;
 @end
