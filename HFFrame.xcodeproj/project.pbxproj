@@ -74,6 +74,10 @@
 		96E517681632B88400E7D20C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5175F1632B88400E7D20C /* UIImageView+AFNetworking.m */; };
 		96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EAC5EC1641105C003D9281 /* libicucore.dylib */; };
 		96EAC5F2164110B6003D9281 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EAC5F1164110B6003D9281 /* RegexKitLite.m */; };
+		96F590361665D7710099860C /* HFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F590351665D7710099860C /* HFLoadingView.m */; };
+		96F590381665D7A60099860C /* HFLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F590371665D7A60099860C /* HFLoadingView.xib */; };
+		96F5903C1665E6A50099860C /* HFLoadingExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5903B1665E6A50099860C /* HFLoadingExampleViewController.m */; };
+		96F5903E1665E6C70099860C /* HFLoadingExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F5903D1665E6C70099860C /* HFLoadingExampleViewController.xib */; };
 		96FC7425164CF8CE005ACABC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */; };
 		96FC7426164CF8CE005ACABC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7414164CF8CE005ACABC /* SDImageCache.m */; };
 		96FC7427164CF8CE005ACABC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7418164CF8CE005ACABC /* SDWebImageDecoder.m */; };
@@ -199,6 +203,12 @@
 		96EAC5EC1641105C003D9281 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		96EAC5F0164110B6003D9281 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = GlobClass/RegexKit/RegexKitLite.h; sourceTree = SOURCE_ROOT; };
 		96EAC5F1164110B6003D9281 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = GlobClass/RegexKit/RegexKitLite.m; sourceTree = SOURCE_ROOT; };
+		96F590341665D7710099860C /* HFLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFLoadingView.h; path = GlobClass/HFLoading/HFLoadingView.h; sourceTree = SOURCE_ROOT; };
+		96F590351665D7710099860C /* HFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFLoadingView.m; path = GlobClass/HFLoading/HFLoadingView.m; sourceTree = SOURCE_ROOT; };
+		96F590371665D7A60099860C /* HFLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFLoadingView.xib; path = GlobClass/HFLoading/HFLoadingView.xib; sourceTree = SOURCE_ROOT; };
+		96F5903A1665E6A50099860C /* HFLoadingExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFLoadingExampleViewController.h; path = HFFrame/Example/HFLoadingExampleViewController.h; sourceTree = "<group>"; };
+		96F5903B1665E6A50099860C /* HFLoadingExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFLoadingExampleViewController.m; path = HFFrame/Example/HFLoadingExampleViewController.m; sourceTree = "<group>"; };
+		96F5903D1665E6C70099860C /* HFLoadingExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFLoadingExampleViewController.xib; path = HFFrame/Example/HFLoadingExampleViewController.xib; sourceTree = "<group>"; };
 		96FC7411164CF8CE005ACABC /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		96FC7413164CF8CE005ACABC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -362,6 +372,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				96F590391665E40C0099860C /* loading例程 */,
 				96A2F8201663444000E61D4F /* 翻转动画 */,
 				96352B7E166323B7001926B9 /* 截屏动画 */,
 				96FC8B0C16614B2000FEB66E /* TTTAttributedLabel */,
@@ -507,6 +518,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96F590321665D3350099860C /* HFLoadingView */,
 				96A2F83516636D0900E61D4F /* FlipViewController */,
 				96352B6616631AE0001926B9 /* UIView+ScreenShot */,
 				96FC8B0716614A0D00FEB66E /* TTTAttributedLabel */,
@@ -642,6 +654,26 @@
 			name = "RegexKitLite正则表达式";
 			sourceTree = "<group>";
 		};
+		96F590321665D3350099860C /* HFLoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				96F590341665D7710099860C /* HFLoadingView.h */,
+				96F590351665D7710099860C /* HFLoadingView.m */,
+				96F590371665D7A60099860C /* HFLoadingView.xib */,
+			);
+			name = HFLoadingView;
+			sourceTree = "<group>";
+		};
+		96F590391665E40C0099860C /* loading例程 */ = {
+			isa = PBXGroup;
+			children = (
+				96F5903A1665E6A50099860C /* HFLoadingExampleViewController.h */,
+				96F5903B1665E6A50099860C /* HFLoadingExampleViewController.m */,
+				96F5903D1665E6C70099860C /* HFLoadingExampleViewController.xib */,
+			);
+			name = "loading例程";
+			sourceTree = "<group>";
+		};
 		96FC7410164CF8CE005ACABC /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +794,8 @@
 				96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */,
 				96A2F81E1663443B00E61D4F /* FlodExampleViewController.xib in Resources */,
 				96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */,
+				96F590381665D7A60099860C /* HFLoadingView.xib in Resources */,
+				96F5903E1665E6C70099860C /* HFLoadingExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +854,8 @@
 				96A2F81D1663443B00E61D4F /* FlodExampleViewController.m in Sources */,
 				96A2F83A16636D5700E61D4F /* FlipViewController.m in Sources */,
 				96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */,
+				96F590361665D7710099860C /* HFLoadingView.m in Sources */,
+				96F5903C1665E6A50099860C /* HFLoadingExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

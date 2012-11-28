@@ -20,6 +20,8 @@
 #import "AttributedLabelControllViewController.h"
 #import "ScreenshotExampleViewController.h"
 #import "FlodExampleViewController.h"
+#import "HFLoadingExampleViewController.h"
+
 
 @interface HomeViewController ()
 
@@ -61,7 +63,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -181,6 +183,10 @@
             [vc setTitle:[context_array objectAtIndex:row]];
             vc.delegate = self;
             [self.navigationController pushViewController:vc animated:NO];
+        }
+        case 11:
+        {
+            [self funcFromeString:@"HFLoadingExampleViewController" index:row];
         }
         default:
             break;
