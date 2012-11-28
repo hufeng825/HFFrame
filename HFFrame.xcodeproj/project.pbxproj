@@ -53,6 +53,8 @@
 		96E517681632B88400E7D20C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5175F1632B88400E7D20C /* UIImageView+AFNetworking.m */; };
 		96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EAC5EC1641105C003D9281 /* libicucore.dylib */; };
 		96EAC5F2164110B6003D9281 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 96EAC5F1164110B6003D9281 /* RegexKitLite.m */; };
+		96F5904C1666077E0099860C /* HFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5904A1666077E0099860C /* HFLoadingView.m */; };
+		96F5904D1666077E0099860C /* HFLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F5904B1666077E0099860C /* HFLoadingView.xib */; };
 		96FC7425164CF8CE005ACABC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */; };
 		96FC7426164CF8CE005ACABC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7414164CF8CE005ACABC /* SDImageCache.m */; };
 		96FC7427164CF8CE005ACABC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7418164CF8CE005ACABC /* SDWebImageDecoder.m */; };
@@ -144,6 +146,9 @@
 		96EAC5EC1641105C003D9281 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		96EAC5F0164110B6003D9281 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = GlobClass/RegexKit/RegexKitLite.h; sourceTree = SOURCE_ROOT; };
 		96EAC5F1164110B6003D9281 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = GlobClass/RegexKit/RegexKitLite.m; sourceTree = SOURCE_ROOT; };
+		96F590491666077E0099860C /* HFLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFLoadingView.h; path = GlobClass/HFLoading/HFLoadingView.h; sourceTree = SOURCE_ROOT; };
+		96F5904A1666077E0099860C /* HFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFLoadingView.m; path = GlobClass/HFLoading/HFLoadingView.m; sourceTree = SOURCE_ROOT; };
+		96F5904B1666077E0099860C /* HFLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFLoadingView.xib; path = GlobClass/HFLoading/HFLoadingView.xib; sourceTree = SOURCE_ROOT; };
 		96FC7411164CF8CE005ACABC /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		96FC7413164CF8CE005ACABC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -351,6 +356,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96F59047166607540099860C /* HFLoading */,
 				96352B6F16632315001926B9 /* UIViewScreenshort */,
 				96FC8AFE1661495400FEB66E /* TTTAttributedLabel */,
 				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
@@ -463,6 +469,16 @@
 			name = "RegexKitLite正则表达式";
 			sourceTree = "<group>";
 		};
+		96F59047166607540099860C /* HFLoading */ = {
+			isa = PBXGroup;
+			children = (
+				96F590491666077E0099860C /* HFLoadingView.h */,
+				96F5904A1666077E0099860C /* HFLoadingView.m */,
+				96F5904B1666077E0099860C /* HFLoadingView.xib */,
+			);
+			name = HFLoading;
+			sourceTree = "<group>";
+		};
 		96FC7410164CF8CE005ACABC /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +578,7 @@
 				969D90A51658AC4C00A382B2 /* btm_nav@2x.png in Resources */,
 				969D90AA1658B2DD00A382B2 /* navigation.jpg in Resources */,
 				969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */,
+				96F5904D1666077E0099860C /* HFLoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +625,7 @@
 				183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */,
 				96FC8B021661497300FEB66E /* TTTAttributedLabel.m in Sources */,
 				96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */,
+				96F5904C1666077E0099860C /* HFLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
