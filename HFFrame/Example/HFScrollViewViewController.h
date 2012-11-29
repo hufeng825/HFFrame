@@ -13,7 +13,7 @@
 
 @interface HFScrollViewViewController : HFBaseViewController<CycleScrollViewDelegate>
 {
-  CycleScrollView * cycleScrollView;
-	NSMutableArray *picArray;
 }
+@property(nonatomic,retain)  CycleScrollView * cycleScrollView;
+@property(nonatomic,retain)	 NSMutableArray *picArray;
 @end

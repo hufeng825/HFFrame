@@ -12,7 +12,7 @@
 @end
 
 @implementation HFScrollViewViewController
-
+@synthesize cycleScrollView,picArray;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,24 +29,27 @@
     // Do any additional setup after loading the view from its nib.
 	NSLog(@"%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 	
-	picArray= [[NSMutableArray alloc] init];
+	self.picArray= [[NSMutableArray alloc] init];
 	[picArray addObject:[UIImage imageNamed:@"default"]];
 	[picArray addObject:[UIImage imageNamed:@"default"]];
 	[picArray addObject:[UIImage imageNamed:@"default"]];
+    [picArray release];
 //	UIImage *cachedImage = [manager imageWithURL:url];
 	//如果cache没有命中，则去下载指定网络位置的图片，并且给出一个委托方法
 		// Start an async download
 //		[manager downloadWithURL: delegate:self];
 	
 
-	cycleScrollView =[ [CycleScrollView alloc ]initWithFrame:self.view.frame cycleDirection:CycleDirectionLandscape pictures:picArray TimeInterval:3];
+	self.cycleScrollView =[ [CycleScrollView alloc ]initWithFrame:self.view.frame cycleDirection:CycleDirectionLandscape pictures:picArray TimeInterval:3];
 	cycleScrollView.delegate = self;
 	[self.view addSubview:cycleScrollView];
+    [cycleScrollView release];
 	[self initPictureFunc];
 }
 
 -(void)initPictureFunc
 {
+    SDWebImageManager *manager = [[[SDWebImageManager alloc]init] autorelease];
 	for (int i=0; i<3; i++)
 	{
 		NSURL *url =nil;
@@ -64,7 +67,6 @@
 			default:
 				break;
 		}
-		SDWebImageManager *manager = [[SDWebImageManager alloc]init];
 		[manager downloadWithURL:url delegate:self options:SDWebImageRetryFailed success:^(UIImage *image, BOOL cached)
 		{
 			if (cached)
@@ -100,6 +102,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)dealloc
+{
+    cycleScrollView.delegate = nil;
+    RELEASE_SAFELY(cycleScrollView);
+    RELEASE_SAFELY(picArray);
+    [super dealloc];
 }
 
 @end

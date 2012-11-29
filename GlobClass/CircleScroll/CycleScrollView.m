@@ -33,8 +33,6 @@
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.pagingEnabled = YES;
         scrollView.delegate = self;
-        [self addSubview:scrollView];
-        
         // 在水平方向滚动
         if(scrollDirection == CycleDirectionLandscape) {
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
@@ -57,6 +55,16 @@
     
     return self;
 }
+
+
+-(void)removeFromSuperview
+{
+    [self.scrollView setDelegate:nil];
+    [timer invalidate];
+    [super removeFromSuperview];
+}
+
+
 -(void)updateScrollWithTimer:(id)sender
 {
 	 if(scrollDirection == CycleDirectionLandscape)
@@ -96,9 +104,8 @@
         if(scrollDirection == CycleDirectionPortait) {
             imageView.frame = CGRectOffset(imageView.frame, 0, scrollFrame.size.height * i);
         }
-        
-        
         [scrollView addSubview:imageView];
+        [imageView release];
     }
     if (scrollDirection == CycleDirectionLandscape) {
         [scrollView setContentOffset:CGPointMake(scrollFrame.size.width, 0)];
@@ -162,9 +169,10 @@
         }
     }
     
-    if ([delegate respondsToSelector:@selector(cycleScrollViewDelegate:didScrollImageView:)]) {
+    if ([delegate respondsToSelector:@selector(cycleScrollViewDelegate:didScrollImageView:)] )
+     {
         [delegate cycleScrollViewDelegate:self didScrollImageView:curPage];
-    }
+      }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)aScrollView {
@@ -194,12 +202,13 @@
 {
 	if (timer)
 	{
+        [timer invalidate];
 		RELEASE_SAFELY(timer);
 	}
-    [imagesArray release];
-    [curImages release];
-    [scrollView release];
-	[curImageView release];
+    RELEASE_SAFELY(imagesArray);
+    RELEASE_SAFELY(curImages);
+    RELEASE_SAFELY(scrollView);
+    RELEASE_SAFELY(curImageView);
     [super dealloc];
 }
 

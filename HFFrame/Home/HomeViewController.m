@@ -185,6 +185,7 @@
             vc.delegate = self;
             [self.navigationController pushViewController:vc animated:NO];
         }
+            break;
         case 11:
         {
             [self funcFromeString:@"HFLoadingExampleViewController" index:row];
@@ -194,6 +195,7 @@
         {
             [self funcFromeString:@"GifExampleViewController" index:row];
         }
+            break;
         default:
             break;
     }
@@ -245,6 +247,7 @@
     
     self.flipcalayer.contents = (id)[[UIApplication sharedApplication].keyWindow screenshot].CGImage;
     [self.flipcalayer addAnimation:transition forKey:@"push"];
+    [flipcalayer release];
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
