@@ -181,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B211661541500FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
 				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
@@ -188,7 +189,6 @@
 				9693402C1656141600F1BDC1 /* CFNetwork.framework in Frameworks */,
 				9693402A165613DC00F1BDC1 /* SystemConfiguration.framework in Frameworks */,
 				96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */,
-				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */,
 				1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */,
 				1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */,
@@ -356,6 +356,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96F5905216672D8A0099860C /* UIImage+GiF */,
 				96F59047166607540099860C /* HFLoading */,
 				96352B6F16632315001926B9 /* UIViewScreenshort */,
 				96FC8AFE1661495400FEB66E /* TTTAttributedLabel */,
@@ -477,6 +478,13 @@
 				96F5904B1666077E0099860C /* HFLoadingView.xib */,
 			);
 			name = HFLoading;
+			sourceTree = "<group>";
+		};
+		96F5905216672D8A0099860C /* UIImage+GiF */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "UIImage+GiF";
 			sourceTree = "<group>";
 		};
 		96FC7410164CF8CE005ACABC /* SDWebImage */ = {
