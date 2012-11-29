@@ -7,6 +7,7 @@
 //
 
 #import "CycleScrollView.h"
+#import "SDWebImageManager.h"
 
 @implementation CycleScrollView
 @synthesize delegate;
@@ -33,12 +34,84 @@
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.pagingEnabled = YES;
         scrollView.delegate = self;
+        
         // 在水平方向滚动
         if(scrollDirection == CycleDirectionLandscape) {
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
                                                 scrollView.frame.size.height);
         }
         // 在垂直方向滚动 
+        if(scrollDirection == CycleDirectionPortait) {
+            scrollView.contentSize = CGSizeMake(scrollView.frame.size.width,
+                                                scrollView.frame.size.height * 3);
+        }
+        if (timeInterval>0 && !timer)
+		{
+			self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
+			NSRunLoop *main=[NSRunLoop currentRunLoop];
+			[main addTimer:timer forMode:NSRunLoopCommonModes];
+		}
+        [self addSubview:scrollView];
+        [self refreshScrollView];
+    }
+    
+    return self;
+}
+
+
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction picturesUrl:(NSMutableArray *)pictureArrayUrl  TimeInterval:(NSTimeInterval)timeInterval
+{
+    SDWebImageManager *manager = [[SDWebImageManager alloc]init];
+    
+    self = [super initWithFrame:frame];
+    if(self)
+    {
+        scrollFrame = frame;
+        scrollDirection = direction;
+        totalPage = pictureArrayUrl.count;
+        curPage = 1;                                    // 显示的是图片数组里的第一张图片
+        curImages = [[NSMutableArray alloc] init];
+        
+        imagesArray = [[NSMutableArray alloc]init];
+
+        for (int i=0; i<totalPage;i++)
+        {
+            [imagesArray addObject:[UIImage imageNamed:@"default"]];
+        }
+        
+        for (int i=0; i<totalPage; i++)
+        {
+            [manager downloadWithURL:[NSURL URLWithString:[pictureArrayUrl objectAtIndex:i]]  delegate:self options:SDWebImageRetryFailed success:^(UIImage *image, BOOL cached)
+             {
+                 if (cached)
+                 {
+                 }
+                 [imagesArray replaceObjectAtIndex:i withObject:image];
+                 [self refreshScrollView];
+             }
+            failure:^(NSError *error)
+             {
+                 NSLog(@"%d error %@",i,[error localizedDescription]);
+             }
+             ];
+        }
+        [manager release];
+
+        
+        
+        scrollView = [[UIScrollView alloc] initWithFrame:frame];
+        scrollView.backgroundColor = [UIColor blackColor];
+        scrollView.showsHorizontalScrollIndicator = NO;
+        scrollView.showsVerticalScrollIndicator = NO;
+        scrollView.pagingEnabled = YES;
+        scrollView.delegate = self;
+        
+        // 在水平方向滚动
+        if(scrollDirection == CycleDirectionLandscape) {
+            scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
+                                                scrollView.frame.size.height);
+        }
+        // 在垂直方向滚动
         if(scrollDirection == CycleDirectionPortait) {
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width,
                                                 scrollView.frame.size.height * 3);
