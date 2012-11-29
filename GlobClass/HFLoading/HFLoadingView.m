@@ -9,7 +9,7 @@
 #import "HFLoadingView.h"
 
 @implementation HFLoadingView
-@synthesize customView;
+@synthesize customView,imageView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -36,18 +36,22 @@
 {
 //    self.backgroundColor = [UIColor blackColor];
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+    self.imageView =(UIImageView*) [customView viewWithTag:1];
     [self addSubview:customView];
+    
 }
 
-- (void)layoutSubviews
-{
-    CGSize viewsize = self.frame.size;
-//    float bothwidth = spinnersize.width + textsize.width + 5.0f;
-//    CGRect containrect = {
-//        CGPointMake(floorf((viewsize.width / 2) - (bothwidth / 2)), floorf((viewsize.height / 2) - (spinnersize.height / 2))),
-//        CGSizeMake(bothwidth, spinnersize.height)
-//    };
-}
+
+
+//- (void)layoutSubviews
+//{
+//    CGSize viewsize = self.frame.size;
+////    float bothwidth = spinnersize.width + textsize.width + 5.0f;
+////    CGRect containrect = {
+////        CGPointMake(floorf((viewsize.width / 2) - (bothwidth / 2)), floorf((viewsize.height / 2) - (spinnersize.height / 2))),
+////        CGSizeMake(bothwidth, spinnersize.height)
+////    };
+//}
 
 #pragma mark -
 #pragma mark Class methods
@@ -80,6 +84,7 @@
 - (void)dealloc
 {
     TTIsStringWithAnyText(customView);
+    TTIsStringWithAnyText(imageView);
     [super dealloc];
 }
 @end

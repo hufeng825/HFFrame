@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ */
+
+
 typedef enum {
     CycleDirectionPortait,          // 垂直滚动
     CycleDirectionLandscape         // 水平滚动
@@ -27,7 +31,7 @@ typedef enum {
     id delegate;
 }
 
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) id<CycleScrollViewDelegate> delegate;
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) NSMutableArray *imagesArray;               // 存放所有需要滚动的图片 UIImage
 @property (nonatomic, retain)  NSMutableArray *curImages;
