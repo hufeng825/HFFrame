@@ -26,17 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     UIImageView *imageV = (UIImageView*)[self.view viewWithTag:2];
     imageV.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL URLWithString:@"http://pic3.nipic.com/20090615/2761475_134344084_2.gif"] duration:1];
-    
     
     UIImageView *imageVe = (UIImageView*)[self.view viewWithTag:1];
     NSURL *url  = [[NSBundle mainBundle] URLForResource:@"wof01" withExtension:@"gif"];
     imageVe.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url] duration:1];
-    
-
-    // Do any additional setup after loading the view from its nib.
 }
+
 
 - (void)didReceiveMemoryWarning
 {
