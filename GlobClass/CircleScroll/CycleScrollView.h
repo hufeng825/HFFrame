@@ -40,6 +40,7 @@ typedef enum {
 
 - (int)validPageValue:(NSInteger)value;
 - (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray TimeInterval:(NSTimeInterval)timeInterval;
+- (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction picturesUrl:(NSMutableArray *)pictureArrayUrl  TimeInterval:(NSTimeInterval)timeInterval;
 - (NSMutableArray *)getDisplayImagesWithCurpage:(int)page;
 - (void)refreshScrollView;
 
