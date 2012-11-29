@@ -17,4 +17,6 @@
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 - (UIImage *)addImage:(UIImage *)image1 toImage:(UIImage *)image2 ;
++ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)data duration:(NSTimeInterval)duration;
++ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)url duration:(NSTimeInterval)duration;
 @end;

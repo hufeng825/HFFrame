@@ -78,6 +78,9 @@
 		96F590381665D7A60099860C /* HFLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F590371665D7A60099860C /* HFLoadingView.xib */; };
 		96F5903C1665E6A50099860C /* HFLoadingExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5903B1665E6A50099860C /* HFLoadingExampleViewController.m */; };
 		96F5903E1665E6C70099860C /* HFLoadingExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F5903D1665E6C70099860C /* HFLoadingExampleViewController.xib */; };
+		96F59061166732110099860C /* GifExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F5905F166732110099860C /* GifExampleViewController.m */; };
+		96F59062166732110099860C /* GifExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96F59060166732110099860C /* GifExampleViewController.xib */; };
+		96F590641667331A0099860C /* wof01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 96F590631667331A0099860C /* wof01.gif */; };
 		96FC7425164CF8CE005ACABC /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */; };
 		96FC7426164CF8CE005ACABC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7414164CF8CE005ACABC /* SDImageCache.m */; };
 		96FC7427164CF8CE005ACABC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FC7418164CF8CE005ACABC /* SDWebImageDecoder.m */; };
@@ -209,6 +212,10 @@
 		96F5903A1665E6A50099860C /* HFLoadingExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFLoadingExampleViewController.h; path = HFFrame/Example/HFLoadingExampleViewController.h; sourceTree = "<group>"; };
 		96F5903B1665E6A50099860C /* HFLoadingExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFLoadingExampleViewController.m; path = HFFrame/Example/HFLoadingExampleViewController.m; sourceTree = "<group>"; };
 		96F5903D1665E6C70099860C /* HFLoadingExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFLoadingExampleViewController.xib; path = HFFrame/Example/HFLoadingExampleViewController.xib; sourceTree = "<group>"; };
+		96F5905E166732110099860C /* GifExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GifExampleViewController.h; path = HFFrame/Example/GifExampleViewController.h; sourceTree = "<group>"; };
+		96F5905F166732110099860C /* GifExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GifExampleViewController.m; path = HFFrame/Example/GifExampleViewController.m; sourceTree = "<group>"; };
+		96F59060166732110099860C /* GifExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GifExampleViewController.xib; path = HFFrame/Example/GifExampleViewController.xib; sourceTree = "<group>"; };
+		96F590631667331A0099860C /* wof01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = wof01.gif; path = HFFrame/Example/wof01.gif; sourceTree = "<group>"; };
 		96FC7411164CF8CE005ACABC /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		96FC7412164CF8CE005ACABC /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		96FC7413164CF8CE005ACABC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -244,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B1316614D1200FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
 				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
@@ -251,7 +259,6 @@
 				9693402C1656141600F1BDC1 /* CFNetwork.framework in Frameworks */,
 				9693402A165613DC00F1BDC1 /* SystemConfiguration.framework in Frameworks */,
 				96FC7430164CFB0E005ACABC /* MapKit.framework in Frameworks */,
-				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */,
 				1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */,
 				1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */,
@@ -372,6 +379,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				96F5905D166731D60099860C /* GifImage */,
 				96F590391665E40C0099860C /* loading例程 */,
 				96A2F8201663444000E61D4F /* 翻转动画 */,
 				96352B7E166323B7001926B9 /* 截屏动画 */,
@@ -674,6 +682,17 @@
 			name = "loading例程";
 			sourceTree = "<group>";
 		};
+		96F5905D166731D60099860C /* GifImage */ = {
+			isa = PBXGroup;
+			children = (
+				96F590631667331A0099860C /* wof01.gif */,
+				96F5905E166732110099860C /* GifExampleViewController.h */,
+				96F5905F166732110099860C /* GifExampleViewController.m */,
+				96F59060166732110099860C /* GifExampleViewController.xib */,
+			);
+			name = GifImage;
+			sourceTree = "<group>";
+		};
 		96FC7410164CF8CE005ACABC /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,6 +815,8 @@
 				96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */,
 				96F590381665D7A60099860C /* HFLoadingView.xib in Resources */,
 				96F5903E1665E6C70099860C /* HFLoadingExampleViewController.xib in Resources */,
+				96F59062166732110099860C /* GifExampleViewController.xib in Resources */,
+				96F590641667331A0099860C /* wof01.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +877,7 @@
 				96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */,
 				96F590361665D7710099860C /* HFLoadingView.m in Sources */,
 				96F5903C1665E6A50099860C /* HFLoadingExampleViewController.m in Sources */,
+				96F59061166732110099860C /* GifExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,13 @@
 
 
 #import "UIImage+Extensions.h"
+#import <ImageIO/ImageIO.h>
+
+#if __has_feature(objc_arc)
+#define toCF (__bridge CFTypeRef)
+#else
+#define toCF (CFTypeRef)
+#endif
 
 
 CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
@@ -228,8 +235,47 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	
 	UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
-	return newImage;
-	
+	return newImage;	
 }
+
+
+static UIImage *animatedImageWithAnimatedGIFImageSource(CGImageSourceRef source, NSTimeInterval duration) {
+    if (!source)
+        return nil;
+    
+    size_t count = CGImageSourceGetCount(source);
+    NSMutableArray *images = [NSMutableArray arrayWithCapacity:count];
+    for (size_t i = 0; i < count; ++i) {
+        CGImageRef cgImage = CGImageSourceCreateImageAtIndex(source, i, NULL);
+        if (!cgImage)
+            return nil;
+        [images addObject:[UIImage imageWithCGImage:cgImage]];
+        CGImageRelease(cgImage);
+    }
+    
+    return [UIImage animatedImageWithImages:images duration:duration];
+}
+
+static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRef source, NSTimeInterval duration) {
+    UIImage *image = animatedImageWithAnimatedGIFImageSource(source, duration);
+    CFRelease(source);
+    return image;
+}
+
+/*
+ NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"gif"];
+ self.dataImageView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url] duration:1];
+ self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url duration:2];
+ */
+
++ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)data duration:(NSTimeInterval)duration {
+    return animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceCreateWithData(toCF data, NULL), duration);
+}
+
++ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)url duration:(NSTimeInterval)duration {
+    return animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceCreateWithURL(toCF url, NULL), duration);
+}
+
+
 
 @end;
