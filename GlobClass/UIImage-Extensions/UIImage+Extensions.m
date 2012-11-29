@@ -262,6 +262,12 @@ static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRe
     return image;
 }
 
+/*
+ NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"gif"];
+ self.dataImageView.image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url] duration:1];
+ self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url duration:2];
+ */
+
 + (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)data duration:(NSTimeInterval)duration {
     return animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceCreateWithData(toCF data, NULL), duration);
 }
