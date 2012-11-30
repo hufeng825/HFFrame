@@ -51,7 +51,6 @@
     [imageView setAnimationRepeatCount:1000];
     [imageView startAnimating];
     [self addSubview:customView];
-    
 }
 
 
