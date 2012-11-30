@@ -21,6 +21,12 @@
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
+		960DAB0D1668A39700303ECC /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB0C1668A39700303ECC /* MTAnimatedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		960DAB131668A3BD00303ECC /* loading01.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB0E1668A3BD00303ECC /* loading01.png */; };
+		960DAB141668A3BD00303ECC /* loading02.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB0F1668A3BD00303ECC /* loading02.png */; };
+		960DAB151668A3BD00303ECC /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB101668A3BD00303ECC /* loading03.png */; };
+		960DAB161668A3BD00303ECC /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB111668A3BD00303ECC /* loading04.png */; };
+		960DAB171668A3BD00303ECC /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB121668A3BD00303ECC /* loading05.png */; };
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
@@ -92,6 +98,13 @@
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
 		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
 		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
+		960DAB0B1668A39700303ECC /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTAnimatedLabel.h; path = GlobClass/MTAnimatedLabel/MTAnimatedLabel.h; sourceTree = SOURCE_ROOT; };
+		960DAB0C1668A39700303ECC /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTAnimatedLabel.m; path = GlobClass/MTAnimatedLabel/MTAnimatedLabel.m; sourceTree = SOURCE_ROOT; };
+		960DAB0E1668A3BD00303ECC /* loading01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading01.png; path = GlobClass/HFLoading/loading01.png; sourceTree = SOURCE_ROOT; };
+		960DAB0F1668A3BD00303ECC /* loading02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading02.png; path = GlobClass/HFLoading/loading02.png; sourceTree = SOURCE_ROOT; };
+		960DAB101668A3BD00303ECC /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
+		960DAB111668A3BD00303ECC /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
+		960DAB121668A3BD00303ECC /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
 		96352B7216632338001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -294,6 +307,15 @@
 			path = HFAnimation;
 			sourceTree = "<group>";
 		};
+		960DAB091668A35E00303ECC /* MTAnimationLabel */ = {
+			isa = PBXGroup;
+			children = (
+				960DAB0B1668A39700303ECC /* MTAnimatedLabel.h */,
+				960DAB0C1668A39700303ECC /* MTAnimatedLabel.m */,
+			);
+			name = MTAnimationLabel;
+			sourceTree = "<group>";
+		};
 		96352B6F16632315001926B9 /* UIViewScreenshort */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +377,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB091668A35E00303ECC /* MTAnimationLabel */,
 				96F5905216672D8A0099860C /* UIImage+GiF */,
 				96F59047166607540099860C /* HFLoading */,
 				96352B6F16632315001926B9 /* UIViewScreenshort */,
@@ -473,6 +496,11 @@
 		96F59047166607540099860C /* HFLoading */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB0E1668A3BD00303ECC /* loading01.png */,
+				960DAB0F1668A3BD00303ECC /* loading02.png */,
+				960DAB101668A3BD00303ECC /* loading03.png */,
+				960DAB111668A3BD00303ECC /* loading04.png */,
+				960DAB121668A3BD00303ECC /* loading05.png */,
 				96F590491666077E0099860C /* HFLoadingView.h */,
 				96F5904A1666077E0099860C /* HFLoadingView.m */,
 				96F5904B1666077E0099860C /* HFLoadingView.xib */,
@@ -587,6 +615,11 @@
 				969D90AA1658B2DD00A382B2 /* navigation.jpg in Resources */,
 				969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */,
 				96F5904D1666077E0099860C /* HFLoadingView.xib in Resources */,
+				960DAB131668A3BD00303ECC /* loading01.png in Resources */,
+				960DAB141668A3BD00303ECC /* loading02.png in Resources */,
+				960DAB151668A3BD00303ECC /* loading03.png in Resources */,
+				960DAB161668A3BD00303ECC /* loading04.png in Resources */,
+				960DAB171668A3BD00303ECC /* loading05.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +667,7 @@
 				96FC8B021661497300FEB66E /* TTTAttributedLabel.m in Sources */,
 				96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */,
 				96F5904C1666077E0099860C /* HFLoadingView.m in Sources */,
+				960DAB0D1668A39700303ECC /* MTAnimatedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
