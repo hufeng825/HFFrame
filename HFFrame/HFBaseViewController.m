@@ -16,6 +16,8 @@ bool ye =[email isMatchedByRegex:@""];
 
 #import "HFBaseViewController.h"
 #import "RegexKitLite.h"
+#import "UIColor+Hex.h"
+
 
 //!!! 设置tab 样式
 static inline void setUITabBarStyle (UITabBarController *tabBar)
@@ -86,6 +88,11 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    //ios5++
+	if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0"))
+    {
+        [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithred:174 green:22 blue:21]];
+	}
     
     [self toSetTitleLable];
     

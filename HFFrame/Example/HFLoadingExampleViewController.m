@@ -41,7 +41,6 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [HFLoadingView hideLoadingViewForView:[self.view viewWithTag:2]];
     });
-
 }
 
 - (void)didReceiveMemoryWarning
