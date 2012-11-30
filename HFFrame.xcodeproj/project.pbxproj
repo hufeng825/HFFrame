@@ -240,7 +240,6 @@
 			children = (
 				969D909A1658A9A500A382B2 /* style */,
 				96876D8F164C041700406C92 /* Class */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				96876D81164BCA5100406C92 /* 全局参数 */,
 				96E517021632AF3200E7D20C /* HFHTTP */,
 				96876D78164BB66D00406C92 /* BaseViewController */,
@@ -373,6 +372,7 @@
 				96876D79164BB8B100406C92 /* UIImage-Extensions缩放旋转裁剪 */,
 				96876D7D164BBBB800406C92 /* UIViewAddition长高宽 */,
 				603900E9E4F1B9869E1B42E4 /* Array+Additons */,
+				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 			);
 			name = Class;
 			sourceTree = "<group>";
