@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTAnimatedLabel.h"
 @interface HFLoadingView : UIView
 @property (nonatomic,retain) UIView *customView;
 @property (nonatomic,retain) UIImageView *imageView;
