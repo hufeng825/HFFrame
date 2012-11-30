@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface HFLoadingView : UIView
 @property (nonatomic,retain) UIView *customView;
 @property (nonatomic,retain) UIImageView *imageView;

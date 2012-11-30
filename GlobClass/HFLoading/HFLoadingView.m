@@ -7,6 +7,7 @@
 //
 
 #import "HFLoadingView.h"
+#import "HFAnimation.h"
 
 @implementation HFLoadingView
 @synthesize customView,imageView;
@@ -36,7 +37,19 @@
 {
 //    self.backgroundColor = [UIColor blackColor];
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    self.imageView =(UIImageView*) [customView viewWithTag:1];
+    self.imageView =(UIImageView*) [customView viewWithTag:11];
+//    [self.imageView setImage:[UIImage imageNamed:@"loading01.png"]];
+    NSArray *arry = [NSArray arrayWithObjects:
+                     [UIImage imageNamed:@"loading01.png"],
+                     [UIImage imageNamed:@"loading02.png"],
+                     [UIImage imageNamed:@"loading03.png"],
+                     [UIImage imageNamed:@"loading04.png"],
+                     [UIImage imageNamed:@"loading05.png"],
+                     nil];
+    [imageView setAnimationImages:arry];
+    [imageView setAnimationDuration:0.5];
+    [imageView setAnimationRepeatCount:1000];
+    [imageView startAnimating];
     [self addSubview:customView];
     
 }

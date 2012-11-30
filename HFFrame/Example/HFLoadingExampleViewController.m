@@ -29,14 +29,14 @@
 	// Do any additional setup after loading the view.
     [HFLoadingView showLoadingViewAddedTo:[self.view viewWithTag:1] title:@"测试loading 页面"];
 //    [HFLoadingView showLoadingViewAddedTo:[self.view viewWithTag:3]];
-    int64_t delayInSeconds = 5.0;
+    int64_t delayInSeconds = 500.0;
     dispatch_time_t popTimes = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTimes, dispatch_get_main_queue(), ^(void){
         [HFLoadingView hideLoadingViewForView:[self.view viewWithTag:1]];
     });
     [HFLoadingView showLoadingViewAddedTo:[self.view viewWithTag:2] title:@"测试loading 页面"];
     //    [HFLoadingView showLoadingViewAddedTo:[self.view viewWithTag:3]];
-    int64_t delayInSecond = 5.0;
+    int64_t delayInSecond = 500.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSecond * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [HFLoadingView hideLoadingViewForView:[self.view viewWithTag:2]];

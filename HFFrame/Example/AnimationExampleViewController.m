@@ -83,4 +83,12 @@
     [HFAnimation animationMovepoint:sender point:CGPointMake(-10, -10)];
 }
 
+- (IBAction)animationRoateX:(id)sender
+{
+    [HFAnimation animationRotate:sender rotatePos:RotateX];
+}
+- (IBAction)animationRoateZ:(id)sender
+{
+    [HFAnimation animationRotate:sender rotatePos:RotateZ];
+}
 @end

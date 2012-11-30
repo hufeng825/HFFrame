@@ -20,5 +20,6 @@
 - (IBAction)animationShow:(id)sender;
 - (IBAction)animationHeartbeat:(id)sender;
 - (IBAction)animationMovepoint:(id)sender;
-
+- (IBAction)animationRoateX:(id)sender;
+- (IBAction)animationRoateZ:(id)sender;
 @end

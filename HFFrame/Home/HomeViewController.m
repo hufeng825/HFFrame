@@ -199,7 +199,7 @@
         default:
             break;
     }
-    NSLog(@"%d",ISJailBreak);
+//    NSLog(@"%d",ISJailBreak);
 }
 
 

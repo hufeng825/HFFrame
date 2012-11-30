@@ -74,13 +74,18 @@
 //!!! 晃动提醒
 + (void)animationShake:(id)sender
 {
+    [self animationShake:sender repeatCount:FLT_MAX];
+}
+
++ (void)animationShake:(id)sender  repeatCount:(float)repeatCount
+{
     UIView *view = (UIView*)sender;
     CGFloat t = 2.0;
     CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
     CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
     view.transform = translateLeft;
     [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionRepeat animations:^{
-        [UIView setAnimationRepeatCount:FLT_MAX];
+        [UIView setAnimationRepeatCount:repeatCount];
         view.transform = translateRight;
     } completion:^(BOOL finished) {
         if (finished) {
@@ -89,7 +94,11 @@
             } completion:NULL];
         }
     }];
+    
 }
+
+
+
 
 +(void )animationMovepoint:(id)sender point:(CGPoint )point //点移动
 {
@@ -102,13 +111,48 @@
     [view.layer addAnimation:animation forKey:@"transform.scale"];
 }
 
-
+//!!! 去掉所有动画
 +(void)removeAllAnimation:(id)sender;
 {
     UIView *view = (UIView*)sender;
     [UIView setAnimationsEnabled:YES];
     [view.layer removeAllAnimations];
 }
+
+
+//!!! 旋转动画
++(void)animationRotate:(id)sender rotatePos:(RotatePos)rotatePos 
+{
+    [self animationRotate:sender rotatePos:rotatePos duration:1.f repeatCount:FLT_MAX];
+}
++(void)animationRotate:(id)sender rotatePos:(RotatePos)rotatePos duration:(NSTimeInterval)duration  repeatCount:(float)repeatCount
+{
+    UIView *view = (UIView*)sender;
+    CAKeyframeAnimation *rotateAnimation;
+    switch (rotatePos) {
+        case RotateX:
+            rotateAnimation  = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.x"]; //设置动画类型为绕x轴旋转（即图片的水平翻转）
+            break;
+        case RotateY:
+            rotateAnimation  = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.Y"]; //设置动画类型为绕x轴旋转（即图片的水平翻转）
+            break;
+        default:
+            rotateAnimation  = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"]; //设置动画类型为绕z轴旋转（即图片的水平翻转）
+            break;
+            break;
+    }
+    
+    rotateAnimation.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:2*M_PI],nil]; //设置起始位置，在此为0~2pi，即旋转360度
+    rotateAnimation.duration = duration; //动画持续时间1秒
+    rotateAnimation.keyTimes = [NSArray arrayWithObjects:
+                                [NSNumber numberWithFloat:.0], //动画关键帧设置，此处为动画开始时间
+                                [NSNumber numberWithFloat:duration], //动画结束时间
+                                nil];
+    rotateAnimation.repeatCount = repeatCount;
+    [view.layer addAnimation:rotateAnimation forKey:@"transform.rotation.x"];
+
+}
+
 
 
 //!!! 隐藏动画
@@ -122,6 +166,7 @@
         [view setAlpha:1];
     }];
 }
+
 
 //!!! 隐藏动画
 +(void)animationShow:(id)sender
@@ -153,6 +198,8 @@
 
 
 
+
+
 +(void)palySound:(NSString*)soundAct
 {
     NSString *path = [NSString stringWithFormat:@"%@%@",
@@ -170,3 +217,43 @@
 
 
 @end
+
+/*组合动画例程*/
+/*
+ CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.x"]; //设置动画类型为绕x轴旋转（即图片的水平翻转）
+ rotateAnimation.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:2*M_PI],nil]; //设置起始位置，在此为0~2pi，即旋转360度
+ rotateAnimation.duration = 5.f; //动画持续时间1秒
+ rotateAnimation.keyTimes = [NSArray arrayWithObjects:
+ [NSNumber numberWithFloat:.0], //动画关键帧设置，此处为动画开始时间
+ [NSNumber numberWithFloat:1], //动画结束时间
+ nil];
+ 
+ //设置淡出效果
+ CABasicAnimation *fadeOutAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+ [fadeOutAnimation setToValue:[NSNumber numberWithFloat:0]];
+ fadeOutAnimation.fillMode = kCAFillModeForwards;
+ fadeOutAnimation.removedOnCompletion = NO; //结束时不移除动画，不过现在该属性被忽略了
+ 
+ //缩放
+ CABasicAnimation *resizeAnimation = [CABasicAnimation animationWithKeyPath:@"bounds.size"];
+ [resizeAnimation setToValue:[NSValue valueWithCGSize:CGSizeMake(40.0f, imageFrame.size.height * (20.0f / imageFrame.size.width))]];
+ resizeAnimation.fillMode = kCAFillModeForwards;
+ resizeAnimation.removedOnCompletion = NO;
+ 
+ CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"]; //动画类型为移动位置
+ positionAnimation.duration =5.f;
+ CGMutablePathRef path = CGPathCreateMutable(); //创建路径
+ CGPathMoveToPoint(path, NULL, view.frame.origin.x+8, view.frame.origin.y+18); //移动到指定路径
+ CGPathAddLineToPoint(path, NULL, view.frame.origin.x+38, view.frame.origin.y+30); //添加一条路径
+ // CGPathAddCurveToPoint(path, NULL, 30, 80, 80, 70, 50, 20); //曲线路径，在此随便填的
+ // CGPathAddCurveToPoint(path, NULL, 30, 50, 80, 0, 40, 30);
+ positionAnimation.path = path; //设置移动路径为刚才创建的路径
+ CGPathRelease(path);
+ 
+ CAAnimationGroup *animationgroup = [CAAnimationGroup animation]; //创建动画数组
+ animationgroup.animations = [NSArray arrayWithObjects:rotateAnimation,fadeOutAnimation,resizeAnimation,positionAnimation,nil];
+ animationgroup.duration = 5.f; //设定动画持续时间
+ animationgroup.fillMode =kCAFillModeBackwards;
+ animationgroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+ [view.layer addAnimation:animationgroup forKey:@"Test"]; //添加动画到指定对象
+ */
