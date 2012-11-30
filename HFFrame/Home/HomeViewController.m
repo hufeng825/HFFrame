@@ -22,7 +22,7 @@
 #import "FlodExampleViewController.h"
 #import "HFLoadingExampleViewController.h"
 #import "GifExampleViewController.h"
-
+#import "MTAnimatedLabelExampleViewController.h"
 
 @interface HomeViewController ()
 
@@ -64,7 +64,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -194,6 +194,11 @@
         case 12:
         {
             [self funcFromeString:@"GifExampleViewController" index:row];
+        }
+            break;
+        case 13:
+        {
+            [self funcFromeString:@"MTAnimatedLabelExampleViewController" index:row];
         }
             break;
         default:

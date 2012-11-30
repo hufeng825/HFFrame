@@ -39,6 +39,10 @@
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
 		9665AF33166874BE005E4E8E /* loading01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2E166874BE005E4E8E /* loading01.png */; };
 		9665AF34166874BE005E4E8E /* loading02.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2F166874BE005E4E8E /* loading02.png */; };
+		9665AF85166892B4005E4E8E /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9665AF84166892B4005E4E8E /* MTAnimatedLabel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		9665AF8A16689309005E4E8E /* MTAnimatedLabelExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9665AF8816689309005E4E8E /* MTAnimatedLabelExampleViewController.m */; };
+		9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF8916689309005E4E8E /* MTAnimatedLabelExampleViewController.xib */; };
+		9665AF9216689B3D005E4E8E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9665AF9116689B3D005E4E8E /* MessageUI.framework */; };
 		96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96791686165CBFE2006F52B9 /* VoiceReadViewController.m */; };
 		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
 		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
@@ -150,6 +154,12 @@
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
 		9665AF2E166874BE005E4E8E /* loading01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading01.png; path = GlobClass/HFLoading/loading01.png; sourceTree = SOURCE_ROOT; };
 		9665AF2F166874BE005E4E8E /* loading02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading02.png; path = GlobClass/HFLoading/loading02.png; sourceTree = SOURCE_ROOT; };
+		9665AF83166892B4005E4E8E /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTAnimatedLabel.h; path = GlobClass/MTAnimatedLabel/MTAnimatedLabel.h; sourceTree = SOURCE_ROOT; };
+		9665AF84166892B4005E4E8E /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTAnimatedLabel.m; path = GlobClass/MTAnimatedLabel/MTAnimatedLabel.m; sourceTree = SOURCE_ROOT; };
+		9665AF8716689309005E4E8E /* MTAnimatedLabelExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTAnimatedLabelExampleViewController.h; path = HFFrame/Example/MTAnimatedLabelExampleViewController.h; sourceTree = "<group>"; };
+		9665AF8816689309005E4E8E /* MTAnimatedLabelExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTAnimatedLabelExampleViewController.m; path = HFFrame/Example/MTAnimatedLabelExampleViewController.m; sourceTree = "<group>"; };
+		9665AF8916689309005E4E8E /* MTAnimatedLabelExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTAnimatedLabelExampleViewController.xib; path = HFFrame/Example/MTAnimatedLabelExampleViewController.xib; sourceTree = "<group>"; };
+		9665AF9116689B3D005E4E8E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		96791685165CBFE2006F52B9 /* VoiceReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceReadViewController.h; path = HFFrame/Example/VoiceReadViewController.h; sourceTree = "<group>"; };
 		96791686165CBFE2006F52B9 /* VoiceReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceReadViewController.m; path = HFFrame/Example/VoiceReadViewController.m; sourceTree = "<group>"; };
 		96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceReadViewController.xib; path = HFFrame/Example/VoiceReadViewController.xib; sourceTree = "<group>"; };
@@ -261,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9665AF9216689B3D005E4E8E /* MessageUI.framework in Frameworks */,
 				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B1316614D1200FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
@@ -310,6 +321,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9665AF9116689B3D005E4E8E /* MessageUI.framework */,
 				96FC8B1216614D1200FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
 				9693402D1656144D00F1BDC1 /* QuartzCore.framework */,
@@ -388,6 +400,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				9665AF86166892BD005E4E8E /* 闪动label例程 */,
 				96F5905D166731D60099860C /* GifImage */,
 				96F590391665E40C0099860C /* loading例程 */,
 				96A2F8201663444000E61D4F /* 翻转动画 */,
@@ -463,6 +476,25 @@
 			name = "截屏动画";
 			sourceTree = "<group>";
 		};
+		9665AF7D166891F1005E4E8E /* MTAnimatedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9665AF83166892B4005E4E8E /* MTAnimatedLabel.h */,
+				9665AF84166892B4005E4E8E /* MTAnimatedLabel.m */,
+			);
+			name = MTAnimatedLabel;
+			sourceTree = "<group>";
+		};
+		9665AF86166892BD005E4E8E /* 闪动label例程 */ = {
+			isa = PBXGroup;
+			children = (
+				9665AF8716689309005E4E8E /* MTAnimatedLabelExampleViewController.h */,
+				9665AF8816689309005E4E8E /* MTAnimatedLabelExampleViewController.m */,
+				9665AF8916689309005E4E8E /* MTAnimatedLabelExampleViewController.xib */,
+			);
+			name = "闪动label例程";
+			sourceTree = "<group>";
+		};
 		96791683165CBF97006F52B9 /* 语音播报 */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +567,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9665AF7D166891F1005E4E8E /* MTAnimatedLabel */,
 				96F590321665D3350099860C /* HFLoadingView */,
 				96A2F83516636D0900E61D4F /* FlipViewController */,
 				96352B6616631AE0001926B9 /* UIView+ScreenShot */,
@@ -837,6 +870,7 @@
 				9665AF32166874BE005E4E8E /* loading03.png in Resources */,
 				9665AF33166874BE005E4E8E /* loading01.png in Resources */,
 				9665AF34166874BE005E4E8E /* loading02.png in Resources */,
+				9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +932,8 @@
 				96F590361665D7710099860C /* HFLoadingView.m in Sources */,
 				96F5903C1665E6A50099860C /* HFLoadingExampleViewController.m in Sources */,
 				96F59061166732110099860C /* GifExampleViewController.m in Sources */,
+				9665AF85166892B4005E4E8E /* MTAnimatedLabel.m in Sources */,
+				9665AF8A16689309005E4E8E /* MTAnimatedLabelExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,6 +982,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -967,6 +1004,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
