@@ -80,7 +80,24 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     return self;
 }
 
+/*------------------------------------------
+ *设置背景
+------------------------------------------*/
 
+ - (void)changeBaseBackgourndColorWithImageName:(NSString *)imageName
+{
+    UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
+    if ([self.view isKindOfClass:[UITableView class]]) {
+        UIView *viewi = [[[UIView alloc] initWithFrame:self.view.bounds] autorelease];
+        viewi.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        viewi.backgroundColor = bgColor;
+        UITableView *tView = (UITableView *)self.view;
+        if ([tView respondsToSelector:@selector(setBackgroundView:)]) {
+            [tView setBackgroundView:viewi];
+        }
+    }
+    self.view.backgroundColor = bgColor;
+}
 
 
 
