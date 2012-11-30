@@ -72,8 +72,9 @@
 	[view addSubview:loadingView];
     if (TTIsStringWithAnyText(title))
     {
-        UILabel *label = (UILabel*)[loadingView.customView viewWithTag:12];
+        MTAnimatedLabel *label = (MTAnimatedLabel*)[loadingView.customView viewWithTag:12];
         label.text = title;
+        [label startAnimating];
     }
     loadingView.customView.center = CGPointMake(
                                        (view.width)/2.0,
