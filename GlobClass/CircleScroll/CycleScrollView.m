@@ -95,10 +95,7 @@
              }
              ];
         }
-        [manager release];
-
-        
-        
+                
         scrollView = [[UIScrollView alloc] initWithFrame:frame];
         scrollView.backgroundColor = [UIColor blackColor];
         scrollView.showsHorizontalScrollIndicator = NO;
@@ -125,7 +122,8 @@
         [self addSubview:scrollView];
         [self refreshScrollView];
     }
-    
+    [manager release];
+
     return self;
 }
 

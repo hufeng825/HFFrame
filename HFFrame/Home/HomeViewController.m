@@ -115,11 +115,11 @@
 #pragma mark -
 -(void)funcFromeString:(NSString*)str index:(NSInteger)index
 {
-    id vc = [[[NSClassFromString(str) alloc]initWithNibName:str bundle:nil]autorelease];
+    id vc = [[NSClassFromString(str) alloc]initWithNibName:str bundle:nil];
 //    vc.title =  [context_array objectAtIndex:index];
     [vc setTitle:[context_array objectAtIndex:index]];
     [self.navigationController pushViewController:vc animated:YES];
-   
+    RELEASE_SAFELY(vc);
 }
 
 
