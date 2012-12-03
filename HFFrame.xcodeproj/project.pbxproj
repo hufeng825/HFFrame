@@ -80,8 +80,8 @@
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
-		96E517621632B88400E7D20C /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517521632B88400E7D20C /* AFImageRequestOperation.m */; };
-		96E517631632B88400E7D20C /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517541632B88400E7D20C /* AFJSONRequestOperation.m */; };
+		96E517621632B88400E7D20C /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517521632B88400E7D20C /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		96E517631632B88400E7D20C /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517541632B88400E7D20C /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96E517641632B88400E7D20C /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517561632B88400E7D20C /* AFNetworkActivityIndicatorManager.m */; };
 		96E517651632B88400E7D20C /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517591632B88400E7D20C /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96E517661632B88400E7D20C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5175B1632B88400E7D20C /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };

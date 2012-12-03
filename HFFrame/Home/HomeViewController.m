@@ -224,7 +224,6 @@
     self.flipcalayer = [[FlipCAlayer alloc]init];
     
     
-    
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
     [self.navigationController.view.layer addSublayer:flipcalayer];

@@ -14,15 +14,21 @@
 
 +(id)item
 {
-    return [self new];
+    return [[self new]autorelease];
 }
 
 +(id)itemWithLabel:(NSString *)inLabel
 {
     id newItem = [self item];
     [newItem setLabel:inLabel];
-    return newItem;
+    return newItem ;
 }
 
+- (void)dealloc
+{
+    RELEASE_SAFELY(label);
+    RELEASE_SAFELY(action);
+    [super dealloc];
+}
 @end
 

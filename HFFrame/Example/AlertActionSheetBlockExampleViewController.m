@@ -48,6 +48,7 @@
 //        HFAlert(@"用户点击了是，回调%d",index);
         UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"测试回调" cancelButtonItem:cancelItem destructiveButtonItem:yesItem1 otherButtonItems:yesItem2, nil];
         [sheet showInView:self.view];
+        [sheet autorelease];
     };
 
     
@@ -56,7 +57,7 @@
     [alertView show];
     [alertView release];
     
-    
+    NSLog(@"");
     
  
     
