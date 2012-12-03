@@ -29,6 +29,8 @@
 		960DAB44166C677B00303ECC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB41166C677B00303ECC /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB60166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB5E166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.m */; };
 		960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB5F166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib */; };
+		960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB85166CA05F00303ECC /* MacroSingletonViewController.m */; };
+		960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */; };
 		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
@@ -149,6 +151,10 @@
 		960DAB5D166C6E5B00303ECC /* AlertActionSheetBlockExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertActionSheetBlockExampleViewController.h; path = HFFrame/Example/AlertActionSheetBlockExampleViewController.h; sourceTree = "<group>"; };
 		960DAB5E166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertActionSheetBlockExampleViewController.m; path = HFFrame/Example/AlertActionSheetBlockExampleViewController.m; sourceTree = "<group>"; };
 		960DAB5F166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertActionSheetBlockExampleViewController.xib; path = HFFrame/Example/AlertActionSheetBlockExampleViewController.xib; sourceTree = "<group>"; };
+		960DAB7D166C9D7500303ECC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Global/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		960DAB84166CA05F00303ECC /* MacroSingletonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacroSingletonViewController.h; path = HFFrame/Example/MacroSingletonViewController.h; sourceTree = "<group>"; };
+		960DAB85166CA05F00303ECC /* MacroSingletonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MacroSingletonViewController.m; path = HFFrame/Example/MacroSingletonViewController.m; sourceTree = "<group>"; };
+		960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MacroSingletonViewController.xib; path = HFFrame/Example/MacroSingletonViewController.xib; sourceTree = "<group>"; };
 		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
 		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
 		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
@@ -446,9 +452,20 @@
 			name = Blocks;
 			sourceTree = "<group>";
 		};
+		960DAB83166CA00B00303ECC /* 宏定义单例 */ = {
+			isa = PBXGroup;
+			children = (
+				960DAB84166CA05F00303ECC /* MacroSingletonViewController.h */,
+				960DAB85166CA05F00303ECC /* MacroSingletonViewController.m */,
+				960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */,
+			);
+			name = "宏定义单例";
+			sourceTree = "<group>";
+		};
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB83166CA00B00303ECC /* 宏定义单例 */,
 				960DAB62166C6E6800303ECC /* Blocks */,
 				9665AF86166892BD005E4E8E /* 闪动label例程 */,
 				96F5905D166731D60099860C /* GifImage */,
@@ -608,6 +625,7 @@
 		96876D81164BCA5100406C92 /* 全局参数 */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB7D166C9D7500303ECC /* SynthesizeSingleton.h */,
 				96876D82164BCAD000406C92 /* Global_macro.h */,
 				96876D83164BCAD000406C92 /* Global_macro.m */,
 			);
@@ -924,6 +942,7 @@
 				9665AF34166874BE005E4E8E /* loading02.png in Resources */,
 				9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */,
 				960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */,
+				960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1011,7 @@
 				960DAB43166C677B00303ECC /* UIActionSheet+Blocks.m in Sources */,
 				960DAB44166C677B00303ECC /* UIAlertView+Blocks.m in Sources */,
 				960DAB60166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.m in Sources */,
+				960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

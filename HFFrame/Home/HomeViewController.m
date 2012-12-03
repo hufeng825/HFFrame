@@ -24,7 +24,7 @@
 #import "GifExampleViewController.h"
 #import "MTAnimatedLabelExampleViewController.h"
 #import "AlertActionSheetBlockExampleViewController.h"
-
+#import "MacroSingletonViewController.h"
 
 @interface HomeViewController ()
 
@@ -66,7 +66,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -206,6 +206,11 @@
         case 14:
         {
             [self funcFromeString:@"AlertActionSheetBlockExampleViewController" index:row];
+        }
+            break;
+        case 15:
+        {
+            [self funcFromeString:@"MacroSingletonViewController" index:row];
         }
             break;
         default:

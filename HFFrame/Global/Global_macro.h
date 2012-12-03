@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HFStyle.h"
 
+#import "SynthesizeSingleton.h"
 #import "NSDictionary_HFDictionary.h"
 #import "NSString+Additions.h"
 #import "UIViewAdditions.h"
