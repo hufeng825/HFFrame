@@ -3,9 +3,12 @@
 //
 //  Description: 语言识别控件
 //
-//  Created by iflytek on 11-2-23.
+//  Created by 陈阳 on 11-2-23.
 //  Copyright 2011 iFLYTEK. All rights reserved.
 //
+//	Important History:
+//	index	version		date		author		notes
+//	0		1.0.0		2011/2/23	yangchen	创建文件
 
 
 #import <UIKit/UIKit.h>
