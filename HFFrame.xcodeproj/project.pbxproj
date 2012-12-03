@@ -117,6 +117,7 @@
 		960DAB50166C6A1500303ECC /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+Blocks.m"; path = "GlobClass/Blocks/UIAlertView+Blocks.m"; sourceTree = SOURCE_ROOT; };
 		960DAB55166C6B3A00303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
+		960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Global/SynthesizeSingleton.h; sourceTree = "<group>"; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
 		96352B7216632338001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -402,6 +403,7 @@
 		96876D81164BCA5100406C92 /* 全局参数 */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */,
 				96876D82164BCAD000406C92 /* Global_macro.h */,
 				96876D83164BCAD000406C92 /* Global_macro.m */,
 			);
