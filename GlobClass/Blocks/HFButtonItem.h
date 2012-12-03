@@ -10,8 +10,8 @@
 
 @interface HFButtonItem : NSObject
 {
-    NSString *label;
-    void (^action)();
+//    NSString *label;
+//    void (^action)(NSInteger buttonIndex);
 }
 @property (retain, nonatomic) NSString *label;
 @property (copy, nonatomic) void (^action)(NSInteger buttonIndex);

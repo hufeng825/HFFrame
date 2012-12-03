@@ -258,7 +258,10 @@ static UIImage *animatedImageWithAnimatedGIFImageSource(CGImageSourceRef source,
 
 static UIImage *animatedImageWithAnimatedGIFReleasingImageSource(CGImageSourceRef source, NSTimeInterval duration) {
     UIImage *image = animatedImageWithAnimatedGIFImageSource(source, duration);
-    CFRelease(source);
+    if (source)
+    {
+        CFRelease(source);
+    }
     return image;
 }
 
