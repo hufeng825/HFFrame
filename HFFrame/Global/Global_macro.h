@@ -22,7 +22,6 @@
 //# define NSLog(...){};
 //#endif
 
-
 //判断系统是否大于等于v
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -49,11 +48,12 @@
 //ios版本
 #define IOSVersion [[[UIDevice currentDevice] systemVersion] floatValue];
 
-#define HFAlert(m) \
+#define HFAlert(fmt, ...) \
     {\
-        UIAlertView *alert1 = [[[UIAlertView alloc] initWithTitle:@"提示" message:m delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil] autorelease];\
+      UIAlertView *alert1 = [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:fmt,##__VA_ARGS__] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil] autorelease];\
         [alert1 show]; \
     }
+
 #define HFAlert_T_M_BT(t,m,bt) \
     {\
         UIAlertView *alert1 = [[[UIAlertView alloc] initWithTitle:t message:m delegate:nil cancelButtonTitle:bt otherButtonTitles:nil] autorelease];[alert1 show];\

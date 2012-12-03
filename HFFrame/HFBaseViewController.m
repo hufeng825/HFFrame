@@ -138,9 +138,8 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
         titleLabel.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
         titleLabel.textAlignment = UITextAlignmentCenter;
         titleLabel.textColor = [UIColor whiteColor]; // change this color
-        [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
+//        [titleLabel setAutoresizingMask:UIViewAutoresizingNone ];
         self.navigationItem.titleView = titleLabel;
-
     }
 }
 -(void)setTitle:(NSString *)title
