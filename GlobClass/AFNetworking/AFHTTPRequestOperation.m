@@ -123,6 +123,7 @@ static void AFSwizzleClassMethodWithClassAndSelectorUsingBlock(Class klass, SEL 
 #endif
         _failureCallbackQueue = NULL;
     }
+    [super dealloc];
 }
 
 - (NSError *)error {
