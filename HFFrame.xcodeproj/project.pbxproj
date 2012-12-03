@@ -23,6 +23,7 @@
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
+		960DAB3A166C647600303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB39166C647600303ECC /* HFSegmentedControl.m */; };
 		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
@@ -132,6 +133,8 @@
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
 		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
 		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
+		960DAB38166C647600303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
+		960DAB39166C647600303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
 		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
 		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
@@ -397,6 +400,15 @@
 			path = HFAnimation;
 			sourceTree = "<group>";
 		};
+		960DAB36166C63E100303ECC /* HFSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				960DAB38166C647600303ECC /* HFSegmentedControl.h */,
+				960DAB39166C647600303ECC /* HFSegmentedControl.m */,
+			);
+			name = HFSegmentedControl;
+			sourceTree = "<group>";
+		};
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +579,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				960DAB36166C63E100303ECC /* HFSegmentedControl */,
 				9665AF7D166891F1005E4E8E /* MTAnimatedLabel */,
 				96F590321665D3350099860C /* HFLoadingView */,
 				96A2F83516636D0900E61D4F /* FlipViewController */,
@@ -934,6 +947,7 @@
 				96F59061166732110099860C /* GifExampleViewController.m in Sources */,
 				9665AF85166892B4005E4E8E /* MTAnimatedLabel.m in Sources */,
 				9665AF8A16689309005E4E8E /* MTAnimatedLabelExampleViewController.m in Sources */,
+				960DAB3A166C647600303ECC /* HFSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
