@@ -67,20 +67,67 @@
 
 #pragma mark -
 #pragma mark Class methods
-+ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view title:(NSString*)title {
-	HFLoadingView *loadingView = [[HFLoadingView alloc] initWithFrame:view.bounds];
-	[view addSubview:loadingView];
-    if (TTIsStringWithAnyText(title))
+
++(BOOL)isContainLoadingView:(UIView*)view
+{
+    for (UIView *v in [view subviews])
     {
-        MTAnimatedLabel *label = (MTAnimatedLabel*)[loadingView.customView viewWithTag:12];
-        label.text = title;
-        [label startAnimating];
-    }
-    loadingView.customView.center = CGPointMake(
-                                       (view.width)/2.0,
-                                       (view.height)/2.0);
-	return [loadingView autorelease];
+		if ([v isKindOfClass:[HFLoadingView class]])
+        {
+            return YES;
+		}
+	}
+    return NO;
 }
+
++ (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view title:(NSString*)title
+{
+    if (![self isContainLoadingView:view])
+    {
+        HFLoadingView *loadingView = [[HFLoadingView alloc] initWithFrame:view.bounds];
+        [view addSubview:loadingView];
+        if (TTIsStringWithAnyText(title))
+        {
+            MTAnimatedLabel *label = (MTAnimatedLabel*)[loadingView.customView viewWithTag:12];
+            label.text = title;
+            [label startAnimating];
+        }
+        loadingView.customView.center = CGPointMake(
+                                                    (view.width)/2.0,
+                                                    (view.height)/2.0);
+        return [loadingView autorelease];
+    }
+	else
+    {
+        for (UIView *v in [view subviews])
+        {
+            if ([v isKindOfClass:[HFLoadingView class]])
+            {
+                MTAnimatedLabel *label = (MTAnimatedLabel*)[v viewWithTag:12];
+                label.text = title;
+                [label startAnimating];
+                return (HFLoadingView*)v;
+            }
+        }
+        return nil;
+    }
+}
+
++ (HFLoadingView*)changeLoadingTextForView:(UIView *)view title:(NSString*)title
+{
+	for (UIView *v in [view subviews])
+    {
+		if ([v isKindOfClass:[HFLoadingView class]]) {
+            MTAnimatedLabel *label = (MTAnimatedLabel*)[v viewWithTag:12];
+            label.text = title;
+            [label startAnimating];
+            return (HFLoadingView*)v;
+		}
+	}
+    //如果没有找到则创建一个实力添加上
+   return [self showLoadingViewAddedTo:view title:title];
+}
+
 
 + (void)hideLoadingViewForView:(UIView *)view {
 	for (UIView *v in [view subviews]) {
