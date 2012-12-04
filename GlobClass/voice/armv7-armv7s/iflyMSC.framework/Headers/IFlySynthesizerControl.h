@@ -3,9 +3,12 @@
 //
 //  Description: 语言合成控件
 //
-//  Created by iflytek on 11-2-23.
+//  Created by 陈阳 on 11-2-23.
 //  Copyright 2011 iFLYTEK. All rights reserved.
 //
+//	Important History:
+//	index	version		date		author		notes
+//	0		1.0.0		2011/2/23	yangchen	创建文件
 
 #import <UIKit/UIKit.h>
 
@@ -27,21 +30,14 @@
 */
 - (void)onSynthesizerEnd:(IFlySynthesizerControl *)iFlySynthesizerControl theError:(SpeechError) error;
 
-/*
-	 @function	onSynthesizerBufferProgress
-	 @abstract	缓冲进度
-	 @discussion	
-	 @param	
-*/
+//xlhou add 20120305
 - (void)onSynthesizerBufferProgress:(float)bufferProgress;
 
-/*
-	 @function	onSynthesizerPlayProgress
-	 @abstract	播放进度
-	 @discussion	
-	 @param	
-*/
 - (void)onSynthesizerPlayProgress:(float)playProgress;
+
+
+//-(void)onSynthesizeProgress:(int)State progress:(float)progress;
+
 
 @end
 
@@ -160,6 +156,15 @@
 	 @param		返回字节数
 */
 - (int)getUpflow;
+
+
+/*
+ @function	replay
+ @abstract	重新播放
+ @discussion	
+ @param		
+ */
+- (void) replay;
 
 
 /*
