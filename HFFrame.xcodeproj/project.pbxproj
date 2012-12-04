@@ -31,6 +31,18 @@
 		960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB5F166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib */; };
 		960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB85166CA05F00303ECC /* MacroSingletonViewController.m */; };
 		960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */; };
+		960DAC64166DED1400303ECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1516328FD800AD42B6 /* UIKit.framework */; };
+		960DAC65166DED1400303ECC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1716328FD800AD42B6 /* Foundation.framework */; };
+		960DAC66166DED1400303ECC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848AF1916328FD800AD42B6 /* CoreGraphics.framework */; };
+		960DAC6C166DED1400303ECC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 960DAC6A166DED1400303ECC /* InfoPlist.strings */; };
+		960DAC6E166DED1400303ECC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAC6D166DED1400303ECC /* main.m */; };
+		960DAC74166DED1400303ECC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAC73166DED1400303ECC /* Default.png */; };
+		960DAC76166DED1400303ECC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAC75166DED1400303ECC /* Default@2x.png */; };
+		960DAC78166DED1400303ECC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 960DAC77166DED1400303ECC /* Default-568h@2x.png */; };
+		960DAC7C166DED1F00303ECC /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960DAC5B166DEC3D00303ECC /* GHUnitIOS.framework */; };
+		960DAC7D166DEF0200303ECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402D1656144D00F1BDC1 /* QuartzCore.framework */; };
+		960DAC80166DEFEF00303ECC /* HFtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAC7F166DEFEF00303ECC /* HFtest.m */; };
+		960DAC81166E01FE00303ECC /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
@@ -155,6 +167,17 @@
 		960DAB84166CA05F00303ECC /* MacroSingletonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacroSingletonViewController.h; path = HFFrame/Example/MacroSingletonViewController.h; sourceTree = "<group>"; };
 		960DAB85166CA05F00303ECC /* MacroSingletonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MacroSingletonViewController.m; path = HFFrame/Example/MacroSingletonViewController.m; sourceTree = "<group>"; };
 		960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MacroSingletonViewController.xib; path = HFFrame/Example/MacroSingletonViewController.xib; sourceTree = "<group>"; };
+		960DAC5B166DEC3D00303ECC /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		960DAC62166DED1400303ECC /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		960DAC69166DED1400303ECC /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		960DAC6B166DED1400303ECC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		960DAC6D166DED1400303ECC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		960DAC6F166DED1400303ECC /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		960DAC73166DED1400303ECC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		960DAC75166DED1400303ECC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		960DAC77166DED1400303ECC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		960DAC7E166DEFEE00303ECC /* HFtest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFtest.h; sourceTree = "<group>"; };
+		960DAC7F166DEFEF00303ECC /* HFtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFtest.m; sourceTree = "<group>"; };
 		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
 		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
 		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
@@ -310,6 +333,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		960DAC5F166DED1400303ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960DAC64166DED1400303ECC /* UIKit.framework in Frameworks */,
+				960DAC65166DED1400303ECC /* Foundation.framework in Frameworks */,
+				960DAC66166DED1400303ECC /* CoreGraphics.framework in Frameworks */,
+				960DAC7C166DED1F00303ECC /* GHUnitIOS.framework in Frameworks */,
+				960DAC7D166DEF0200303ECC /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -328,6 +363,7 @@
 			children = (
 				962F7004165C9D170032A849 /* example */,
 				1848AF1B16328FD800AD42B6 /* HFFrame */,
+				960DAC67166DED1400303ECC /* Tests */,
 				1848AF1416328FD800AD42B6 /* Frameworks */,
 				1848AF1216328FD800AD42B6 /* Products */,
 			);
@@ -337,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				1848AF1116328FD800AD42B6 /* HFFrame.app */,
+				960DAC62166DED1400303ECC /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -356,6 +393,7 @@
 				96FC742D164CFA6F005ACABC /* ImageIO.framework */,
 				1848AF1516328FD800AD42B6 /* UIKit.framework */,
 				1848AF1716328FD800AD42B6 /* Foundation.framework */,
+				960DAC5B166DEC3D00303ECC /* GHUnitIOS.framework */,
 				1848AF1916328FD800AD42B6 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
@@ -460,6 +498,30 @@
 				960DAB86166CA05F00303ECC /* MacroSingletonViewController.xib */,
 			);
 			name = "宏定义单例";
+			sourceTree = "<group>";
+		};
+		960DAC67166DED1400303ECC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				960DAC7E166DEFEE00303ECC /* HFtest.h */,
+				960DAC7F166DEFEF00303ECC /* HFtest.m */,
+				960DAC68166DED1400303ECC /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		960DAC68166DED1400303ECC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				960DAC69166DED1400303ECC /* Tests-Info.plist */,
+				960DAC6A166DED1400303ECC /* InfoPlist.strings */,
+				960DAC6D166DED1400303ECC /* main.m */,
+				960DAC6F166DED1400303ECC /* Tests-Prefix.pch */,
+				960DAC73166DED1400303ECC /* Default.png */,
+				960DAC75166DED1400303ECC /* Default@2x.png */,
+				960DAC77166DED1400303ECC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		962F7004165C9D170032A849 /* example */ = {
@@ -878,6 +940,23 @@
 			productReference = 1848AF1116328FD800AD42B6 /* HFFrame.app */;
 			productType = "com.apple.product-type.application";
 		};
+		960DAC61166DED1400303ECC /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 960DAC79166DED1400303ECC /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				960DAC5E166DED1400303ECC /* Sources */,
+				960DAC5F166DED1400303ECC /* Frameworks */,
+				960DAC60166DED1400303ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 960DAC62166DED1400303ECC /* Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -901,6 +980,7 @@
 			projectRoot = "";
 			targets = (
 				1848AF1016328FD800AD42B6 /* HFFrame */,
+				960DAC61166DED1400303ECC /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -943,6 +1023,17 @@
 				9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */,
 				960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */,
 				960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		960DAC60166DED1400303ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960DAC6C166DED1400303ECC /* InfoPlist.strings in Resources */,
+				960DAC74166DED1400303ECC /* Default.png in Resources */,
+				960DAC76166DED1400303ECC /* Default@2x.png in Resources */,
+				960DAC78166DED1400303ECC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,6 +1106,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		960DAC5E166DED1400303ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960DAC6E166DED1400303ECC /* main.m in Sources */,
+				960DAC80166DEFEF00303ECC /* HFtest.m in Sources */,
+				960DAC81166E01FE00303ECC /* Array.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1032,6 +1133,14 @@
 				1848AF3116328FD800AD42B6 /* en */,
 			);
 			name = HFBaseViewController.xib;
+			sourceTree = "<group>";
+		};
+		960DAC6A166DED1400303ECC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				960DAC6B166DED1400303ECC /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1092,6 +1201,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
@@ -1108,12 +1218,58 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		960DAC7A166DED1400303ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		960DAC7B166DED1400303ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1138,6 +1294,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		960DAC79166DED1400303ECC /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960DAC7A166DED1400303ECC /* Debug */,
+				960DAC7B166DED1400303ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
