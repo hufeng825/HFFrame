@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol SpeechUserDelegate
+- (void) onError : (int) err;
+@end
+
 @class SpeechUserImp;
 
 @interface SpeechUser : NSObject

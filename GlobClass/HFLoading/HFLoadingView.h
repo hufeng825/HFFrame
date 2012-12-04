@@ -13,5 +13,6 @@
 @property (nonatomic,retain) UIImageView *imageView;
 //传入nil 或空字符串 title 用默认字符串
 + (HFLoadingView *)showLoadingViewAddedTo:(UIView *)view title:(NSString*)title;
++ (HFLoadingView*)changeLoadingTextForView:(UIView *)view title:(NSString*)title;
 + (void)hideLoadingViewForView:(UIView *)view;
 @end
