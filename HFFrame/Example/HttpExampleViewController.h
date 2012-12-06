@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
+
 @interface HttpExampleViewController : HFBaseViewController
 @property (retain, nonatomic) IBOutlet UITextView *resultTextView;
 

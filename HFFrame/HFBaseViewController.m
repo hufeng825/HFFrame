@@ -160,16 +160,6 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 }
 
 
--(void)buttonIndexClick
-{
-    NSLog(@"clicked");
-}
-
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex  // after animation
-{
-    NSLog(@"su button %d",buttonIndex);
-}
 
 
 - (void)didReceiveMemoryWarning
@@ -186,5 +176,18 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     RELEASE_CF_SAFELY(hfClient);
     [super dealloc];
 }
+
+//网络请求 
+-(void)postUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
+{
+    [self.hfClient Url:url sucessBlock:sucessRespon failBlock:failRespon method:POST];
+}
+
+-(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
+{
+    [self.hfClient Url:url sucessBlock:sucessRespon failBlock:failRespon method:GET];
+}
+
+
 
 @end

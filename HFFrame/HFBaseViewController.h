@@ -16,11 +16,17 @@
 #define ENGINE_URL @"http://dev.voicecloud.cn:1028/index.htm"
 
 @interface HFBaseViewController : UIViewController
+{
+}
+
+
 
 @property (nonatomic,retain) HFHttpRequest *hfClient;
 @property (nonatomic,retain) UILabel *titleLabel;//标题栏
 
 
+-(void)postUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon;
+-(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon;
 
 
 @end
