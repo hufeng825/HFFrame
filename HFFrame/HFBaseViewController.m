@@ -119,8 +119,6 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
    
 //    [[client operationQueue]cancelAllOperations];
 }
-#pragma mark  - 设置title
-
 -(HFHttpRequest *)hfClient
 {
     if (!hfClient) {
@@ -128,7 +126,19 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     }
     return hfClient;
 }
+#pragma mark  - 返回上级页面
+-(void)goBack
+{
+    if ([[self.navigationController viewControllers]count]>1)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
+}
 
+
+#pragma mark  - 设置title
 -(void) toSetTitleLable
 {
     if (!titleLabel) {
