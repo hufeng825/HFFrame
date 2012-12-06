@@ -416,7 +416,6 @@
 				960DAB54166C6B1E00303ECC /* HFSegmentedControl */,
 				960DAB49166C69F600303ECC /* Blocks */,
 				960DAB091668A35E00303ECC /* MTAnimationLabel */,
-				96F5905216672D8A0099860C /* UIImage+GiF */,
 				96F59047166607540099860C /* HFLoading */,
 				96352B6F16632315001926B9 /* UIViewScreenshort */,
 				96FC8AFE1661495400FEB66E /* TTTAttributedLabel */,
@@ -544,13 +543,6 @@
 				96F5904B1666077E0099860C /* HFLoadingView.xib */,
 			);
 			name = HFLoading;
-			sourceTree = "<group>";
-		};
-		96F5905216672D8A0099860C /* UIImage+GiF */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "UIImage+GiF";
 			sourceTree = "<group>";
 		};
 		96FC7410164CF8CE005ACABC /* SDWebImage */ = {

@@ -27,6 +27,6 @@
 
 -(void)postUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon;
 -(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon;
-
-
+//返回上级页面 自行判断是mode 还是push 弹出来的
+-(void)goBack;
 @end
