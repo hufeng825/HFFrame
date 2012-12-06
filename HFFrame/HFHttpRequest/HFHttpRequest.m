@@ -7,6 +7,7 @@
 //
 #import "HFHttpRequest.h"
 @implementation HFHttpRequest
+//@synthesize sucessRespon;
 - (id)init
 {
     self = [super init];
@@ -43,6 +44,47 @@
 //因为是单例和非单例混合的初始化 暂时没有重写allocWithZone
 
 
+-(void)Url:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
+{
+    NSMutableURLRequest *request;
+    if (method == GET)
+    {
+        request  = [self requestWithMethod:@"GET" path:
+                    url parameters:nil];
+
+    }
+    else
+    {
+       request = [self requestWithMethod:@"POST" path:
+           url parameters:nil];
+
+    }
+    //设置超时时间
+    [request setTimeoutInterval:30];
+    //设置默认错误处理方式
+    if (!failRespon)
+    {
+        failRespon  = HFHttpFailResponClass
+        {
+            NSLog(@"%@",[error description]);
+        };
+    }
+    
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
+                                         sucessRespon
+                                                                                        failure:failRespon
+                                         ];
+    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
+    [operation start];
+    
+}
+
+
+
+
+
+
 
 
 
@@ -57,8 +99,9 @@
     return self;
 }
 
-- (void)dealloc {
-
+- (void)dealloc
+{
+//    RELEASE_SAFELY(sucessRespon);
     [super dealloc];
 }
 @end
