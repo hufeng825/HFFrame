@@ -9,6 +9,7 @@
 #import "HFAppDelegate.h"
 #import "HomeViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UncaughtExceptionHandler.h"
 
 @implementation HFAppDelegate
 
@@ -21,6 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    InstallUncaughtExceptionHandler();
+
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
 

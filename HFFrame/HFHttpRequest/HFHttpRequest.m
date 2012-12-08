@@ -50,13 +50,13 @@
     if (method == GET)
     {
         request  = [self requestWithMethod:@"GET" path:
-                    url parameters:nil];
+                    [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil];
 
     }
     else
     {
        request = [self requestWithMethod:@"POST" path:
-           url parameters:nil];
+            [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil];
 
     }
     //设置超时时间
@@ -79,13 +79,6 @@
     [operation start];
     
 }
-
-
-
-
-
-
-
 
 
 -(id)initWithBaseURL:(NSURL *)url {
