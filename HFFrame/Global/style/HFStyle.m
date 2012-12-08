@@ -117,7 +117,7 @@
 	}
     else
         barButton.frame = CGRectMake(0, 0, image.size.width + 15 + [title sizeWithFont:font].width, 30);
-    UIImage *img = [[UIImage imageNamed:@"btm_nav.png"] stretchableImageWithLeftCapWidth:5 topCapHeight:3];
+    UIImage *img = [[UIImage imageNamed:@"btm_nav.png"] stretchImageLeftCapWidth:5 topCapHeight:3];
 	[barButton setBackgroundImage:img
                          forState:UIControlStateNormal];
 	

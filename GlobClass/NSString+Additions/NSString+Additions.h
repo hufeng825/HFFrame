@@ -10,6 +10,9 @@
 #import "RegexKitLite.h"
 @interface NSString (HF)
 
++ (NSString *) base64StringFromData:(NSData *)data;
++ (NSString *) URLencodeWithEncodingUTF8: (NSString *) stringToEncode;
+
 - (NSString*)dateStringWithFormat:(NSString*)format;
 - (NSString*)ymdString;
 - (NSString*)ymdStringWithSeperator:(NSString*)seperator;

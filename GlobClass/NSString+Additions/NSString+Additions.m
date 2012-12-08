@@ -8,7 +8,95 @@
 
 #import "NSString+Additions.h"
 
+static const char BASE64_CHAR_TABLE[64] = {
+	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+	'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+	'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+	'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'
+};
+
+
 @implementation NSString (HF)
+
+
+
++ (NSString*) base64StringFromData: (NSData*)data {
+	if (data == nil)
+		return nil;
+    
+	int length = [data length];
+    
+	const unsigned char *bytes = [data bytes];
+	NSMutableString *result = [NSMutableString stringWithCapacity:length];
+	unsigned long ixtext = 0;
+	long ctremaining = 0;
+	unsigned char bufIn[3], bufOut[4];
+	short i = 0;
+	short charsonline = 0, ctcopy = 0;
+	unsigned long ix = 0;
+	while( YES ) {
+		ctremaining = length - ixtext;
+		if( ctremaining <= 0 ) break;
+		for( i = 0; i < 3; i++ ) {
+			ix = ixtext + i;
+			if( ix < length ) bufIn[i] = bytes[ix];
+			else bufIn [i] = 0;
+		}
+		bufOut [0] = (bufIn [0] & 0xFC) >> 2;
+		bufOut [1] = ((bufIn [0] & 0x03) << 4) | ((bufIn [1] & 0xF0) >> 4);
+		bufOut [2] = ((bufIn [1] & 0x0F) << 2) | ((bufIn [2] & 0xC0) >> 6);
+		bufOut [3] = bufIn [2] & 0x3F;
+		ctcopy = 4;
+		switch( ctremaining ) {
+			case 1:
+                ctcopy = 2;
+                break;
+			case 2:
+                ctcopy = 3;
+                break;
+		}
+		for( i = 0; i < ctcopy; i++ )
+			[result appendFormat:@"%c", BASE64_CHAR_TABLE[bufOut[i]]];
+		for( i = ctcopy; i < 4; i++ )
+			[result appendString:@"="];
+		ixtext += 3;
+		charsonline += 4;
+	}
+	return result;
+}
+
++(NSString *) URLencodeWithEncodingUTF8: (NSString *) stringToEncode
+{
+    NSArray *escapeChars = [NSArray arrayWithObjects:@";" , @"/" , @"?" , @":" ,
+							@"@" , @"&" , @"=" , @"+" ,
+							@"$" , @"," , @"[" , @"]",
+							@"#", @"!", @"'", @"(",
+							@")", @"*", @" ",nil];
+	
+    NSArray *replaceChars = [NSArray arrayWithObjects:@"%3B" , @"%2F" , @"%3F" ,
+							 @"%3A" , @"%40" , @"%26" ,
+							 @"%3D" , @"%2B" , @"%24" ,
+							 @"%2C" , @"%5B" , @"%5D",
+							 @"%23", @"%21", @"%27",
+							 @"%28", @"%29", @"%2A", @"%20", nil];
+	
+    int len = [escapeChars count];
+	
+    NSMutableString *temp = [stringToEncode mutableCopy];
+	
+    int i;
+    for(i = 0; i < len; i++)
+    {
+		
+        [temp replaceOccurrencesOfString: [escapeChars objectAtIndex:i]
+							  withString:[replaceChars objectAtIndex:i]
+								 options:NSLiteralSearch
+								   range:NSMakeRange(0, [temp length])];
+    }
+	
+	return [temp autorelease];
+}
+
 
 /*---------------------------------------------------------------------------
  * 根据format来格式化形式为"20121010"的字符串
