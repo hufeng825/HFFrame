@@ -10,6 +10,6 @@
 #import "HFBaseViewController.h"
 #import "iFlyMSC/IFlySynthesizerControl.h"
 
-@interface VoiceReadViewController : HFBaseViewController
+@interface VoiceReadViewController : HFBaseViewController<IFlySynthesizerControlDelegate>
 
 @end
