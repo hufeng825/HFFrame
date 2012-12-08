@@ -7,6 +7,8 @@
 //
 
 #import "NSString+Additions.h"
+#import <CommonCrypto/CommonDigest.h>
+
 
 static const char BASE64_CHAR_TABLE[64] = {
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
@@ -96,6 +98,30 @@ static const char BASE64_CHAR_TABLE[64] = {
 	
 	return [temp autorelease];
 }
+
+- (NSString *) stringFromMD5{
+    
+    if(self == nil || [self length] == 0)
+        return nil;
+    
+    const char *value = [self UTF8String];
+    
+    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(value, strlen(value), outputBuffer);
+    
+    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
+        [outputString appendFormat:@"%02x",outputBuffer[count]];
+    }
+    
+    return [outputString autorelease];
+}
+
+- (NSString*)md5Hash
+{
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] md5Hash];
+}
+
 
 
 /*---------------------------------------------------------------------------
@@ -318,5 +344,19 @@ static const char BASE64_CHAR_TABLE[64] = {
     
     return [emailTest evaluateWithObject:self];
     
+}
+@end
+
+@implementation NSData(dataMD5Addition)
+
+- (NSString*)md5Hash {
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5([self bytes], [self length], result);
+    
+    return [NSString stringWithFormat:
+            @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+            result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],
+            result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]
+            ];
 }
 @end
