@@ -52,6 +52,7 @@
 		969D90AE1658C57000A382B2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90AD1658C57000A382B2 /* UIColor+Hex.m */; };
 		969D90C01658FB6200A382B2 /* HFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90BF1658FB6200A382B2 /* HFButton.m */; };
 		96D9A95D16739404003F87F4 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9A95C16739404003F87F4 /* UncaughtExceptionHandler.m */; };
+		96D9A97D16748FC5003F87F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D9A97C16748FC5003F87F4 /* Security.framework */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
@@ -151,6 +152,7 @@
 		969D90BF1658FB6200A382B2 /* HFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFButton.m; path = GlobClass/HFButton/HFButton.m; sourceTree = SOURCE_ROOT; };
 		96D9A95B16739404003F87F4 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UncaughtExceptionHandler.h; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.h; sourceTree = SOURCE_ROOT; };
 		96D9A95C16739404003F87F4 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UncaughtExceptionHandler.m; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.m; sourceTree = SOURCE_ROOT; };
+		96D9A97C16748FC5003F87F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		96E517071632AFB300E7D20C /* HFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFHttpRequest.h; path = HFHttpRequest/HFHttpRequest.h; sourceTree = "<group>"; };
 		96E517081632AFB300E7D20C /* HFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFHttpRequest.m; path = HFHttpRequest/HFHttpRequest.m; sourceTree = "<group>"; };
 		96E5174D1632B88400E7D20C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = GlobClass/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
@@ -210,6 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D9A97D16748FC5003F87F4 /* Security.framework in Frameworks */,
 				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B211661541500FEB66E /* CoreText.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
@@ -248,6 +251,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96D9A97C16748FC5003F87F4 /* Security.framework */,
 				96FC8B201661541500FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
 				9693402D1656144D00F1BDC1 /* QuartzCore.framework */,
