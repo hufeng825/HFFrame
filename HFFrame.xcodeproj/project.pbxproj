@@ -92,6 +92,8 @@
 		96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F83916636D5700E61D4F /* FlipViewController.xib */; };
 		96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F83D1663723500E61D4F /* FlipCAlayer.m */; };
 		96D9A96716739590003F87F4 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9A96616739590003F87F4 /* UncaughtExceptionHandler.m */; };
+		96D9A96B1673A474003F87F4 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9A96A1673A474003F87F4 /* SFHFKeychainUtils.m */; };
+		96D9A97716748D8A003F87F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D9A97616748D8A003F87F4 /* Security.framework */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		96E517601632B88400E7D20C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5174E1632B88400E7D20C /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		96E517611632B88400E7D20C /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517501632B88400E7D20C /* AFHTTPRequestOperation.m */; };
@@ -251,6 +253,9 @@
 		96A2F83D1663723500E61D4F /* FlipCAlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipCAlayer.m; path = GlobClass/FlipViewController/FlipCAlayer.m; sourceTree = SOURCE_ROOT; };
 		96D9A96516739590003F87F4 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UncaughtExceptionHandler.h; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.h; sourceTree = SOURCE_ROOT; };
 		96D9A96616739590003F87F4 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UncaughtExceptionHandler.m; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.m; sourceTree = SOURCE_ROOT; };
+		96D9A9691673A474003F87F4 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		96D9A96A1673A474003F87F4 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		96D9A97616748D8A003F87F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		96E517071632AFB300E7D20C /* HFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFHttpRequest.h; path = HFHttpRequest/HFHttpRequest.h; sourceTree = "<group>"; };
 		96E517081632AFB300E7D20C /* HFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFHttpRequest.m; path = HFHttpRequest/HFHttpRequest.m; sourceTree = "<group>"; };
 		96E5174D1632B88400E7D20C /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPClient.h; path = GlobClass/AFNetworking/AFHTTPClient.h; sourceTree = SOURCE_ROOT; };
@@ -320,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D9A97716748D8A003F87F4 /* Security.framework in Frameworks */,
 				9665AF9216689B3D005E4E8E /* MessageUI.framework in Frameworks */,
 				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B1316614D1200FEB66E /* CoreText.framework in Frameworks */,
@@ -384,6 +390,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96D9A97616748D8A003F87F4 /* Security.framework */,
 				9665AF9116689B3D005E4E8E /* MessageUI.framework */,
 				96FC8B1216614D1200FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
@@ -700,6 +707,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96D9A9681673A474003F87F4 /* Security */,
 				96D9A96316739540003F87F4 /* 异常捕获 */,
 				960DAB3B166C670B00303ECC /* Blocks */,
 				960DAB36166C63E100303ECC /* HFSegmentedControl */,
@@ -805,6 +813,16 @@
 			);
 			name = "异常捕获";
 			sourceTree = "<group>";
+		};
+		96D9A9681673A474003F87F4 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				96D9A9691673A474003F87F4 /* SFHFKeychainUtils.h */,
+				96D9A96A1673A474003F87F4 /* SFHFKeychainUtils.m */,
+			);
+			name = Security;
+			path = GlobClass/Security;
+			sourceTree = SOURCE_ROOT;
 		};
 		96E517021632AF3200E7D20C /* HFHTTP */ = {
 			isa = PBXGroup;
@@ -1117,6 +1135,7 @@
 				960DAB60166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.m in Sources */,
 				960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */,
 				96D9A96716739590003F87F4 /* UncaughtExceptionHandler.m in Sources */,
+				96D9A96B1673A474003F87F4 /* SFHFKeychainUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

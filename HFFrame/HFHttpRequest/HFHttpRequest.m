@@ -46,17 +46,19 @@
 
 -(void)Url:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
 {
+   NSString *urlStr=  [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"url 输出 %@",urlStr);
     NSMutableURLRequest *request;
     if (method == GET)
     {
-        request  = [self requestWithMethod:@"GET" path:
-                    [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil];
+        request  = [self requestWithMethod:@"GET" path:urlStr
+                    parameters:nil];
 
     }
     else
     {
-       request = [self requestWithMethod:@"POST" path:
-            [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:nil];
+       request = [self requestWithMethod:@"POST" path:urlStr
+            parameters:nil];
 
     }
     //设置超时时间

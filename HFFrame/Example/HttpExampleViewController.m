@@ -35,7 +35,7 @@
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
     };
     
-   [self postUrl:@"http://9snow.org/weather/api?city=%E5%8C%97%E4%BA%AC" sucessBlock:su failBlock:nil];
+   [self gettUrl:@"http://9snow.org/weather/api?city=北京" sucessBlock:su failBlock:nil];
     
 }
 
