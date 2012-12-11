@@ -204,17 +204,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	return newImage ;
 }
 
-- (UIImage *)stretchImageLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight
-{
-    if ( [self respondsToSelector:        NSSelectorFromString(@"resizableImageWithCapInsets:resizingMode:")])
-    {
-       return  [self resizableImageWithCapInsets:UIEdgeInsetsMake(topCapHeight,leftCapWidth,topCapHeight,leftCapWidth) resizingMode:UIImageResizingModeStretch];
-    }
-    else
-    {
-        return  [self stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight];
-    }
-}
+
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians
 {
 	return [self imageRotatedByDegrees:RadiansToDegrees(radians)];

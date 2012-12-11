@@ -44,9 +44,14 @@
 //因为是单例和非单例混合的初始化 暂时没有重写allocWithZone
 
 
--(void)Url:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
+-(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
+ sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
 {
    NSString *urlStr=  [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    /**
+     Some nested parameter structures, such as a keyed array of hashes containing inconsistent keys (i.e. @{@"": @[@{@"a" : @(1)}, @{@"b" : @(2)}]}), cannot be unambiguously represented in query strings. It is strongly recommended that an unambiguous encoding, such as AFJSONParameterEncoding, is used when posting complicated or nondeterministic parameter structures
+     **/
+    [self setParameterEncoding:AFJSONParameterEncoding];
     NSLog(@"url 输出 %@",urlStr);
     NSMutableURLRequest *request;
     if (method == GET)
@@ -58,7 +63,7 @@
     else
     {
        request = [self requestWithMethod:@"POST" path:urlStr
-            parameters:nil];
+            parameters:parameters];
 
     }
     //设置超时时间
@@ -71,15 +76,12 @@
             NSLog(@"%@",[error description]);
         };
     }
-    
     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
-                                         sucessRespon
-                                                                                        failure:failRespon
-                                         ];
+    sucessRespon failure:failRespon];
     operation.JSONReadingOptions = NSJSONReadingAllowFragments;
     [operation start];
-    
+//    NSDictionary *dict = [NSDictionary]
 }
 
 
