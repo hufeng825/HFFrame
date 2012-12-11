@@ -43,7 +43,9 @@
 }
 //因为是单例和非单例混合的初始化 暂时没有重写allocWithZone
 
-
+/* post 参数
+NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"param1", @"value2", @"param2", @"value3", @"param3", @"value4", @"param4", nil]
+*/
 -(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
  sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
 {
@@ -80,9 +82,13 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
     sucessRespon failure:failRespon];
     operation.JSONReadingOptions = NSJSONReadingAllowFragments;
+    [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"changed %d", status);
+        //your code here
+    }];
     [operation start];
-//    NSDictionary *dict = [NSDictionary]
 }
+
 
 
 -(id)initWithBaseURL:(NSURL *)url {

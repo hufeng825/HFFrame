@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
-
-
 #define HFHttpSucessResponClass  ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
 #define HFHttpFailResponClass ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
 typedef  void(^HttpSucessRespon)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON);

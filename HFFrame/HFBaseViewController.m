@@ -188,14 +188,15 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 }
 
 //网络请求 
--(void)postUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
+-(void)postUrl:(NSString*)url parameters:(NSDictionary *)parameters
+ sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
 {
-    [self.hfClient Url:url sucessBlock:sucessRespon failBlock:failRespon method:POST];
+    [self.hfClient Url:url  parameters:parameters sucessBlock:sucessRespon failBlock:failRespon method:POST];
 }
 
 -(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
 {
-    [self.hfClient Url:url sucessBlock:sucessRespon failBlock:failRespon method:GET];
+    [self.hfClient Url:url  parameters:nil sucessBlock:sucessRespon failBlock:failRespon method:GET];
 }
 
 
