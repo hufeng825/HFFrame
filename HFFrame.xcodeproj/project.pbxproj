@@ -51,6 +51,7 @@
 		969D90AB1658B2DD00A382B2 /* navigation@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 969D90A91658B2DD00A382B2 /* navigation@2x.jpg */; };
 		969D90AE1658C57000A382B2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90AD1658C57000A382B2 /* UIColor+Hex.m */; };
 		969D90C01658FB6200A382B2 /* HFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 969D90BF1658FB6200A382B2 /* HFButton.m */; };
+		96C146BA167719A6005ACDB7 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C146B9167719A6005ACDB7 /* SFHFKeychainUtils.m */; };
 		96D9A95D16739404003F87F4 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9A95C16739404003F87F4 /* UncaughtExceptionHandler.m */; };
 		96D9A97D16748FC5003F87F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D9A97C16748FC5003F87F4 /* Security.framework */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
@@ -150,6 +151,8 @@
 		969D90AD1658C57000A382B2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "GlobClass/UIColor+Hex/UIColor+Hex.m"; sourceTree = SOURCE_ROOT; };
 		969D90BE1658FB6200A382B2 /* HFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButton.h; path = GlobClass/HFButton/HFButton.h; sourceTree = SOURCE_ROOT; };
 		969D90BF1658FB6200A382B2 /* HFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFButton.m; path = GlobClass/HFButton/HFButton.m; sourceTree = SOURCE_ROOT; };
+		96C146B8167719A6005ACDB7 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		96C146B9167719A6005ACDB7 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		96D9A95B16739404003F87F4 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UncaughtExceptionHandler.h; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.h; sourceTree = SOURCE_ROOT; };
 		96D9A95C16739404003F87F4 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UncaughtExceptionHandler.m; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.m; sourceTree = SOURCE_ROOT; };
 		96D9A97C16748FC5003F87F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -420,6 +423,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				96C146B7167719A6005ACDB7 /* Security */,
 				96D9A959167392CC003F87F4 /* 异常截获 */,
 				960DAB54166C6B1E00303ECC /* HFSegmentedControl */,
 				960DAB49166C69F600303ECC /* Blocks */,
@@ -493,6 +497,16 @@
 			);
 			name = HFButton;
 			sourceTree = "<group>";
+		};
+		96C146B7167719A6005ACDB7 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				96C146B8167719A6005ACDB7 /* SFHFKeychainUtils.h */,
+				96C146B9167719A6005ACDB7 /* SFHFKeychainUtils.m */,
+			);
+			name = Security;
+			path = GlobClass/Security;
+			sourceTree = SOURCE_ROOT;
 		};
 		96D9A959167392CC003F87F4 /* 异常截获 */ = {
 			isa = PBXGroup;
@@ -720,6 +734,7 @@
 				960DAB53166C6A1500303ECC /* UIAlertView+Blocks.m in Sources */,
 				960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */,
 				96D9A95D16739404003F87F4 /* UncaughtExceptionHandler.m in Sources */,
+				96C146BA167719A6005ACDB7 /* SFHFKeychainUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
