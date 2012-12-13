@@ -639,7 +639,7 @@
 		1848AF0816328FD800AD42B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DM;
+				CLASSPREFIX = HF;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = jason;
 			};
