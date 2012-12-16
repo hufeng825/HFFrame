@@ -32,8 +32,8 @@
 		960DAB53166C6A1500303ECC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB50166C6A1500303ECC /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */; };
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
-		9647A02A167E12AA00829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A028167E12AA00829C89 /* HFInfoView.m */; };
-		9647A02B167E12AA00829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A029167E12AA00829C89 /* HFInfoView.xib */; };
+		9647A040167E13A400829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A03E167E13A400829C89 /* HFInfoView.m */; };
+		9647A041167E13A400829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A03F167E13A400829C89 /* HFInfoView.xib */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -125,9 +125,9 @@
 		960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Global/SynthesizeSingleton.h; sourceTree = "<group>"; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
 		96352B7216632338001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
-		9647A027167E12AA00829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFInfoView.h; sourceTree = "<group>"; };
-		9647A028167E12AA00829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFInfoView.m; sourceTree = "<group>"; };
-		9647A029167E12AA00829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFInfoView.xib; sourceTree = "<group>"; };
+		9647A03D167E13A400829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFInfoView.h; sourceTree = "<group>"; };
+		9647A03E167E13A400829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFInfoView.m; sourceTree = "<group>"; };
+		9647A03F167E13A400829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFInfoView.xib; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -378,9 +378,9 @@
 		9647A026167E12AA00829C89 /* HFInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				9647A027167E12AA00829C89 /* HFInfoView.h */,
-				9647A028167E12AA00829C89 /* HFInfoView.m */,
-				9647A029167E12AA00829C89 /* HFInfoView.xib */,
+				9647A03D167E13A400829C89 /* HFInfoView.h */,
+				9647A03E167E13A400829C89 /* HFInfoView.m */,
+				9647A03F167E13A400829C89 /* HFInfoView.xib */,
 			);
 			name = HFInfoView;
 			path = GlobClass/HFInfoView;
@@ -698,7 +698,7 @@
 				960DAB151668A3BD00303ECC /* loading03.png in Resources */,
 				960DAB161668A3BD00303ECC /* loading04.png in Resources */,
 				960DAB171668A3BD00303ECC /* loading05.png in Resources */,
-				9647A02B167E12AA00829C89 /* HFInfoView.xib in Resources */,
+				9647A041167E13A400829C89 /* HFInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,7 +753,7 @@
 				960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */,
 				96D9A95D16739404003F87F4 /* UncaughtExceptionHandler.m in Sources */,
 				96C146BA167719A6005ACDB7 /* SFHFKeychainUtils.m in Sources */,
-				9647A02A167E12AA00829C89 /* HFInfoView.m in Sources */,
+				9647A040167E13A400829C89 /* HFInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
