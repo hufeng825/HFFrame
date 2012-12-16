@@ -109,7 +109,10 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     //ios5++
 	if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0"))
     {
-        [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithred:174 green:22 blue:21]];
+        [[UIBarButtonItem appearance] setTintColor:
+         [UIColor colorWithHex:0xD60016]
+//         [UIColor colorWithred:174 green:22 blue:21]
+         ];
 	}
     
     [self toSetTitleLable];

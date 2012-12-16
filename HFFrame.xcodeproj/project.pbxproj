@@ -22,7 +22,6 @@
 		1848AF2F16328FD800AD42B6 /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */; };
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
-		60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390C31B0D47E2AE9AF071F /* HFAnimation.m */; };
 		960DAB3A166C647600303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB39166C647600303ECC /* HFSegmentedControl.m */; };
 		960DAB42166C677B00303ECC /* HFButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB3D166C677B00303ECC /* HFButtonItem.m */; };
 		960DAB43166C677B00303ECC /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB3F166C677B00303ECC /* UIActionSheet+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -55,6 +54,11 @@
 		96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B6916631B53001926B9 /* UIView+Screenshot.m */; };
 		96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */; };
 		96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */; };
+		9647A012167DB9C700829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A011167DB9C700829C89 /* HFInfoView.m */; };
+		9647A017167DBF0700829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A016167DBF0700829C89 /* HFInfoView.xib */; };
+		9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A01A167DCB5400829C89 /* HFInfoViewController.m */; };
+		9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A01B167DCB5400829C89 /* HFInfoViewController.xib */; };
+		9647A021167DE27300829C89 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A020167DE27300829C89 /* HFAnimation.m */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -153,8 +157,6 @@
 		1848AF3116328FD800AD42B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFBaseViewController.xib; sourceTree = "<group>"; };
 		60390693556A2D35E43E2729 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = "GlobClass/Array+Extensions/Array.m"; sourceTree = SOURCE_ROOT; };
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
-		60390C31B0D47E2AE9AF071F /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFAnimation.m; path = GlobClass/HFAnimation/HFAnimation.m; sourceTree = SOURCE_ROOT; };
-		60390F639EF55A8FFAE7BF29 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFAnimation.h; path = GlobClass/HFAnimation/HFAnimation.h; sourceTree = SOURCE_ROOT; };
 		960DAB38166C647600303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB39166C647600303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		960DAB3C166C677B00303ECC /* HFButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButtonItem.h; path = GlobClass/Blocks/HFButtonItem.h; sourceTree = SOURCE_ROOT; };
@@ -200,6 +202,14 @@
 		96352B78166323A1001926B9 /* ScreenshotExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotExampleViewController.h; path = HFFrame/Example/ScreenshotExampleViewController.h; sourceTree = "<group>"; };
 		96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenshotExampleViewController.m; path = HFFrame/Example/ScreenshotExampleViewController.m; sourceTree = "<group>"; };
 		96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScreenshotExampleViewController.xib; path = HFFrame/Example/ScreenshotExampleViewController.xib; sourceTree = "<group>"; };
+		9647A010167DB9C700829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoView.h; path = ../GlobClass/InfoView/HFInfoView.h; sourceTree = "<group>"; };
+		9647A011167DB9C700829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoView.m; path = ../GlobClass/InfoView/HFInfoView.m; sourceTree = "<group>"; };
+		9647A016167DBF0700829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoView.xib; path = GlobClass/InfoView/HFInfoView.xib; sourceTree = SOURCE_ROOT; };
+		9647A019167DCB5400829C89 /* HFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoViewController.h; path = HFFrame/Example/HFInfoViewController.h; sourceTree = "<group>"; };
+		9647A01A167DCB5400829C89 /* HFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoViewController.m; path = HFFrame/Example/HFInfoViewController.m; sourceTree = "<group>"; };
+		9647A01B167DCB5400829C89 /* HFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoViewController.xib; path = HFFrame/Example/HFInfoViewController.xib; sourceTree = "<group>"; };
+		9647A01F167DE27300829C89 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFAnimation.h; sourceTree = "<group>"; };
+		9647A020167DE27300829C89 /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFAnimation.m; sourceTree = "<group>"; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -459,15 +469,6 @@
 			name = "Array+Additons";
 			sourceTree = "<group>";
 		};
-		603909DF0C4A042C9DAE96F0 /* HFAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				60390F639EF55A8FFAE7BF29 /* HFAnimation.h */,
-				60390C31B0D47E2AE9AF071F /* HFAnimation.m */,
-			);
-			path = HFAnimation;
-			sourceTree = "<group>";
-		};
 		960DAB36166C63E100303ECC /* HFSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,6 +538,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				9647A018167DCAFB00829C89 /* 自动消失提示框 */,
 				960DAB83166CA00B00303ECC /* 宏定义单例 */,
 				960DAB62166C6E6800303ECC /* Blocks */,
 				9665AF86166892BD005E4E8E /* 闪动label例程 */,
@@ -614,6 +616,36 @@
 			);
 			name = "截屏动画";
 			sourceTree = "<group>";
+		};
+		9647A009167DB8D900829C89 /* HFInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				9647A010167DB9C700829C89 /* HFInfoView.h */,
+				9647A016167DBF0700829C89 /* HFInfoView.xib */,
+				9647A011167DB9C700829C89 /* HFInfoView.m */,
+			);
+			name = HFInfoView;
+			sourceTree = "<group>";
+		};
+		9647A018167DCAFB00829C89 /* 自动消失提示框 */ = {
+			isa = PBXGroup;
+			children = (
+				9647A019167DCB5400829C89 /* HFInfoViewController.h */,
+				9647A01A167DCB5400829C89 /* HFInfoViewController.m */,
+				9647A01B167DCB5400829C89 /* HFInfoViewController.xib */,
+			);
+			name = "自动消失提示框";
+			sourceTree = "<group>";
+		};
+		9647A01E167DE27300829C89 /* HFAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9647A01F167DE27300829C89 /* HFAnimation.h */,
+				9647A020167DE27300829C89 /* HFAnimation.m */,
+			);
+			name = HFAnimation;
+			path = GlobClass/HFAnimation;
+			sourceTree = SOURCE_ROOT;
 		};
 		9665AF7D166891F1005E4E8E /* MTAnimatedLabel */ = {
 			isa = PBXGroup;
@@ -707,6 +739,8 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9647A01E167DE27300829C89 /* HFAnimation */,
+				9647A009167DB8D900829C89 /* HFInfoView */,
 				96D9A9681673A474003F87F4 /* Security */,
 				96D9A96316739540003F87F4 /* 异常捕获 */,
 				960DAB3B166C670B00303ECC /* Blocks */,
@@ -716,9 +750,7 @@
 				96A2F83516636D0900E61D4F /* FlipViewController */,
 				96352B6616631AE0001926B9 /* UIView+ScreenShot */,
 				96FC8B0716614A0D00FEB66E /* TTTAttributedLabel */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				1887E62D1660B2470069EDC6 /* 循环ScrollView */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 				969D90BD1658FAD000A382B2 /* HFButton */,
 				969D90AF1658C88100A382B2 /* UIColor+Additons */,
 				9693403816561F5200F1BDC1 /* NSDictionary+Additons */,
@@ -729,7 +761,6 @@
 				96876D79164BB8B100406C92 /* UIImage-Extensions缩放旋转裁剪 */,
 				96876D7D164BBBB800406C92 /* UIViewAddition长高宽 */,
 				603900E9E4F1B9869E1B42E4 /* Array+Additons */,
-				603909DF0C4A042C9DAE96F0 /* HFAnimation */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -994,7 +1025,7 @@
 		1848AF0816328FD800AD42B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DM;
+				CLASSPREFIX = HF;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = jason;
 			};
@@ -1054,6 +1085,8 @@
 				9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */,
 				960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */,
 				960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */,
+				9647A017167DBF0700829C89 /* HFInfoView.xib in Resources */,
+				9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,7 +1140,6 @@
 				969D90AE1658C57000A382B2 /* UIColor+Hex.m in Sources */,
 				969D90C01658FB6200A382B2 /* HFButton.m in Sources */,
 				60390DEF8443AB722552E435 /* Array.m in Sources */,
-				60390F03B7B1D78B14DECB02 /* HFAnimation.m in Sources */,
 				183206761660BB5500EA3FD1 /* CycleScrollView.m in Sources */,
 				962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */,
 				962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */,
@@ -1136,6 +1168,9 @@
 				960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */,
 				96D9A96716739590003F87F4 /* UncaughtExceptionHandler.m in Sources */,
 				9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */,
+				9647A012167DB9C700829C89 /* HFInfoView.m in Sources */,
+				9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */,
+				9647A021167DE27300829C89 /* HFAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
