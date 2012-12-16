@@ -54,11 +54,11 @@
 		96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B6916631B53001926B9 /* UIView+Screenshot.m */; };
 		96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */; };
 		96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */; };
-		9647A012167DB9C700829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A011167DB9C700829C89 /* HFInfoView.m */; };
-		9647A017167DBF0700829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A016167DBF0700829C89 /* HFInfoView.xib */; };
 		9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A01A167DCB5400829C89 /* HFInfoViewController.m */; };
 		9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A01B167DCB5400829C89 /* HFInfoViewController.xib */; };
 		9647A021167DE27300829C89 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A020167DE27300829C89 /* HFAnimation.m */; };
+		9647A036167E132F00829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A034167E132F00829C89 /* HFInfoView.m */; };
+		9647A037167E132F00829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A035167E132F00829C89 /* HFInfoView.xib */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -202,14 +202,14 @@
 		96352B78166323A1001926B9 /* ScreenshotExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotExampleViewController.h; path = HFFrame/Example/ScreenshotExampleViewController.h; sourceTree = "<group>"; };
 		96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenshotExampleViewController.m; path = HFFrame/Example/ScreenshotExampleViewController.m; sourceTree = "<group>"; };
 		96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScreenshotExampleViewController.xib; path = HFFrame/Example/ScreenshotExampleViewController.xib; sourceTree = "<group>"; };
-		9647A010167DB9C700829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoView.h; path = ../GlobClass/InfoView/HFInfoView.h; sourceTree = "<group>"; };
-		9647A011167DB9C700829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoView.m; path = ../GlobClass/InfoView/HFInfoView.m; sourceTree = "<group>"; };
-		9647A016167DBF0700829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoView.xib; path = GlobClass/InfoView/HFInfoView.xib; sourceTree = SOURCE_ROOT; };
 		9647A019167DCB5400829C89 /* HFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoViewController.h; path = HFFrame/Example/HFInfoViewController.h; sourceTree = "<group>"; };
 		9647A01A167DCB5400829C89 /* HFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoViewController.m; path = HFFrame/Example/HFInfoViewController.m; sourceTree = "<group>"; };
 		9647A01B167DCB5400829C89 /* HFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoViewController.xib; path = HFFrame/Example/HFInfoViewController.xib; sourceTree = "<group>"; };
 		9647A01F167DE27300829C89 /* HFAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFAnimation.h; sourceTree = "<group>"; };
 		9647A020167DE27300829C89 /* HFAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFAnimation.m; sourceTree = "<group>"; };
+		9647A033167E132F00829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoView.h; path = GlobClass/HFInfoView/HFInfoView.h; sourceTree = SOURCE_ROOT; };
+		9647A034167E132F00829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoView.m; path = GlobClass/HFInfoView/HFInfoView.m; sourceTree = SOURCE_ROOT; };
+		9647A035167E132F00829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoView.xib; path = GlobClass/HFInfoView/HFInfoView.xib; sourceTree = SOURCE_ROOT; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -620,9 +620,9 @@
 		9647A009167DB8D900829C89 /* HFInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				9647A010167DB9C700829C89 /* HFInfoView.h */,
-				9647A016167DBF0700829C89 /* HFInfoView.xib */,
-				9647A011167DB9C700829C89 /* HFInfoView.m */,
+				9647A033167E132F00829C89 /* HFInfoView.h */,
+				9647A034167E132F00829C89 /* HFInfoView.m */,
+				9647A035167E132F00829C89 /* HFInfoView.xib */,
 			);
 			name = HFInfoView;
 			sourceTree = "<group>";
@@ -1085,8 +1085,8 @@
 				9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */,
 				960DAB61166C6E5C00303ECC /* AlertActionSheetBlockExampleViewController.xib in Resources */,
 				960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */,
-				9647A017167DBF0700829C89 /* HFInfoView.xib in Resources */,
 				9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */,
+				9647A037167E132F00829C89 /* HFInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,9 +1168,9 @@
 				960DAB87166CA05F00303ECC /* MacroSingletonViewController.m in Sources */,
 				96D9A96716739590003F87F4 /* UncaughtExceptionHandler.m in Sources */,
 				9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */,
-				9647A012167DB9C700829C89 /* HFInfoView.m in Sources */,
 				9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */,
 				9647A021167DE27300829C89 /* HFAnimation.m in Sources */,
+				9647A036167E132F00829C89 /* HFInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
