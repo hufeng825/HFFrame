@@ -10,6 +10,12 @@
 
 @implementation NSString (HF)
 
+-(CGSize)withWithFont:(UIFont*)font
+{
+   return  [self sizeWithFont:font constrainedToSize:CGSizeMake(200.f, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+}
+
+
 /*---------------------------------------------------------------------------
  * 根据format来格式化形式为"20121010"的字符串
  * 格式化的3个参数顺序是年、月、日
@@ -154,6 +160,10 @@
 	return [self rangeOfString:string options:options].location == NSNotFound ? NO : YES;
 }
 
+/*---------------------------------------------------------------------------
+ * 返回含有中文字符串的长度
+ * 1个中文=2个英文
+ *--------------------------------------------------------------------------*/
 
 -(int)lengthToInt
 {

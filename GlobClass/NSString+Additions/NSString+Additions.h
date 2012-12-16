@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RegexKitLite.h"
 @interface NSString (HF)
-
+- (CGSize)withWithFont:(UIFont*)font;
 - (NSString*)dateStringWithFormat:(NSString*)format;
 - (NSString*)ymdString;
 - (NSString*)ymdStringWithSeperator:(NSString*)seperator;
