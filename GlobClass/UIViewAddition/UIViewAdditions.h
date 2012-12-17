@@ -13,5 +13,7 @@
 @property(nonatomic) CGFloat bottom;
 @property(nonatomic) CGFloat width;
 @property(nonatomic) CGFloat height;
+//得到此view 所在的viewController
+- (UIViewController *)viewController;
 
 @end

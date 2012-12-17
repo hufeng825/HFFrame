@@ -119,6 +119,7 @@
     [self setAlpha:.8];
     [self setEnabled:NO];
     [activeView startAnimating];
+    [self viewController]
 }
 -(void)stopActivity
 {
