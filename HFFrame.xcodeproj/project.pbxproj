@@ -59,6 +59,8 @@
 		9647A021167DE27300829C89 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A020167DE27300829C89 /* HFAnimation.m */; };
 		9647A036167E132F00829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A034167E132F00829C89 /* HFInfoView.m */; };
 		9647A037167E132F00829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A035167E132F00829C89 /* HFInfoView.xib */; };
+		9647A06F167F6C0100829C89 /* SEFilterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A06C167F6C0100829C89 /* SEFilterControl.m */; };
+		9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A06E167F6C0100829C89 /* SEFilterKnob.m */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -210,6 +212,10 @@
 		9647A033167E132F00829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoView.h; path = GlobClass/HFInfoView/HFInfoView.h; sourceTree = SOURCE_ROOT; };
 		9647A034167E132F00829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoView.m; path = GlobClass/HFInfoView/HFInfoView.m; sourceTree = SOURCE_ROOT; };
 		9647A035167E132F00829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoView.xib; path = GlobClass/HFInfoView/HFInfoView.xib; sourceTree = SOURCE_ROOT; };
+		9647A06B167F6C0100829C89 /* SEFilterControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterControl.h; sourceTree = "<group>"; };
+		9647A06C167F6C0100829C89 /* SEFilterControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterControl.m; sourceTree = "<group>"; };
+		9647A06D167F6C0100829C89 /* SEFilterKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterKnob.h; sourceTree = "<group>"; };
+		9647A06E167F6C0100829C89 /* SEFilterKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterKnob.m; sourceTree = "<group>"; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -647,6 +653,18 @@
 			path = GlobClass/HFAnimation;
 			sourceTree = SOURCE_ROOT;
 		};
+		9647A06A167F6C0100829C89 /* SEFilterControl */ = {
+			isa = PBXGroup;
+			children = (
+				9647A06B167F6C0100829C89 /* SEFilterControl.h */,
+				9647A06C167F6C0100829C89 /* SEFilterControl.m */,
+				9647A06D167F6C0100829C89 /* SEFilterKnob.h */,
+				9647A06E167F6C0100829C89 /* SEFilterKnob.m */,
+			);
+			name = SEFilterControl;
+			path = GlobClass/SEFilterControl;
+			sourceTree = SOURCE_ROOT;
+		};
 		9665AF7D166891F1005E4E8E /* MTAnimatedLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -739,6 +757,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9647A06A167F6C0100829C89 /* SEFilterControl */,
 				9647A01E167DE27300829C89 /* HFAnimation */,
 				9647A009167DB8D900829C89 /* HFInfoView */,
 				96D9A9681673A474003F87F4 /* Security */,
@@ -1171,6 +1190,8 @@
 				9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */,
 				9647A021167DE27300829C89 /* HFAnimation.m in Sources */,
 				9647A036167E132F00829C89 /* HFInfoView.m in Sources */,
+				9647A06F167F6C0100829C89 /* SEFilterControl.m in Sources */,
+				9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
