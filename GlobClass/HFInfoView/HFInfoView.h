@@ -10,6 +10,7 @@
 
 @interface HFInfoView : UIView
 @property(nonatomic,retain)UIView *view;
+@property (nonatomic,assign)BOOL isFinsh;
 -(void)showInfo:(NSString *)infoStr;
 +(HFInfoView *)sharedInstance;
 @end

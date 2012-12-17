@@ -19,6 +19,7 @@
 
 //#ifdef QA
 # define NSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+
 //#else
 //# define NSLog(...){};
 //#endif
@@ -60,5 +61,7 @@
         UIAlertView *alert1 = [[[UIAlertView alloc] initWithTitle:t message:m delegate:nil cancelButtonTitle:bt otherButtonTitles:nil] autorelease];[alert1 show];\
     }
 
+
+void ShowInfo(NSString *str);
 
 BOOL TTIsStringWithAnyText(id object) ;
