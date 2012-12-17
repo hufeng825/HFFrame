@@ -128,6 +128,10 @@
 		9647A03D167E13A400829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFInfoView.h; sourceTree = "<group>"; };
 		9647A03E167E13A400829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFInfoView.m; sourceTree = "<group>"; };
 		9647A03F167E13A400829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFInfoView.xib; sourceTree = "<group>"; };
+		9647A061167F6B1000829C89 /* SEFilterControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SEFilterControl.h; path = GlobClass/SEFilterControl/SEFilterControl.h; sourceTree = SOURCE_ROOT; };
+		9647A062167F6B1000829C89 /* SEFilterControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterControl.m; path = GlobClass/SEFilterControl/SEFilterControl.m; sourceTree = SOURCE_ROOT; };
+		9647A063167F6B1000829C89 /* SEFilterKnob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SEFilterKnob.h; path = GlobClass/SEFilterControl/SEFilterKnob.h; sourceTree = SOURCE_ROOT; };
+		9647A064167F6B1000829C89 /* SEFilterKnob.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterKnob.m; path = GlobClass/SEFilterControl/SEFilterKnob.m; sourceTree = SOURCE_ROOT; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -386,6 +390,17 @@
 			path = GlobClass/HFInfoView;
 			sourceTree = SOURCE_ROOT;
 		};
+		9647A05F167F6AD800829C89 /* SEFilterControl */ = {
+			isa = PBXGroup;
+			children = (
+				9647A061167F6B1000829C89 /* SEFilterControl.h */,
+				9647A062167F6B1000829C89 /* SEFilterControl.m */,
+				9647A063167F6B1000829C89 /* SEFilterKnob.h */,
+				9647A064167F6B1000829C89 /* SEFilterKnob.m */,
+			);
+			name = SEFilterControl;
+			sourceTree = "<group>";
+		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +454,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9647A05F167F6AD800829C89 /* SEFilterControl */,
 				9647A026167E12AA00829C89 /* HFInfoView */,
 				96C146B7167719A6005ACDB7 /* Security */,
 				96D9A959167392CC003F87F4 /* 异常截获 */,
