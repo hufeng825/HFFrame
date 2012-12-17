@@ -9,5 +9,6 @@
 #import "HFBaseViewController.h"
 
 @interface HFInfoViewController : HFBaseViewController
+- (IBAction)showMessage:(id)sender;
 
 @end

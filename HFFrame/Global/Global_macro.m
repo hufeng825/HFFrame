@@ -7,6 +7,10 @@
 //
 
 #import "Global_macro.h"
-
+#import "HFInfoView.h"
 BOOL TTIsStringWithAnyText(id object) {
     return [object isKindOfClass:[NSString class]]&& [(NSString*)object length] > 0 && object !=nil ;}
+void ShowInfo(NSString *str)
+{
+   [ [HFInfoView sharedInstance]showInfo: str];
+}
