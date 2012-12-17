@@ -26,6 +26,7 @@
 #import "AlertActionSheetBlockExampleViewController.h"
 #import "MacroSingletonViewController.h"
 #import "HFInfoViewController.h"
+#import "HFSEFilterControlViewController.h"
 
 @interface HomeViewController ()
 
@@ -67,7 +68,7 @@
 //    [HFAnimation animationShake:bt];
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",nil]autorelease];
+    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",nil]autorelease];
 }
 //-(void)btClick:(id)sender
 //{
@@ -218,10 +219,17 @@
         {
             [self hfff];
         }
+            break;
         case 17:
         {
             [self funcFromeString:@"HFInfoViewController" index:row];
         }
+            break;
+        case 18:
+        {
+            [self funcFromeString:@"HFSEFilterControlViewController" index:row];
+        }
+            break;
         default:
             break;
     }

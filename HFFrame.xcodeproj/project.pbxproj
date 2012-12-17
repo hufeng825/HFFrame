@@ -61,6 +61,8 @@
 		9647A037167E132F00829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A035167E132F00829C89 /* HFInfoView.xib */; };
 		9647A06F167F6C0100829C89 /* SEFilterControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A06C167F6C0100829C89 /* SEFilterControl.m */; };
 		9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A06E167F6C0100829C89 /* SEFilterKnob.m */; };
+		9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A074167F6CA100829C89 /* HFSEFilterControlViewController.m */; };
+		9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -216,6 +218,9 @@
 		9647A06C167F6C0100829C89 /* SEFilterControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterControl.m; sourceTree = "<group>"; };
 		9647A06D167F6C0100829C89 /* SEFilterKnob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEFilterKnob.h; sourceTree = "<group>"; };
 		9647A06E167F6C0100829C89 /* SEFilterKnob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEFilterKnob.m; sourceTree = "<group>"; };
+		9647A073167F6CA100829C89 /* HFSEFilterControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSEFilterControlViewController.h; path = HFFrame/Example/HFSEFilterControlViewController.h; sourceTree = "<group>"; };
+		9647A074167F6CA100829C89 /* HFSEFilterControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSEFilterControlViewController.m; path = HFFrame/Example/HFSEFilterControlViewController.m; sourceTree = "<group>"; };
+		9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFSEFilterControlViewController.xib; path = HFFrame/Example/HFSEFilterControlViewController.xib; sourceTree = "<group>"; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -544,6 +549,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				9647A072167F6C7B00829C89 /* SEFilterControl 手机充值 */,
 				9647A018167DCAFB00829C89 /* 自动消失提示框 */,
 				960DAB83166CA00B00303ECC /* 宏定义单例 */,
 				960DAB62166C6E6800303ECC /* Blocks */,
@@ -664,6 +670,16 @@
 			name = SEFilterControl;
 			path = GlobClass/SEFilterControl;
 			sourceTree = SOURCE_ROOT;
+		};
+		9647A072167F6C7B00829C89 /* SEFilterControl 手机充值 */ = {
+			isa = PBXGroup;
+			children = (
+				9647A073167F6CA100829C89 /* HFSEFilterControlViewController.h */,
+				9647A074167F6CA100829C89 /* HFSEFilterControlViewController.m */,
+				9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */,
+			);
+			name = "SEFilterControl 手机充值";
+			sourceTree = "<group>";
 		};
 		9665AF7D166891F1005E4E8E /* MTAnimatedLabel */ = {
 			isa = PBXGroup;
@@ -1106,6 +1122,7 @@
 				960DAB88166CA05F00303ECC /* MacroSingletonViewController.xib in Resources */,
 				9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */,
 				9647A037167E132F00829C89 /* HFInfoView.xib in Resources */,
+				9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1209,7 @@
 				9647A036167E132F00829C89 /* HFInfoView.m in Sources */,
 				9647A06F167F6C0100829C89 /* SEFilterControl.m in Sources */,
 				9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */,
+				9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

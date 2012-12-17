@@ -95,6 +95,11 @@
         userInfo = [_userInfo copy];
     }
 }
+/*---------------------------------------------------------------------------
+ * title 输入nil 则用原有的titile
+ * 
+ * edit *胡峰*
+ *--------------------------------------------------------------------------*/
 
 -(void)beginActivity:(NSString*)title postion:(ActionPostionOnBt)postion
 {
@@ -104,8 +109,11 @@
         activeView.center= CGPointMake(10, self.height/2);
         [self addSubview:activeView];
     }
-    self.tmpTitle = self.titleLabel.text;
-    [self setTitle:title forState:UIControlStateDisabled];
+    if (!title) {
+        self.tmpTitle = self.titleLabel.text;
+        [self setTitle:title forState:UIControlStateDisabled];
+    }
+   
     switch (postion) {
         case ActiveLeftOnBt:
             activeView.left = 10;
@@ -116,7 +124,7 @@
         default:
             break;
     }
-    [self setAlpha:.8];
+    [self setAlpha:.65];
     [self setEnabled:NO];
     [activeView startAnimating];
 }

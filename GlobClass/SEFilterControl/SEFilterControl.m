@@ -31,7 +31,7 @@
 @end
 
 @implementation SEFilterControl
-@synthesize SelectedIndex, progressColor,EnableFromIndex;
+@synthesize SelectedIndex, progressColor,EnableFromIndex,titleArray;
 
 -(CGPoint)getCenterPointForIndex:(int) i{
     return CGPointMake((i/(float)(titlesArr.count-1)) * (self.frame.size.width-RIGHT_OFFSET-LEFT_OFFSET) + LEFT_OFFSET, i==0?self.frame.size.height-55-TITLE_SELECTED_DISTANCE:self.frame.size.height-55);
@@ -50,7 +50,7 @@
     if (self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, 70)]) {
         [self setBackgroundColor:[UIColor clearColor]];
         titlesArr = [[NSArray alloc] initWithArray:titles];
-        
+        self.titleArray = [NSArray arrayWithArray:titlesArr];
         [self setProgressColor:[UIColor colorWithRed:103/255.f green:173/255.f blue:202/255.f alpha:1]];
         
         UITapGestureRecognizer *gest = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(ItemSelected:)];
@@ -305,8 +305,9 @@
     [handler removeTarget:self action:@selector(TouchUp:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside];
     [handler removeTarget:self action:@selector(TouchMove:withEvent: ) forControlEvents: UIControlEventTouchDragOutside | UIControlEventTouchDragInside];
     [handler release];
-    [titlesArr release];
+    [titleArray release];
     [progressColor release];
+    [titlesArr release];
     [super dealloc];
 }
 
