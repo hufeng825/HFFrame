@@ -7,8 +7,7 @@
 //
 
 #import "CycleScrollView.h"
-#import "SDWebImageManager.h"
-
+#import "NSTimer+pause.h"
 @implementation CycleScrollView
 @synthesize delegate;
 @synthesize scrollView;
@@ -34,7 +33,6 @@
         scrollView.showsVerticalScrollIndicator = NO;
         scrollView.pagingEnabled = YES;
         scrollView.delegate = self;
-        
         // 在水平方向滚动
         if(scrollDirection == CycleDirectionLandscape) {
             scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * 3,
@@ -61,7 +59,7 @@
 
 - (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction picturesUrl:(NSMutableArray *)pictureArrayUrl  TimeInterval:(NSTimeInterval)timeInterval
 {
-    SDWebImageManager *manager = [[SDWebImageManager alloc]init];
+   manager = [[SDWebImageManager alloc]init];
     
     self = [super initWithFrame:frame];
     if(self)
@@ -122,7 +120,6 @@
         [self addSubview:scrollView];
         [self refreshScrollView];
     }
-    [manager release];
 
     return self;
 }
@@ -207,9 +204,19 @@
     
     return value;
 }
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [timer pauseTimer];
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (decelerate)
+    {
+        [timer resumeTimer];
+    }
+};
 
 - (void)scrollViewDidScroll:(UIScrollView *)aScrollView {
-    
     int x = aScrollView.contentOffset.x;
     int y = aScrollView.contentOffset.y;
     NSLog(@"did  x=%d  y=%d", x, y);
@@ -247,7 +254,6 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)aScrollView {
-    
     int x = aScrollView.contentOffset.x;
     int y = aScrollView.contentOffset.y;
     
@@ -276,6 +282,7 @@
         [timer invalidate];
 		RELEASE_SAFELY(timer);
 	}
+    [manager release];
     RELEASE_SAFELY(imagesArray);
     RELEASE_SAFELY(curImages);
     RELEASE_SAFELY(scrollView);
