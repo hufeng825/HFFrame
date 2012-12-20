@@ -43,7 +43,7 @@
 		960DAC80166DEFEF00303ECC /* HFtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAC7F166DEFEF00303ECC /* HFtest.m */; };
 		960DAC81166E01FE00303ECC /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */; };
-		962C0AE31682C75D002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AE21682C75D002C9992 /* NSTimer+pause.m */; };
+		962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */; };
 		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
@@ -190,8 +190,8 @@
 		960DAC7F166DEFEF00303ECC /* HFtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFtest.m; sourceTree = "<group>"; };
 		9624A0501676F07000B8A816 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
-		962C0AE11682C75D002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+pause.h"; path = "NSTimer/NSTimer+pause.h"; sourceTree = SOURCE_ROOT; };
-		962C0AE21682C75D002C9992 /* NSTimer+pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+pause.m"; path = "NSTimer/NSTimer+pause.m"; sourceTree = SOURCE_ROOT; };
+		962C0AED1682CDCD002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+pause.h"; path = "GlobClass/NSTimer/NSTimer+pause.h"; sourceTree = SOURCE_ROOT; };
+		962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+pause.m"; path = "GlobClass/NSTimer/NSTimer+pause.m"; sourceTree = SOURCE_ROOT; };
 		962F7007165C9D760032A849 /* HttpExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpExampleViewController.h; path = HFFrame/Example/HttpExampleViewController.h; sourceTree = "<group>"; };
 		962F7008165C9D760032A849 /* HttpExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpExampleViewController.m; path = HFFrame/Example/HttpExampleViewController.m; sourceTree = "<group>"; };
 		962F7009165C9D760032A849 /* HttpExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HttpExampleViewController.xib; path = HFFrame/Example/HttpExampleViewController.xib; sourceTree = "<group>"; };
@@ -552,8 +552,8 @@
 		962C0ADF1682C71E002C9992 /* NSTimer */ = {
 			isa = PBXGroup;
 			children = (
-				962C0AE11682C75D002C9992 /* NSTimer+pause.h */,
-				962C0AE21682C75D002C9992 /* NSTimer+pause.m */,
+				962C0AED1682CDCD002C9992 /* NSTimer+pause.h */,
+				962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */,
 			);
 			name = NSTimer;
 			sourceTree = "<group>";
@@ -1223,7 +1223,7 @@
 				9647A06F167F6C0100829C89 /* SEFilterControl.m in Sources */,
 				9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */,
 				9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */,
-				962C0AE31682C75D002C9992 /* NSTimer+pause.m in Sources */,
+				962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
