@@ -37,6 +37,18 @@
     
    [self gettUrl:@"http://9snow.org/weather/api?city=北京" sucessBlock:su failBlock:nil];
     
+    
+    
+    /***********************网络请求例子*****************************/
+    HttpSucessRespon sua = HFHttpSucessResponClass
+    {
+        NSLog(@"json %@",[JSON class]);
+        _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
+        
+    };
+    
+    [self gettUrl:@"http://9snow.org/weather/api?city=北京" sucessBlock:sua failBlock:nil];
+    
 }
 
 

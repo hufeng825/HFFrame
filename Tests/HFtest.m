@@ -22,13 +22,13 @@
 //    GHAssertEqualObjects(str, str1, @"dddddd%@",str1);
 }
 
-//- (void)testSimpleFail
-//
-//{
-//    
+- (void)testSimpleFail
+
+{
+    GHTestLog(@"格式前dddddd");
 //    GHAssertTrue(NO, nil);
-//    
-//}
+    
+}
 
 
 

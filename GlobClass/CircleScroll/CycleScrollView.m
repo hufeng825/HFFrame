@@ -7,7 +7,6 @@
 //
 
 #import "CycleScrollView.h"
-#import "NSTimer+pause.h"
 @implementation CycleScrollView
 @synthesize delegate;
 @synthesize scrollView;
@@ -15,6 +14,7 @@
 @synthesize curImages;
 @synthesize curImageView;
 @synthesize timer;
+NSTimeInterval timeinterval;
 - (id)initWithFrame:(CGRect)frame cycleDirection:(CycleDirection)direction pictures:(NSMutableArray *)pictureArray TimeInterval:(NSTimeInterval)timeInterval
 {
     self = [super initWithFrame:frame];
@@ -113,6 +113,7 @@
         }
         if (timeInterval>0 && !timer)
 		{
+            timeinterval = timeInterval;
 			self.timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
 			NSRunLoop *main=[NSRunLoop currentRunLoop];
 			[main addTimer:timer forMode:NSRunLoopCommonModes];
@@ -208,14 +209,17 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     if (  timer ) {
-        [timer pauseTimer];
+        [timer invalidate];
     }
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     if (decelerate && timer )
     {
-        [timer resumeTimer];
+        timer = nil;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:timeinterval target:self selector:@selector(updateScrollWithTimer:) userInfo:nil repeats:YES];
+        NSRunLoop *main=[NSRunLoop currentRunLoop];
+        [main addTimer:timer forMode:NSRunLoopCommonModes];
     }
 };
 
