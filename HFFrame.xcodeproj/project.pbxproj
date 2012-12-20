@@ -35,6 +35,7 @@
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
 		9647A040167E13A400829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A03E167E13A400829C89 /* HFInfoView.m */; };
 		9647A041167E13A400829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A03F167E13A400829C89 /* HFInfoView.xib */; };
+		967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22C316835DF100DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -135,6 +136,8 @@
 		9647A062167F6B1000829C89 /* SEFilterControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterControl.m; path = GlobClass/SEFilterControl/SEFilterControl.m; sourceTree = SOURCE_ROOT; };
 		9647A063167F6B1000829C89 /* SEFilterKnob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SEFilterKnob.h; path = GlobClass/SEFilterControl/SEFilterKnob.h; sourceTree = SOURCE_ROOT; };
 		9647A064167F6B1000829C89 /* SEFilterKnob.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterKnob.m; path = GlobClass/SEFilterControl/SEFilterKnob.m; sourceTree = SOURCE_ROOT; };
+		967D22C216835DF100DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
+		967D22C316835DF100DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -549,6 +552,8 @@
 			isa = PBXGroup;
 			children = (
 				96C146B8167719A6005ACDB7 /* SFHFKeychainUtils.h */,
+				967D22C216835DF100DD44C3 /* NSString+Security.h */,
+				967D22C316835DF100DD44C3 /* NSString+Security.m */,
 				96C146B9167719A6005ACDB7 /* SFHFKeychainUtils.m */,
 			);
 			name = Security;
@@ -785,6 +790,7 @@
 				96C146BA167719A6005ACDB7 /* SFHFKeychainUtils.m in Sources */,
 				9647A040167E13A400829C89 /* HFInfoView.m in Sources */,
 				962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */,
+				967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
