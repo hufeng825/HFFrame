@@ -31,6 +31,7 @@
 		960DAB52166C6A1500303ECC /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB4E166C6A1500303ECC /* UIActionSheet+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB53166C6A1500303ECC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB50166C6A1500303ECC /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */; };
+		962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AF71682CF19002C9992 /* NSTimer+pause.m */; };
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
 		9647A040167E13A400829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A03E167E13A400829C89 /* HFInfoView.m */; };
 		9647A041167E13A400829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A03F167E13A400829C89 /* HFInfoView.xib */; };
@@ -123,6 +124,8 @@
 		960DAB55166C6B3A00303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Global/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		962C0AF61682CF19002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+pause.h"; sourceTree = "<group>"; };
+		962C0AF71682CF19002C9992 /* NSTimer+pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+pause.m"; sourceTree = "<group>"; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
 		96352B7216632338001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
 		9647A03D167E13A400829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFInfoView.h; sourceTree = "<group>"; };
@@ -370,6 +373,16 @@
 			name = HFSegmentedControl;
 			sourceTree = "<group>";
 		};
+		962C0AF51682CF19002C9992 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				962C0AF61682CF19002C9992 /* NSTimer+pause.h */,
+				962C0AF71682CF19002C9992 /* NSTimer+pause.m */,
+			);
+			name = NSTimer;
+			path = GlobClass/NSTimer;
+			sourceTree = SOURCE_ROOT;
+		};
 		96352B6F16632315001926B9 /* UIViewScreenshort */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +467,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				962C0AF51682CF19002C9992 /* NSTimer */,
 				9647A05F167F6AD800829C89 /* SEFilterControl */,
 				9647A026167E12AA00829C89 /* HFInfoView */,
 				96C146B7167719A6005ACDB7 /* Security */,
@@ -770,6 +784,7 @@
 				96D9A95D16739404003F87F4 /* UncaughtExceptionHandler.m in Sources */,
 				96C146BA167719A6005ACDB7 /* SFHFKeychainUtils.m in Sources */,
 				9647A040167E13A400829C89 /* HFInfoView.m in Sources */,
+				962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
