@@ -206,11 +206,13 @@
 }
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    [timer pauseTimer];
+    if (  timer ) {
+        [timer pauseTimer];
+    }
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (decelerate)
+    if (decelerate && timer )
     {
         [timer resumeTimer];
     }
