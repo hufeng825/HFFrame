@@ -204,6 +204,7 @@
     
     return value;
 }
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     if (  timer ) {
