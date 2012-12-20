@@ -11,6 +11,7 @@
 @interface HFInfoView : UIView
 @property(nonatomic,retain)UIView *view;
 @property (nonatomic,assign)BOOL isFinsh;
+@property (nonatomic,retain)NSTimer *timer;
 -(void)showInfo:(NSString *)infoStr;
 +(HFInfoView *)sharedInstance;
 @end
