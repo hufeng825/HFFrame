@@ -14,6 +14,10 @@
 @implementation HFInfoView
 @synthesize view;
 @synthesize isFinsh;
+@synthesize timer;
+bool done = NO;
+#define AnimationInterval 1.f
+
 SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
 
 +(HFInfoView *)sharedInstance
@@ -31,8 +35,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
 
 -(void)showInfo:(NSString *)infoStr
 {
-//    [view setAlpha:0];
-    
+    //    [view setAlpha:0];
     UILabel * textlabel = [[HFInfoView sharedInstance] textLable];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UIView *backgroundView  = [[HFInfoView sharedHFInfoView]backgroundView];
@@ -71,52 +74,82 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
     opacityAnimation.toValue = [NSNumber numberWithFloat:1.f];
+
     opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     CAAnimationGroup *animGroup = [CAAnimationGroup animation];
     animGroup.animations = [NSArray arrayWithObjects:scalAnimation,opacityAnimation, nil];
     animGroup.duration = 0.5;
     animGroup.removedOnCompletion = NO;
+   animGroup.delegate = self;
     animGroup.fillMode = kCAFillModeForwards;
-    animGroup.delegate = self;
     [view.layer addAnimation:animGroup forKey:nil];
 
-    if (isFinsh == NO)
-    {
-        return;
-    }
-    isFinsh = NO;
-    int64_t delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_current_queue(), ^(void)
-                   {
-                       //!!! 词句最好放在动画结束的delegate 中 但是 不知道为何 设置好delegate后 无法调用  很是奇怪。
-                       isFinsh = YES;
-                       //缩放动画
-                       CABasicAnimation *scalAni = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-                       scalAni.fromValue = [NSNumber numberWithFloat:1];
-                       scalAni.toValue = [NSNumber numberWithFloat:.8];
-                       scalAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                       scalAni.delegate = self;
+//    if (isFinsh == NO)
+//    {
+//        return;
+//    }
+//    isFinsh = NO;
+//    int64_t delayInSeconds = 2.0;
+//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//    dispatch_after(popTime, dispatch_get_current_queue(), ^(void)
+//                   {
+//                       //!!! 词句最好放在动画结束的delegate 中 但是 不知道为何 设置好delegate后 无法调用  很是奇怪。
+//                       isFinsh = YES;
+//                       
+//                   });
 
-                       //透明动画
-                       CABasicAnimation *opacityAni = [CABasicAnimation animationWithKeyPath:@"opacity"];
-                       opacityAni.fromValue = [NSNumber numberWithFloat:1.0];
-                       opacityAni.toValue = [NSNumber numberWithFloat:0.f];
-                       opacityAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-                       CAAnimationGroup *animGroup_ = [CAAnimationGroup animation];
-                       animGroup_.animations = [NSArray arrayWithObjects:scalAni,opacityAni,nil];
-                       animGroup_.duration = .5;
-                       animGroup_.removedOnCompletion = NO;
-                       animGroup_.fillMode = kCAFillModeForwards;
-                       [view.layer addAnimation:animGroup_ forKey:nil];
-                       
-                   });
 }
+
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
+    if ([timer isValid])
+    {
+        [timer invalidate];
+        timer = nil;
+    }
+   self.timer = [ NSTimer  timerWithTimeInterval:AnimationInterval target:self selector:@selector(timerFinsh:) userInfo:nil repeats:NO];
+   NSRunLoop *main=[NSRunLoop currentRunLoop];
+    [main addTimer:timer forMode:NSDefaultRunLoopMode];
+    return;
+
+    /*另外一种写法
+     NSMethodSignature *sgn = [self methodSignatureForSelector:@selector(timerFinsh:)];
+    NSInvocation *inv = [NSInvocation invocationWithMethodSignature: sgn];
+    [inv setTarget: self];
+    [inv setSelector:@selector(timerFinsh:)];
     
+    self.timer = [NSTimer timerWithTimeInterval: AnimationInterval
+                                     invocation:inv
+                                        repeats:NO];
+    NSRunLoop *runner = [NSRunLoop currentRunLoop];
+    [runner addTimer: timer forMode: NSDefaultRunLoopMode];
+
+    return;
+     */
+
 }
 
+-(void)timerFinsh:(NSTimer *)timer
+{
+       //缩放动画
+       CABasicAnimation *scalAni = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+       scalAni.fromValue = [NSNumber numberWithFloat:1];
+       scalAni.toValue = [NSNumber numberWithFloat:.8];
+       scalAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        //透明动画
+       CABasicAnimation *opacityAni = [CABasicAnimation animationWithKeyPath:@"opacity"];
+       opacityAni.fromValue = [NSNumber numberWithFloat:1.0];
+       opacityAni.toValue = [NSNumber numberWithFloat:0.f];
+       opacityAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+      CAAnimationGroup *animGroup_ = [CAAnimationGroup animation];
+       animGroup_.animations = [NSArray arrayWithObjects:scalAni,opacityAni,nil];
+       animGroup_.duration = .5;
+       animGroup_.removedOnCompletion = NO;
+       animGroup_.fillMode = kCAFillModeForwards;
+       [view.layer addAnimation:animGroup_ forKey:nil];
+
+}
 
 
 -(UILabel*)textLable
@@ -145,6 +178,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
 */
 - (void)dealloc
 {
+    [timer release];
     [view release];
     [super dealloc];
 }
