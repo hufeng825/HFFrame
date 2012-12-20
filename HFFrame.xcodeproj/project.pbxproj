@@ -77,6 +77,7 @@
 		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
 		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
 		9679168F165CD819006F52B9 /* VoiceExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */; };
+		967D22D116835EA700DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22D016835EA700DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
@@ -241,6 +242,8 @@
 		9679168B165CD819006F52B9 /* VoiceExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceExampleViewController.h; path = HFFrame/Example/VoiceExampleViewController.h; sourceTree = "<group>"; };
 		9679168C165CD819006F52B9 /* VoiceExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceExampleViewController.m; path = HFFrame/Example/VoiceExampleViewController.m; sourceTree = "<group>"; };
 		9679168D165CD819006F52B9 /* VoiceExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceExampleViewController.xib; path = HFFrame/Example/VoiceExampleViewController.xib; sourceTree = "<group>"; };
+		967D22CF16835EA700DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
+		967D22D016835EA700DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		96876D74164BA44200406C92 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		96876D7A164BB8B100406C92 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
@@ -896,6 +899,8 @@
 		96D9A9681673A474003F87F4 /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				967D22CF16835EA700DD44C3 /* NSString+Security.h */,
+				967D22D016835EA700DD44C3 /* NSString+Security.m */,
 				9624A0501676F07000B8A816 /* SFHFKeychainUtils.h */,
 				9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */,
 			);
@@ -1224,6 +1229,7 @@
 				9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */,
 				9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */,
 				962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */,
+				967D22D116835EA700DD44C3 /* NSString+Security.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
