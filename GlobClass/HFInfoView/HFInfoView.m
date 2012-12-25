@@ -38,7 +38,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UIView *backgroundView  = [[HFInfoView sharedHFInfoView]backgroundView];
     textlabel.text = infoStr;
-    CGSize size = [infoStr withWithFont:textlabel.font];
+//    CGSize size = [infoStr withWithFont:textlabel.font];
+    CGSize size = [infoStr sizeWithFont:textlabel.font constrainedToSize:CGSizeMake(200.f, CGFLOAT_MAX) lineBreakMode:UILineBreakModeWordWrap];
+
     [textlabel setWidth:size.width];
     [textlabel setHeight:size.height];
     [view setWidth:size.width+8];
