@@ -82,6 +82,7 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
     sucessRespon failure:failRespon];
     operation.JSONReadingOptions = NSJSONReadingAllowFragments;
+    
     [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         NSLog(@"changed %d", status);
         //your code here
