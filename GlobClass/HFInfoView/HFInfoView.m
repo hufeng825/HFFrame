@@ -13,10 +13,9 @@
 
 @implementation HFInfoView
 @synthesize view;
-@synthesize isFinsh;
 @synthesize timer;
-bool done = NO;
-#define AnimationInterval 1.f
+#define AnimationInterval .5f
+#define ShowInterval 1.5f
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
 
@@ -27,7 +26,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
     if (mustInitialize)
     {
         v.view = [[[NSBundle mainBundle] loadNibNamed:@"HFInfoView" owner:self options:nil]objectAtIndex:0];
-        v.isFinsh = YES;
     }
     return v;
 }
@@ -35,7 +33,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
 
 -(void)showInfo:(NSString *)infoStr
 {
-    //    [view setAlpha:0];
+
     UILabel * textlabel = [[HFInfoView sharedInstance] textLable];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UIView *backgroundView  = [[HFInfoView sharedHFInfoView]backgroundView];
@@ -60,12 +58,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
     backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
     backgroundView.layer.borderColor = [[UIColor blackColor] CGColor];
     [backgroundView setFrame: CGRectMake(0, 0, view.width, view.height)];
-    
-
-    
-    
     [window addSubview:view];
-    
+   [ view.layer removeAnimationForKey:@"hideAnimat"] ;
     CABasicAnimation *scalAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scalAnimation.fromValue = [NSNumber numberWithFloat:0.3];
     scalAnimation.toValue = [NSNumber numberWithFloat:1];
@@ -78,7 +72,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
     opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     CAAnimationGroup *animGroup = [CAAnimationGroup animation];
     animGroup.animations = [NSArray arrayWithObjects:scalAnimation,opacityAnimation, nil];
-    animGroup.duration = 0.5;
+    animGroup.duration = AnimationInterval;
     animGroup.removedOnCompletion = NO;
    animGroup.delegate = self;
     animGroup.fillMode = kCAFillModeForwards;
@@ -108,7 +102,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
         [timer invalidate];
         timer = nil;
     }
-   self.timer = [ NSTimer  timerWithTimeInterval:AnimationInterval target:self selector:@selector(timerFinsh:) userInfo:nil repeats:NO];
+   self.timer = [ NSTimer  timerWithTimeInterval:ShowInterval target:self selector:@selector(timerFinsh:) userInfo:nil repeats:NO];
    NSRunLoop *main=[NSRunLoop currentRunLoop];
     [main addTimer:timer forMode:NSDefaultRunLoopMode];
     return;
@@ -144,11 +138,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(HFInfoView);
        opacityAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
       CAAnimationGroup *animGroup_ = [CAAnimationGroup animation];
        animGroup_.animations = [NSArray arrayWithObjects:scalAni,opacityAni,nil];
-       animGroup_.duration = .5;
+       animGroup_.duration = AnimationInterval;
        animGroup_.removedOnCompletion = NO;
        animGroup_.fillMode = kCAFillModeForwards;
-       [view.layer addAnimation:animGroup_ forKey:nil];
-
+       [view.layer addAnimation:animGroup_ forKey:@"hideAnimat"];
 }
 
 
