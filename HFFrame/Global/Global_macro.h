@@ -62,6 +62,6 @@
     }
 
 
-void ShowInfo(NSString *str);
+void ShowInfo( id formatstring,...);
 
 BOOL TTIsStringWithAnyText(id object) ;
