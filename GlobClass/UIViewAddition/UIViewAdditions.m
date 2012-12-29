@@ -78,6 +78,48 @@
   frame.size.height = height;
   self.frame = frame;
 }
+- (CGFloat)centerX {
+    return self.center.x;
+}
+
+- (void)setCenterX:(CGFloat)centerX {
+    self.center = CGPointMake(centerX, self.center.y);
+}
+
+- (CGFloat)centerY {
+    return self.center.y;
+}
+
+- (void)setCenterY:(CGFloat)centerY {
+    self.center = CGPointMake(self.center.x, centerY);
+}
+
+-(BOOL)hiddenWithAnimation
+{
+    if (self.alpha==0)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+-(void)setHiddenWithAnimation:(BOOL)hidden
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.30f];
+    if (hidden)
+    {
+        self.alpha =0;
+    }
+    else
+    {
+        self.alpha =1;
+    }
+    [UIView commitAnimations];
+}
+
 - (UIViewController*)viewController {
     for (UIView* next = [self superview]; next; next = next.superview) {
         UIResponder* nextResponder = [next nextResponder];
