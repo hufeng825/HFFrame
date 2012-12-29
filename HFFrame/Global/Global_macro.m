@@ -10,7 +10,12 @@
 #import "HFInfoView.h"
 BOOL TTIsStringWithAnyText(id object) {
     return [object isKindOfClass:[NSString class]]&& [(NSString*)object length] > 0 && object !=nil ;}
-void ShowInfo(NSString *str)
+void ShowInfo( id formatstring,...)
 {
-   [ [HFInfoView sharedInstance]showInfo: str];
+    va_list arglist;
+	if (!formatstring) return;
+	va_start(arglist, formatstring);
+	id outstring = [[[NSString alloc] initWithFormat:formatstring arguments:arglist] autorelease];
+	va_end(arglist);
+   [ [HFInfoView sharedInstance]showInfo: outstring];
 }
