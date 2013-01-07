@@ -7,7 +7,6 @@
 //
 
 #import "HFLoadingView.h"
-#import "HFAnimation.h"
 
 @implementation HFLoadingView
 @synthesize customView,imageView;
@@ -39,6 +38,7 @@
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     self.imageView =(UIImageView*) [customView viewWithTag:11];
 //    [self.imageView setImage:[UIImage imageNamed:@"loading01.png"]];
+    
     NSArray *arry = [NSArray arrayWithObjects:
                      [UIImage imageNamed:@"loading01.png"],
                      [UIImage imageNamed:@"loading02.png"],
@@ -132,11 +132,25 @@
 + (void)hideLoadingViewForView:(UIView *)view {
 	for (UIView *v in [view subviews]) {
 		if ([v isKindOfClass:[HFLoadingView class]]) {
-            [v removeFromSuperview];
+            [UIView animateWithDuration:1
+                                  delay:0.0
+                                options:UIViewAnimationCurveEaseInOut //设置动画类型
+                             animations:^{
+                                 //开始动画
+                                 [v setAlpha:0.f];
+                             }
+                             completion:^(BOOL finished){
+                                 if (finished)
+                                 {
+                                     [v removeFromSuperview];
+                                 }
+                                 // 动画结束时的处理  
+                             }];
             break;
 		}
 	}
 }
+
 
 #pragma mark -
 

@@ -26,10 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
     
     /***********************网络请求例子*****************************/
-    HttpSucessRespon su = HFHttpSucessResponClass
+    HttpSucessRespon su = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+//    HFHttpSucessResponClass
     {
         NSLog(@"json %@",[JSON class]);
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
