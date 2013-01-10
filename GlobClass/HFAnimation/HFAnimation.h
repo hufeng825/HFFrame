@@ -31,6 +31,7 @@ typedef enum
 +(void)animationHidden:(id)sender;
 +(void )animationMovepoint:(id)sender point:(CGPoint )point; //点移动
 +(void)animationHeartbeat:(id)sender;
++(void)animationHeartbeat:(id)sender repeatCount:(float)repeatCount;
 +(void)removeAllAnimation:(id)sender;
 
 +(void)animationRotate:(id)sender rotatePos:(RotatePos)rotatePos;

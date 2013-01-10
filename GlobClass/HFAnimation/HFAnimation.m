@@ -184,19 +184,23 @@
 
 +(void)animationHeartbeat:(id)sender
 {
+    [self animationHeartbeat:sender repeatCount:FLT_MAX];
+};
+
+
++(void)animationHeartbeat:(id)sender repeatCount:(float)repeatCount
+{
     float bigSize = 1.1;
     UIView *view = (UIView*)sender;
-
+    
     CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     pulseAnimation.duration = .5;
     pulseAnimation.toValue = [NSNumber numberWithFloat:bigSize];
     pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pulseAnimation.autoreverses = YES;
-    pulseAnimation.repeatCount = FLT_MAX;
+    pulseAnimation.repeatCount = repeatCount;
     [view.layer addAnimation:pulseAnimation forKey:@"transform.scale"];
 };
-
-
 
 
 
