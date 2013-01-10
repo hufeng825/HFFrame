@@ -35,6 +35,7 @@
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
 		9647A040167E13A400829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A03E167E13A400829C89 /* HFInfoView.m */; };
 		9647A041167E13A400829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A03F167E13A400829C89 /* HFInfoView.xib */; };
+		9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674479E169E940F00A8341A /* GHUnitIOS.framework */; };
 		967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22C316835DF100DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
@@ -136,6 +137,7 @@
 		9647A062167F6B1000829C89 /* SEFilterControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterControl.m; path = GlobClass/SEFilterControl/SEFilterControl.m; sourceTree = SOURCE_ROOT; };
 		9647A063167F6B1000829C89 /* SEFilterKnob.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SEFilterKnob.h; path = GlobClass/SEFilterControl/SEFilterKnob.h; sourceTree = SOURCE_ROOT; };
 		9647A064167F6B1000829C89 /* SEFilterKnob.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SEFilterKnob.m; path = GlobClass/SEFilterControl/SEFilterKnob.m; sourceTree = SOURCE_ROOT; };
+		9674479E169E940F00A8341A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		967D22C216835DF100DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
 		967D22C316835DF100DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
 		96876D73164BA44200406C92 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */,
 				1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */,
 				969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */,
+				9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +272,7 @@
 		1848AF1416328FD800AD42B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9674479E169E940F00A8341A /* GHUnitIOS.framework */,
 				96D9A97C16748FC5003F87F4 /* Security.framework */,
 				96FC8B201661541500FEB66E /* CoreText.framework */,
 				9693402F165615AD00F1BDC1 /* AudioToolbox.framework */,
@@ -869,6 +873,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
@@ -885,6 +890,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
