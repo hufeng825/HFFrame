@@ -131,7 +131,7 @@
 
 + (void)hideLoadingViewForView:(UIView *)view {
 	for (UIView *v in [view subviews]) {
-		if ([v isKindOfClass:[HFLoadingView class]]) {
+		if ([v isKindOfClass:[CmbLoadingView class]]) {
             [UIView animateWithDuration:1
                                   delay:0.0
                                 options:UIViewAnimationCurveEaseInOut //设置动画类型
@@ -144,11 +144,21 @@
                                  {
                                      [v removeFromSuperview];
                                  }
-                                 // 动画结束时的处理  
+                                 // 动画结束时的处理
                              }];
             break;
 		}
 	}
+}
+
+- (void)rotateAnimation:(UIView *)view
+{
+    CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    spinAnimation.byValue = [NSNumber numberWithFloat:2*M_PI];
+    spinAnimation.duration = .7f;
+	spinAnimation.repeatCount = HUGE_VAL;
+    spinAnimation.delegate = self;
+    [view.layer addAnimation:spinAnimation forKey:@"spinAnimation"];
 }
 
 
