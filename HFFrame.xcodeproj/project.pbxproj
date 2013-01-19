@@ -73,6 +73,7 @@
 		9665AF8A16689309005E4E8E /* MTAnimatedLabelExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9665AF8816689309005E4E8E /* MTAnimatedLabelExampleViewController.m */; };
 		9665AF8B16689309005E4E8E /* MTAnimatedLabelExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF8916689309005E4E8E /* MTAnimatedLabelExampleViewController.xib */; };
 		9665AF9216689B3D005E4E8E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9665AF9116689B3D005E4E8E /* MessageUI.framework */; };
+		9668558716AA77ED0041D23E /* loading_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9668558616AA77ED0041D23E /* loading_bg1.png */; };
 		96791688165CBFE2006F52B9 /* VoiceReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96791686165CBFE2006F52B9 /* VoiceReadViewController.m */; };
 		96791689165CBFE2006F52B9 /* VoiceReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */; };
 		9679168E165CD819006F52B9 /* VoiceExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679168C165CD819006F52B9 /* VoiceExampleViewController.m */; };
@@ -236,6 +237,7 @@
 		9665AF8816689309005E4E8E /* MTAnimatedLabelExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTAnimatedLabelExampleViewController.m; path = HFFrame/Example/MTAnimatedLabelExampleViewController.m; sourceTree = "<group>"; };
 		9665AF8916689309005E4E8E /* MTAnimatedLabelExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTAnimatedLabelExampleViewController.xib; path = HFFrame/Example/MTAnimatedLabelExampleViewController.xib; sourceTree = "<group>"; };
 		9665AF9116689B3D005E4E8E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9668558616AA77ED0041D23E /* loading_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading_bg1.png; path = GlobClass/HFLoading/loading_bg1.png; sourceTree = SOURCE_ROOT; };
 		96791685165CBFE2006F52B9 /* VoiceReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VoiceReadViewController.h; path = HFFrame/Example/VoiceReadViewController.h; sourceTree = "<group>"; };
 		96791686165CBFE2006F52B9 /* VoiceReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoiceReadViewController.m; path = HFFrame/Example/VoiceReadViewController.m; sourceTree = "<group>"; };
 		96791687165CBFE2006F52B9 /* VoiceReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VoiceReadViewController.xib; path = HFFrame/Example/VoiceReadViewController.xib; sourceTree = "<group>"; };
@@ -959,6 +961,7 @@
 				9665AF2C166874BE005E4E8E /* loading04.png */,
 				9665AF2D166874BE005E4E8E /* loading03.png */,
 				9665AF2E166874BE005E4E8E /* loading01.png */,
+				9668558616AA77ED0041D23E /* loading_bg1.png */,
 				9665AF2F166874BE005E4E8E /* loading02.png */,
 				96F590341665D7710099860C /* HFLoadingView.h */,
 				96F590351665D7710099860C /* HFLoadingView.m */,
@@ -1141,6 +1144,7 @@
 				9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */,
 				9647A037167E132F00829C89 /* HFInfoView.xib in Resources */,
 				9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */,
+				9668558716AA77ED0041D23E /* loading_bg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

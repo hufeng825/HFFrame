@@ -131,7 +131,7 @@
 
 + (void)hideLoadingViewForView:(UIView *)view {
 	for (UIView *v in [view subviews]) {
-		if ([v isKindOfClass:[CmbLoadingView class]]) {
+		if ([v isKindOfClass:[HFLoadingView class]]) {
             [UIView animateWithDuration:1
                                   delay:0.0
                                 options:UIViewAnimationCurveEaseInOut //设置动画类型
