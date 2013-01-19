@@ -95,6 +95,14 @@
 {
     return 60;
 }
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSMutableArray *indexTiles = [NSMutableArray arrayWithArray:[@"A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|#"
+    componentsSeparatedByString:@"|"]];
+    [indexTiles insertObject:UITableViewIndexSearch atIndex:0];//添加搜索符号
+//    [indexTiles addObject:@"{search}"];//等价于[indexTiles addObject:UITableViewIndexSearch];
+    return indexTiles;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     static NSString * showUserInfoCellIdentifier = @"ShowUserInfoCell";
