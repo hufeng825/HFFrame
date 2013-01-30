@@ -57,7 +57,7 @@
 
 -(void)action:(id)parm
 {
-    HFAlert(parm);
+    HFAlert(@"%@",parm);
 }
 
 - (void) onResult:(IFlyRecognizeControl *)iFlyRecognizeControl theResult:(NSArray *)resultArray

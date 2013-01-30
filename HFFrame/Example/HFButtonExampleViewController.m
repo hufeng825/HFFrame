@@ -53,6 +53,6 @@
 - (IBAction)Btclicked:(id)sender
 {
     HFButton *bt = sender;
-    HFAlert(bt.userInfo);
+    HFAlert(@"%@",bt.userInfo);
   }
 @end

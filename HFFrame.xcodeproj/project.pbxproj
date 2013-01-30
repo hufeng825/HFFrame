@@ -115,6 +115,10 @@
 		96A2F83A16636D5700E61D4F /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F83816636D5700E61D4F /* FlipViewController.m */; };
 		96A2F83B16636D5700E61D4F /* FlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A2F83916636D5700E61D4F /* FlipViewController.xib */; };
 		96A2F83E1663723500E61D4F /* FlipCAlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2F83D1663723500E61D4F /* FlipCAlayer.m */; };
+		96B90EB116B91A26007552C4 /* HFObjectMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B90EAF16B91A26007552C4 /* HFObjectMapViewController.m */; };
+		96B90EB216B91A26007552C4 /* HFObjectMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B90EB016B91A26007552C4 /* HFObjectMapViewController.xib */; };
+		96B90EB516B91AB1007552C4 /* ModelKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B90EB416B91AB0007552C4 /* ModelKit.m */; };
+		96B90EB716B92BC9007552C4 /* j.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B90EB616B92BC9007552C4 /* j.json */; };
 		96D9A96716739590003F87F4 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D9A96616739590003F87F4 /* UncaughtExceptionHandler.m */; };
 		96D9A97716748D8A003F87F4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D9A97616748D8A003F87F4 /* Security.framework */; };
 		96E517091632AFB300E7D20C /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
@@ -174,20 +178,20 @@
 		1848AF2D16328FD800AD42B6 /* HFBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFBaseViewController.h; sourceTree = "<group>"; };
 		1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFBaseViewController.m; sourceTree = "<group>"; };
 		1848AF3116328FD800AD42B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFBaseViewController.xib; sourceTree = "<group>"; };
-		603900591C0A81201CE9374B /* JTDateMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDateMappings.h; path = GlobClass/JTobject/JTDateMappings.h; sourceTree = "<group>"; };
-		603900951E76099CF34F5B99 /* NSObject+JTObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JTObjectMapping.h"; path = "GlobClass/JTobject/NSObject+JTObjectMapping.h"; sourceTree = "<group>"; };
-		603900AAF00A7A74804BBDF6 /* JTDataMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDataMappings.h; path = GlobClass/JTobject/JTDataMappings.h; sourceTree = "<group>"; };
-		603901C45F13912CE243EE84 /* JTMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTMappings.m; path = GlobClass/JTobject/JTMappings.m; sourceTree = "<group>"; };
-		6039022EF395C058FC66FED9 /* JTValidMappingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTValidMappingKey.m; path = GlobClass/JTobject/JTValidMappingKey.m; sourceTree = "<group>"; };
-		603905817E27B3BB6AEADE86 /* JTValidMappingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTValidMappingKey.h; path = GlobClass/JTobject/JTValidMappingKey.h; sourceTree = "<group>"; };
-		603906403D5CCE4113F5403C /* JTDateMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDateMappings.m; path = GlobClass/JTobject/JTDateMappings.m; sourceTree = "<group>"; };
+		603900591C0A81201CE9374B /* JTDateMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDateMappings.h; path = ../GlobClass/JTobject/JTDateMappings.h; sourceTree = "<group>"; };
+		603900951E76099CF34F5B99 /* NSObject+JTObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JTObjectMapping.h"; path = "../GlobClass/JTobject/NSObject+JTObjectMapping.h"; sourceTree = "<group>"; };
+		603900AAF00A7A74804BBDF6 /* JTDataMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDataMappings.h; path = ../GlobClass/JTobject/JTDataMappings.h; sourceTree = "<group>"; };
+		603901C45F13912CE243EE84 /* JTMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTMappings.m; path = ../GlobClass/JTobject/JTMappings.m; sourceTree = "<group>"; };
+		6039022EF395C058FC66FED9 /* JTValidMappingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTValidMappingKey.m; path = ../GlobClass/JTobject/JTValidMappingKey.m; sourceTree = "<group>"; };
+		603905817E27B3BB6AEADE86 /* JTValidMappingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTValidMappingKey.h; path = ../GlobClass/JTobject/JTValidMappingKey.h; sourceTree = "<group>"; };
+		603906403D5CCE4113F5403C /* JTDateMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDateMappings.m; path = ../GlobClass/JTobject/JTDateMappings.m; sourceTree = "<group>"; };
 		60390693556A2D35E43E2729 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = "GlobClass/Array+Extensions/Array.m"; sourceTree = SOURCE_ROOT; };
-		60390811458BED395D107C21 /* JTSetMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSetMappings.m; path = GlobClass/JTobject/JTSetMappings.m; sourceTree = "<group>"; };
+		60390811458BED395D107C21 /* JTSetMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSetMappings.m; path = ../GlobClass/JTobject/JTSetMappings.m; sourceTree = "<group>"; };
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
-		60390AEF61413D62711442F1 /* JTSetMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSetMappings.h; path = GlobClass/JTobject/JTSetMappings.h; sourceTree = "<group>"; };
-		60390B6537D188E5BF494A82 /* JTDataMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDataMappings.m; path = GlobClass/JTobject/JTDataMappings.m; sourceTree = "<group>"; };
-		60390BD043F2401923295A66 /* JTMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTMappings.h; path = GlobClass/JTobject/JTMappings.h; sourceTree = "<group>"; };
-		60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JTObjectMapping.m"; path = "GlobClass/JTobject/NSObject+JTObjectMapping.m"; sourceTree = "<group>"; };
+		60390AEF61413D62711442F1 /* JTSetMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSetMappings.h; path = ../GlobClass/JTobject/JTSetMappings.h; sourceTree = "<group>"; };
+		60390B6537D188E5BF494A82 /* JTDataMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDataMappings.m; path = ../GlobClass/JTobject/JTDataMappings.m; sourceTree = "<group>"; };
+		60390BD043F2401923295A66 /* JTMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTMappings.h; path = ../GlobClass/JTobject/JTMappings.h; sourceTree = "<group>"; };
+		60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JTObjectMapping.m"; path = "../GlobClass/JTobject/NSObject+JTObjectMapping.m"; sourceTree = "<group>"; };
 		960DAB38166C647600303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB39166C647600303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		960DAB3C166C677B00303ECC /* HFButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButtonItem.h; path = GlobClass/Blocks/HFButtonItem.h; sourceTree = SOURCE_ROOT; };
@@ -306,6 +310,12 @@
 		96A2F83916636D5700E61D4F /* FlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FlipViewController.xib; path = GlobClass/FlipViewController/FlipViewController.xib; sourceTree = SOURCE_ROOT; };
 		96A2F83C1663723500E61D4F /* FlipCAlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipCAlayer.h; path = GlobClass/FlipViewController/FlipCAlayer.h; sourceTree = SOURCE_ROOT; };
 		96A2F83D1663723500E61D4F /* FlipCAlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipCAlayer.m; path = GlobClass/FlipViewController/FlipCAlayer.m; sourceTree = SOURCE_ROOT; };
+		96B90EAE16B91A26007552C4 /* HFObjectMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFObjectMapViewController.h; path = HFFrame/Example/HFObjectMapViewController.h; sourceTree = "<group>"; };
+		96B90EAF16B91A26007552C4 /* HFObjectMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFObjectMapViewController.m; path = HFFrame/Example/HFObjectMapViewController.m; sourceTree = "<group>"; };
+		96B90EB016B91A26007552C4 /* HFObjectMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFObjectMapViewController.xib; path = HFFrame/Example/HFObjectMapViewController.xib; sourceTree = "<group>"; };
+		96B90EB316B91AB0007552C4 /* ModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelKit.h; path = HFFrame/Example/ModelKit.h; sourceTree = "<group>"; };
+		96B90EB416B91AB0007552C4 /* ModelKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelKit.m; path = HFFrame/Example/ModelKit.m; sourceTree = "<group>"; };
+		96B90EB616B92BC9007552C4 /* j.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = j.json; sourceTree = "<group>"; };
 		96D9A96516739590003F87F4 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UncaughtExceptionHandler.h; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.h; sourceTree = SOURCE_ROOT; };
 		96D9A96616739590003F87F4 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UncaughtExceptionHandler.m; path = GlobClass/UncaughtExceptionHandler/UncaughtExceptionHandler.m; sourceTree = SOURCE_ROOT; };
 		96D9A97616748D8A003F87F4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -503,6 +513,19 @@
 			name = "循环ScrollView";
 			sourceTree = "<group>";
 		};
+		603900788E1D811223F5EC0F /* 序列化 */ = {
+			isa = PBXGroup;
+			children = (
+				96B90EAE16B91A26007552C4 /* HFObjectMapViewController.h */,
+				96B90EB316B91AB0007552C4 /* ModelKit.h */,
+				96B90EB416B91AB0007552C4 /* ModelKit.m */,
+				96B90EAF16B91A26007552C4 /* HFObjectMapViewController.m */,
+				96B90EB616B92BC9007552C4 /* j.json */,
+				96B90EB016B91A26007552C4 /* HFObjectMapViewController.xib */,
+			);
+			name = "序列化";
+			sourceTree = "<group>";
+		};
 		603900E9E4F1B9869E1B42E4 /* Array+Additons */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,7 +649,7 @@
 				962F7006165C9D2B0032A849 /* 网络请求 */,
 				962F701A165CAC720032A849 /* 网络图片 */,
 				962F702A165CB0930032A849 /* HFButton */,
-				603901D160AD8E9D591DC1A8 /* JTobject */,
+				603900788E1D811223F5EC0F /* 序列化 */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -858,6 +881,7 @@
 				96876D79164BB8B100406C92 /* UIImage-Extensions缩放旋转裁剪 */,
 				96876D7D164BBBB800406C92 /* UIViewAddition长高宽 */,
 				603900E9E4F1B9869E1B42E4 /* Array+Additons */,
+				603901D160AD8E9D591DC1A8 /* JTobject */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -1189,6 +1213,8 @@
 				9647A037167E132F00829C89 /* HFInfoView.xib in Resources */,
 				9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */,
 				9668558716AA77ED0041D23E /* loading_bg1.png in Resources */,
+				96B90EB216B91A26007552C4 /* HFObjectMapViewController.xib in Resources */,
+				96B90EB716B92BC9007552C4 /* j.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,6 +1310,8 @@
 				60390EBA3DB9773953FF4913 /* JTSetMappings.m in Sources */,
 				60390425315278EB11299D7A /* JTValidMappingKey.m in Sources */,
 				603901DF4AD1582A4B5693E2 /* NSObject+JTObjectMapping.m in Sources */,
+				96B90EB116B91A26007552C4 /* HFObjectMapViewController.m in Sources */,
+				96B90EB516B91AB1007552C4 /* ModelKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

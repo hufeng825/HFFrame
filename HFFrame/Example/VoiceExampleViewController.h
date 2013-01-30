@@ -10,6 +10,6 @@
 #import "iFlyMSC/IFlyRecognizeControl.h"
 #import "HFBaseViewController.h"
 
-@interface VoiceExampleViewController : HFBaseViewController
+@interface VoiceExampleViewController : HFBaseViewController<IFlyRecognizeControlDelegate>
 
 @end
