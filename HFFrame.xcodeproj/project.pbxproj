@@ -21,7 +21,19 @@
 		1848AF2C16328FD800AD42B6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF2B16328FD800AD42B6 /* Default-568h@2x.png */; };
 		1848AF2F16328FD800AD42B6 /* HFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */; };
 		1848AF3216328FD800AD42B6 /* HFBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848AF3016328FD800AD42B6 /* HFBaseViewController.xib */; };
+		603901429EBFF3FF08AA1562 /* JTDataMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390B6537D188E5BF494A82 /* JTDataMappings.m */; };
+		603901DF4AD1582A4B5693E2 /* NSObject+JTObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */; };
+		60390425315278EB11299D7A /* JTValidMappingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039022EF395C058FC66FED9 /* JTValidMappingKey.m */; };
+		6039042691BB60EA13DB278A /* JTSetMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390811458BED395D107C21 /* JTSetMappings.m */; };
+		603907A3150D47DFCEFA9219 /* JTDateMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 603906403D5CCE4113F5403C /* JTDateMappings.m */; };
+		60390AE524CAD708675054A8 /* JTValidMappingKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039022EF395C058FC66FED9 /* JTValidMappingKey.m */; };
+		60390BCF1F7096BF176D4A19 /* JTMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 603901C45F13912CE243EE84 /* JTMappings.m */; };
+		60390C3E398FA8849310CE70 /* JTDateMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 603906403D5CCE4113F5403C /* JTDateMappings.m */; };
+		60390CA4F2C0A99205B4E2C6 /* NSObject+JTObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */; };
 		60390DEF8443AB722552E435 /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
+		60390DFA4C57EF5A09333257 /* JTMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 603901C45F13912CE243EE84 /* JTMappings.m */; };
+		60390EA086E557E88098815B /* JTDataMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390B6537D188E5BF494A82 /* JTDataMappings.m */; };
+		60390EBA3DB9773953FF4913 /* JTSetMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390811458BED395D107C21 /* JTSetMappings.m */; };
 		960DAB3A166C647600303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB39166C647600303ECC /* HFSegmentedControl.m */; };
 		960DAB42166C677B00303ECC /* HFButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB3D166C677B00303ECC /* HFButtonItem.m */; };
 		960DAB43166C677B00303ECC /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB3F166C677B00303ECC /* UIActionSheet+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -162,8 +174,20 @@
 		1848AF2D16328FD800AD42B6 /* HFBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFBaseViewController.h; sourceTree = "<group>"; };
 		1848AF2E16328FD800AD42B6 /* HFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFBaseViewController.m; sourceTree = "<group>"; };
 		1848AF3116328FD800AD42B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HFBaseViewController.xib; sourceTree = "<group>"; };
+		603900591C0A81201CE9374B /* JTDateMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDateMappings.h; path = GlobClass/JTobject/JTDateMappings.h; sourceTree = "<group>"; };
+		603900951E76099CF34F5B99 /* NSObject+JTObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JTObjectMapping.h"; path = "GlobClass/JTobject/NSObject+JTObjectMapping.h"; sourceTree = "<group>"; };
+		603900AAF00A7A74804BBDF6 /* JTDataMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDataMappings.h; path = GlobClass/JTobject/JTDataMappings.h; sourceTree = "<group>"; };
+		603901C45F13912CE243EE84 /* JTMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTMappings.m; path = GlobClass/JTobject/JTMappings.m; sourceTree = "<group>"; };
+		6039022EF395C058FC66FED9 /* JTValidMappingKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTValidMappingKey.m; path = GlobClass/JTobject/JTValidMappingKey.m; sourceTree = "<group>"; };
+		603905817E27B3BB6AEADE86 /* JTValidMappingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTValidMappingKey.h; path = GlobClass/JTobject/JTValidMappingKey.h; sourceTree = "<group>"; };
+		603906403D5CCE4113F5403C /* JTDateMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDateMappings.m; path = GlobClass/JTobject/JTDateMappings.m; sourceTree = "<group>"; };
 		60390693556A2D35E43E2729 /* Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Array.m; path = "GlobClass/Array+Extensions/Array.m"; sourceTree = SOURCE_ROOT; };
+		60390811458BED395D107C21 /* JTSetMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTSetMappings.m; path = GlobClass/JTobject/JTSetMappings.m; sourceTree = "<group>"; };
 		6039094F212CB306D7DE551E /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Array.h; path = "GlobClass/Array+Extensions/Array.h"; sourceTree = SOURCE_ROOT; };
+		60390AEF61413D62711442F1 /* JTSetMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTSetMappings.h; path = GlobClass/JTobject/JTSetMappings.h; sourceTree = "<group>"; };
+		60390B6537D188E5BF494A82 /* JTDataMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDataMappings.m; path = GlobClass/JTobject/JTDataMappings.m; sourceTree = "<group>"; };
+		60390BD043F2401923295A66 /* JTMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTMappings.h; path = GlobClass/JTobject/JTMappings.h; sourceTree = "<group>"; };
+		60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JTObjectMapping.m"; path = "GlobClass/JTobject/NSObject+JTObjectMapping.m"; sourceTree = "<group>"; };
 		960DAB38166C647600303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB39166C647600303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		960DAB3C166C677B00303ECC /* HFButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFButtonItem.h; path = GlobClass/Blocks/HFButtonItem.h; sourceTree = SOURCE_ROOT; };
@@ -488,6 +512,25 @@
 			name = "Array+Additons";
 			sourceTree = "<group>";
 		};
+		603901D160AD8E9D591DC1A8 /* JTobject */ = {
+			isa = PBXGroup;
+			children = (
+				603900AAF00A7A74804BBDF6 /* JTDataMappings.h */,
+				60390B6537D188E5BF494A82 /* JTDataMappings.m */,
+				603900591C0A81201CE9374B /* JTDateMappings.h */,
+				603906403D5CCE4113F5403C /* JTDateMappings.m */,
+				60390BD043F2401923295A66 /* JTMappings.h */,
+				603901C45F13912CE243EE84 /* JTMappings.m */,
+				60390AEF61413D62711442F1 /* JTSetMappings.h */,
+				60390811458BED395D107C21 /* JTSetMappings.m */,
+				603905817E27B3BB6AEADE86 /* JTValidMappingKey.h */,
+				6039022EF395C058FC66FED9 /* JTValidMappingKey.m */,
+				603900951E76099CF34F5B99 /* NSObject+JTObjectMapping.h */,
+				60390DD0F8DF863403E7501B /* NSObject+JTObjectMapping.m */,
+			);
+			name = JTobject;
+			sourceTree = "<group>";
+		};
 		960DAB36166C63E100303ECC /* HFSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +626,7 @@
 				962F7006165C9D2B0032A849 /* 网络请求 */,
 				962F701A165CAC720032A849 /* 网络图片 */,
 				962F702A165CB0930032A849 /* HFButton */,
+				603901D160AD8E9D591DC1A8 /* JTobject */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -1234,6 +1278,12 @@
 				9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */,
 				962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */,
 				967D22D116835EA700DD44C3 /* NSString+Security.m in Sources */,
+				603901429EBFF3FF08AA1562 /* JTDataMappings.m in Sources */,
+				60390C3E398FA8849310CE70 /* JTDateMappings.m in Sources */,
+				60390BCF1F7096BF176D4A19 /* JTMappings.m in Sources */,
+				60390EBA3DB9773953FF4913 /* JTSetMappings.m in Sources */,
+				60390425315278EB11299D7A /* JTValidMappingKey.m in Sources */,
+				603901DF4AD1582A4B5693E2 /* NSObject+JTObjectMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1294,12 @@
 				960DAC6E166DED1400303ECC /* main.m in Sources */,
 				960DAC80166DEFEF00303ECC /* HFtest.m in Sources */,
 				960DAC81166E01FE00303ECC /* Array.m in Sources */,
+				60390EA086E557E88098815B /* JTDataMappings.m in Sources */,
+				603907A3150D47DFCEFA9219 /* JTDateMappings.m in Sources */,
+				60390DFA4C57EF5A09333257 /* JTMappings.m in Sources */,
+				6039042691BB60EA13DB278A /* JTSetMappings.m in Sources */,
+				60390AE524CAD708675054A8 /* JTValidMappingKey.m in Sources */,
+				60390CA4F2C0A99205B4E2C6 /* NSObject+JTObjectMapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
