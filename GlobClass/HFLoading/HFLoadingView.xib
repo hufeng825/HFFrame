@@ -42,7 +42,8 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{152, 110}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="291061804"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="342161930"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -56,6 +57,7 @@
 						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{62, 20}, {20, 20}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="289344383"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -71,7 +73,8 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{45, 6}, {60, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="342161930"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="IBUITag">11</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -82,7 +85,8 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{5, 74}, {141, 29}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="291061804"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -119,6 +123,7 @@
 				</array>
 				<string key="NSFrameSize">{152, 110}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="775503303"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>

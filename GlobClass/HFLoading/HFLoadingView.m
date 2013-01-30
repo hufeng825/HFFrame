@@ -95,6 +95,12 @@
         loadingView.customView.center = CGPointMake(
                                                     (view.width)/2.0,
                                                     (view.height)/2.0);
+        UIControl*  _mask = [[[UIControl  alloc] initWithFrame:CGRectMake(0, 0, view.width, view.height)]autorelease];
+        _mask.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
+        _mask.backgroundColor = [UIColor blackColor];
+        [_mask setAlpha:0.4];
+        [loadingView insertSubview:_mask atIndex:0];
+        
         return [loadingView autorelease];
     }
 	else
