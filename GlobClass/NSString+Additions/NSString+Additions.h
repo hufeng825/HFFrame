@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "RegexKitLite.h"
 @interface NSString (HF)
+
+- (NSString*)URLencodeWithEncoding:(NSStringEncoding)stringEncoding;
+- (NSString*)URLencodeWithEncodingUTF8;
+
 - (CGSize)withWithFont:(UIFont*)font;
 - (NSString*)dateStringWithFormat:(NSString*)format;
 - (NSString*)ymdString;

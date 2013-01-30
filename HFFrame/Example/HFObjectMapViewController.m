@@ -28,6 +28,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    /***********************网络请求例子*****************************/
+    HttpSucessRespon sua = HFHttpSucessResponClass
+    {
+        NSLog(@"json %@",[JSON class]);
+        
+    };
+    NSURL *url = [[NSBundle mainBundle] URLForResource: @"j" withExtension:@"json"];
+    NSLog(@"url 输出 %@",[url absoluteString]);
+
+    [self gettUrl:[[url absoluteString] stringByReplacingOccurrencesOfString:@"" withString:@""] sucessBlock:sua failBlock:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
