@@ -199,7 +199,7 @@
  * 1个中文=2个英文
  *--------------------------------------------------------------------------*/
 
--(int)lengthToInt
+-(NSUInteger)lengthToInt
 {
     //去掉空格
     NSString *st = [self  stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
