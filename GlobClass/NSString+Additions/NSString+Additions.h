@@ -27,7 +27,8 @@
 
 
 -(BOOL)isContainsString:(NSString *)findStr;
--(int)lengthToInt;//得到字符串长度 中英文混合情况下
+-(NSUInteger)lengthToInt;//得到字符串长度 中英文混合情况下
+-(NSUInteger)gotChineseCount;//得到字符串中含有的中文和全角支付个数
 -(BOOL)isPersonCard;
 -(BOOL)isNumberStr;
 -(BOOL)isNameStr;//只准有字母和英文

@@ -37,10 +37,9 @@
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
     };
     
-   [self gettUrl:@"http://9snow.org/weather/api?city=北京" sucessBlock:su failBlock:nil];
-    
-    
-    
+    NSString *url = @"http://9snow.org/weather/api?city=北京";
+    NSLog(@"%d",[url gotChineseCount]);
+   [self gettUrl:url sucessBlock:su failBlock:nil];
     /***********************网络请求例子*****************************/
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
@@ -49,7 +48,7 @@
         
     };
     
-    [self gettUrl:@"http://9snow.org/weather/api?city=北京" sucessBlock:sua failBlock:nil];
+    [self gettUrl:url sucessBlock:sua failBlock:nil];
     
 }
 

@@ -217,6 +217,28 @@
     }
     return strlength;
 }
+/*---------------------------------------------------------------------------
+ * 返回含有字符串中中文和全角字符的个数
+ * 没有返回 0
+ * 例如 @"i'm a 苹果。..." 返回 3 -》「 苹 果 。 」
+ *--------------------------------------------------------------------------*/
+-(NSUInteger) gotChineseCount
+{
+    int length = [self length];
+    NSUInteger count=0;
+    for (int i=0; i<length; ++i)
+    {
+        NSRange range = NSMakeRange(i, 1);
+        NSString *subString = [self substringWithRange:range];
+        const char    *cString = [subString UTF8String];
+        if (strlen(cString) == 3)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
 //验证是否是数字
 -(BOOL)isNumberStr
 {
