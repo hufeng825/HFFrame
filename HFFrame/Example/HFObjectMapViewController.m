@@ -33,24 +33,21 @@
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
         NSLog(@"json %@",[JSON class]);
-        NSDictionary *dictmap = [NSDictionary dictionaryWithObjectsAndKeys:@"arrays" ,@"array"
-                                 , nil];
+        NSDictionary *dictmap = [NSDictionary dictionaryWithObjectsAndKeys:@"arrays" ,@"array", nil];
+        NSDictionary *mapmap= [NSDictionary dictionaryWithObjectsAndKeys:[DictModel mappingWithKey:@"dict" mapping:dictmap],@"dict", nil];
         NSDictionary *dict = [NSDictionary  dictionaryWithObjectsAndKeys:
-                              [MovieModel mappingWithKey:@"movieList" mapping:
-                               [NSDictionary dictionaryWithObjectsAndKeys:[DictModel mappingWithKey:@"dict" mapping:dictmap],@"dict", nil] ]
-                               ,@"movie",
+                              [MovieModel mappingWithKey:@"movieList" mapping:mapmap],@"movie",
                               [StateModel mappingWithKey:@"state" mapping:nil],@"state",nil];
         ContextModel *model =  [ContextModel objectFromJSONObject:JSON mapping:dict];
-        NSLog(@"movie->dict0->array= %@ \n  movie->state->respCode= %@  \n  movie->dict1->body=%@",
-              [[model.movieList objectAtIndex:0] dict].arrays,
-              model.state.respCode,
-              [[model.movieList objectAtIndex:1]body]
-              );
-        
+        NSString *text = [NSString stringWithFormat: @"movie->dict0->array= %@ \n  movie->state->respCode= %@  \n  movie->dict1->body=%@",
+        [[model.movieList objectAtIndex:0] dict].arrays,
+        model.state.respCode,
+        [[model.movieList objectAtIndex:1]body]];
+
+        NSLog( @"%@",text);
+        self.resultView.text = text;
     };
     NSURL *url = [[NSBundle mainBundle] URLForResource: @"j" withExtension:@"json"];
-//    NSLog(@"url 输出 %@",[url absoluteString]);
-
     [self gettUrl:[[url absoluteString] stringByReplacingOccurrencesOfString:@"" withString:@""] sucessBlock:sua failBlock:nil];
     
 }
@@ -61,4 +58,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_resultView release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [self setResultView:nil];
+    [super viewDidUnload];
+}
 @end

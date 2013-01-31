@@ -10,5 +10,6 @@
 #import "HFBaseViewController.h"
 #import "ModelKit.h"
 @interface HFObjectMapViewController : HFBaseViewController
+@property (retain, nonatomic) IBOutlet UITextView *resultView;
 
 @end
