@@ -56,6 +56,7 @@
 		960DAC81166E01FE00303ECC /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
 		9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */; };
 		962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */; };
+		962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		962F700A165C9D760032A849 /* HttpExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F7008165C9D760032A849 /* HttpExampleViewController.m */; };
 		962F700B165C9D760032A849 /* HttpExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962F7009165C9D760032A849 /* HttpExampleViewController.xib */; };
 		962F701E165CACAB0032A849 /* WebPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962F701C165CACAB0032A849 /* WebPictureViewController.m */; };
@@ -1328,6 +1329,7 @@
 				6039042691BB60EA13DB278A /* JTSetMappings.m in Sources */,
 				60390AE524CAD708675054A8 /* JTValidMappingKey.m in Sources */,
 				60390CA4F2C0A99205B4E2C6 /* NSObject+JTObjectMapping.m in Sources */,
+				962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
