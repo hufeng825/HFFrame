@@ -517,9 +517,9 @@
 			isa = PBXGroup;
 			children = (
 				96B90EAE16B91A26007552C4 /* HFObjectMapViewController.h */,
+				96B90EAF16B91A26007552C4 /* HFObjectMapViewController.m */,
 				96B90EB316B91AB0007552C4 /* ModelKit.h */,
 				96B90EB416B91AB0007552C4 /* ModelKit.m */,
-				96B90EAF16B91A26007552C4 /* HFObjectMapViewController.m */,
 				96B90EB616B92BC9007552C4 /* j.json */,
 				96B90EB016B91A26007552C4 /* HFObjectMapViewController.xib */,
 			);

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
+#import "ModelKit.h"
 @interface HFObjectMapViewController : HFBaseViewController
 
 @end

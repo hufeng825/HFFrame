@@ -22,24 +22,12 @@
 @end
 
 /*-------------------------------------------------*/
-@implementation ContextModel
-@synthesize movieList,state;
--(void) dealloc
-{
-    [state release];
-    [movieList release];
-    [super dealloc];
-}
-
-@end
-
-/*-------------------------------------------------*/
 @implementation DictModel
-@synthesize name,array;
+@synthesize name,arrays;
 - (void)dealloc
 {
     [name release];
-    [array release];
+    [arrays release];
     [super dealloc];
 }
 
@@ -61,6 +49,18 @@
     [type release];
     [url release];
     [dict release];
+    [super dealloc];
+}
+
+@end
+
+/*-------------------------------------------------*/
+@implementation ContextModel
+@synthesize movieList,state;
+-(void) dealloc
+{
+    [state release];
+    [movieList release];
     [super dealloc];
 }
 

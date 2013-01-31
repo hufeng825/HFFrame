@@ -79,9 +79,9 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
             NSLog(@"%@",[error description]);
         };
     }
-    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
     sucessRespon failure:failRespon];
+   [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html", nil]];
     operation.JSONReadingOptions = NSJSONReadingAllowFragments;
     
     [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {

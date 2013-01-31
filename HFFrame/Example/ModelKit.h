@@ -81,7 +81,7 @@
 
 @interface DictModel : ModelKit
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic,retain) NSArray *array;
+@property (nonatomic,retain) NSArray *arrays;
 @end
 
 @interface  MovieModel : ModelKit
@@ -96,7 +96,7 @@
 @property (nonatomic,copy) NSString *type;
 @property (nonatomic,copy) NSString *url;
 @property (nonatomic,copy) NSString *popularity;
-@property (nonatomic,copy) DictModel *dict;
+@property (nonatomic,retain) DictModel *dict;
 @end
 
 
