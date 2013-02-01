@@ -68,6 +68,10 @@
 		96352B6A16631B53001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B6916631B53001926B9 /* UIView+Screenshot.m */; };
 		96352B7B166323A1001926B9 /* ScreenshotExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */; };
 		96352B7C166323A1001926B9 /* ScreenshotExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */; };
+		964247B616BB84C60016D3A2 /* Array.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247B016BB84C60016D3A2 /* Array.mm */; };
+		964247B716BB84C60016D3A2 /* multipy_unicode.dat in Resources */ = {isa = PBXBuildFile; fileRef = 964247B116BB84C60016D3A2 /* multipy_unicode.dat */; };
+		964247B816BB84C60016D3A2 /* SearchCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247B316BB84C60016D3A2 /* SearchCore.mm */; };
+		964247B916BB84C60016D3A2 /* SearchCoreManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247B516BB84C60016D3A2 /* SearchCoreManager.mm */; };
 		9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A01A167DCB5400829C89 /* HFInfoViewController.m */; };
 		9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A01B167DCB5400829C89 /* HFInfoViewController.xib */; };
 		9647A021167DE27300829C89 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A020167DE27300829C89 /* HFAnimation.m */; };
@@ -240,6 +244,13 @@
 		96352B78166323A1001926B9 /* ScreenshotExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotExampleViewController.h; path = HFFrame/Example/ScreenshotExampleViewController.h; sourceTree = "<group>"; };
 		96352B79166323A1001926B9 /* ScreenshotExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenshotExampleViewController.m; path = HFFrame/Example/ScreenshotExampleViewController.m; sourceTree = "<group>"; };
 		96352B7A166323A1001926B9 /* ScreenshotExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScreenshotExampleViewController.xib; path = HFFrame/Example/ScreenshotExampleViewController.xib; sourceTree = "<group>"; };
+		964247AF16BB84C60016D3A2 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		964247B016BB84C60016D3A2 /* Array.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Array.mm; sourceTree = "<group>"; };
+		964247B116BB84C60016D3A2 /* multipy_unicode.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = multipy_unicode.dat; sourceTree = "<group>"; };
+		964247B216BB84C60016D3A2 /* SearchCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCore.h; sourceTree = "<group>"; };
+		964247B316BB84C60016D3A2 /* SearchCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCore.mm; sourceTree = "<group>"; };
+		964247B416BB84C60016D3A2 /* SearchCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCoreManager.h; sourceTree = "<group>"; };
+		964247B516BB84C60016D3A2 /* SearchCoreManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCoreManager.mm; sourceTree = "<group>"; };
 		9647A019167DCB5400829C89 /* HFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoViewController.h; path = HFFrame/Example/HFInfoViewController.h; sourceTree = "<group>"; };
 		9647A01A167DCB5400829C89 /* HFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoViewController.m; path = HFFrame/Example/HFInfoViewController.m; sourceTree = "<group>"; };
 		9647A01B167DCB5400829C89 /* HFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoViewController.xib; path = HFFrame/Example/HFInfoViewController.xib; sourceTree = "<group>"; };
@@ -714,6 +725,20 @@
 			name = "截屏动画";
 			sourceTree = "<group>";
 		};
+		964247AE16BB84C60016D3A2 /* SearchCore */ = {
+			isa = PBXGroup;
+			children = (
+				964247AF16BB84C60016D3A2 /* Array.h */,
+				964247B016BB84C60016D3A2 /* Array.mm */,
+				964247B116BB84C60016D3A2 /* multipy_unicode.dat */,
+				964247B216BB84C60016D3A2 /* SearchCore.h */,
+				964247B316BB84C60016D3A2 /* SearchCore.mm */,
+				964247B416BB84C60016D3A2 /* SearchCoreManager.h */,
+				964247B516BB84C60016D3A2 /* SearchCoreManager.mm */,
+			);
+			path = SearchCore;
+			sourceTree = "<group>";
+		};
 		9647A009167DB8D900829C89 /* HFInfoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +883,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				964247AE16BB84C60016D3A2 /* SearchCore */,
 				962C0ADF1682C71E002C9992 /* NSTimer */,
 				9647A06A167F6C0100829C89 /* SEFilterControl */,
 				9647A01E167DE27300829C89 /* HFAnimation */,
@@ -1216,6 +1242,7 @@
 				9668558716AA77ED0041D23E /* loading_bg1.png in Resources */,
 				96B90EB216B91A26007552C4 /* HFObjectMapViewController.xib in Resources */,
 				96B90EB716B92BC9007552C4 /* j.json in Resources */,
+				964247B716BB84C60016D3A2 /* multipy_unicode.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,6 +1340,9 @@
 				603901DF4AD1582A4B5693E2 /* NSObject+JTObjectMapping.m in Sources */,
 				96B90EB116B91A26007552C4 /* HFObjectMapViewController.m in Sources */,
 				96B90EB516B91AB1007552C4 /* ModelKit.m in Sources */,
+				964247B616BB84C60016D3A2 /* Array.mm in Sources */,
+				964247B816BB84C60016D3A2 /* SearchCore.mm in Sources */,
+				964247B916BB84C60016D3A2 /* SearchCoreManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
