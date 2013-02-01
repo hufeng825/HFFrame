@@ -33,6 +33,10 @@
 		960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */; };
 		962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AF71682CF19002C9992 /* NSTimer+pause.m */; };
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
+		964247CE16BBA2760016D3A2 /* Array.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247C816BBA2760016D3A2 /* Array.mm */; };
+		964247CF16BBA2760016D3A2 /* multipy_unicode.dat in Resources */ = {isa = PBXBuildFile; fileRef = 964247C916BBA2760016D3A2 /* multipy_unicode.dat */; };
+		964247D016BBA2760016D3A2 /* SearchCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247CB16BBA2760016D3A2 /* SearchCore.mm */; };
+		964247D116BBA2760016D3A2 /* SearchCoreManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247CD16BBA2760016D3A2 /* SearchCoreManager.mm */; };
 		9647A040167E13A400829C89 /* HFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A03E167E13A400829C89 /* HFInfoView.m */; };
 		9647A041167E13A400829C89 /* HFInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A03F167E13A400829C89 /* HFInfoView.xib */; };
 		9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674479E169E940F00A8341A /* GHUnitIOS.framework */; };
@@ -130,6 +134,13 @@
 		962C0AF71682CF19002C9992 /* NSTimer+pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+pause.m"; sourceTree = "<group>"; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
 		96352B7216632338001926B9 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
+		964247C716BBA2760016D3A2 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		964247C816BBA2760016D3A2 /* Array.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Array.mm; sourceTree = "<group>"; };
+		964247C916BBA2760016D3A2 /* multipy_unicode.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = multipy_unicode.dat; sourceTree = "<group>"; };
+		964247CA16BBA2760016D3A2 /* SearchCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCore.h; sourceTree = "<group>"; };
+		964247CB16BBA2760016D3A2 /* SearchCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCore.mm; sourceTree = "<group>"; };
+		964247CC16BBA2760016D3A2 /* SearchCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCoreManager.h; sourceTree = "<group>"; };
+		964247CD16BBA2760016D3A2 /* SearchCoreManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCoreManager.mm; sourceTree = "<group>"; };
 		9647A03D167E13A400829C89 /* HFInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFInfoView.h; sourceTree = "<group>"; };
 		9647A03E167E13A400829C89 /* HFInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFInfoView.m; sourceTree = "<group>"; };
 		9647A03F167E13A400829C89 /* HFInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFInfoView.xib; sourceTree = "<group>"; };
@@ -399,6 +410,21 @@
 			name = UIViewScreenshort;
 			sourceTree = "<group>";
 		};
+		964247C616BBA2760016D3A2 /* SearchCore */ = {
+			isa = PBXGroup;
+			children = (
+				964247C716BBA2760016D3A2 /* Array.h */,
+				964247C816BBA2760016D3A2 /* Array.mm */,
+				964247C916BBA2760016D3A2 /* multipy_unicode.dat */,
+				964247CA16BBA2760016D3A2 /* SearchCore.h */,
+				964247CB16BBA2760016D3A2 /* SearchCore.mm */,
+				964247CC16BBA2760016D3A2 /* SearchCoreManager.h */,
+				964247CD16BBA2760016D3A2 /* SearchCoreManager.mm */,
+			);
+			name = SearchCore;
+			path = GlobClass/SearchCore;
+			sourceTree = SOURCE_ROOT;
+		};
 		9647A026167E12AA00829C89 /* HFInfoView */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +500,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				964247C616BBA2760016D3A2 /* SearchCore */,
 				962C0AF51682CF19002C9992 /* NSTimer */,
 				9647A05F167F6AD800829C89 /* SEFilterControl */,
 				9647A026167E12AA00829C89 /* HFInfoView */,
@@ -738,6 +765,7 @@
 				960DAB161668A3BD00303ECC /* loading04.png in Resources */,
 				960DAB171668A3BD00303ECC /* loading05.png in Resources */,
 				9647A041167E13A400829C89 /* HFInfoView.xib in Resources */,
+				964247CF16BBA2760016D3A2 /* multipy_unicode.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +823,9 @@
 				9647A040167E13A400829C89 /* HFInfoView.m in Sources */,
 				962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */,
 				967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */,
+				964247CE16BBA2760016D3A2 /* Array.mm in Sources */,
+				964247D016BBA2760016D3A2 /* SearchCore.mm in Sources */,
+				964247D116BBA2760016D3A2 /* SearchCoreManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
