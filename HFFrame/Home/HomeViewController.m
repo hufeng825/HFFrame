@@ -28,12 +28,16 @@
 #import "HFInfoViewController.h"
 #import "HFSEFilterControlViewController.h"
 #import "HFObjectMapViewController.h"
+
+#import "SearchCoreManager.h"
+
 @interface HomeViewController ()
 
 @end
 
 @implementation HomeViewController
 @synthesize context_array;
+@synthesize  nameArray;
 
 /******用于翻转动画 工程中没用到可注释******/
 @synthesize flipcalayer;
@@ -69,6 +73,13 @@
     
     
     self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",@"序列化",nil]autorelease];
+    
+    for (NSUInteger i=0; i< [context_array count]; i++)
+    {
+        [[SearchCoreManager share] AddContact: [NSNumber  numberWithInteger:i]  name:[context_array objectAtIndex:i] phone:nil];
+    }
+    
+     self.nameArray = [NSMutableArray array];
 }
 //-(void)btClick:(id)sender
 //{
@@ -103,6 +114,35 @@
 //    [indexTiles addObject:@"{search}"];//等价于[indexTiles addObject:UITableViewIndexSearch];
     return indexTiles;
 }
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    NSLog(@"title = %@ \n index = %d ",title,index);
+    [nameArray removeAllObjects];
+   //如果等于0 则清楚拼音搜索标记
+    if (index != 0)
+    {
+        [[SearchCoreManager share] Search:title searchArray:nil nameMatch:nameArray phoneMatch:nil];
+        //默认只跳转到首个上面
+        if ([nameArray count]>0)
+        {
+            NSLog(@"array = %@", nameArray);
+        }
+    }
+    [tableView beginUpdates];
+    [tableView reloadData];
+    [tableView endUpdates];
+    NSUInteger *scrollRow;
+    if ([nameArray count]>0)
+    {
+        scrollRow = [[nameArray objectAtIndex:0]intValue] ;//默认滑倒第一个
+    }
+    else
+    {
+        scrollRow = 0;//点击了搜索图标 则复位滑倒第一行
+    }
+    [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:scrollRow inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    return 1;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
     static NSString * showUserInfoCellIdentifier = @"ShowUserInfoCell";
@@ -114,8 +154,25 @@
                                        reuseIdentifier:showUserInfoCellIdentifier]
                 autorelease];
     }
-    
-    // Configure the cell.
+    NSMutableString *matchString = [NSMutableString string];
+    NSMutableArray *matchPos = [NSMutableArray array];
+    if ([nameArray count]>0)
+    {
+        [nameArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
+         {
+             [[SearchCoreManager share] GetPinYin:obj pinYin:matchString matchPos:matchPos];
+             NSInteger i = [obj intValue];
+             if (i == indexPath.row)
+             {
+                 cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ == 匹配坐标%@",matchString,matchPos];
+             }
+         }];
+    }
+    else
+    {
+        cell.detailTextLabel.text = nil;
+    }
+       // Configure the cell.
     cell.textLabel.text= [context_array objectAtIndex:indexPath.row];
     return cell;
 }
