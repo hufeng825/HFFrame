@@ -131,7 +131,7 @@
     [tableView beginUpdates];
     [tableView reloadData];
     [tableView endUpdates];
-    NSUInteger *scrollRow;
+    int scrollRow;
     if ([nameArray count]>0)
     {
         scrollRow = [[nameArray objectAtIndex:0]intValue] ;//默认滑倒第一个
