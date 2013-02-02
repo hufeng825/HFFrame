@@ -93,6 +93,20 @@
 
 #pragma mark StackAndQueueExtensions
 @implementation NSMutableArray (StackAndQueueExtensions)
+- (void)moveObjectFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
+{
+    if (toIndex != fromIndex && fromIndex < [self count] && toIndex< [self count]) {
+        id obj = [self objectAtIndex:fromIndex];
+        [obj retain];
+        [self removeObjectAtIndex:fromIndex];
+        if (toIndex >= [self count]) {
+            [self addObject:obj];
+        } else {
+            [self insertObject:obj atIndex:toIndex];
+        }
+        [obj release];
+    }
+}
 - (id) popObject
 {
     if ([self count] == 0) return nil;
@@ -108,20 +122,22 @@
     return self;
 }
 
-- (NSMutableArray *) pushObjects:(id)object,...
+- (NSMutableArray *)pushObjects:(id)object,...
 {
-    if (!object) return self;
-    id obj = object;
-    va_list objects;
-    va_start(objects, object);
-    do
-    {
-        [self addObject:obj];
+	if (!object)
+		return self;
+	id obj = object;
+	va_list objects;
+	va_start(objects, object);
+	do
+	{
+		[self addObject:obj];
         obj = va_arg(objects, id);
-    } while (obj);
-    va_end(objects);
-    return self;
+	} while (obj);
+	va_end(objects);
+	return self;
 }
+
 
 - (id) pullObject
 {
