@@ -15,8 +15,8 @@
 {
        //arrary 数组去重复
         NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
-        GHTestLog(@"格式前：%@",array);
-        GHTestLog(@"格式后：%@",[array uniqueMembers]);
+        GHTestLog(@"去重格式前：%@",array);
+        GHTestLog(@"去重格式后：%@",[array uniqueMembers]);
 //    GHAssertNULL(str,nil);
 //    NSString *str1 = @"hufeng";
 //    GHAssertEqualObjects(str, str1, @"dddddd%@",str1);
@@ -36,7 +36,16 @@
     
 }
 
+-(void)testMutableArray
+{
+    NSMutableArray *array = [NSMutableArray array];
+    [array  pushObject:@"a"];
+    GHTestLog(@"push a 后：%@",array);
+    [array  pushObjects:@"b",@"c",@"e",@"d",nil];
+    GHTestLog(@"push b c e d 后：%@",array);
+    [array moveObjectFromIndex:4 toIndex:5];
 
+}
 
 
 @end

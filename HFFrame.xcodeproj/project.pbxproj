@@ -541,8 +541,8 @@
 		603900E9E4F1B9869E1B42E4 /* Array+Additons */ = {
 			isa = PBXGroup;
 			children = (
-				60390693556A2D35E43E2729 /* Array.m */,
 				6039094F212CB306D7DE551E /* Array.h */,
+				60390693556A2D35E43E2729 /* Array.m */,
 			);
 			name = "Array+Additons";
 			sourceTree = "<group>";

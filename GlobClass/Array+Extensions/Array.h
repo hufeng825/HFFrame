@@ -28,8 +28,11 @@
 @end
 
 @interface NSMutableArray (StackAndQueueExtensions)
+- (void)moveObjectFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
 - (NSMutableArray *)pushObject:(id)object;
 - (NSMutableArray *)pushObjects:(id)object,...;
+
 - (id) popObject;
 - (id) pullObject;
 
