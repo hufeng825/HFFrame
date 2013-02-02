@@ -61,7 +61,7 @@
 
 - (IBAction)animationShake:(id)sender
 {
-    [HFAnimation animationShake:sender];
+    [HFAnimation animationShakeBounce:sender];
 }
 
 - (IBAction)animationHidden:(id)sender

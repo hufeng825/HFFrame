@@ -96,6 +96,34 @@
     }];
     
 }
+//!!! 晃动带弹性
++ (void)animationShakeBounce:(id)sender
+{
+    [self shakeXWithOffset:30.0 breakFactor:0.75 duration:1.5 maxShakes:25 sender:sender];
+}
++ (void)shakeXWithOffset:(CGFloat)aOffset breakFactor:(CGFloat)aBreakFactor duration:(CGFloat)aDuration maxShakes:(NSInteger)maxShakes sender:(id)sender
+{
+    UIView *view = (UIView*)sender;
+	CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+	[animation setDuration:aDuration];
+	NSMutableArray *keys = [NSMutableArray arrayWithCapacity:20];
+	int infinitySec = maxShakes;
+	while(aOffset > 0.01) {
+		[keys addObject:[NSValue valueWithCGPoint:CGPointMake(view.center.x - aOffset, view.center.y)]];
+		aOffset *= aBreakFactor;
+		[keys addObject:[NSValue valueWithCGPoint:CGPointMake(view.center.x + aOffset, view.center.y)]];
+		aOffset *= aBreakFactor;
+		infinitySec--;
+		if(infinitySec <= 0) {
+			break;
+		}
+	}
+	
+	animation.values = keys;
+	
+	
+	[view.layer addAnimation:animation forKey:@"position"];
+}
 
 
 
