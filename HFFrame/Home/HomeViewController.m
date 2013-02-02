@@ -57,22 +57,10 @@
     [super viewDidLoad];
 
     self.title = @"例程说明";
-       // Do any additional setup after loading the view from its nib.
-    
-//    //HFbutton类使用
-//    bt.userInfo = @"d";
-//    [bt addTarget:self action:@selector(btClick:) forControlEvents:UIControlEventTouchUpInside];
-////    [bt beginWarningAnimation];
-//    
-//    //arrary 数组去重复
-//    NSArray *array = [NSArray arrayWithObjects:@"1",@"1",@"2",@"3",@"4",nil];
-//    NSLog(@"%@",array);
-//    NSLog(@"%@", [array uniqueMembers]);
-////     [HFAnimation animationHeartbeat:bt];
-//    [HFAnimation animationShake:bt];
+
     
     
-    self.context_array = [[[NSArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",@"序列化",nil]autorelease];
+    self.context_array = [[[NSMutableArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",@"序列化",nil]autorelease];
     
     for (NSUInteger i=0; i< [context_array count]; i++)
     {
@@ -80,6 +68,9 @@
     }
     
      self.nameArray = [NSMutableArray array];
+    
+    //[_tableView setEditing:YES animated:YES]; 设置显示编辑按钮
+
 }
 //-(void)btClick:(id)sender
 //{
@@ -179,6 +170,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self pushController:indexPath.row];
+}
+// Override to support conditional editing of the table view.
+- (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+        return UITableViewCellEditingStyleDelete;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    HFAlert(@"只是做演示uitableview用法并不允许真正删除数据");
+    return ;
+    [context_array removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark -
@@ -360,66 +365,6 @@
 	}
 }
 
-#pragma mark 
-
-
-#pragma mark -  语音接口实现
-#pragma  mark 识别接口实现
-- (void) onGrammer:(NSString *)grammer error:(int)err
-{
-    NSLog(@"the error is:%d",err);
-    
-}
-
-- (void) onRecognizeEnd:(IFlyRecognizeControl *)iFlyRecognizeControl theError:(int)error
-{
-    NSLog(@"识别结束回调finish.....");
-//	NSLog(@"getUpflow:%d,getDownflow:%d",[iFlyRecognizeControl getUpflow],[iFlyRecognizeControl getDownflow]);
-    
-}
-
--(void)action:(id)parm
-{
-    HFAlert(@"%@",parm);
-}
-
-- (void) onResult:(IFlyRecognizeControl *)iFlyRecognizeControl theResult:(NSArray *)resultArray
-{
-    [self onRecognizeResult:resultArray];
-}
-- (void)onRecognizeResult:(NSArray *)array
-{
-    //  execute the onUpdateTextView function in main thread
-    //  在主线程中执行onUpdateTextView方法
-	[self performSelectorOnMainThread:@selector(action:) withObject:
-	 [[array objectAtIndex:0] stringForKey:@"NAME"] waitUntilDone:YES];
-}
-
-
-
-#pragma 合成接口实现
-- (void)onSynthesizerEnd:(IFlySynthesizerControl *)iFlySynthesizerControl theError:(SpeechError) error
-{
-    
-	NSLog(@"finish.....");
-//	[self enableButton];
-    
-	// get the upload flow and download flow
-    // 获取上传流量和下载流量
-	NSLog(@"upFlow:%d,downFlow:%d",[iFlySynthesizerControl getUpflow],[iFlySynthesizerControl getDownflow]);
-}
-// get the player buffer progress
-// 获取播放器缓冲进度
-- (void)onSynthesizerBufferProgress:(float)bufferProgress
-{
-    NSLog(@"the playing buffer :%f",bufferProgress);
-}
-// get the player progress
-// 获取播放器的播放进度
-- (void)onSynthesizerPlayProgress:(float)playProgress
-{
-    NSLog(@"the playing progress :%f",playProgress);
-}
 #pragma mark -
 
 

@@ -27,7 +27,7 @@ FlipViewControllerDelegate
 >
 
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
-@property (retain, nonatomic) NSArray *context_array;
+@property (retain, nonatomic) NSMutableArray *context_array;
 @property (retain, nonatomic)     NSMutableArray *nameArray;
 
 /******用于翻转动画 工程中没用到可注释******/
