@@ -27,6 +27,6 @@
 
 - (void)customInit;
 -(void) showSelfView;
--(void) toSetLabelText:(NSString *)title;//设置title
-
+-(UILabel*)titleLabel;
+-(UIPickerView*)pickView;
 @end
