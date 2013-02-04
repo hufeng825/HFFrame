@@ -72,6 +72,10 @@
 		964247C316BB855B0016D3A2 /* multipy_unicode.dat in Resources */ = {isa = PBXBuildFile; fileRef = 964247BD16BB855B0016D3A2 /* multipy_unicode.dat */; };
 		964247C416BB855B0016D3A2 /* SearchCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247BF16BB855B0016D3A2 /* SearchCore.mm */; };
 		964247C516BB855B0016D3A2 /* SearchCoreManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247C116BB855B0016D3A2 /* SearchCoreManager.mm */; };
+		9642480916BF84AD0016D3A2 /* HFPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9642480816BF84AD0016D3A2 /* HFPickerView.m */; };
+		9642480B16BF86AF0016D3A2 /* PickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642480A16BF86AF0016D3A2 /* PickerView.xib */; };
+		9642480F16BF88030016D3A2 /* HFPickerExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9642480D16BF88020016D3A2 /* HFPickerExampleViewController.m */; };
+		9642481016BF88030016D3A2 /* HFPickerExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642480E16BF88030016D3A2 /* HFPickerExampleViewController.xib */; };
 		9647A01C167DCB5400829C89 /* HFInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A01A167DCB5400829C89 /* HFInfoViewController.m */; };
 		9647A01D167DCB5400829C89 /* HFInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A01B167DCB5400829C89 /* HFInfoViewController.xib */; };
 		9647A021167DE27300829C89 /* HFAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A020167DE27300829C89 /* HFAnimation.m */; };
@@ -251,6 +255,12 @@
 		964247BF16BB855B0016D3A2 /* SearchCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCore.mm; sourceTree = "<group>"; };
 		964247C016BB855B0016D3A2 /* SearchCoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCoreManager.h; sourceTree = "<group>"; };
 		964247C116BB855B0016D3A2 /* SearchCoreManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SearchCoreManager.mm; sourceTree = "<group>"; };
+		9642480716BF84AD0016D3A2 /* HFPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFPickerView.h; sourceTree = "<group>"; };
+		9642480816BF84AD0016D3A2 /* HFPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFPickerView.m; sourceTree = "<group>"; };
+		9642480A16BF86AF0016D3A2 /* PickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerView.xib; sourceTree = "<group>"; };
+		9642480C16BF88020016D3A2 /* HFPickerExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFPickerExampleViewController.h; path = HFFrame/Example/HFPickerExampleViewController.h; sourceTree = "<group>"; };
+		9642480D16BF88020016D3A2 /* HFPickerExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFPickerExampleViewController.m; path = HFFrame/Example/HFPickerExampleViewController.m; sourceTree = "<group>"; };
+		9642480E16BF88030016D3A2 /* HFPickerExampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFPickerExampleViewController.xib; path = HFFrame/Example/HFPickerExampleViewController.xib; sourceTree = "<group>"; };
 		9647A019167DCB5400829C89 /* HFInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFInfoViewController.h; path = HFFrame/Example/HFInfoViewController.h; sourceTree = "<group>"; };
 		9647A01A167DCB5400829C89 /* HFInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFInfoViewController.m; path = HFFrame/Example/HFInfoViewController.m; sourceTree = "<group>"; };
 		9647A01B167DCB5400829C89 /* HFInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFInfoViewController.xib; path = HFFrame/Example/HFInfoViewController.xib; sourceTree = "<group>"; };
@@ -644,6 +654,7 @@
 		962F7004165C9D170032A849 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				9642481116BF880A0016D3A2 /* picker */,
 				9647A072167F6C7B00829C89 /* SEFilterControl 手机充值 */,
 				9647A018167DCAFB00829C89 /* 自动消失提示框 */,
 				960DAB83166CA00B00303ECC /* 宏定义单例 */,
@@ -739,6 +750,27 @@
 			name = SearchCore;
 			path = GlobClass/SearchCore;
 			sourceTree = SOURCE_ROOT;
+		};
+		9642480616BF84AD0016D3A2 /* HFPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				9642480716BF84AD0016D3A2 /* HFPickerView.h */,
+				9642480816BF84AD0016D3A2 /* HFPickerView.m */,
+				9642480A16BF86AF0016D3A2 /* PickerView.xib */,
+			);
+			name = HFPickerView;
+			path = GlobClass/HFPickerView;
+			sourceTree = SOURCE_ROOT;
+		};
+		9642481116BF880A0016D3A2 /* picker */ = {
+			isa = PBXGroup;
+			children = (
+				9642480C16BF88020016D3A2 /* HFPickerExampleViewController.h */,
+				9642480D16BF88020016D3A2 /* HFPickerExampleViewController.m */,
+				9642480E16BF88030016D3A2 /* HFPickerExampleViewController.xib */,
+			);
+			name = picker;
+			sourceTree = "<group>";
 		};
 		9647A009167DB8D900829C89 /* HFInfoView */ = {
 			isa = PBXGroup;
@@ -884,6 +916,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9642480616BF84AD0016D3A2 /* HFPickerView */,
 				964247BA16BB855B0016D3A2 /* SearchCore */,
 				962C0ADF1682C71E002C9992 /* NSTimer */,
 				9647A06A167F6C0100829C89 /* SEFilterControl */,
@@ -1244,6 +1277,8 @@
 				96B90EB216B91A26007552C4 /* HFObjectMapViewController.xib in Resources */,
 				96B90EB716B92BC9007552C4 /* j.json in Resources */,
 				964247C316BB855B0016D3A2 /* multipy_unicode.dat in Resources */,
+				9642480B16BF86AF0016D3A2 /* PickerView.xib in Resources */,
+				9642481016BF88030016D3A2 /* HFPickerExampleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,6 +1379,8 @@
 				964247C216BB855B0016D3A2 /* Array.mm in Sources */,
 				964247C416BB855B0016D3A2 /* SearchCore.mm in Sources */,
 				964247C516BB855B0016D3A2 /* SearchCoreManager.mm in Sources */,
+				9642480916BF84AD0016D3A2 /* HFPickerView.m in Sources */,
+				9642480F16BF88030016D3A2 /* HFPickerExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
