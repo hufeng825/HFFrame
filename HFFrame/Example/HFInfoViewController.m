@@ -30,9 +30,22 @@
     // Do any additional setup after loading the view from its nib.
     [self.view addSubview: [HFInfoView sharedInstance].view ];
     [[HFInfoView sharedInstance]showInfo:@"这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试"];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"您有一条新消息!"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"取消"
+                                          otherButtonTitles:@"确定",nil];
+    
+    [alert show];
+    [alert release];
+    
 
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%d",buttonIndex);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

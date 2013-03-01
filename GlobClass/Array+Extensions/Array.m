@@ -41,11 +41,9 @@
 - (NSArray *) uniqueMembers
 {
     NSMutableArray *copy = [self mutableCopy];
-    for (id object in self)
-    {
-        [copy removeObjectIdenticalTo:object];
-        [copy addObject:object];
-    }
+    NSSet *uniqueEvents = [NSSet setWithArray:copy];
+    [copy removeAllObjects];
+    [copy addObjectsFromArray:[uniqueEvents allObjects]];
     return [copy autorelease];
 }
 
