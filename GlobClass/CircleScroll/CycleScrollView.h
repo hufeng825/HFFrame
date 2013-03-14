@@ -10,6 +10,8 @@
 #import "SDWebImageManager.h"
 
 /*
+ 在weever的基础上修改的  添加了 新的api 可以直接传入url 
+ addby HF
  */
 
 

@@ -457,7 +457,7 @@
 			children = (
 				962F7004165C9D170032A849 /* example */,
 				1848AF1B16328FD800AD42B6 /* HFFrame */,
-				960DAC67166DED1400303ECC /* Tests */,
+				960DAC67166DED1400303ECC /* 单元测试Tests */,
 				1848AF1416328FD800AD42B6 /* Frameworks */,
 				1848AF1216328FD800AD42B6 /* Products */,
 			);
@@ -618,13 +618,14 @@
 			name = "宏定义单例";
 			sourceTree = "<group>";
 		};
-		960DAC67166DED1400303ECC /* Tests */ = {
+		960DAC67166DED1400303ECC /* 单元测试Tests */ = {
 			isa = PBXGroup;
 			children = (
 				960DAC7E166DEFEE00303ECC /* HFtest.h */,
 				960DAC7F166DEFEF00303ECC /* HFtest.m */,
 				960DAC68166DED1400303ECC /* Supporting Files */,
 			);
+			name = "单元测试Tests";
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -642,13 +643,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		962C0ADF1682C71E002C9992 /* NSTimer */ = {
+		962C0ADF1682C71E002C9992 /* NSTimer  添加暂停恢复 */ = {
 			isa = PBXGroup;
 			children = (
 				962C0AED1682CDCD002C9992 /* NSTimer+pause.h */,
 				962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */,
 			);
-			name = NSTimer;
+			name = "NSTimer  添加暂停恢复";
 			sourceTree = "<group>";
 		};
 		962F7004165C9D170032A849 /* example */ = {
@@ -918,7 +919,7 @@
 			children = (
 				9642480616BF84AD0016D3A2 /* HFPickerView */,
 				964247BA16BB855B0016D3A2 /* SearchCore */,
-				962C0ADF1682C71E002C9992 /* NSTimer */,
+				962C0ADF1682C71E002C9992 /* NSTimer  添加暂停恢复 */,
 				9647A06A167F6C0100829C89 /* SEFilterControl */,
 				9647A01E167DE27300829C89 /* HFAnimation */,
 				9647A009167DB8D900829C89 /* HFInfoView */,
