@@ -7,6 +7,8 @@
 #include <libkern/OSAtomic.h>
 #include <execinfo.h>
 
+NSString *const CrashReportUrl = @"http://httpbin.org/post";
+
 NSString * const UncaughtExceptionHandlerSignalExceptionName = @"UncaughtExceptionHandlerSignalExceptionName";
 NSString * const UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
 NSString * const UncaughtExceptionHandlerAddressesKey = @"UncaughtExceptionHandlerAddressesKey";
@@ -40,23 +42,94 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 	 return backtrace;
 }
 
+-(NSString *)getInfoApp
+{
+    NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSString* version = [infoDict objectForKey:@"CFBundleVersion"];
+    NSString *infoStr = [NSString stringWithFormat:@"appVersion=%@&iosVersion=%@&device=%@",
+                         version,[[UIDevice currentDevice] systemVersion],[[UIDevice currentDevice]model]
+                         ];
+    return infoStr;
+}
+
 - (void)alertView:(UIAlertView *)anAlertView clickedButtonAtIndex:(NSInteger)anIndex
 {
 	if (anIndex == 0)
 	{
-		dismissed = YES;
+        candismissed = YES;
 	}
 }
 
-- (void)validateAndSaveCriticalApplicationData
+- (void)validateAndSaveCriticalApplicationData:(NSException *)exception
 {
-	
+    NSString *urlFormat = CrashReportUrl;
+    candismissed = NO;
+    NSURL *registrationURL = [NSURL URLWithString:urlFormat];
+    
+    // Create theregistration request
+    
+    NSMutableURLRequest *request =[[NSMutableURLRequest alloc]
+                                   
+                                   initWithURL:registrationURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    NSMutableData *postBody = [NSMutableData data];
+    [postBody appendData:[[NSString stringWithFormat:@"function name=%@", [exception reason]]
+                          dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"des=%@",
+                           [[exception userInfo] objectForKey:UncaughtExceptionHandlerAddressesKey]] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[self getInfoApp] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [request setHTTPBody:postBody];
+    
+    // And fireit off
+    
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request
+                                   
+                                                                delegate:self];
+    
+    [connection start];
 }
+
+
+- (void)connection:(NSURLConnection *)connection
+  didFailWithError:(NSError *)error
+{
+    NSLog(@"%@",[error description]);
+    if (candismissed)
+    {
+        dismissed = YES;
+        candismissed = NO;
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection
+    didReceiveData:(NSData *)data
+{
+    NSString *reply  =[ [NSString alloc] initWithData:data
+                                             encoding:NSUTF8StringEncoding] ;
+    
+    NSLog(@"%@",reply);
+    if (candismissed)
+    {
+        dismissed = YES;
+        candismissed = NO;
+    }
+}
+
+
+
 
 - (void)handleException:(NSException *)exception
 {
-	[self validateAndSaveCriticalApplicationData];
-	
+	[self validateAndSaveCriticalApplicationData :exception];
+
+    
+    // TODO: Passthe token to our server
+    
+    
 	UIAlertView *alert =
 		[[[UIAlertView alloc]
 			initWithTitle:NSLocalizedString(@"友情提示", nil)
@@ -104,6 +177,8 @@ const NSInteger UncaughtExceptionHandlerReportAddressCount = 5;
 
 @end
 
+
+
 void HandleException(NSException *exception)
 {
 	int32_t exceptionCount = OSAtomicIncrement32(&UncaughtExceptionCount);
@@ -113,6 +188,7 @@ void HandleException(NSException *exception)
 	}
 	
 	NSArray *callStack = [UncaughtExceptionHandler backtrace];
+    
 	NSMutableDictionary *userInfo =
 		[NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
 	[userInfo
