@@ -8,6 +8,7 @@
 
 @interface UncaughtExceptionHandler : NSObject{
 	BOOL dismissed;
+    BOOL candismissed;
 }
 
 @end
