@@ -311,7 +311,7 @@
 			children = (
 				969D909A1658A9A500A382B2 /* style */,
 				96876D8F164C041700406C92 /* Class */,
-				96876D81164BCA5100406C92 /* 全局参数 */,
+				96876D81164BCA5100406C92 /* 全局变量 */,
 				96E517021632AF3200E7D20C /* HFHTTP */,
 				96876D78164BB66D00406C92 /* BaseViewController */,
 				1848AF2416328FD800AD42B6 /* HFAppDelegate.h */,
@@ -503,14 +503,14 @@
 			path = GlobClass/UIViewAddition;
 			sourceTree = SOURCE_ROOT;
 		};
-		96876D81164BCA5100406C92 /* 全局参数 */ = {
+		96876D81164BCA5100406C92 /* 全局变量 */ = {
 			isa = PBXGroup;
 			children = (
 				960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */,
 				96876D82164BCAD000406C92 /* Global_macro.h */,
 				96876D83164BCAD000406C92 /* Global_macro.m */,
 			);
-			name = "全局参数";
+			name = "全局变量";
 			sourceTree = "<group>";
 		};
 		96876D8F164C041700406C92 /* Class */ = {
@@ -927,9 +927,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -944,9 +946,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

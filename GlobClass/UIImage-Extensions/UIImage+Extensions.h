@@ -19,4 +19,10 @@
 - (UIImage *)addImage:(UIImage *)image1 toImage:(UIImage *)image2 ;
 + (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)data duration:(NSTimeInterval)duration;
 + (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)url duration:(NSTimeInterval)duration;
+//图片压缩
+- (UIImage *)compressedImage;
+- (CGFloat)compressionQuality;
+- (NSData *)compressedData;
+- (NSData *)compressedData:(CGFloat)compressionQuality;
+
 @end;
