@@ -39,7 +39,9 @@
     
     NSString *url = @"http://9snow.org/weather/api?city=北京";
     NSLog(@"%d",[url gotChineseCount]);
-   [self gettUrl:url sucessBlock:su failBlock:nil];
+   [self gettUrl:url sucessBlock:su failBlock:nil downloadProgressBlock:nil];
+    
+    
     /***********************网络请求例子*****************************/
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
@@ -48,7 +50,7 @@
         
     };
     
-    [self gettUrl:url sucessBlock:sua failBlock:nil];
+    [self gettUrl:url sucessBlock:sua failBlock:nil downloadProgressBlock:nil];
     
 }
 
