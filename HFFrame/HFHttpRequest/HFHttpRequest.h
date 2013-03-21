@@ -15,7 +15,7 @@
 
 typedef  void(^HttpSucessRespon)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON);
 typedef  void(^HttpFailRespon)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON);
-typedef  void (^HttpDownloadProgressBlock)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) ;
+typedef  void (^HttpDownloadProgressBlock)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead);
 
 typedef enum
 {

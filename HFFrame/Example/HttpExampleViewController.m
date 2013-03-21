@@ -41,17 +41,13 @@
     NSLog(@"%d",[url gotChineseCount]);
    [self gettUrl:url sucessBlock:su failBlock:nil downloadProgressBlock:nil];
     
-    
     /***********************网络请求例子*****************************/
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
         NSLog(@"json %@",[JSON class]);
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
-        
     };
-    
-    [self gettUrl:url sucessBlock:sua failBlock:nil downloadProgressBlock:nil];
-    
+     [self gettUrl:url sucessBlock:sua failBlock:nil downloadProgressBlock:nil];
 }
 
 
