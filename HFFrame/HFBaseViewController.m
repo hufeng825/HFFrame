@@ -109,7 +109,10 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     //ios5++
 	if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0"))
     {
-        [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithred:174 green:22 blue:21]];
+        [[UIBarButtonItem appearance] setTintColor:
+         [UIColor colorWithHex:0xD60016]
+//         [UIColor colorWithred:174 green:22 blue:21]
+         ];
 	}
     
     [self toSetTitleLable];
@@ -189,14 +192,14 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
 
 //网络请求 
 -(void)postUrl:(NSString*)url parameters:(NSDictionary *)parameters
- sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
+ sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock
 {
-    [self.hfClient Url:url  parameters:parameters sucessBlock:sucessRespon failBlock:failRespon method:POST];
+    [self.hfClient Url:url  parameters:parameters sucessBlock:sucessRespon failBlock:failRespon method:POST progressBlock:downloadProgressBlock] ;
 }
 
--(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon
+-(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
 {
-    [self.hfClient Url:url  parameters:nil sucessBlock:sucessRespon failBlock:failRespon method:GET];
+    [self.hfClient Url:url  parameters:nil sucessBlock:sucessRespon failBlock:failRespon method:GET progressBlock:downloadProgressBlock];
 }
 
 
