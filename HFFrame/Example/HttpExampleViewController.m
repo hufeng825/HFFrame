@@ -9,7 +9,7 @@
 #import "HttpExampleViewController.h"
 #import "HFHttpRequest.h"
 #import "HFLoadingView.h"
-
+#import "UIImage+Extensions.h"
 @interface HttpExampleViewController ()
 
 @end
@@ -31,7 +31,7 @@
     
     // Do any additional setup after loading the view from its nib.
     
-    /***********************网络请求例子*************************/
+    /***********************网络get请求例子*************************/
     HttpSucessRespon su = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
 //  HFHttpSucessResponClass
     {
@@ -42,21 +42,24 @@
     
     NSString *url = @"http://9snow.org/weather/api?city=北京";
     NSLog(@"%d",[url gotChineseCount]);
-//   [self gettUrl:url sucessBlock:su failBlock:nil];
+   [self gettUrl:url sucessBlock:su failBlock:nil downloadProgressBlock:nil];
+    
     
     url = @"http://httpbin.org/post";
-    /***********************网络请求例子*************************/
+    /***********************网络post请求例子*************************/    
+    
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
-        NSLog(@"json %@",[JSON class]);
-        _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
-        
+        [HFLoadingView hideLoadingViewForView:self.view];
+        NSLog(@"%@",JSON);
     };
-    [self postUrl:url parameters:[NSDictionary dictionaryWithObject:@"dd" forKey:@"hufeng"] sucessBlock:sua failBlock:nil];
-//    [self gettUrl:url sucessBlock:sua failBlock:nil];
-    [HFLoadingView showLoadingViewAddedTo:self.view title:@"hufeng"];
-
-    
+    NSData *imageData = [[UIImage imageNamed:@"Default-568h@2x.png"]compressedData];
+    HttpDownloadProgressBlock progressBlock = HFHttpDownloadProgressBlock
+    {
+        int percentNum = (float)totalBytesRead/totalBytesExpectedToRead *10;
+        [HFLoadingView changeLoadingTextForView:self.view title:[ NSString stringWithFormat:@"%@%d0",@"%",percentNum]];
+    };
+    [self postUrl:url parameters:[NSDictionary dictionaryWithObject:[imageData description]forKey:@"urlimage"] sucessBlock:sua failBlock:nil downloadProgressBlock:progressBlock];
 }
 
 

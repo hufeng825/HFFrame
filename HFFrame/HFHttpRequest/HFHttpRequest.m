@@ -47,7 +47,7 @@
 NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"param1", @"value2", @"param2", @"value3", @"param3", @"value4", @"param4", nil]
 */
 -(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
- sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method
+ sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
 {
     NSString *urlStr=nil;//如果含有中文或者全角字符 则进行UTF-8格式化
     if ([url gotChineseCount]>0)
@@ -89,10 +89,14 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     }
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
     sucessRespon failure:failRespon];
+    
+    [operation setDownloadProgressBlock:progressBlock];
+    
    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html", nil]];
     operation.JSONReadingOptions = NSJSONReadingAllowFragments;
     
-    [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+    [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
+    {
         NSLog(@"changed %d", status);
         //your code here
     }];
@@ -101,7 +105,8 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
 
 
 
--(id)initWithBaseURL:(NSURL *)url {
+-(id)initWithBaseURL:(NSURL *)url
+{
     self = [super initWithBaseURL:url];
     if (!self) {
         return nil;
