@@ -8,6 +8,8 @@
 
 #import "HttpExampleViewController.h"
 #import "HFHttpRequest.h"
+#import "HFLoadingView.h"
+
 @interface HttpExampleViewController ()
 
 @end
@@ -29,26 +31,31 @@
     
     // Do any additional setup after loading the view from its nib.
     
-    /***********************网络请求例子*****************************/
+    /***********************网络请求例子*************************/
     HttpSucessRespon su = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-//    HFHttpSucessResponClass
+//  HFHttpSucessResponClass
     {
         NSLog(@"json %@",[JSON class]);
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
+        [HFLoadingView hideLoadingViewForView:self.view];
     };
     
     NSString *url = @"http://9snow.org/weather/api?city=北京";
     NSLog(@"%d",[url gotChineseCount]);
-   [self gettUrl:url sucessBlock:su failBlock:nil];
-    /***********************网络请求例子*****************************/
+//   [self gettUrl:url sucessBlock:su failBlock:nil];
+    
+    url = @"http://httpbin.org/post";
+    /***********************网络请求例子*************************/
     HttpSucessRespon sua = HFHttpSucessResponClass
     {
         NSLog(@"json %@",[JSON class]);
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
         
     };
-    
-    [self gettUrl:url sucessBlock:sua failBlock:nil];
+    [self postUrl:url parameters:[NSDictionary dictionaryWithObject:@"dd" forKey:@"hufeng"] sucessBlock:sua failBlock:nil];
+//    [self gettUrl:url sucessBlock:sua failBlock:nil];
+    [HFLoadingView showLoadingViewAddedTo:self.view title:@"hufeng"];
+
     
 }
 
