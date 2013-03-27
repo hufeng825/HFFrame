@@ -29,7 +29,7 @@
 #import "HFSEFilterControlViewController.h"
 #import "HFObjectMapViewController.h"
 #import "HFPickerExampleViewController.h"
-
+#import "HFFastTopViewViewController.h"
 
 #import "SearchCoreManager.h"
 
@@ -62,7 +62,7 @@
 
     
     
-    self.context_array = [[[NSMutableArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",@"序列化",@"picker",nil]autorelease];
+    self.context_array = [[[NSMutableArray alloc]initWithObjects:@"网络请求",@"网络图片",@"Button类",@"NSString NSArray …… ",@"Animation",@"语音播报",@"语音识别",@"循环Scrollview",@"TTTAttributedLabel",@"截屏函数 用于特殊动画需要",@"组动画和delegate",@"loading",@"Gif 图片支持",@"仿开机的动画label",@"UIAlert、ActionSheet+Blocks",@"宏定义单例",@"测试崩溃",@"自动消失提示框",@"指示选择器",@"序列化",@"picker",@"快速返回顶部",nil]autorelease];
     
     for (NSUInteger i=0; i< [context_array count]; i++)
     {
@@ -309,6 +309,10 @@
         case 20:
         {
             [self funcFromeString:@"HFPickerExampleViewController" index:row];
+        }
+        case 21:
+        {
+            [self funcFromeString:@"HFFastTopViewViewController" index:row];
         }
         default:
             break;

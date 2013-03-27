@@ -93,7 +93,7 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     [operation setDownloadProgressBlock:progressBlock];
     
    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html", nil]];
-    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
+//    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
     
     [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
     {
