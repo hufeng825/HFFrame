@@ -1500,6 +1500,7 @@
 		1848AF3616328FD800AD42B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (U2X73EWY36)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1509,7 +1510,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6E409063-3ACD-4290-806E-7B5B09A672B5";
 				WRAPPER_EXTENSION = app;
@@ -1519,6 +1520,7 @@
 		1848AF3716328FD800AD42B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (U2X73EWY36)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1528,7 +1530,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6E409063-3ACD-4290-806E-7B5B09A672B5";
 				WRAPPER_EXTENSION = app;
