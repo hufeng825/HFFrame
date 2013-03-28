@@ -97,6 +97,7 @@
 		966082851702F0AF00E72B0A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082791702F0AF00E72B0A /* AFURLConnectionOperation.m */; };
 		966082861702F0AF00E72B0A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660827B1702F0AF00E72B0A /* AFXMLRequestOperation.m */; };
 		966082871702F0AF00E72B0A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660827D1702F0AF00E72B0A /* UIImageView+AFNetworking.m */; };
+		966082BD1703EB5000E72B0A /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082BC1703EB5000E72B0A /* NSObject+HF.m */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -303,6 +304,8 @@
 		9660827B1702F0AF00E72B0A /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = GlobClass/AFNetworking/AFXMLRequestOperation.m; sourceTree = SOURCE_ROOT; };
 		9660827C1702F0AF00E72B0A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.h"; sourceTree = SOURCE_ROOT; };
 		9660827D1702F0AF00E72B0A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = SOURCE_ROOT; };
+		966082BB1703EB5000E72B0A /* NSObject+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HF.h"; path = "ObjectAdditon/NSObject+HF.h"; sourceTree = SOURCE_ROOT; };
+		966082BC1703EB5000E72B0A /* NSObject+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HF.m"; path = "ObjectAdditon/NSObject+HF.m"; sourceTree = SOURCE_ROOT; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -836,6 +839,15 @@
 			name = "SEFilterControl 手机充值";
 			sourceTree = "<group>";
 		};
+		966082BA1703EB0800E72B0A /* Object+Addition */ = {
+			isa = PBXGroup;
+			children = (
+				966082BB1703EB5000E72B0A /* NSObject+HF.h */,
+				966082BC1703EB5000E72B0A /* NSObject+HF.m */,
+			);
+			name = "Object+Addition";
+			sourceTree = "<group>";
+		};
 		9665AF7D166891F1005E4E8E /* MTAnimatedLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -928,6 +940,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				966082BA1703EB0800E72B0A /* Object+Addition */,
 				9642480616BF84AD0016D3A2 /* HFPickerView */,
 				964247BA16BB855B0016D3A2 /* SearchCore */,
 				962C0ADF1682C71E002C9992 /* NSTimer  添加暂停恢复 */,
@@ -948,7 +961,7 @@
 				969D90AF1658C88100A382B2 /* UIColor+Additons */,
 				9693403816561F5200F1BDC1 /* NSDictionary+Additons */,
 				96FC7410164CF8CE005ACABC /* SDWebImage */,
-				96E517301632B82500E7D20C /* AFNetwprking */,
+				96E517301632B82500E7D20C /* AFNetworking */,
 				96EAC5EF16411081003D9281 /* RegexKitLite正则表达式 */,
 				96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */,
 				96876D79164BB8B100406C92 /* UIImage-Extensions缩放旋转裁剪 */,
@@ -1060,7 +1073,7 @@
 			name = HFHTTP;
 			sourceTree = "<group>";
 		};
-		96E517301632B82500E7D20C /* AFNetwprking */ = {
+		96E517301632B82500E7D20C /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				966082691702F0AF00E72B0A /* AFHTTPClient.h */,
@@ -1085,7 +1098,7 @@
 				9660827C1702F0AF00E72B0A /* UIImageView+AFNetworking.h */,
 				9660827D1702F0AF00E72B0A /* UIImageView+AFNetworking.m */,
 			);
-			name = AFNetwprking;
+			name = AFNetworking;
 			sourceTree = "<group>";
 		};
 		96EAC5EF16411081003D9281 /* RegexKitLite正则表达式 */ = {
@@ -1398,6 +1411,7 @@
 				966082851702F0AF00E72B0A /* AFURLConnectionOperation.m in Sources */,
 				966082861702F0AF00E72B0A /* AFXMLRequestOperation.m in Sources */,
 				966082871702F0AF00E72B0A /* UIImageView+AFNetworking.m in Sources */,
+				966082BD1703EB5000E72B0A /* NSObject+HF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

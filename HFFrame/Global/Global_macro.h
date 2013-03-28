@@ -15,6 +15,7 @@
 #import "UIViewAdditions.h"
 #import "UIImage+Extensions.h"
 #import "Array.h"
+#import "NSObject+HF.h"
 
 
 //#ifdef QA
