@@ -21,6 +21,18 @@
 //    NSString *str1 = @"hufeng";
 //    GHAssertEqualObjects(str, str1, @"dddddd%@",str1);
 }
+
+-(void)testValidateTel
+{
+    NSString *str = @"03123405871";
+    GHTestLog(@"%d",[str validateCellPhone]);
+}
+-(void)testGetIpAddress
+{
+    NSString *ipStr = [NSString getIPAddress];
+    GHTestLog(@"当前ip：%@",ipStr);
+}
+
 -(void)testGotChineseCount
 {
     NSString *text = @"i'm a 苹果。...";
