@@ -7,6 +7,12 @@
 //
 
 #import "NSString+Additions.h"
+#include <ifaddrs.h>
+#include <arpa/inet.h>
+#import <mach/mach.h>
+#import <mach/mach_host.h>
+#import "RegexKitLite.h"
+
 
 @implementation NSString (HF)
 /*---------------------------------------------------------------------------
@@ -43,6 +49,49 @@
 	return [self URLencodeWithEncoding:NSUTF8StringEncoding];
 }
 
++ (NSString *)getIPAddress
+{
+	NSString *address = @"Unknown";
+	struct ifaddrs *interfaces = NULL;
+	struct ifaddrs *temp_addr = NULL;
+	int success = 0;
+    
+	// retrieve the current interfaces - returns 0 on success
+	success = getifaddrs(&interfaces);
+	if (success == 0){
+		// Loop through linked lvalidatet of interfaces
+		temp_addr = interfaces;
+		while(temp_addr != NULL){
+			if(temp_addr->ifa_addr->sa_family == AF_INET){
+				// Check if interface is en0 which is the wifi connection on the iPhone
+                //                address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                //                NSLog(@"address: %@", [NSString stringWithUTF8String:temp_addr->ifa_name]);
+				if([@(temp_addr->ifa_name) isEqualToString:@"en0"]){
+					// Get NSString from C String
+					address = @(inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr));
+				}
+			}
+            
+			temp_addr = temp_addr->ifa_next;
+		}
+	}
+    
+	// Free memory
+	freeifaddrs(interfaces);
+    
+	return address;
+    
+    //    char iphone_ip[255];
+    //    strcpy(iphone_ip,"127.0.0.1"); // if everything fails
+    //    NSHost* myhost =[NSHost currentHost];
+    //    if (myhost)
+    //    {
+    //        NSString *ad = [myhost address];
+    //        if (ad)
+    //            strcpy(iphone_ip,[ad cStringUsingEncoding: NSISOLatin1StringEncoding]);
+    //    }
+    //    return [NSString stringWithFormat:@"%s",iphone_ip];
+}
 
 -(CGSize)withWithFont:(UIFont*)font
 {
@@ -183,14 +232,14 @@
     return [fen stringValue];
 }
 
--(BOOL)isContainsString:(NSString *)findStr
+-(BOOL)validateContainsString:(NSString *)findStr
 {
     NSRange textRange;
     textRange =[self rangeOfString:findStr];
     return (textRange.location != NSNotFound);
 }
 
-- (BOOL)isContainsString:(NSString*)string options:(NSStringCompareOptions)options {
+- (BOOL)validateContainsString:(NSString*)string options:(NSStringCompareOptions)options {
 	return [self rangeOfString:string options:options].location == NSNotFound ? NO : YES;
 }
 
@@ -240,7 +289,7 @@
 }
 
 //验证是否是数字
--(BOOL)isNumberStr
+-(BOOL)validateNumberStr
 {
     NSString *number =@"0123456789";
     NSCharacterSet * cs =[[NSCharacterSet characterSetWithCharactersInString:number]invertedSet];
@@ -248,14 +297,14 @@
     return [self isEqualToString:comparStr];
 }
 //验证是否是字母
--(BOOL)isLetterStr
+-(BOOL)validateLetterStr
 {
     return [self isMatchedByRegex:@"^([A-Za-z]+$"];
 }
 
 
 //验证身份证
--(BOOL)isPersonCard
+-(BOOL)validatePersonCard
 {
 //    NSLog(@"%d",[self length]);
     /*招行那帮东西之前让做简单验证
@@ -282,12 +331,12 @@
     return [self isMatchedByRegex:@"^((1[1-5])|(2[1-3])|(3[1-7])|(4[1-6])|(5[0-4])|(6[1-5])|71|(8[12])|91)\\d{4}((19\\d{2}(0[13-9]|1[012])(0[1-9]|[12]\\d|30))|(19\\d{2}(0[13578]|1[02])31)|(19\\d{2}02(0[1-9]|1\\d|2[0-8]))|(19([13579][26]|[2468][048]|0[48])0229))\\d{3}(\\d|X|x)?$"];
 }
 
--(BOOL)isNameStr
+-(BOOL)validateNameStr
 {
 	return [self isMatchedByRegex:@"^([A-Za-z]|[\u4E00-\u9FA5])+$"];
 };
 //验证邮箱
--(BOOL)isEmailAddress
+-(BOOL)validateEmailAddress
 {
     
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
@@ -297,4 +346,12 @@
     return [emailTest evaluateWithObject:self];
     
 }
+//验证是否是电话号码
+- (BOOL)validateCellPhone
+{
+	NSString *phoneRegex = @"((\\d{11})|^((\\d{7,8})|(\\d{4}|\\d{3})-(\\d{7,8})|(\\d{4}|\\d{3})-(\\d{7,8})-(\\d{4}|\\d{3}|\\d{2}|\\d{1})|(\\d{7,8})-(\\d{4}|\\d{3}|\\d{2}|\\d{1}))$)";
+	NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
+	return [phoneTest evaluateWithObject:self];
+}
+
 @end
