@@ -85,6 +85,8 @@
 		9647A070167F6C0100829C89 /* SEFilterKnob.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A06E167F6C0100829C89 /* SEFilterKnob.m */; };
 		9647A076167F6CA100829C89 /* HFSEFilterControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9647A074167F6CA100829C89 /* HFSEFilterControlViewController.m */; };
 		9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */; };
+		964EA23617040DF000A87D30 /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA23517040DF000A87D30 /* NSObject+HF.m */; };
+		964EA23717040DF000A87D30 /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA23517040DF000A87D30 /* NSObject+HF.m */; };
 		966082671702D4FA00E72B0A /* HFFastTopViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082651702D4FA00E72B0A /* HFFastTopViewViewController.m */; };
 		966082681702D4FA00E72B0A /* HFFastTopViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966082661702D4FA00E72B0A /* HFFastTopViewViewController.xib */; };
 		9660827E1702F0AF00E72B0A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660826A1702F0AF00E72B0A /* AFHTTPClient.m */; };
@@ -97,7 +99,6 @@
 		966082851702F0AF00E72B0A /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082791702F0AF00E72B0A /* AFURLConnectionOperation.m */; };
 		966082861702F0AF00E72B0A /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660827B1702F0AF00E72B0A /* AFXMLRequestOperation.m */; };
 		966082871702F0AF00E72B0A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660827D1702F0AF00E72B0A /* UIImageView+AFNetworking.m */; };
-		966082BD1703EB5000E72B0A /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082BC1703EB5000E72B0A /* NSObject+HF.m */; };
 		9665AF30166874BE005E4E8E /* loading05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2B166874BE005E4E8E /* loading05.png */; };
 		9665AF31166874BE005E4E8E /* loading04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2C166874BE005E4E8E /* loading04.png */; };
 		9665AF32166874BE005E4E8E /* loading03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9665AF2D166874BE005E4E8E /* loading03.png */; };
@@ -280,6 +281,8 @@
 		9647A073167F6CA100829C89 /* HFSEFilterControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSEFilterControlViewController.h; path = HFFrame/Example/HFSEFilterControlViewController.h; sourceTree = "<group>"; };
 		9647A074167F6CA100829C89 /* HFSEFilterControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSEFilterControlViewController.m; path = HFFrame/Example/HFSEFilterControlViewController.m; sourceTree = "<group>"; };
 		9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFSEFilterControlViewController.xib; path = HFFrame/Example/HFSEFilterControlViewController.xib; sourceTree = "<group>"; };
+		964EA23417040DF000A87D30 /* NSObject+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HF.h"; path = "GlobClass/Object+Additon/NSObject+HF.h"; sourceTree = SOURCE_ROOT; };
+		964EA23517040DF000A87D30 /* NSObject+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HF.m"; path = "GlobClass/Object+Additon/NSObject+HF.m"; sourceTree = SOURCE_ROOT; };
 		966082641702D4FA00E72B0A /* HFFastTopViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFFastTopViewViewController.h; path = HFFrame/Example/HFFastTopViewViewController.h; sourceTree = "<group>"; };
 		966082651702D4FA00E72B0A /* HFFastTopViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFFastTopViewViewController.m; path = HFFrame/Example/HFFastTopViewViewController.m; sourceTree = "<group>"; };
 		966082661702D4FA00E72B0A /* HFFastTopViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFFastTopViewViewController.xib; path = HFFrame/Example/HFFastTopViewViewController.xib; sourceTree = "<group>"; };
@@ -304,8 +307,6 @@
 		9660827B1702F0AF00E72B0A /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = GlobClass/AFNetworking/AFXMLRequestOperation.m; sourceTree = SOURCE_ROOT; };
 		9660827C1702F0AF00E72B0A /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.h"; sourceTree = SOURCE_ROOT; };
 		9660827D1702F0AF00E72B0A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = SOURCE_ROOT; };
-		966082BB1703EB5000E72B0A /* NSObject+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+HF.h"; path = "ObjectAdditon/NSObject+HF.h"; sourceTree = SOURCE_ROOT; };
-		966082BC1703EB5000E72B0A /* NSObject+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+HF.m"; path = "ObjectAdditon/NSObject+HF.m"; sourceTree = SOURCE_ROOT; };
 		9665AF2B166874BE005E4E8E /* loading05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading05.png; path = GlobClass/HFLoading/loading05.png; sourceTree = SOURCE_ROOT; };
 		9665AF2C166874BE005E4E8E /* loading04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading04.png; path = GlobClass/HFLoading/loading04.png; sourceTree = SOURCE_ROOT; };
 		9665AF2D166874BE005E4E8E /* loading03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loading03.png; path = GlobClass/HFLoading/loading03.png; sourceTree = SOURCE_ROOT; };
@@ -842,8 +843,8 @@
 		966082BA1703EB0800E72B0A /* Object+Addition */ = {
 			isa = PBXGroup;
 			children = (
-				966082BB1703EB5000E72B0A /* NSObject+HF.h */,
-				966082BC1703EB5000E72B0A /* NSObject+HF.m */,
+				964EA23417040DF000A87D30 /* NSObject+HF.h */,
+				964EA23517040DF000A87D30 /* NSObject+HF.m */,
 			);
 			name = "Object+Addition";
 			sourceTree = "<group>";
@@ -1411,7 +1412,7 @@
 				966082851702F0AF00E72B0A /* AFURLConnectionOperation.m in Sources */,
 				966082861702F0AF00E72B0A /* AFXMLRequestOperation.m in Sources */,
 				966082871702F0AF00E72B0A /* UIImageView+AFNetworking.m in Sources */,
-				966082BD1703EB5000E72B0A /* NSObject+HF.m in Sources */,
+				964EA23617040DF000A87D30 /* NSObject+HF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1429,6 +1430,7 @@
 				60390AE524CAD708675054A8 /* JTValidMappingKey.m in Sources */,
 				60390CA4F2C0A99205B4E2C6 /* NSObject+JTObjectMapping.m in Sources */,
 				962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */,
+				964EA23717040DF000A87D30 /* NSObject+HF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
