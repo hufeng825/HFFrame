@@ -18,6 +18,15 @@
     
     return self;
 }
+- (NSString*)encodeURL:(NSString *)string
+{
+	NSString *newString = [(NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)string, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)) autorelease];
+	if (newString) {
+		return newString;
+	}
+	return @"";
+}
+
 
 //非单例模式
 +(HFHttpRequest *)client
@@ -53,17 +62,18 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     if ([url gotChineseCount]>0)
     {
        urlStr = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        urlStr = [url URLencodeWithEncodingUTF8];
     }
     else
     {
         urlStr = url;
     }
-    
+
     /**
      Some nested parameter structures, such as a keyed array of hashes containing inconsistent keys (i.e. @{@"": @[@{@"a" : @(1)}, @{@"b" : @(2)}]}), cannot be unambiguously represented in query strings. It is strongly recommended that an unambiguous encoding, such as AFJSONParameterEncoding, is used when posting complicated or nondeterministic parameter structures
      **/
     [self setParameterEncoding:AFJSONParameterEncoding];
-    NSLog(@"url 输出 %@",urlStr);
+    NSLog(@"url 输出 %@",[urlStr description]);
     NSMutableURLRequest *request;
     if (method == GET)
     {
@@ -93,13 +103,14 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     [operation setDownloadProgressBlock:progressBlock];
     
    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html", nil]];
-    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
+//    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
     
     [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
     {
         NSLog(@"changed %d", status);
         //your code here
     }];
+    NSLog(@"opertation %@",[operation description]);
     [operation start];
 }
 

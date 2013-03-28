@@ -14,6 +14,7 @@
 #import "NSString+Additions.h"
 #import "UIViewAdditions.h"
 #import "UIImage+Extensions.h"
+#import "NSObject+HF.h"
 #import "Array.h"
 
 
