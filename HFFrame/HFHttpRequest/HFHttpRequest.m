@@ -56,7 +56,7 @@
 NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"param1", @"value2", @"param2", @"value3", @"param3", @"value4", @"param4", nil]
 */
 -(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
- sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon method:(HFRequestMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
+ sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFHttpMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
 {
     NSString *urlStr=nil;//如果含有中文或者全角字符 则进行UTF-8格式化
     if ([url gotChineseCount]>0)
@@ -73,13 +73,11 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
      Some nested parameter structures, such as a keyed array of hashes containing inconsistent keys (i.e. @{@"": @[@{@"a" : @(1)}, @{@"b" : @(2)}]}), cannot be unambiguously represented in query strings. It is strongly recommended that an unambiguous encoding, such as AFJSONParameterEncoding, is used when posting complicated or nondeterministic parameter structures
      **/
     [self setParameterEncoding:AFJSONParameterEncoding];
-    NSLog(@"url 输出 %@",[urlStr description]);
     NSMutableURLRequest *request;
-    if (method == GET)
+    if (method == GETHttpMethod)
     {
         request  = [self requestWithMethod:@"GET" path:urlStr
                     parameters:nil];
-
     }
     else
     {
@@ -92,29 +90,56 @@ NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"p
     //设置默认错误处理方式
     if (!failRespon)
     {
-        failRespon  = HFHttpFailResponClass
+        failRespon  = HFHttp_Fail_Respon
         {
             NSLog(@"%@",[error description]);
         };
     }
+    if (parameters)
+    {
+        NSLog(@"url 输出 %@?%@",urlStr,[self describeDictionary:parameters]);
+    }
+    else
+    {
+        NSLog(@"url 输出 %@",[urlStr description]);
+    }
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
     sucessRespon failure:failRespon];
     
+    NSLog(@"opertation %@",[operation description]);
+
     [operation setDownloadProgressBlock:progressBlock];
     
    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain",@"text/html", nil]];
 //    operation.JSONReadingOptions = NSJSONReadingAllowFragments;
-    
+    //设置网络状态切换模式
     [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status)
     {
         NSLog(@"changed %d", status);
         //your code here
     }];
-    NSLog(@"opertation %@",[operation description]);
+    
     [operation start];
 }
 
-
+- (NSString *) describeDictionary :(NSDictionary *)dict
+{    
+    NSArray *keys;
+    NSMutableString *parmURLStr = [NSMutableString string];
+    int i, count;
+    id key, value;
+    
+    keys = [dict allKeys];
+    count = [keys count];
+    for (i = 0; i < count; i++)
+    {
+        key = [keys objectAtIndex: i];
+        value = [dict objectForKey: key];
+//        NSLog (@"Key: %@ for value: %@", key, value);
+        [parmURLStr appendFormat:@"&%@=%@",key,value];
+    }
+    return parmURLStr;
+}
 
 -(id)initWithBaseURL:(NSURL *)url
 {
