@@ -21,12 +21,12 @@
 
 
 
-@property (nonatomic,retain) HFHttpRequest *hfClient;
 @property (nonatomic,retain) UILabel *titleLabel;//标题栏
+@property (nonatomic,retain) HFHttpRequest *hfClient;
 
+-(void)postUrl:(NSString*)url  parameters:(NSDictionary *)parameters sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
+-(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
 
--(void)postUrl:(NSString*)url  parameters:(NSDictionary *)parameters sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
--(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
 //返回上级页面 自行判断是mode 还是push 弹出来的
 -(void)goBack;
 @end

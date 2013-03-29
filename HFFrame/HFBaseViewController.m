@@ -19,28 +19,6 @@ bool ye =[email isMatchedByRegex:@""];
 #import "UIColor+Hex.h"
 
 
-//!!! 设置tab 样式
-static inline void setUITabBarStyle (UITabBarController *tabBar)
-{
-    for(UIView *view in tabBar.tabBar.subviews)
-    {
-        if([view isKindOfClass:[UIImageView class]])
-        {
-            [view removeFromSuperview];
-        }
-    }
-    UIImageView *imageView = [[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"teb.png"]]autorelease];
-    imageView.width = tabBar.tabBar.width;
-    imageView.height = tabBar.tabBar.height;
-    [tabBar.tabBar insertSubview:imageView  atIndex:0];
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5"))
-    {
-        [tabBar.tabBar setSelectedImageTintColor:[UIColor whiteColor]];
-        UIImage *img = [UIImage imageNamed:@"tab_bg.png"];
-        UIImage *img1 = [img imageByScalingToSize:CGSizeMake(imageView.width/[[tabBar viewControllers]count],imageView.height)];
-        [tabBar.tabBar setSelectionIndicatorImage:img1];
-    }
-}
 
 
 @interface HFBaseViewController ()
@@ -122,13 +100,7 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
    
 //    [[client operationQueue]cancelAllOperations];
 }
--(HFHttpRequest *)hfClient
-{
-    if (!hfClient) {
-        self.hfClient = [HFHttpRequest client];
-    }
-    return hfClient;
-}
+
 #pragma mark  - 返回上级页面
 -(void)goBack
 {
@@ -181,26 +153,38 @@ static inline void setUITabBarStyle (UITabBarController *tabBar)
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark  -  网络请求
+-(HFHttpRequest *)hfClient
+{
+    if (!hfClient) {
+        self.hfClient = [HFHttpRequest client];
+    }
+    return hfClient;
+}
+
+-(void)postUrl:(NSString*)url parameters:(NSDictionary *)parameters
+   sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock
+{
+    [self.hfClient Url:url  parameters:parameters sucessBlock:sucessRespon failBlock:failRespon method:POSTHttpMethod progressBlock:downloadProgressBlock] ;
+}
+
+-(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
+{
+    [self.hfClient Url:url  parameters:nil sucessBlock:sucessRespon failBlock:failRespon method:GETHttpMethod progressBlock:downloadProgressBlock];
+}
+
 
 - (void)dealloc
 {
+    
     [[hfClient operationQueue]cancelAllOperations];
+    RELEASE_SAFELY(hfClient);
+
     RELEASE_SAFELY(titleLabel);
-    RELEASE_CF_SAFELY(hfClient);
     [super dealloc];
 }
 
-//网络请求 
--(void)postUrl:(NSString*)url parameters:(NSDictionary *)parameters
- sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock
-{
-    [self.hfClient Url:url  parameters:parameters sucessBlock:sucessRespon failBlock:failRespon method:POST progressBlock:downloadProgressBlock] ;
-}
 
--(void)gettUrl:(NSString*)url sucessBlock:(HttpSucessRespon)sucessRespon failBlock:(HttpFailRespon)failRespon downloadProgressBlock:(HttpDownloadProgressBlock)downloadProgressBlock;
-{
-    [self.hfClient Url:url  parameters:nil sucessBlock:sucessRespon failBlock:failRespon method:GET progressBlock:downloadProgressBlock];
-}
 
 
 

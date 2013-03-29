@@ -20,6 +20,7 @@
 //    GHAssertNULL(str,nil);
 //    NSString *str1 = @"hufeng";
 //    GHAssertEqualObjects(str, str1, @"dddddd%@",str1);
+
 }
 
 -(void)testValidateTel

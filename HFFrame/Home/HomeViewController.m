@@ -70,20 +70,10 @@
     }
     
      self.nameArray = [NSMutableArray array];
-    
-    //[_tableView setEditing:YES animated:YES]; 设置显示编辑按钮
 
+    //[_tableView setEditing:YES animated:YES]; 设置显示编辑按钮
+    [HFStyle setUITabBarStyle:nil];
 }
-//-(void)btClick:(id)sender
-//{
-//    if([sender isKindOfClass:[HFButton class]])
-//    {
-//        //停止醒目提示
-////        [(HFButton*)sender stopWarningAnimation];
-//        NSLog(@"%@",bt.userInfo);
-//        [HFAnimation removeAllAnimation:sender];
-//    }
-//}
 
 #pragma mark -
 #pragma mark - UItableView delegate

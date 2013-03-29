@@ -87,6 +87,7 @@
 		9647A077167F6CA100829C89 /* HFSEFilterControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9647A075167F6CA100829C89 /* HFSEFilterControlViewController.xib */; };
 		964EA23617040DF000A87D30 /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA23517040DF000A87D30 /* NSObject+HF.m */; };
 		964EA23717040DF000A87D30 /* NSObject+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA23517040DF000A87D30 /* NSObject+HF.m */; };
+		964EA264170443FB00A87D30 /* HFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E517081632AFB300E7D20C /* HFHttpRequest.m */; };
 		966082671702D4FA00E72B0A /* HFFastTopViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966082651702D4FA00E72B0A /* HFFastTopViewViewController.m */; };
 		966082681702D4FA00E72B0A /* HFFastTopViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966082661702D4FA00E72B0A /* HFFastTopViewViewController.xib */; };
 		9660827E1702F0AF00E72B0A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660826A1702F0AF00E72B0A /* AFHTTPClient.m */; };
@@ -1431,6 +1432,7 @@
 				60390CA4F2C0A99205B4E2C6 /* NSObject+JTObjectMapping.m in Sources */,
 				962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */,
 				964EA23717040DF000A87D30 /* NSObject+HF.m in Sources */,
+				964EA264170443FB00A87D30 /* HFHttpRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

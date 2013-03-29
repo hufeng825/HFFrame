@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view from its nib.
     
     /***********************网络请求例子*****************************/
-    HttpSucessRespon sua = HFHttpSucessResponClass
+    HttpSucessResponBlock sua = HFHttp_Sucess_Respon
     {
         NSLog(@"json %@",[JSON class]);
         NSDictionary *dictmap = [NSDictionary dictionaryWithObjectsAndKeys:@"arrays" ,@"array", nil];

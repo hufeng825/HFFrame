@@ -32,8 +32,8 @@
     // Do any additional setup after loading the view from its nib.
     
     /***********************网络get请求例子*************************/
-    HttpSucessRespon su = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-//  HFHttpSucessResponClass
+    HttpSucessResponBlock su = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+//  HFHttp_Sucess_Respon
     {
         NSLog(@"json %@",[JSON class]);
         _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
@@ -48,16 +48,18 @@
     url = @"http://httpbin.org/post";
     /***********************网络post请求例子*************************/    
     
-    HttpSucessRespon sua = HFHttpSucessResponClass
+    HttpSucessResponBlock sua = HFHttp_Sucess_Respon
     {
         [HFLoadingView hideLoadingViewForView:self.view];
         NSLog(@"%@",JSON);
     };
     NSData *imageData = [[UIImage imageNamed:@"Default-568h@2x.png"]compressedData];
-    HttpDownloadProgressBlock progressBlock = HFHttpDownloadProgressBlock
+    HttpDownloadProgressBlock progressBlock = HFHttp_DownloadProgress
     {
-        int percentNum = (float)totalBytesRead/totalBytesExpectedToRead *10;
-        [HFLoadingView changeLoadingTextForView:self.view title:[ NSString stringWithFormat:@"%@%d0",@"%",percentNum]];
+        float percentNum = (float)totalBytesRead/totalBytesExpectedToRead ;
+        NSString *percentStr = [NSString stringWithFormat:@"%.0f",percentNum*100];
+        
+        [HFLoadingView changeLoadingTextForView:self.view title:[ NSString stringWithFormat:@"%@%@",percentStr,@"%"]];
     };
     [self postUrl:url parameters:[NSDictionary dictionaryWithObject:[imageData description]forKey:@"urlimage"] sucessBlock:sua failBlock:nil downloadProgressBlock:progressBlock];
 }

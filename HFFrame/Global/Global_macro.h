@@ -17,9 +17,24 @@
 #import "Array.h"
 #import "NSObject+HF.h"
 
+#pragma mark - shortcuts
+
+#define USER_DEFAULT [NSUserDefaults standardUserDefaults]
+
 
 //#ifdef QA
 # define NSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+
+#define CONSOLE_LOG_FILE_PREFIX @"console_log_"
+#define REDIRECT_CONSOLE_LOG() {\
+NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);\
+NSString *cachePath = [paths objectAtIndex:0];\
+NSString *dateString = [NSString stringWithFormat:@"%.0f",[[NSDate date] timeIntervalSince1970]];\
+NSString *fileName = [NSString stringWithFormat:@"%@%@.txt",CONSOLE_LOG_FILE_PREFIX,dateString];\
+NSString *logPath = [cachePath stringByAppendingPathComponent:fileName];\
+freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);\
+}
 
 //#else
 //# define NSLog(...){};
