@@ -9,6 +9,7 @@
 #import "DataEnvironment.h"
 #import "DataCacheManager.h"
 #import "SynthesizeSingleton.h"
+
 @interface DataEnvironment()
 - (void)restore;
 - (void)registerMemoryWarningNotification;
@@ -22,7 +23,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataEnvironment);
 
 - (void)dealloc
 {
-    RELEASE_SAFELY(_urlRequestHost);
+    [_urlRequestHost release];
+    _urlRequestHost = nil;
 	[super dealloc];
 }
 

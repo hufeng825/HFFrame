@@ -22,10 +22,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataCacheManager);
 #pragma mark - lifecycle methods
 - (void)dealloc
 {
-    RELEASE_SAFELY(_memoryCacheKeys);
-    RELEASE_SAFELY(_memoryCachedObjects);
-    RELEASE_SAFELY(_keys);
-    RELEASE_SAFELY(_cachedObjects);
+    [_memoryCacheKeys release];
+    _memoryCacheKeys = nil;
+    [_memoryCachedObjects release];
+    _memoryCachedObjects = nil;
+    [_keys release];
+    _keys = nil;
+    [_cachedObjects release];
+    _cachedObjects = nil;
     [super dealloc];
 }
 - (id)init
@@ -33,6 +37,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataCacheManager);
     self = [super init];
     if(self){
         [self registerMemoryWarningNotification];
+        _cachedObjects = [[NSMutableDictionary alloc] init];
+        _memoryCacheKeys = [[NSMutableArray alloc] init];
+        _memoryCachedObjects = [[NSMutableDictionary alloc] init];
+        _keys = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -61,15 +69,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataCacheManager);
 
 - (void)restore
 {
-    if ([USER_DEFAULT objectForKey:UD_KEY_DATA_CACHE_KEYS]) {
-        NSArray *keysArray = (NSArray*)[NSKeyedUnarchiver unarchiveObjectWithData:[USER_DEFAULT objectForKey:UD_KEY_DATA_CACHE_KEYS]];
+    if ([ [NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_DATA_CACHE_KEYS]) {
+        NSArray *keysArray = (NSArray*)[NSKeyedUnarchiver unarchiveObjectWithData:[ [NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_DATA_CACHE_KEYS]];
         _keys = [[NSMutableArray alloc] initWithArray:keysArray];
     }else{
         _keys = [[NSMutableArray alloc] init];
     }
     
-    if([USER_DEFAULT objectForKey:UD_KEY_DATA_CACHE_OBJECTS]){
-        NSDictionary *objDic = (NSDictionary*)[NSKeyedUnarchiver unarchiveObjectWithData:[USER_DEFAULT objectForKey:UD_KEY_DATA_CACHE_OBJECTS]];
+    if([ [NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_DATA_CACHE_OBJECTS]){
+        NSDictionary *objDic = (NSDictionary*)[NSKeyedUnarchiver unarchiveObjectWithData:[ [NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_DATA_CACHE_OBJECTS]];
         _cachedObjects = [[NSMutableDictionary alloc] initWithDictionary:objDic];
     }else{
         _cachedObjects = [[NSMutableDictionary alloc] init];
@@ -104,9 +112,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataCacheManager);
 
 - (void)doSave
 {
-    [USER_DEFAULT setObject:[NSKeyedArchiver archivedDataWithRootObject:_keys] forKey:UD_KEY_DATA_CACHE_KEYS];
-    [USER_DEFAULT setObject:[NSKeyedArchiver archivedDataWithRootObject:_cachedObjects] forKey:UD_KEY_DATA_CACHE_OBJECTS];
-    [USER_DEFAULT synchronize];
+    [ [NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:_keys] forKey:UD_KEY_DATA_CACHE_KEYS];
+    [ [NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:_cachedObjects] forKey:UD_KEY_DATA_CACHE_OBJECTS];
+    [ [NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)clearAllCache

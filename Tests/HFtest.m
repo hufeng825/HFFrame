@@ -9,8 +9,27 @@
 #import "HFtest.h"
 #import "Array.h"
 #import "NSString+Additions.h"
+#import "DataCacheManager.h"
+
+
+
 @implementation HFtest
 
+-(void)testDateCacheManagerGetKey
+{
+    GHTestLog(@"%@",[[DataCacheManager sharedDataCacheManager] getCachedObjectByKey:@"test"]);
+}
+-(void)testDateCacheManagerSave
+{
+    [[DataCacheManager sharedDataCacheManager] addObject:@"value" forKey:@"test"];
+    GHTestLog(@"%@",[[DataCacheManager sharedDataCacheManager] getCachedObjectByKey:@"test"]);
+}
+
+-(void)testDateCacheManagerRemove
+{
+    [[DataCacheManager sharedDataCacheManager] removeObjectInCacheByKey:@"test"];
+    GHTestLog(@"%@",[[DataCacheManager sharedDataCacheManager] getCachedObjectByKey:@"test"]);
+}
 -(void)testString
 {
        //arrary 数组去重复
@@ -22,6 +41,8 @@
 //    GHAssertEqualObjects(str, str1, @"dddddd%@",str1);
 
 }
+
+
 
 -(void)testValidateTel
 {
