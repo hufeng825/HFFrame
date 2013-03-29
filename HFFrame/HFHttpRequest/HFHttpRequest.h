@@ -25,7 +25,7 @@ typedef enum
 {
     POSTHttpMethod,
     GETHttpMethod
-}HFRequestMethod ;
+}HFHttpMethod ;
 
 @interface HFHttpRequest : AFHTTPClient
 {
@@ -33,5 +33,5 @@ typedef enum
 
 +(HFHttpRequest *)sharedClient;
 +(HFHttpRequest *)client;
--(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFRequestMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock;
+-(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFHttpMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock;
 @end

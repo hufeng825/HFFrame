@@ -56,7 +56,7 @@
 NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"param1", @"value2", @"param2", @"value3", @"param3", @"value4", @"param4", nil]
 */
 -(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
- sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFRequestMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
+ sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFHttpMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
 {
     NSString *urlStr=nil;//如果含有中文或者全角字符 则进行UTF-8格式化
     if ([url gotChineseCount]>0)
