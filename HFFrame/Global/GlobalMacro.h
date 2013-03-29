@@ -14,27 +14,13 @@
 #import "NSString+Additions.h"
 #import "UIViewAdditions.h"
 #import "UIImage+Extensions.h"
-#import "Array.h"
 #import "NSObject+HF.h"
-
-#pragma mark - shortcuts
+#import "Array.h"
 
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 
-
 //#ifdef QA
 # define NSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
-
-
-#define CONSOLE_LOG_FILE_PREFIX @"console_log_"
-#define REDIRECT_CONSOLE_LOG() {\
-NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);\
-NSString *cachePath = [paths objectAtIndex:0];\
-NSString *dateString = [NSString stringWithFormat:@"%.0f",[[NSDate date] timeIntervalSince1970]];\
-NSString *fileName = [NSString stringWithFormat:@"%@%@.txt",CONSOLE_LOG_FILE_PREFIX,dateString];\
-NSString *logPath = [cachePath stringByAppendingPathComponent:fileName];\
-freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);\
-}
 
 //#else
 //# define NSLog(...){};
@@ -52,10 +38,10 @@ freopen([logPath cStringUsingEncoding:NSASCIIStringEncoding],"a+",stderr);\
 #define HFAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]
 
 //判断是否越狱
-#define ISJailBreak system("ls") == 0 ? YES:NO
+#define IS_JailBreak system("ls") == 0 ? YES:NO
 
 //判断是否是iphone5
-#define IsIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define Is_IPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
 //机器语言

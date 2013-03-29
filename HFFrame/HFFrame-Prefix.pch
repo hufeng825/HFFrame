@@ -12,5 +12,5 @@
 	#import <UIKit/UIKit.h>
     #import <SystemConfiguration/SystemConfiguration.h>
 	#import <Foundation/Foundation.h>
-    #import"Global_macro.h"
+    #import "GlobalMacro.h"
 #endif

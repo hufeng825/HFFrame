@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 jason. All rights reserved.
 //
 
-#import "Global_macro.h"
+#import "GlobalMacro.h"
 #import "HFInfoView.h"
 BOOL TTIsStringWithAnyText(id object) {
     return [object isKindOfClass:[NSString class]]&& [(NSString*)object length] > 0 && object !=nil ;}

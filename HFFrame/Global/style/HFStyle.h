@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UILabel.h>
 @interface HFStyle : NSObject
-+(void) setUITabBarStyle: (UITabBarController *)tabBar;
+
 @end
 
 @interface HFNavigationBar : UINavigationBar
