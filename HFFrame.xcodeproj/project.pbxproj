@@ -52,6 +52,8 @@
 		964EA259170410A900A87D30 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA24C1704102E00A87D30 /* AFURLConnectionOperation.m */; };
 		964EA25A170410AB00A87D30 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA24E1704102E00A87D30 /* AFXMLRequestOperation.m */; };
 		964EA25B170410B300A87D30 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA2501704102E00A87D30 /* UIImageView+AFNetworking.m */; };
+		964EA286170585C000A87D30 /* DataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA283170585C000A87D30 /* DataCacheManager.m */; };
+		964EA287170585C000A87D30 /* DataEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA285170585C000A87D30 /* DataEnvironment.m */; };
 		9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674479E169E940F00A8341A /* GHUnitIOS.framework */; };
 		967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22C316835DF100DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
@@ -178,6 +180,10 @@
 		964EA24E1704102E00A87D30 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = GlobClass/AFNetworking/AFXMLRequestOperation.m; sourceTree = SOURCE_ROOT; };
 		964EA24F1704102E00A87D30 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.h"; sourceTree = SOURCE_ROOT; };
 		964EA2501704102E00A87D30 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "GlobClass/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = SOURCE_ROOT; };
+		964EA282170585C000A87D30 /* DataCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataCacheManager.h; path = GlobClass/DataCacheManager/DataCacheManager.h; sourceTree = SOURCE_ROOT; };
+		964EA283170585C000A87D30 /* DataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataCacheManager.m; path = GlobClass/DataCacheManager/DataCacheManager.m; sourceTree = SOURCE_ROOT; };
+		964EA284170585C000A87D30 /* DataEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEnvironment.h; path = GlobClass/DataCacheManager/DataEnvironment.h; sourceTree = SOURCE_ROOT; };
+		964EA285170585C000A87D30 /* DataEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataEnvironment.m; path = GlobClass/DataCacheManager/DataEnvironment.m; sourceTree = SOURCE_ROOT; };
 		9674479E169E940F00A8341A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		967D22C216835DF100DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
 		967D22C316835DF100DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
@@ -479,6 +485,17 @@
 			path = "GlobClass/Object+Additon";
 			sourceTree = SOURCE_ROOT;
 		};
+		964EA2811705857600A87D30 /* DataCachManager */ = {
+			isa = PBXGroup;
+			children = (
+				964EA282170585C000A87D30 /* DataCacheManager.h */,
+				964EA283170585C000A87D30 /* DataCacheManager.m */,
+				964EA284170585C000A87D30 /* DataEnvironment.h */,
+				964EA285170585C000A87D30 /* DataEnvironment.m */,
+			);
+			name = DataCachManager;
+			sourceTree = "<group>";
+		};
 		96876D70164BA44200406C92 /* NSString+Additions包含判断格式化 */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +549,7 @@
 		96876D8F164C041700406C92 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				964EA2811705857600A87D30 /* DataCachManager */,
 				964EA23817040E6B00A87D30 /* Object+Additon */,
 				9642481216BFBEB70016D3A2 /* HFPickerView */,
 				964247C616BBA2760016D3A2 /* SearchCore */,
@@ -866,6 +884,8 @@
 				964EA259170410A900A87D30 /* AFURLConnectionOperation.m in Sources */,
 				964EA25A170410AB00A87D30 /* AFXMLRequestOperation.m in Sources */,
 				964EA25B170410B300A87D30 /* UIImageView+AFNetworking.m in Sources */,
+				964EA286170585C000A87D30 /* DataCacheManager.m in Sources */,
+				964EA287170585C000A87D30 /* DataEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
