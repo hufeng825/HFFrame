@@ -54,12 +54,13 @@
 		964EA25B170410B300A87D30 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA2501704102E00A87D30 /* UIImageView+AFNetworking.m */; };
 		964EA286170585C000A87D30 /* DataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA283170585C000A87D30 /* DataCacheManager.m */; };
 		964EA287170585C000A87D30 /* DataEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA285170585C000A87D30 /* DataEnvironment.m */; };
+		964EA28A17058B9F00A87D30 /* GobalPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA28917058B9F00A87D30 /* GobalPaths.m */; };
 		9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674479E169E940F00A8341A /* GHUnitIOS.framework */; };
 		967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22C316835DF100DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
 		96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7B164BB8B100406C92 /* UIImage+Extensions.m */; };
 		96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D7F164BBBB800406C92 /* UIViewAdditions.m */; };
-		96876D84164BCAD000406C92 /* Global_macro.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D83164BCAD000406C92 /* Global_macro.m */; };
+		96876D84164BCAD000406C92 /* GlobalMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D83164BCAD000406C92 /* GlobalMacro.m */; };
 		96876D93164C048600406C92 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D91164C048500406C92 /* HomeViewController.m */; };
 		96876D94164C048600406C92 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96876D92164C048500406C92 /* HomeViewController.xib */; };
 		969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969340231656110B00F1BDC1 /* iflyMSC.framework */; };
@@ -184,6 +185,8 @@
 		964EA283170585C000A87D30 /* DataCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataCacheManager.m; path = GlobClass/DataCacheManager/DataCacheManager.m; sourceTree = SOURCE_ROOT; };
 		964EA284170585C000A87D30 /* DataEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEnvironment.h; path = GlobClass/DataCacheManager/DataEnvironment.h; sourceTree = SOURCE_ROOT; };
 		964EA285170585C000A87D30 /* DataEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataEnvironment.m; path = GlobClass/DataCacheManager/DataEnvironment.m; sourceTree = SOURCE_ROOT; };
+		964EA28817058B9E00A87D30 /* GobalPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GobalPaths.h; path = Global/GobalPaths.h; sourceTree = "<group>"; };
+		964EA28917058B9F00A87D30 /* GobalPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GobalPaths.m; path = Global/GobalPaths.m; sourceTree = "<group>"; };
 		9674479E169E940F00A8341A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		967D22C216835DF100DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
 		967D22C316835DF100DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
@@ -193,8 +196,8 @@
 		96876D7B164BB8B100406C92 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
 		96876D7E164BBBB800406C92 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		96876D7F164BBBB800406C92 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
-		96876D82164BCAD000406C92 /* Global_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global_macro.h; path = Global/Global_macro.h; sourceTree = "<group>"; };
-		96876D83164BCAD000406C92 /* Global_macro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global_macro.m; path = Global/Global_macro.m; sourceTree = "<group>"; };
+		96876D82164BCAD000406C92 /* GlobalMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalMacro.h; path = Global/GlobalMacro.h; sourceTree = "<group>"; };
+		96876D83164BCAD000406C92 /* GlobalMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalMacro.m; path = Global/GlobalMacro.m; sourceTree = "<group>"; };
 		96876D90164C048400406C92 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		96876D91164C048500406C92 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		96876D92164C048500406C92 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
@@ -540,8 +543,10 @@
 			isa = PBXGroup;
 			children = (
 				960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */,
-				96876D82164BCAD000406C92 /* Global_macro.h */,
-				96876D83164BCAD000406C92 /* Global_macro.m */,
+				964EA28817058B9E00A87D30 /* GobalPaths.h */,
+				964EA28917058B9F00A87D30 /* GobalPaths.m */,
+				96876D82164BCAD000406C92 /* GlobalMacro.h */,
+				96876D83164BCAD000406C92 /* GlobalMacro.m */,
 			);
 			name = "全局变量";
 			sourceTree = "<group>";
@@ -839,7 +844,7 @@
 				96876D76164BA44200406C92 /* NSString+Additions.m in Sources */,
 				96876D7C164BB8B100406C92 /* UIImage+Extensions.m in Sources */,
 				96876D80164BBBB800406C92 /* UIViewAdditions.m in Sources */,
-				96876D84164BCAD000406C92 /* Global_macro.m in Sources */,
+				96876D84164BCAD000406C92 /* GlobalMacro.m in Sources */,
 				96876D93164C048600406C92 /* HomeViewController.m in Sources */,
 				96FC7425164CF8CE005ACABC /* MKAnnotationView+WebCache.m in Sources */,
 				96FC7426164CF8CE005ACABC /* SDImageCache.m in Sources */,
@@ -886,6 +891,7 @@
 				964EA25B170410B300A87D30 /* UIImageView+AFNetworking.m in Sources */,
 				964EA286170585C000A87D30 /* DataCacheManager.m in Sources */,
 				964EA287170585C000A87D30 /* DataEnvironment.m in Sources */,
+				964EA28A17058B9F00A87D30 /* GobalPaths.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
