@@ -8,8 +8,33 @@
 
 #import "HFStyle.h"
 #import "UIColor+Hex.h"
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
 @implementation HFStyle
 
++(void)setUITabBarStyle:(UITabBarController *)tabBar
+{
+    for(UIView *view in tabBar.tabBar.subviews)
+    {
+        if([view isKindOfClass:[UIImageView class]])
+        {
+            [view removeFromSuperview];
+        }
+    }
+    UIImageView *imageView = [[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"teb.png"]]autorelease];
+    imageView.width = tabBar.tabBar.width;
+    imageView.height = tabBar.tabBar.height;
+    [tabBar.tabBar insertSubview:imageView  atIndex:0];
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5"))
+    {
+        [tabBar.tabBar setSelectedImageTintColor:[UIColor whiteColor]];
+        UIImage *img = [UIImage imageNamed:@"tab_bg.png"];
+        UIImage *img1 = [img imageByScalingToSize:CGSizeMake(imageView.width/[[tabBar viewControllers]count],imageView.height)];
+        
+        [tabBar.tabBar setSelectionIndicatorImage:img1];
+    }
+}
 @end
 /*
  设置uitabr 样式
