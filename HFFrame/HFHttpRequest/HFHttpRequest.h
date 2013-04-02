@@ -10,10 +10,24 @@
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
 
-
+/////////////////////////////////////
 #define HFHttp_Sucess_Respon  ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
 #define HFHttp_Fail_Respon ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+/*
+ * HFHttp_DownloadProgress 用法举例
+ HFHttp_DownloadProgress
+ {
+  float percentNum = (float)totalBytesRead/totalBytesExpectedToRead ;
+ NSString *percentStr = [NSString stringWithFormat:@"%.0f",percentNum*100];
+ 
+ [HFLoadingView changeLoadingTextForView:self.view title:[ NSString stringWithFormat:@"%@%@",percentStr,@"%"]];
+ }
+ */
+
 #define HFHttp_DownloadProgress ^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead)
+/////////////////////////////////////
+
+
 
 typedef  void(^HttpSucessResponBlock)(NSURLRequest *request, NSHTTPURLResponse *response, id JSON);
 

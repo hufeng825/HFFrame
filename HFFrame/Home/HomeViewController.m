@@ -296,10 +296,12 @@
         {
             [self funcFromeString:@"HFObjectMapViewController" index:row];
         }
+            break;
         case 20:
         {
             [self funcFromeString:@"HFPickerExampleViewController" index:row];
         }
+            break;
         case 21:
         {
             [self funcFromeString:@"HFFastTopViewViewController" index:row];
