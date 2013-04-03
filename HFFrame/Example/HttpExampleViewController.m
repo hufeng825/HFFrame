@@ -40,9 +40,15 @@
         [HFLoadingView hideLoadingViewForView:self.view];
     };
     
+    
+    HttpFailResponBlock failBlock = HFHttp_Fail_Respon
+    {
+        HFAlert(@"%@",[error description]);
+    };
+    
     NSString *url = @"http://9snow.org/weather/api?city=北京";
     NSLog(@"%d",[url gotChineseCount]);
-   [self gettUrl:url sucessBlock:su failBlock:nil downloadProgressBlock:nil];
+   [self gettUrl:url sucessBlock:su failBlock:failBlock downloadProgressBlock:nil];
     
     
     url = @"http://httpbin.org/post";
