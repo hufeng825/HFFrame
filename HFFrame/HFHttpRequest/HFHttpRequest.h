@@ -44,7 +44,7 @@ typedef enum
 @interface HFHttpRequest : AFHTTPClient
 {
 }
-
+@property (nonatomic,copy) NSMutableDictionary *operationDict;
 +(HFHttpRequest *)sharedClient;
 +(HFHttpRequest *)client;
 

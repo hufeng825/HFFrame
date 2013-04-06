@@ -177,7 +177,7 @@ bool ye =[email isMatchedByRegex:@""];
 - (void)dealloc
 {
     
-    [[hfClient operationQueue]cancelAllOperations];
+    //[[hfClient operationQueue]cancelAllOperations];
     RELEASE_SAFELY(hfClient);
 
     RELEASE_SAFELY(titleLabel);

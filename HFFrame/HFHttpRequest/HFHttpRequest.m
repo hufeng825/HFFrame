@@ -7,13 +7,14 @@
 //
 #import "HFHttpRequest.h"
 @implementation HFHttpRequest
-//@synthesize sucessRespon;
+@synthesize operationDict;
 - (id)init
 {
     self = [super init];
     if (self)
     {
         // Initialization code here.
+        operationDict = [[NSMutableDictionary alloc]init];
     }
     
     return self;
@@ -92,9 +93,17 @@
          //your code here
      }];
 }
-#pragma mark - 错误处理
-- (HttpFailResponBlock )failResponHandling:(HttpFailResponBlock)failRespon
+#pragma mark - 将operate 从字典中移除
+- (void) removeHashFromDict :(NSInteger) hasNum
 {
+    [self.operationDict removeObjectForKey:[NSString stringWithFormat:@"%d",hasNum] ];
+}
+
+#pragma mark - 错误处理
+- (HttpFailResponBlock )failResponHandling:(HttpFailResponBlock)failRespon hashNum:(NSUInteger) hasNum
+
+{
+    [self removeHashFromDict:hasNum];
     //如果用户传入nil 则进入下面调用默认的错误处理
     if (!failRespon)
     {
@@ -106,6 +115,14 @@
     }
     return failRespon;
 }
+
+#pragma mark - 成功处理
+-(HttpSucessResponBlock)sucessHandling:(HttpSucessResponBlock)sucessRespon hashNum:(NSUInteger) hasNum
+{
+    [self removeHashFromDict:hasNum];
+    return sucessRespon;
+}
+
 - (NSMutableURLRequest *)requestWithMethod:(HFHttpMethod)method
                                       url:(NSString *)path
                                 parameters:(NSDictionary *)parameters
@@ -125,23 +142,30 @@
     }
     return request;
 }
+
 /* post 参数
  NSDictionary *params = [NSDictionarydictionaryWithObjectsAndKeys: @"value1", @"param1", @"value2", @"param2", @"value3", @"param3", @"value4", @"param4", nil]
  */
+
 -(void)Url:(NSString*)url  parameters:(NSDictionary *)parameters
 sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)failRespon method:(HFHttpMethod)method progressBlock:(HttpDownloadProgressBlock)progressBlock
 {
     NSString *urlStr = [self formatUrlStr:url];
     [self setParameterEncoding:AFJSONParameterEncoding];
     NSMutableURLRequest *request = [self requestWithMethod:method url:urlStr parameters:parameters];
+    NSUInteger hashNum = [request hash];
     //设置错误处理
-    failRespon = [self failResponHandling:failRespon];
+    failRespon = [self failResponHandling:failRespon hashNum:hashNum];
+    sucessRespon = [self sucessHandling:sucessRespon hashNum:hashNum];
+    
     //设置超时时间
     [request setTimeoutInterval:30];
     //打印url 
     [self logUrl:urlStr parameters:parameters];
+    
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
                                          sucessRespon failure:failRespon];
+    [self.operationDict setObject:operation forKey:[NSString stringWithFormat:@"%u",hashNum]];
     //打印下载百分比    
     [operation setDownloadProgressBlock:progressBlock];
     //设置网络状态改变
@@ -182,9 +206,12 @@ sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)f
     return self;
 }
 
+
 - (void)dealloc
 {
     //    RELEASE_SAFELY(sucessRespon);
+    [operationDict release];
+    [[self operationQueue] cancelAllOperations];
     [super dealloc];
 }
 @end
