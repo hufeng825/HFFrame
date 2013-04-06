@@ -57,6 +57,8 @@
     HttpSucessResponBlock sua = HFHttp_Sucess_Respon
     {
         [HFLoadingView hideLoadingViewForView:self.view];
+        _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
+
         NSLog(@"%@",JSON);
     };
     NSData *imageData = [[UIImage imageNamed:@"Default-568h@2x.png"]compressedData];
