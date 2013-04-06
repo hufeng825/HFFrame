@@ -165,7 +165,7 @@ sucessBlock:(HttpSucessResponBlock)sucessRespon failBlock:(HttpFailResponBlock)f
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:
                                          sucessRespon failure:failRespon];
-    //[self.operationDict setObject:operation forKey:[NSString stringWithFormat:@"%u",hashNum]];
+    [self.operationDict setObject:operation forKey:[NSString stringWithFormat:@"%u",hashNum]];
     //打印下载百分比    
     [operation setDownloadProgressBlock:progressBlock];
     //设置网络状态改变
