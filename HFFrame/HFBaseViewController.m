@@ -33,7 +33,8 @@ bool ye =[email isMatchedByRegex:@""];
 
 - (id)init
 {
-    self = [super init];
+//    self = [super init];
+    [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
     if (self) {
     }
     

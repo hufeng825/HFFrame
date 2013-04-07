@@ -31,6 +31,8 @@
 		960DAB52166C6A1500303ECC /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB4E166C6A1500303ECC /* UIActionSheet+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB53166C6A1500303ECC /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB50166C6A1500303ECC /* UIAlertView+Blocks.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		960DAB57166C6B3A00303ECC /* HFSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */; };
+		960EA3E617110EAC007B9C9A /* HFXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3E317110EAC007B9C9A /* HFXibView.m */; };
+		960EA3E717110EAC007B9C9A /* HFXibViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3E517110EAC007B9C9A /* HFXibViewUtils.m */; };
 		962C0AF81682CF19002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AF71682CF19002C9992 /* NSTimer+pause.m */; };
 		96352B7316632338001926B9 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 96352B7116632338001926B9 /* UIView+Screenshot.m */; };
 		964247CE16BBA2760016D3A2 /* Array.mm in Sources */ = {isa = PBXBuildFile; fileRef = 964247C816BBA2760016D3A2 /* Array.mm */; };
@@ -137,6 +139,10 @@
 		960DAB55166C6B3A00303ECC /* HFSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFSegmentedControl.h; path = GlobClass/HFSegmentedControl/HFSegmentedControl.h; sourceTree = SOURCE_ROOT; };
 		960DAB56166C6B3A00303ECC /* HFSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFSegmentedControl.m; path = GlobClass/HFSegmentedControl/HFSegmentedControl.m; sourceTree = SOURCE_ROOT; };
 		960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = Global/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		960EA3E217110EAC007B9C9A /* HFXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXibView.h; sourceTree = "<group>"; };
+		960EA3E317110EAC007B9C9A /* HFXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibView.m; sourceTree = "<group>"; };
+		960EA3E417110EAC007B9C9A /* HFXibViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXibViewUtils.h; sourceTree = "<group>"; };
+		960EA3E517110EAC007B9C9A /* HFXibViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibViewUtils.m; sourceTree = "<group>"; };
 		962C0AF61682CF19002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+pause.h"; sourceTree = "<group>"; };
 		962C0AF71682CF19002C9992 /* NSTimer+pause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+pause.m"; sourceTree = "<group>"; };
 		96352B7116632338001926B9 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "GlobClass/UIViewScreenShot/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
@@ -411,6 +417,18 @@
 			name = HFSegmentedControl;
 			sourceTree = "<group>";
 		};
+		960EA3E117110EAC007B9C9A /* XIBUtils */ = {
+			isa = PBXGroup;
+			children = (
+				960EA3E217110EAC007B9C9A /* HFXibView.h */,
+				960EA3E317110EAC007B9C9A /* HFXibView.m */,
+				960EA3E417110EAC007B9C9A /* HFXibViewUtils.h */,
+				960EA3E517110EAC007B9C9A /* HFXibViewUtils.m */,
+			);
+			name = XIBUtils;
+			path = Global/XIBUtils;
+			sourceTree = "<group>";
+		};
 		962C0AF51682CF19002C9992 /* NSTimer */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +560,7 @@
 		96876D81164BCA5100406C92 /* 全局变量 */ = {
 			isa = PBXGroup;
 			children = (
+				960EA3E117110EAC007B9C9A /* XIBUtils */,
 				960DAB8D166CA18F00303ECC /* SynthesizeSingleton.h */,
 				964EA28817058B9E00A87D30 /* GobalPaths.h */,
 				964EA28917058B9F00A87D30 /* GobalPaths.m */,
@@ -892,6 +911,8 @@
 				964EA286170585C000A87D30 /* DataCacheManager.m in Sources */,
 				964EA287170585C000A87D30 /* DataEnvironment.m in Sources */,
 				964EA28A17058B9F00A87D30 /* GobalPaths.m in Sources */,
+				960EA3E617110EAC007B9C9A /* HFXibView.m in Sources */,
+				960EA3E717110EAC007B9C9A /* HFXibViewUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

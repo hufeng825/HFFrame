@@ -1,10 +1,4 @@
-//
-//  ITTGobalPaths.h
-//  iTotemFrame
-//
-//  Created by jian jin on 8/23/11.
-//  Copyright 2011 caixin. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 

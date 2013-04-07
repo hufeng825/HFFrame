@@ -1,9 +1,3 @@
-//
-//  HFGobalPaths.m
-//
-//  Created by jian jin on 8/23/11.
-//  Copyright 2011 caixin. All rights reserved.
-//
 
 
 static NSBundle* globalBundle = nil;
