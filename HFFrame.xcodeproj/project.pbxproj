@@ -60,6 +60,7 @@
 		960EA3DE17110980007B9C9A /* HFXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DA17110980007B9C9A /* HFXibView.m */; };
 		960EA3DF17110980007B9C9A /* HFXibViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DC17110980007B9C9A /* HFXibViewUtils.m */; };
 		960EA3E017110980007B9C9A /* HFXibViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DC17110980007B9C9A /* HFXibViewUtils.m */; };
+		960EA3EE171144A6007B9C9A /* HFDataEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3ED171144A6007B9C9A /* HFDataEnvironment.m */; };
 		9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */; };
 		962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */; };
 		962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
@@ -249,6 +250,8 @@
 		960EA3DA17110980007B9C9A /* HFXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibView.m; sourceTree = "<group>"; };
 		960EA3DB17110980007B9C9A /* HFXibViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXibViewUtils.h; sourceTree = "<group>"; };
 		960EA3DC17110980007B9C9A /* HFXibViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibViewUtils.m; sourceTree = "<group>"; };
+		960EA3EC171144A6007B9C9A /* HFDataEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFDataEnvironment.h; path = Global/DataEnvironment/HFDataEnvironment.h; sourceTree = "<group>"; };
+		960EA3ED171144A6007B9C9A /* HFDataEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFDataEnvironment.m; path = Global/DataEnvironment/HFDataEnvironment.m; sourceTree = "<group>"; };
 		9624A0501676F07000B8A816 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		962C0AED1682CDCD002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+pause.h"; path = "GlobClass/NSTimer/NSTimer+pause.h"; sourceTree = SOURCE_ROOT; };
@@ -530,9 +533,8 @@
 		1848AF1B16328FD800AD42B6 /* HFFrame */ = {
 			isa = PBXGroup;
 			children = (
-				969D909A1658A9A500A382B2 /* style */,
 				96876D8F164C041700406C92 /* Class */,
-				96876D81164BCA5100406C92 /* 全局参数 */,
+				96876D81164BCA5100406C92 /* Common */,
 				96E517021632AF3200E7D20C /* HFHTTP */,
 				96876D78164BB66D00406C92 /* BaseViewController */,
 				1848AF2416328FD800AD42B6 /* HFAppDelegate.h */,
@@ -686,6 +688,15 @@
 			);
 			name = XIBUtils;
 			path = Global/XIBUtils;
+			sourceTree = "<group>";
+		};
+		960EA3E817114433007B9C9A /* DateEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				960EA3EC171144A6007B9C9A /* HFDataEnvironment.h */,
+				960EA3ED171144A6007B9C9A /* HFDataEnvironment.m */,
+			);
+			name = DateEnvironment;
 			sourceTree = "<group>";
 		};
 		962C0ADF1682C71E002C9992 /* NSTimer  添加暂停恢复 */ = {
@@ -973,9 +984,11 @@
 			path = GlobClass/UIViewAddition;
 			sourceTree = SOURCE_ROOT;
 		};
-		96876D81164BCA5100406C92 /* 全局参数 */ = {
+		96876D81164BCA5100406C92 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				960EA3E817114433007B9C9A /* DateEnvironment */,
+				969D909A1658A9A500A382B2 /* style */,
 				960EA3D817110980007B9C9A /* XIBUtils */,
 				960EA3D41711068F007B9C9A /* GobalPaths.h */,
 				960EA3D51711068F007B9C9A /* GobalPaths.m */,
@@ -983,7 +996,7 @@
 				96876D82164BCAD000406C92 /* GlobalMacro.h */,
 				96876D83164BCAD000406C92 /* GlobalMacro.m */,
 			);
-			name = "全局参数";
+			name = Common;
 			sourceTree = "<group>";
 		};
 		96876D8F164C041700406C92 /* Class */ = {
@@ -1467,6 +1480,7 @@
 				960EA3D61711068F007B9C9A /* GobalPaths.m in Sources */,
 				960EA3DD17110980007B9C9A /* HFXibView.m in Sources */,
 				960EA3DF17110980007B9C9A /* HFXibViewUtils.m in Sources */,
+				960EA3EE171144A6007B9C9A /* HFDataEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
