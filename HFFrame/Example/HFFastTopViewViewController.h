@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "HFBaseViewController.h"
+typedef enum ScrollDirection {
+    ScrollDirectionNone,
+    ScrollDirectionRight,
+    ScrollDirectionLeft,
+    ScrollDirectionUp,
+    ScrollDirectionDown,
+    ScrollDirectionCrazy,
+} ScrollDirection;
+
 @interface HFFastTopViewViewController : HFBaseViewController
 {
     CGPoint lastOffset;

@@ -82,8 +82,8 @@ bool ye =[email isMatchedByRegex:@""];
 /*------------------------------------------
  *隐藏tabbar
  ------------------------------------------*/
-- (void) hideTabBar:(BOOL) hidden{
-    
+- (void) hideTabBar:(BOOL) hidden
+{    
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0];
     UIView *window = [UIApplication sharedApplication].keyWindow;

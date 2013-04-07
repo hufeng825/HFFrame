@@ -29,4 +29,5 @@
 
 //返回上级页面 自行判断是mode 还是push 弹出来的
 -(void)goBack;
+- (void) hideTabBar:(BOOL) hidden;
 @end

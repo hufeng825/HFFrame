@@ -54,7 +54,8 @@
             
             CGFloat scrollSpeed = /*fabsf*/(scrollSpeedNotAbs);
             NSLog(@"~~~~~%f",scrollSpeed);
-            if (scrollSpeed < -8) {
+            if (scrollSpeed < -7.5)
+            {
                 //            isScrollingFast = YES;
                 NSLog(@"Fast");
                 [self.bgScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
@@ -62,11 +63,21 @@
                 //            isScrollingFast = NO;
                 NSLog(@"Slow");
             }
-            
+            ScrollDirection scrollDirection;
+            if (lastOffset.y > scrollView.contentOffset.y)
+                scrollDirection = ScrollDirectionUp;
+            else scrollDirection = ScrollDirectionDown;
+            if (scrollDirection == ScrollDirectionDown)
+            {
+                [self hideTabBar:NO];
+            }
+            else
+            {
+                [self hideTabBar:YES];
+            }
             lastOffset = currentOffset;
             lastOffsetCapture = currentTime;
         }
-
     }
 }
 - (void)didReceiveMemoryWarning

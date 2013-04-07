@@ -17,7 +17,7 @@
 #import "NSObject+HF.h"
 #import "Array.h"
 
-#define DATA_ENV [DataEnvironment sharedDataEnvironment]
+#define DATA_ENV [HFDataEnvironment sharedDataEnvironment]
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 
 //#ifdef QA
