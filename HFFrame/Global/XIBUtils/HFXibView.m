@@ -1,11 +1,11 @@
 
 #import "HFXibView.h"
-#import "ITTXibViewUtils.h"
+#import "HFXibViewUtils.h"
 
 @implementation HFXibView
 
 + (id)loadFromXib
 {
-    return [ITTXibViewUtils loadViewFromXibNamed:NSStringFromClass([self class])];
+    return [HFXibViewUtils loadViewFromXibNamed:NSStringFromClass([self class])];
 }
 @end

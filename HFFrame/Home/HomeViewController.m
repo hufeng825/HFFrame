@@ -181,7 +181,8 @@
 #pragma mark -
 -(void)funcFromeString:(NSString*)str index:(NSInteger)index
 {
-    id vc = [[NSClassFromString(str) alloc]initWithNibName:str bundle:nil];
+//    id vc = [[NSClassFromString(str) alloc]initWithNibName:str bundle:nil];
+    id vc = [[NSClassFromString(str) alloc] init];
 //    vc.title =  [context_array objectAtIndex:index];
     [vc setTitle:[context_array objectAtIndex:index]];
     [self.navigationController pushViewController:vc animated:YES];
