@@ -79,6 +79,36 @@ bool ye =[email isMatchedByRegex:@""];
     self.view.backgroundColor = bgColor;
 }
 
+/*------------------------------------------
+ *隐藏tabbar
+ ------------------------------------------*/
+- (void) hideTabBar:(BOOL) hidden{
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0];
+    UIView *window = [UIApplication sharedApplication].keyWindow;
+    for(UIView *view in self.tabBarController.view.subviews)
+    {
+        if([view isKindOfClass:[UITabBar class]])
+        {
+            if (hidden) {
+                [view setFrame:CGRectMake(view.frame.origin.x, window.height, view.frame.size.width, view.frame.size.height)];
+            } else {
+                [view setFrame:CGRectMake(view.frame.origin.x, window.height-49, view.frame.size.width, view.frame.size.height)];
+            }
+        }
+        else
+        {
+            if (hidden) {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, window.height)];
+            } else {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, window.height-49)];
+            }
+        }
+    }
+    
+    [UIView commitAnimations];
+}
 
 
 - (void)viewDidLoad
