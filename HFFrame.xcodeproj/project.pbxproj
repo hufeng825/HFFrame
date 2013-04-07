@@ -54,6 +54,12 @@
 		960DAC7D166DEF0200303ECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402D1656144D00F1BDC1 /* QuartzCore.framework */; };
 		960DAC80166DEFEF00303ECC /* HFtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 960DAC7F166DEFEF00303ECC /* HFtest.m */; };
 		960DAC81166E01FE00303ECC /* Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 60390693556A2D35E43E2729 /* Array.m */; };
+		960EA3D61711068F007B9C9A /* GobalPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3D51711068F007B9C9A /* GobalPaths.m */; };
+		960EA3D71711068F007B9C9A /* GobalPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3D51711068F007B9C9A /* GobalPaths.m */; };
+		960EA3DD17110980007B9C9A /* HFXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DA17110980007B9C9A /* HFXibView.m */; };
+		960EA3DE17110980007B9C9A /* HFXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DA17110980007B9C9A /* HFXibView.m */; };
+		960EA3DF17110980007B9C9A /* HFXibViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DC17110980007B9C9A /* HFXibViewUtils.m */; };
+		960EA3E017110980007B9C9A /* HFXibViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 960EA3DC17110980007B9C9A /* HFXibViewUtils.m */; };
 		9624A0521676F07000B8A816 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */; };
 		962C0AEF1682CDCD002C9992 /* NSTimer+pause.m in Sources */ = {isa = PBXBuildFile; fileRef = 962C0AEE1682CDCD002C9992 /* NSTimer+pause.m */; };
 		962CFE4616BAB5CF003386B4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
@@ -237,6 +243,12 @@
 		960DAC77166DED1400303ECC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		960DAC7E166DEFEE00303ECC /* HFtest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFtest.h; sourceTree = "<group>"; };
 		960DAC7F166DEFEF00303ECC /* HFtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFtest.m; sourceTree = "<group>"; };
+		960EA3D41711068F007B9C9A /* GobalPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GobalPaths.h; path = Global/GobalPaths.h; sourceTree = "<group>"; };
+		960EA3D51711068F007B9C9A /* GobalPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GobalPaths.m; path = Global/GobalPaths.m; sourceTree = "<group>"; };
+		960EA3D917110980007B9C9A /* HFXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXibView.h; sourceTree = "<group>"; };
+		960EA3DA17110980007B9C9A /* HFXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibView.m; sourceTree = "<group>"; };
+		960EA3DB17110980007B9C9A /* HFXibViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFXibViewUtils.h; sourceTree = "<group>"; };
+		960EA3DC17110980007B9C9A /* HFXibViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFXibViewUtils.m; sourceTree = "<group>"; };
 		9624A0501676F07000B8A816 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		9624A0511676F07000B8A816 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		962C0AED1682CDCD002C9992 /* NSTimer+pause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+pause.h"; path = "GlobClass/NSTimer/NSTimer+pause.h"; sourceTree = SOURCE_ROOT; };
@@ -664,6 +676,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		960EA3D817110980007B9C9A /* XIBUtils */ = {
+			isa = PBXGroup;
+			children = (
+				960EA3D917110980007B9C9A /* HFXibView.h */,
+				960EA3DA17110980007B9C9A /* HFXibView.m */,
+				960EA3DB17110980007B9C9A /* HFXibViewUtils.h */,
+				960EA3DC17110980007B9C9A /* HFXibViewUtils.m */,
+			);
+			name = XIBUtils;
+			path = Global/XIBUtils;
+			sourceTree = "<group>";
+		};
 		962C0ADF1682C71E002C9992 /* NSTimer  添加暂停恢复 */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +976,9 @@
 		96876D81164BCA5100406C92 /* 全局参数 */ = {
 			isa = PBXGroup;
 			children = (
+				960EA3D817110980007B9C9A /* XIBUtils */,
+				960EA3D41711068F007B9C9A /* GobalPaths.h */,
+				960EA3D51711068F007B9C9A /* GobalPaths.m */,
 				960DAB7D166C9D7500303ECC /* SynthesizeSingleton.h */,
 				96876D82164BCAD000406C92 /* GlobalMacro.h */,
 				96876D83164BCAD000406C92 /* GlobalMacro.m */,
@@ -1437,6 +1464,9 @@
 				964EA23617040DF000A87D30 /* NSObject+HF.m in Sources */,
 				964EA29017058E1100A87D30 /* DataCacheManager.m in Sources */,
 				964EA29217058E1100A87D30 /* DataEnvironment.m in Sources */,
+				960EA3D61711068F007B9C9A /* GobalPaths.m in Sources */,
+				960EA3DD17110980007B9C9A /* HFXibView.m in Sources */,
+				960EA3DF17110980007B9C9A /* HFXibViewUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1458,6 +1488,9 @@
 				964EA29117058E1100A87D30 /* DataCacheManager.m in Sources */,
 				964EA29317058E1100A87D30 /* DataEnvironment.m in Sources */,
 				964EA2941705927C00A87D30 /* GlobalMacro.m in Sources */,
+				960EA3D71711068F007B9C9A /* GobalPaths.m in Sources */,
+				960EA3DE17110980007B9C9A /* HFXibView.m in Sources */,
+				960EA3E017110980007B9C9A /* HFXibViewUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

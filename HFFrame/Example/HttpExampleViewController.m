@@ -57,7 +57,10 @@
     HttpSucessResponBlock sua = HFHttp_Sucess_Respon
     {
         [HFLoadingView hideLoadingViewForView:self.view];
-        _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
+        dispatch_async(dispatch_get_main_queue(),^{
+			//异步调用主线程
+            _resultTextView.text = [NSString stringWithFormat:@"%@",JSON];
+        });
 
         NSLog(@"%@",JSON);
     };
