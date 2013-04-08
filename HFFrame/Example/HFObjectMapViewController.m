@@ -33,7 +33,7 @@
     HttpSucessResponBlock sua = HFHttp_Sucess_Respon
     {
         NSLog(@"json %@",[JSON class]);
-
+        
         NSDictionary *dictmap = @{@"array":@"arrays"};
         
         NSDictionary *mapmap= [NSDictionary dictionaryWithObjectsAndKeys:[DictModel mappingWithKey:@"dict" mapping:dictmap],@"dict", nil];
@@ -42,19 +42,37 @@
                               [MovieModel mappingWithKey:@"movieList" mapping:mapmap],@"movie",
                               [StateModel mappingWithKey:@"state" mapping:nil],@"state",nil];
         ContextModel *model =  [ContextModel objectFromJSONObject:JSON mapping:dict];
+        
+        
+        
+        NSArray *array = [[NSArray alloc]initWithObjects:model, nil];
+        NSData *encodedCurBirdSightingList = [NSKeyedArchiver archivedDataWithRootObject:array];
+        [USER_DEFAULT setObject:encodedCurBirdSightingList forKey:@"test"];
+        [USER_DEFAULT synchronize];
+        
+        NSData *savedEncodedData = [USER_DEFAULT objectForKey:@"test"];
+        if(savedEncodedData == nil)
+        {
+            NSMutableArray *sightingList = [[NSMutableArray alloc] init];
+            array = sightingList;
+        }
+        else{
+            array = (NSMutableArray *)[NSKeyedUnarchiver unarchiveObjectWithData:savedEncodedData];
+        }
+        model = [array objectAtIndex:0];
         NSString *text = [NSString stringWithFormat: @"movie->dict0->array= %@ \n  movie->state->respCode= %@  \n  movie->dict1->body=%@",
-        [[model.movieList objectAtIndex:0] dict].arrays,
-        model.state.respCode,
-        [[model.movieList objectAtIndex:1]movid]];
+                          [[model.movieList objectAtIndex:0] dict].arrays,
+                          model.state.respCode,
+                          [[model.movieList objectAtIndex:1]movid]];
         NSLog( @"%@",text);
         self.resultView.text = text;
     };
     NSURL *url = [[NSBundle mainBundle] URLForResource: @"j" withExtension:@"json"];
     [self gettUrl:[[url absoluteString] stringByReplacingOccurrencesOfString:@"" withString:@""] sucessBlock:sua failBlock:nil downloadProgressBlock:
      HFHttp_DownloadProgress
-    {
-        
-    }];
+     {
+         
+     }];
     
 }
 
