@@ -57,6 +57,12 @@
  ]
  }
  */
+
+/*
+ * 如果用户不用持久化自定义数据 可以不用重载 如下的函数
+ -(void)encodeWithCoder:(NSCoder *)aCoder
+ -(id)initWithCoder:(NSCoder *)aDecoder
+ */
 @interface ModelKit : NSObject
 @end
 
