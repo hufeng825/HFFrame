@@ -1009,7 +1009,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (T2UY4TB9R4)";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/GlobClass/voice/armv6-armv7\\\"",
@@ -1022,7 +1022,7 @@
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0ADC3771-A06F-4F7A-B2C5-C42D4E2BEC35";
+				PROVISIONING_PROFILE = "806DECB4-BA44-4656-99D3-2F62BBDEAD24";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1032,7 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (T2UY4TB9R4)";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\\\"$(SRCROOT)/GlobClass/voice/armv6-armv7\\\"",
@@ -1045,7 +1045,7 @@
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0ADC3771-A06F-4F7A-B2C5-C42D4E2BEC35";
+				PROVISIONING_PROFILE = "806DECB4-BA44-4656-99D3-2F62BBDEAD24";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
