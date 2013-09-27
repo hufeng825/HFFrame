@@ -58,6 +58,7 @@
 		964EA286170585C000A87D30 /* DataCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA283170585C000A87D30 /* DataCacheManager.m */; };
 		964EA287170585C000A87D30 /* DataEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA285170585C000A87D30 /* DataEnvironment.m */; };
 		964EA28A17058B9F00A87D30 /* GobalPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 964EA28917058B9F00A87D30 /* GobalPaths.m */; };
+		9669F37E17F51134008FE5B2 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9669F37D17F51134008FE5B2 /* iflyMSC.framework */; };
 		9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9674479E169E940F00A8341A /* GHUnitIOS.framework */; };
 		967D22C416835DF100DD44C3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 967D22C316835DF100DD44C3 /* NSString+Security.m */; };
 		96876D76164BA44200406C92 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D74164BA44200406C92 /* NSString+Additions.m */; };
@@ -66,7 +67,6 @@
 		96876D84164BCAD000406C92 /* GlobalMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D83164BCAD000406C92 /* GlobalMacro.m */; };
 		96876D93164C048600406C92 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96876D91164C048500406C92 /* HomeViewController.m */; };
 		96876D94164C048600406C92 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96876D92164C048500406C92 /* HomeViewController.xib */; };
-		969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 969340231656110B00F1BDC1 /* iflyMSC.framework */; };
 		9693402A165613DC00F1BDC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96934029165613DC00F1BDC1 /* SystemConfiguration.framework */; };
 		9693402C1656141600F1BDC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402B1656141600F1BDC1 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9693402D1656144D00F1BDC1 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -196,6 +196,7 @@
 		964EA285170585C000A87D30 /* DataEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataEnvironment.m; path = GlobClass/DataCacheManager/DataEnvironment.m; sourceTree = SOURCE_ROOT; };
 		964EA28817058B9E00A87D30 /* GobalPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GobalPaths.h; path = Global/GobalPaths.h; sourceTree = "<group>"; };
 		964EA28917058B9F00A87D30 /* GobalPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GobalPaths.m; path = Global/GobalPaths.m; sourceTree = "<group>"; };
+		9669F37D17F51134008FE5B2 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "GlobClass/voice/armv7-armv7s/iflyMSC.framework"; sourceTree = "<group>"; };
 		9674479E169E940F00A8341A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		967D22C216835DF100DD44C3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
 		967D22C316835DF100DD44C3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
@@ -210,7 +211,6 @@
 		96876D90164C048400406C92 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Home/HomeViewController.h; sourceTree = "<group>"; };
 		96876D91164C048500406C92 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Home/HomeViewController.m; sourceTree = "<group>"; };
 		96876D92164C048500406C92 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = Home/HomeViewController.xib; sourceTree = "<group>"; };
-		969340231656110B00F1BDC1 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "GlobClass/voice/armv6-armv7/iflyMSC.framework"; sourceTree = "<group>"; };
 		96934029165613DC00F1BDC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9693402B1656141600F1BDC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9693402D1656144D00F1BDC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -275,6 +275,7 @@
 				96D9A97D16748FC5003F87F4 /* Security.framework in Frameworks */,
 				96FC742E164CFA6F005ACABC /* ImageIO.framework in Frameworks */,
 				96FC8B211661541500FEB66E /* CoreText.framework in Frameworks */,
+				9669F37E17F51134008FE5B2 /* iflyMSC.framework in Frameworks */,
 				96934030165615AD00F1BDC1 /* AudioToolbox.framework in Frameworks */,
 				9693402E1656144D00F1BDC1 /* QuartzCore.framework in Frameworks */,
 				1848AF1A16328FD800AD42B6 /* CoreGraphics.framework in Frameworks */,
@@ -284,7 +285,6 @@
 				96EAC5ED1641105C003D9281 /* libicucore.dylib in Frameworks */,
 				1848AF1616328FD800AD42B6 /* UIKit.framework in Frameworks */,
 				1848AF1816328FD800AD42B6 /* Foundation.framework in Frameworks */,
-				969340241656110B00F1BDC1 /* iflyMSC.framework in Frameworks */,
 				9674479F169E940F00A8341A /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +320,7 @@
 				9693402B1656141600F1BDC1 /* CFNetwork.framework */,
 				96934029165613DC00F1BDC1 /* SystemConfiguration.framework */,
 				96EAC5EC1641105C003D9281 /* libicucore.dylib */,
-				969340231656110B00F1BDC1 /* iflyMSC.framework */,
+				9669F37D17F51134008FE5B2 /* iflyMSC.framework */,
 				96FC742F164CFB0E005ACABC /* MapKit.framework */,
 				96FC742D164CFA6F005ACABC /* ImageIO.framework */,
 				1848AF1516328FD800AD42B6 /* UIKit.framework */,
@@ -817,6 +817,11 @@
 				CLASSPREFIX = HF;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = jason;
+				TargetAttributes = {
+					1848AF1016328FD800AD42B6 = {
+						DevelopmentTeam = 8KSE9P3XDC;
+					};
+				};
 			};
 			buildConfigurationList = 1848AF0B16328FD800AD42B6 /* Build configuration list for PBXProject "HFFrame" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -961,7 +966,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -987,7 +992,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1004,10 +1009,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (T2UY4TB9R4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
-					"\"$(SRCROOT)\"",
+					"\\\"$(SRCROOT)/GlobClass/voice/armv6-armv7\\\"",
+					"$(SRCROOT)",
+					"/Users/jason/Desktop/HFFrame/GlobClass/voice/armv7-armv7s",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
@@ -1015,6 +1022,7 @@
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0ADC3771-A06F-4F7A-B2C5-C42D4E2BEC35";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1024,10 +1032,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 峰 胡 (T2UY4TB9R4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/GlobClass/voice/armv6-armv7\"",
-					"\"$(SRCROOT)\"",
+					"\\\"$(SRCROOT)/GlobClass/voice/armv6-armv7\\\"",
+					"$(SRCROOT)",
+					"/Users/jason/Desktop/HFFrame/GlobClass/voice/armv7-armv7s",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HFFrame/HFFrame-Prefix.pch";
@@ -1035,6 +1045,7 @@
 				INFOPLIST_FILE = "HFFrame/HFFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0ADC3771-A06F-4F7A-B2C5-C42D4E2BEC35";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
